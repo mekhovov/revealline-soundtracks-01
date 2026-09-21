@@ -1,0 +1,2683 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": "not-reviewed",
+  "archive": {
+    "id": "licensed-preview-01",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/",
+    "inventorySha256": "2706445dafe995f6c4dc044ad5e92031cae60627699f6a72985e67a972064ccd"
+  },
+  "source": {
+    "sourcesSha256": "7f738c8291a829eb87d03cc4f3317fe5babcc353845ba42073a9dcce71011982",
+    "productionRegisterSha256": "0173d83d022875c20d45a5c881719dde2a1e9dc121cbd4aa63a53a6d75cac287",
+    "authorizationSha256": "7920db5ae2cfe4e0b13f73c8e2a6ffeb2e09ca65ff20438caebfc0ac20a71da4",
+    "evidence": [
+      {
+        "path": "sources.json",
+        "bytes": 159672,
+        "sha256": "7f738c8291a829eb87d03cc4f3317fe5babcc353845ba42073a9dcce71011982"
+      },
+      {
+        "path": "production-register.json",
+        "bytes": 285022,
+        "sha256": "0173d83d022875c20d45a5c881719dde2a1e9dc121cbd4aa63a53a6d75cac287"
+      },
+      {
+        "path": "preview-authorization.json",
+        "bytes": 10810,
+        "sha256": "7920db5ae2cfe4e0b13f73c8e2a6ffeb2e09ca65ff20438caebfc0ac20a71da4"
+      },
+      {
+        "path": "provenance/license-revalidation.json",
+        "bytes": 30098,
+        "sha256": "3c0f26d136c5a0e36097e0f8ca67afa6d3f26a7f1d1b4a0d0980c5344b762626"
+      },
+      {
+        "path": "provenance/derivatives.json",
+        "bytes": 4798,
+        "sha256": "2d50dd3c92ab2fa3809c88cce5ec24a73c81239a7ce88d3cec03dc281228bdac"
+      },
+      {
+        "path": "provenance/additional-derivatives.json",
+        "bytes": 3572,
+        "sha256": "488ebc1c41159964bec37c63f51ca6d78e49fe1cc685d260248c582bbfb9d96d"
+      },
+      {
+        "path": "provenance/expansion-derivatives.json",
+        "bytes": 55945,
+        "sha256": "89b567003f9c20aa9578b0927eef0e5b6c37e8a561b578b346d99cbf97ad8d0f"
+      }
+    ]
+  },
+  "albums": [
+    {
+      "id": "holizna.retro-wave-1",
+      "title": "Holizna — Retro Wave 1",
+      "description": "Seven tracks from Holizna’s Retro Wave Collection.",
+      "trackIds": [
+        "holizna.drama",
+        "holizna.retro-soundtrack",
+        "holizna.cyber-anxiety",
+        "holizna.lost-in-the-jungle",
+        "holizna.night-life",
+        "holizna.day-dreams",
+        "holizna.fires-uptown"
+      ]
+    },
+    {
+      "id": "holizna.retro-wave-2",
+      "title": "Holizna — Retro Wave 2",
+      "description": "Six more tracks from Holizna’s Retro Wave Collection.",
+      "trackIds": [
+        "holizna.mutant-club",
+        "holizna.we-used-to-dance",
+        "holizna.machines-with-feelings",
+        "holizna.retro-synths",
+        "holizna.50-over-the-speed-limit",
+        "holizna.dear-mr-super-computer"
+      ]
+    },
+    {
+      "id": "licensed.rock-metal",
+      "title": "Rock & Metal",
+      "description": "Four guitar-led tracks by Emma_MA, HydroGene and Vitalezzz.",
+      "trackIds": [
+        "emma-ma.megasong",
+        "hydrogene.determination",
+        "vitalezzz.silver-bullet",
+        "vitalezzz.devoted-guard"
+      ]
+    },
+    {
+      "id": "3xblast.pop-punk-chiptune",
+      "title": "3xBlast — Pop-Punk Chiptune",
+      "description": "Seven instrumental tracks from 3xBlast’s Babe, You Look Poggers Tonight! album.",
+      "trackIds": [
+        "3xblast.a-band-of-jellyfish",
+        "3xblast.babe-you-look-poggers-tonight",
+        "3xblast.if-you-re-thinking-about-giving-up-think-again-beause-i-believe-in-you",
+        "3xblast.let-s-go-olive-boy",
+        "3xblast.now-this-is-a-waterpark",
+        "3xblast.thanks-for-listening",
+        "3xblast.the-best-move-is-to-keep-going"
+      ]
+    },
+    {
+      "id": "retro90s.tracker-fm",
+      "title": "Tracker & FM Arcade",
+      "description": "Four creator-declared tracker and Sega-style FM recordings; source OGGs retained with documented MP3 conversions. Listening review pending.",
+      "trackIds": [
+        "congusbongus.raspberry-jam",
+        "congusbongus.escalate",
+        "ragnar-random.castle-nosferatu-fm",
+        "ragnar-random.tower-of-the-vampire-fm"
+      ]
+    },
+    {
+      "id": "metal.extra-battles",
+      "title": "Metal — Extra Battles",
+      "description": "Two exact creator MP3 recordings by MintoDog and Kistol. Listening review pending.",
+      "trackIds": [
+        "mintodog.heavy-battle-2",
+        "kistol.untitled-metal-track"
+      ]
+    },
+    {
+      "id": "preview.expansion-metal",
+      "title": "Metal & Synth-Metal — Preview",
+      "description": "6 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "zander-noriega.the-recon-mission",
+        "zander-noriega.dragged-through-hellfire",
+        "zander-noriega.the-wreck",
+        "zander-noriega.abelian",
+        "zander-noriega.fight-them-until-we-cant",
+        "peachtea.last-stand-lets-go"
+      ]
+    },
+    {
+      "id": "preview.expansion-rock",
+      "title": "Instrumental Rock — Preview",
+      "description": "3 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "zander-noriega.stonemason",
+        "zander-noriega.ironbound",
+        "zander-noriega.blinding-lights"
+      ]
+    },
+    {
+      "id": "preview.expansion-electronic",
+      "title": "Electronic & Dance — Preview",
+      "description": "10 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "zander-noriega.darker-waves",
+        "congusbongus.rhythm-garden",
+        "congusbongus.second-cruise",
+        "zane-little-music.rhythm-factory",
+        "joth.black-diamond",
+        "joth.party-sector",
+        "tricks-and-traps.experiment-g",
+        "tricks-and-traps.space-collisions",
+        "tricks-and-traps.simulation-unknown",
+        "tricks-and-traps.new-factory"
+      ]
+    },
+    {
+      "id": "preview.expansion-synth90s",
+      "title": "90s Synth & FM — Preview",
+      "description": "4 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "congusbongus.the-demon-king",
+        "ragnar-random.castle-of-the-goblin-queen",
+        "snabisch.at-the-beginning",
+        "snabisch.the-organ"
+      ]
+    },
+    {
+      "id": "preview.expansion-synth90s-cues",
+      "title": "90s Synth & FM — Short Cues — Preview",
+      "description": "4 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "ragnar-random.super-scary-cave-dragon",
+        "ragnar-random.dinosaur-spirit-guide",
+        "ragnar-random.helgi-the-hero-bold",
+        "snabisch.adn"
+      ]
+    },
+    {
+      "id": "preview.expansion-chiptune-cues",
+      "title": "Fakebit & Chiptune — Short Cues — Preview",
+      "description": "7 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "ragnar-random.hostile-planet",
+        "ragnar-random.reason-of-the-itch",
+        "ragnar-random.we-got-the-crud",
+        "ragnar-random.digestive-malady",
+        "ragnar-random.jonathan-livingston-sea-cucumber",
+        "ragnar-random.cassette-culture",
+        "joth.bossa-nova"
+      ]
+    },
+    {
+      "id": "preview.expansion-chiptune",
+      "title": "Fakebit & Chiptune — Preview",
+      "description": "4 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "ragnar-random.the-creeper",
+        "ragnar-random.chick-with-weapon",
+        "ragnar-random.this-mad-gnosis",
+        "ragnar-random.viroid-planet"
+      ]
+    },
+    {
+      "id": "preview.expansion-ambient-cues",
+      "title": "Ambient — Short Cues — Preview",
+      "description": "1 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "snabisch.where-i-am"
+      ]
+    },
+    {
+      "id": "preview.expansion-electronic-cues",
+      "title": "Electronic & Dance — Short Cues — Preview",
+      "description": "1 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "trackIds": [
+        "tricks-and-traps.electric-stream"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "holizna.drama",
+      "albumId": "holizna.retro-wave-1",
+      "title": "Drama",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "01 HoliznaCC0 - Drama.mp3",
+          "sha256": "bacdf4eae1d6031a357837389b86f5b114997629be60ca9cb3d2e14284fee34b",
+          "bytes": 8431885
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 210.792,
+      "fileName": "01 HoliznaCC0 - Drama.mp3",
+      "path": "objects/bacdf4eae1d6031a357837389b86f5b114997629be60ca9cb3d2e14284fee34b.mp3",
+      "bytes": 8431885,
+      "sha256": "bacdf4eae1d6031a357837389b86f5b114997629be60ca9cb3d2e14284fee34b"
+    },
+    {
+      "id": "holizna.retro-soundtrack",
+      "albumId": "holizna.retro-wave-1",
+      "title": "Retro Soundtrack",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "02 HoliznaCC0 - Retro Soundtrack.mp3",
+          "sha256": "b5f4aaee16d26df31fb64d19d80d98190b617a3e8bfa41c4f20a977bdbf56982",
+          "bytes": 6308365
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 157.704,
+      "fileName": "02 HoliznaCC0 - Retro Soundtrack.mp3",
+      "path": "objects/b5f4aaee16d26df31fb64d19d80d98190b617a3e8bfa41c4f20a977bdbf56982.mp3",
+      "bytes": 6308365,
+      "sha256": "b5f4aaee16d26df31fb64d19d80d98190b617a3e8bfa41c4f20a977bdbf56982"
+    },
+    {
+      "id": "holizna.cyber-anxiety",
+      "albumId": "holizna.retro-wave-1",
+      "title": "Cyber Anxiety",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "03 HoliznaCC0 - Cyber Anxiety.mp3",
+          "sha256": "10c172f2fcc6cd889fcbefcd8ac64d18e494748223973fba906d7371575181ed",
+          "bytes": 6799885
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 169.992,
+      "fileName": "03 HoliznaCC0 - Cyber Anxiety.mp3",
+      "path": "objects/10c172f2fcc6cd889fcbefcd8ac64d18e494748223973fba906d7371575181ed.mp3",
+      "bytes": 6799885,
+      "sha256": "10c172f2fcc6cd889fcbefcd8ac64d18e494748223973fba906d7371575181ed"
+    },
+    {
+      "id": "holizna.lost-in-the-jungle",
+      "albumId": "holizna.retro-wave-1",
+      "title": "Lost In The Jungle",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "04 HoliznaCC0 - Lost In The Jungle.mp3",
+          "sha256": "e50fd5b7f3275040ba246df9ce2ed9a07b7c015d90ce628692f3c7615cd9dee3",
+          "bytes": 6492685
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 162.312,
+      "fileName": "04 HoliznaCC0 - Lost In The Jungle.mp3",
+      "path": "objects/e50fd5b7f3275040ba246df9ce2ed9a07b7c015d90ce628692f3c7615cd9dee3.mp3",
+      "bytes": 6492685,
+      "sha256": "e50fd5b7f3275040ba246df9ce2ed9a07b7c015d90ce628692f3c7615cd9dee3"
+    },
+    {
+      "id": "holizna.night-life",
+      "albumId": "holizna.retro-wave-1",
+      "title": "Night Life",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "04 HoliznaCC0 - Night Life.mp3",
+          "sha256": "119b628fece763ccaf3da607d848258e6a281d6a45d0e27ac6c6841ee3022b21",
+          "bytes": 8960845
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 224.016,
+      "fileName": "04 HoliznaCC0 - Night Life.mp3",
+      "path": "objects/119b628fece763ccaf3da607d848258e6a281d6a45d0e27ac6c6841ee3022b21.mp3",
+      "bytes": 8960845,
+      "sha256": "119b628fece763ccaf3da607d848258e6a281d6a45d0e27ac6c6841ee3022b21"
+    },
+    {
+      "id": "holizna.day-dreams",
+      "albumId": "holizna.retro-wave-1",
+      "title": "Day Dreams",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "05 HoliznaCC0 - Day Dreams.mp3",
+          "sha256": "345324857ee7c8ffc6ae15b8d646036f3630fbc7c4470cc633907715bfaad44f",
+          "bytes": 7901965
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 197.544,
+      "fileName": "05 HoliznaCC0 - Day Dreams.mp3",
+      "path": "objects/345324857ee7c8ffc6ae15b8d646036f3630fbc7c4470cc633907715bfaad44f.mp3",
+      "bytes": 7901965,
+      "sha256": "345324857ee7c8ffc6ae15b8d646036f3630fbc7c4470cc633907715bfaad44f"
+    },
+    {
+      "id": "holizna.fires-uptown",
+      "albumId": "holizna.retro-wave-1",
+      "title": "Fires Uptown",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "05 HoliznaCC0 - Fires Uptown.mp3",
+          "sha256": "01fc5e02157285c9ceb8f3c2d303768dfb02a43896f9c75a07629628330af126",
+          "bytes": 7640845
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 191.016,
+      "fileName": "05 HoliznaCC0 - Fires Uptown.mp3",
+      "path": "objects/01fc5e02157285c9ceb8f3c2d303768dfb02a43896f9c75a07629628330af126.mp3",
+      "bytes": 7640845,
+      "sha256": "01fc5e02157285c9ceb8f3c2d303768dfb02a43896f9c75a07629628330af126"
+    },
+    {
+      "id": "holizna.mutant-club",
+      "albumId": "holizna.retro-wave-2",
+      "title": "Mutant Club",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "07 HoliznaCC0 - Mutant Club.mp3",
+          "sha256": "385d8b71a88b933f5360ef63ed1e777ceb869e32ad6b1c6a4b784cba56a0255c",
+          "bytes": 5228365
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 130.704,
+      "fileName": "07 HoliznaCC0 - Mutant Club.mp3",
+      "path": "objects/385d8b71a88b933f5360ef63ed1e777ceb869e32ad6b1c6a4b784cba56a0255c.mp3",
+      "bytes": 5228365,
+      "sha256": "385d8b71a88b933f5360ef63ed1e777ceb869e32ad6b1c6a4b784cba56a0255c"
+    },
+    {
+      "id": "holizna.we-used-to-dance",
+      "albumId": "holizna.retro-wave-2",
+      "title": "We used To Dance",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "08 HoliznaCC0 - We used To Dance.mp3",
+          "sha256": "5af6bb3a28e3e8a45996c64638ebfbaf7abb71954a2a957de4b89141f555dbf2",
+          "bytes": 8572045
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 214.296,
+      "fileName": "08 HoliznaCC0 - We used To Dance.mp3",
+      "path": "objects/5af6bb3a28e3e8a45996c64638ebfbaf7abb71954a2a957de4b89141f555dbf2.mp3",
+      "bytes": 8572045,
+      "sha256": "5af6bb3a28e3e8a45996c64638ebfbaf7abb71954a2a957de4b89141f555dbf2"
+    },
+    {
+      "id": "holizna.machines-with-feelings",
+      "albumId": "holizna.retro-wave-2",
+      "title": "Machines With Feelings",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "09 HoliznaCC0 - Machines With Feelings.mp3",
+          "sha256": "abe5a49446af9a06514277dd4e585694cd0be70a4191ed9932a419f3086a4930",
+          "bytes": 7920205
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 198,
+      "fileName": "09 HoliznaCC0 - Machines With Feelings.mp3",
+      "path": "objects/abe5a49446af9a06514277dd4e585694cd0be70a4191ed9932a419f3086a4930.mp3",
+      "bytes": 7920205,
+      "sha256": "abe5a49446af9a06514277dd4e585694cd0be70a4191ed9932a419f3086a4930"
+    },
+    {
+      "id": "holizna.retro-synths",
+      "albumId": "holizna.retro-wave-2",
+      "title": "Retro Synths",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "09 HoliznaCC0 - Retro Synths.mp3",
+          "sha256": "0aba9efcd8b2d6b127ac69676e15c7364ba5e2ed0adc811a19aa2da2eb2ed1d7",
+          "bytes": 8919565
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 222.984,
+      "fileName": "09 HoliznaCC0 - Retro Synths.mp3",
+      "path": "objects/0aba9efcd8b2d6b127ac69676e15c7364ba5e2ed0adc811a19aa2da2eb2ed1d7.mp3",
+      "bytes": 8919565,
+      "sha256": "0aba9efcd8b2d6b127ac69676e15c7364ba5e2ed0adc811a19aa2da2eb2ed1d7"
+    },
+    {
+      "id": "holizna.50-over-the-speed-limit",
+      "albumId": "holizna.retro-wave-2",
+      "title": "50 Over The Speed Limit",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "12 HoliznaCC0 - 50 Over The Speed Limit.mp3",
+          "sha256": "c00de3e6294bc7dbd484c26815dfcfe0787cb352e7129a0e84ba14941fcab37f",
+          "bytes": 5228365
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 130.704,
+      "fileName": "12 HoliznaCC0 - 50 Over The Speed Limit.mp3",
+      "path": "objects/c00de3e6294bc7dbd484c26815dfcfe0787cb352e7129a0e84ba14941fcab37f.mp3",
+      "bytes": 5228365,
+      "sha256": "c00de3e6294bc7dbd484c26815dfcfe0787cb352e7129a0e84ba14941fcab37f"
+    },
+    {
+      "id": "holizna.dear-mr-super-computer",
+      "albumId": "holizna.retro-wave-2",
+      "title": "Dear Mr Super Computer",
+      "artist": "Holizna",
+      "source": "https://opengameart.org/content/retro-wave-collection",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Holizna — Retro Wave Collection",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "13 HoliznaCC0 - Dear Mr Super Computer.mp3",
+          "sha256": "ea56caa66bd6c7ae35e07da2ee3912588e4934970d887f6cc1427716c30ef66b",
+          "bytes": 5612365
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 140.304,
+      "fileName": "13 HoliznaCC0 - Dear Mr Super Computer.mp3",
+      "path": "objects/ea56caa66bd6c7ae35e07da2ee3912588e4934970d887f6cc1427716c30ef66b.mp3",
+      "bytes": 5612365,
+      "sha256": "ea56caa66bd6c7ae35e07da2ee3912588e4934970d887f6cc1427716c30ef66b"
+    },
+    {
+      "id": "emma-ma.megasong",
+      "albumId": "licensed.rock-metal",
+      "title": "Megasong",
+      "artist": "Emma_MA",
+      "source": "https://opengameart.org/content/megasong",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Emma_MA — Megasong",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "megasong_0.mp3",
+          "sha256": "13ac89fa8e5b12b78c872f981376315d0b9d33829ab85f259972be54913f8239",
+          "bytes": 5374338
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "fpv"
+        ]
+      },
+      "durationSeconds": 224.26122448979592,
+      "fileName": "megasong_0.mp3",
+      "path": "objects/13ac89fa8e5b12b78c872f981376315d0b9d33829ab85f259972be54913f8239.mp3",
+      "bytes": 5374338,
+      "sha256": "13ac89fa8e5b12b78c872f981376315d0b9d33829ab85f259972be54913f8239"
+    },
+    {
+      "id": "hydrogene.determination",
+      "albumId": "licensed.rock-metal",
+      "title": "Determination",
+      "artist": "HydroGene",
+      "source": "https://opengameart.org/content/determination-anime-style-music",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "HydroGene — Determination",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "determination_1.mp3",
+          "sha256": "409a98ca2923cbe78427ba21f8f5131fb9f3439a255be562bcd840b111586fe7",
+          "bytes": 2745003
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "fpv"
+        ]
+      },
+      "durationSeconds": 68.62367346938775,
+      "fileName": "determination_1.mp3",
+      "path": "objects/409a98ca2923cbe78427ba21f8f5131fb9f3439a255be562bcd840b111586fe7.mp3",
+      "bytes": 2745003,
+      "sha256": "409a98ca2923cbe78427ba21f8f5131fb9f3439a255be562bcd840b111586fe7"
+    },
+    {
+      "id": "vitalezzz.silver-bullet",
+      "albumId": "licensed.rock-metal",
+      "title": "Silver Bullet",
+      "artist": "Vitalezzz",
+      "source": "https://opengameart.org/content/silver-bullet",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vitalezzz — Silver Bullet",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "silver_bullet_0.mp3",
+          "sha256": "ee645b6a0cf9c8cd45fa96882cd35cc3ba5ffd0a5b4fb92544d8ee49d24cedf1",
+          "bytes": 8675578
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "fpv"
+        ]
+      },
+      "durationSeconds": 216.888,
+      "fileName": "silver_bullet_0.mp3",
+      "path": "objects/ee645b6a0cf9c8cd45fa96882cd35cc3ba5ffd0a5b4fb92544d8ee49d24cedf1.mp3",
+      "bytes": 8675578,
+      "sha256": "ee645b6a0cf9c8cd45fa96882cd35cc3ba5ffd0a5b4fb92544d8ee49d24cedf1"
+    },
+    {
+      "id": "vitalezzz.devoted-guard",
+      "albumId": "licensed.rock-metal",
+      "title": "Devoted Guard",
+      "artist": "Vitalezzz",
+      "source": "https://opengameart.org/content/devoted-guard",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vitalezzz — Devoted Guard",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "devoted_guard_0.mp3",
+          "sha256": "6a7ab8157315c16eee234fd0eb5c523dc830c335272cec3cc5e795a5aa067e26",
+          "bytes": 7270456
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "fpv"
+        ]
+      },
+      "durationSeconds": 181.76,
+      "fileName": "devoted_guard_0.mp3",
+      "path": "objects/6a7ab8157315c16eee234fd0eb5c523dc830c335272cec3cc5e795a5aa067e26.mp3",
+      "bytes": 7270456,
+      "sha256": "6a7ab8157315c16eee234fd0eb5c523dc830c335272cec3cc5e795a5aa067e26"
+    },
+    {
+      "id": "3xblast.a-band-of-jellyfish",
+      "albumId": "3xblast.pop-punk-chiptune",
+      "title": "A Band of Jellyfish",
+      "artist": "3xBlast",
+      "source": "https://opengameart.org/content/7-pop-punk-chiptune-tracks",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "3xBlast — A Band of Jellyfish",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "3xBlast - A Band of Jellyfish (Looped).ogg",
+          "sha256": "1a346766b8d628d2fee6710559ace9e37bc6cff78d0dbf806fb5172bd96cf1fe",
+          "bytes": 2860848
+        },
+        "transform": "provenance/derivatives.json",
+        "evidence": "provenance/derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 44.4865306122449,
+      "fileName": "3xBlast - A Band of Jellyfish (Looped).mp3",
+      "path": "objects/f03927dbb34fca2946b4d156523e24d8ada69fbf390ed522597b9fbaedbf09a6.mp3",
+      "bytes": 1423569,
+      "sha256": "f03927dbb34fca2946b4d156523e24d8ada69fbf390ed522597b9fbaedbf09a6"
+    },
+    {
+      "id": "3xblast.babe-you-look-poggers-tonight",
+      "albumId": "3xblast.pop-punk-chiptune",
+      "title": "Babe, You Look Poggers Tonight!",
+      "artist": "3xBlast",
+      "source": "https://opengameart.org/content/7-pop-punk-chiptune-tracks",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "3xBlast — Babe, You Look Poggers Tonight!",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "3xBlast - Babe, You Look Poggers Tonight! (Looped).ogg",
+          "sha256": "2779bbc9b1672edec2010e0b471d60dd3ca6c0ee86676d8f0f7086c0134b84bc",
+          "bytes": 7399662
+        },
+        "transform": "provenance/derivatives.json",
+        "evidence": "provenance/derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 120.0326530612245,
+      "fileName": "3xBlast - Babe, You Look Poggers Tonight! (Looped).mp3",
+      "path": "objects/709bdef4fae6f42a2747ddab802ce3087c79e126037f64b9d60b0fa71160c536.mp3",
+      "bytes": 3841044,
+      "sha256": "709bdef4fae6f42a2747ddab802ce3087c79e126037f64b9d60b0fa71160c536"
+    },
+    {
+      "id": "3xblast.if-you-re-thinking-about-giving-up-think-again-beause-i-believe-in-you",
+      "albumId": "3xblast.pop-punk-chiptune",
+      "title": "If You're Thinking About Giving Up, Think Again Beause I Believe In You!",
+      "artist": "3xBlast",
+      "source": "https://opengameart.org/content/7-pop-punk-chiptune-tracks",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "3xBlast — If You're Thinking About Giving Up, Think Again Beause I Believe In You!",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "3xBlast - If You're Thinking About Giving Up, Think Again Beause I Believe In You! (Looped).ogg",
+          "sha256": "1c225dbaa204d9ad584182daf0bce8106ee60e63980987926d6d99bd9b56e287",
+          "bytes": 10896553
+        },
+        "transform": "provenance/derivatives.json",
+        "evidence": "provenance/derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 177.6326530612245,
+      "fileName": "3xBlast - If You're Thinking About Giving Up, Think Again Beause I Believe In You! (Looped).mp3",
+      "path": "objects/e9cd1330b99e2f978b04795a7311c37f2fd7e2419bfd89c3c4277bfd15f216fa.mp3",
+      "bytes": 5684244,
+      "sha256": "e9cd1330b99e2f978b04795a7311c37f2fd7e2419bfd89c3c4277bfd15f216fa"
+    },
+    {
+      "id": "3xblast.let-s-go-olive-boy",
+      "albumId": "3xblast.pop-punk-chiptune",
+      "title": "Let's Go, Olive Boy!",
+      "artist": "3xBlast",
+      "source": "https://opengameart.org/content/7-pop-punk-chiptune-tracks",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "3xBlast — Let's Go, Olive Boy!",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "3xBlast - Let's Go, Olive Boy! (Looped).ogg",
+          "sha256": "4075cc85649f781a7ec63f9b24c2a409453b9b585ff0c1ec94d3ab00adb30851",
+          "bytes": 5717731
+        },
+        "transform": "provenance/derivatives.json",
+        "evidence": "provenance/derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 92.89142857142858,
+      "fileName": "3xBlast - Let's Go, Olive Boy! (Looped).mp3",
+      "path": "objects/f97ea7ef15cff0de647b8116a8e917827268559b35f3bf3cad58ad901132b49f.mp3",
+      "bytes": 2972525,
+      "sha256": "f97ea7ef15cff0de647b8116a8e917827268559b35f3bf3cad58ad901132b49f"
+    },
+    {
+      "id": "3xblast.now-this-is-a-waterpark",
+      "albumId": "3xblast.pop-punk-chiptune",
+      "title": "Now This Is A Waterpark!",
+      "artist": "3xBlast",
+      "source": "https://opengameart.org/content/7-pop-punk-chiptune-tracks",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "3xBlast — Now This Is A Waterpark!",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "3xBlast - Now This Is A Waterpark! (Looped).ogg",
+          "sha256": "d5b88e522728f4ef69efcabf0178c0911968a74cda403ace582e181bd2b062cd",
+          "bytes": 7191489
+        },
+        "transform": "provenance/derivatives.json",
+        "evidence": "provenance/derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 121.5738775510204,
+      "fileName": "3xBlast - Now This Is A Waterpark! (Looped).mp3",
+      "path": "objects/93634c4c3d76558d0b4c80740883223c2d68cc0a095142c420107b2f8b08d037.mp3",
+      "bytes": 3890364,
+      "sha256": "93634c4c3d76558d0b4c80740883223c2d68cc0a095142c420107b2f8b08d037"
+    },
+    {
+      "id": "3xblast.thanks-for-listening",
+      "albumId": "3xblast.pop-punk-chiptune",
+      "title": "Thanks For Listening!",
+      "artist": "3xBlast",
+      "source": "https://opengameart.org/content/7-pop-punk-chiptune-tracks",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "3xBlast — Thanks For Listening!",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "3xBlast - Thanks For Listening! (Looped).ogg",
+          "sha256": "dfa62ad57bcaaaab310df9fa9eff70900f07983a4831747ff1445494ba597e70",
+          "bytes": 3387717
+        },
+        "transform": "provenance/derivatives.json",
+        "evidence": "provenance/derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 55.666938775510204,
+      "fileName": "3xBlast - Thanks For Listening! (Looped).mp3",
+      "path": "objects/ecf32b424b78773ba6df4c56a5068ddb0e1674f5c3fdadc47d23c79dde15f5af.mp3",
+      "bytes": 1781342,
+      "sha256": "ecf32b424b78773ba6df4c56a5068ddb0e1674f5c3fdadc47d23c79dde15f5af"
+    },
+    {
+      "id": "3xblast.the-best-move-is-to-keep-going",
+      "albumId": "3xblast.pop-punk-chiptune",
+      "title": "The Best Move Is To Keep Going",
+      "artist": "3xBlast",
+      "source": "https://opengameart.org/content/7-pop-punk-chiptune-tracks",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "3xBlast — The Best Move Is To Keep Going",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "3xBlast - The Best Move Is To Keep Going (Looped).ogg",
+          "sha256": "0df251764cf9e920b45d92d95a20bcc9b6faaebc3c1d853ac22a3fdf79b1de75",
+          "bytes": 14334337
+        },
+        "transform": "provenance/derivatives.json",
+        "evidence": "provenance/derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 236.22530612244898,
+      "fileName": "3xBlast - The Best Move Is To Keep Going (Looped).mp3",
+      "path": "objects/bdff30f60f78f5c6e5103ba387f31b98672b8514358a9624207c33aeed1ac9c7.mp3",
+      "bytes": 7559209,
+      "sha256": "bdff30f60f78f5c6e5103ba387f31b98672b8514358a9624207c33aeed1ac9c7"
+    },
+    {
+      "id": "congusbongus.raspberry-jam",
+      "albumId": "retro90s.tracker-fm",
+      "title": "Raspberry Jam",
+      "artist": "congusbongus",
+      "source": "https://opengameart.org/content/raspberry-jam",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "congusbongus — Raspberry Jam",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "raspberry_jam.ogg",
+          "sha256": "99d2ff8088f26abaf5bd0b492e870e46ab798eed4eb71bcad6eb310af1049c12",
+          "bytes": 2921627
+        },
+        "transform": "provenance/additional-derivatives.json",
+        "evidence": "provenance/additional-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 174.57632653061225,
+      "fileName": "raspberry_jam.mp3",
+      "path": "objects/7b1a78a001d69aa47d75b2f55d647836ea445355065a3df3b0cebd2e978863fa.mp3",
+      "bytes": 5586442,
+      "sha256": "7b1a78a001d69aa47d75b2f55d647836ea445355065a3df3b0cebd2e978863fa"
+    },
+    {
+      "id": "congusbongus.escalate",
+      "albumId": "retro90s.tracker-fm",
+      "title": "Escalate",
+      "artist": "congusbongus",
+      "source": "https://opengameart.org/content/escalate",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Escalate by congusbongus, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Converted from OGG to MP3; no musical edit.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "escalate_0.ogg",
+          "sha256": "1f8bb1b11448fd84be6f791ca868f39dcd0c6bb848322ae343f0d5bf1468efb7",
+          "bytes": 7325760
+        },
+        "transform": "provenance/additional-derivatives.json",
+        "evidence": "provenance/additional-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 207.696,
+      "fileName": "escalate_0.mp3",
+      "path": "objects/88b95dc4ea8749d136e03813cc0ff4dae2ef753bcdde2e3acb3b2aeb3efcd24d.mp3",
+      "bytes": 6646272,
+      "sha256": "88b95dc4ea8749d136e03813cc0ff4dae2ef753bcdde2e3acb3b2aeb3efcd24d"
+    },
+    {
+      "id": "ragnar-random.castle-nosferatu-fm",
+      "albumId": "retro90s.tracker-fm",
+      "title": "Castle Nosferatu (Sega-style FM synth remix)",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Castle Nosferatu (Sega-style FM synth remix)",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "04_-_castle_nosferatu_sega-style_fm_synth_remix.ogg",
+          "sha256": "a0adeea9e320f42d2e351721e290e91cf9a11a8fab32bbd85c210a1c65c0f22d",
+          "bytes": 1079781
+        },
+        "transform": "provenance/additional-derivatives.json",
+        "evidence": "provenance/additional-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 76.82612244897959,
+      "fileName": "04_-_castle_nosferatu_sega-style_fm_synth_remix.mp3",
+      "path": "objects/b5a0d55e0a88c0e4d2bf258bc0b2219372751b781c3bc53d195d4b1c4a0d8a07.mp3",
+      "bytes": 2458435,
+      "sha256": "b5a0d55e0a88c0e4d2bf258bc0b2219372751b781c3bc53d195d4b1c4a0d8a07"
+    },
+    {
+      "id": "ragnar-random.tower-of-the-vampire-fm",
+      "albumId": "retro90s.tracker-fm",
+      "title": "Tower of the Vampire (Sega-style FM synth remix)",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Tower of the Vampire (Sega-style FM synth remix)",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "17_-_tower_of_the_vampire_sega-style_fm-synth_remix.ogg",
+          "sha256": "8e2b9266a8a703d1643c526950212f0b1bbfbe1fbd07b394f4b30935906646aa",
+          "bytes": 1815149
+        },
+        "transform": "provenance/additional-derivatives.json",
+        "evidence": "provenance/additional-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "retro"
+        ]
+      },
+      "durationSeconds": 128.02612244897958,
+      "fileName": "17_-_tower_of_the_vampire_sega-style_fm-synth_remix.mp3",
+      "path": "objects/77e8b47ad4ed2b2bb54ee4a1def79fedbd4c60b99963aa1f0d0de231e8391941.mp3",
+      "bytes": 4096835,
+      "sha256": "77e8b47ad4ed2b2bb54ee4a1def79fedbd4c60b99963aa1f0d0de231e8391941"
+    },
+    {
+      "id": "mintodog.heavy-battle-2",
+      "albumId": "metal.extra-battles",
+      "title": "Heavy Battle 2",
+      "artist": "MintoDog",
+      "source": "https://opengameart.org/content/heavy-battle-2",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "MintoDog — Heavy Battle 2",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "heavy_battle_2_bpm185.mp3",
+          "sha256": "3dd1b959c4734a7463998e07f9b95a810d277c3b8946630988651ff2ef3fc222",
+          "bytes": 3323941
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "fpv"
+        ]
+      },
+      "durationSeconds": 83.09551020408163,
+      "fileName": "heavy_battle_2_bpm185.mp3",
+      "path": "objects/3dd1b959c4734a7463998e07f9b95a810d277c3b8946630988651ff2ef3fc222.mp3",
+      "bytes": 3323941,
+      "sha256": "3dd1b959c4734a7463998e07f9b95a810d277c3b8946630988651ff2ef3fc222"
+    },
+    {
+      "id": "kistol.untitled-metal-track",
+      "albumId": "metal.extra-battles",
+      "title": "Untitled Metal Track",
+      "artist": "Kistol",
+      "source": "https://opengameart.org/content/untitled-metal-track",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Kistol — Untitled Metal Track",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "untitled_metal_track.mp3",
+          "sha256": "4616ba62005e668bd5d1d6ba7327ec280876f076b7195e2eed923b6d52e8dcd3",
+          "bytes": 3820523
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": [
+          "fpv"
+        ]
+      },
+      "durationSeconds": 145.2669387755102,
+      "fileName": "untitled_metal_track.mp3",
+      "path": "objects/4616ba62005e668bd5d1d6ba7327ec280876f076b7195e2eed923b6d52e8dcd3.mp3",
+      "bytes": 3820523,
+      "sha256": "4616ba62005e668bd5d1d6ba7327ec280876f076b7195e2eed923b6d52e8dcd3"
+    },
+    {
+      "id": "zander-noriega.the-recon-mission",
+      "albumId": "preview.expansion-metal",
+      "title": "The Recon Mission",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/the-recon-mission",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — The Recon Mission. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - The Recon Mission.mp3",
+          "sha256": "4f7d3674fe0989867ec831bb7d838e34d677cca2229f8b3f191ebe73ede40781",
+          "bytes": 7318382
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 4,
+        "themes": []
+      },
+      "durationSeconds": 182.85714285714286,
+      "fileName": "Zander Noriega - The Recon Mission.mp3",
+      "path": "objects/4f7d3674fe0989867ec831bb7d838e34d677cca2229f8b3f191ebe73ede40781.mp3",
+      "bytes": 7318382,
+      "sha256": "4f7d3674fe0989867ec831bb7d838e34d677cca2229f8b3f191ebe73ede40781"
+    },
+    {
+      "id": "zander-noriega.dragged-through-hellfire",
+      "albumId": "preview.expansion-metal",
+      "title": "Dragged Through Hellfire",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/dragged-through-hellfire",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — Dragged Through Hellfire. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - Dragged Through Hellfire.mp3",
+          "sha256": "9ce237e3111768fe0fd4e2d9322bd36f03500ed4d46fd49d11dcf0b503c4fc01",
+          "bytes": 9898235
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 5,
+        "themes": []
+      },
+      "durationSeconds": 247.3534693877551,
+      "fileName": "Zander Noriega - Dragged Through Hellfire.mp3",
+      "path": "objects/9ce237e3111768fe0fd4e2d9322bd36f03500ed4d46fd49d11dcf0b503c4fc01.mp3",
+      "bytes": 9898235,
+      "sha256": "9ce237e3111768fe0fd4e2d9322bd36f03500ed4d46fd49d11dcf0b503c4fc01"
+    },
+    {
+      "id": "zander-noriega.the-wreck",
+      "albumId": "preview.expansion-metal",
+      "title": "The Wreck",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/the-wreck",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — The Wreck. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - The Wreck.mp3",
+          "sha256": "00073ec8ed2031e75a72d11e4933fdef45ecd22930f0dbf6117447f9888dd539",
+          "bytes": 8796913
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 5,
+        "themes": []
+      },
+      "durationSeconds": 219.8204081632653,
+      "fileName": "Zander Noriega - The Wreck.mp3",
+      "path": "objects/00073ec8ed2031e75a72d11e4933fdef45ecd22930f0dbf6117447f9888dd539.mp3",
+      "bytes": 8796913,
+      "sha256": "00073ec8ed2031e75a72d11e4933fdef45ecd22930f0dbf6117447f9888dd539"
+    },
+    {
+      "id": "zander-noriega.stonemason",
+      "albumId": "preview.expansion-rock",
+      "title": "Stonemason",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/stonemason",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — Stonemason. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - Stonemason.mp3",
+          "sha256": "027fe8682dd4e8b9e0ddaccf1617fd7681e3b9d3ce4390c92cb865bb92e2ae47",
+          "bytes": 11470806
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "rock"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 286.6677551020408,
+      "fileName": "Zander Noriega - Stonemason.mp3",
+      "path": "objects/027fe8682dd4e8b9e0ddaccf1617fd7681e3b9d3ce4390c92cb865bb92e2ae47.mp3",
+      "bytes": 11470806,
+      "sha256": "027fe8682dd4e8b9e0ddaccf1617fd7681e3b9d3ce4390c92cb865bb92e2ae47"
+    },
+    {
+      "id": "zander-noriega.ironbound",
+      "albumId": "preview.expansion-rock",
+      "title": "Ironbound",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/ironbound",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — Ironbound. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - Ironbound.mp3",
+          "sha256": "575730b8c1f04d701aa55c3acaf53b24685b25bbd9fc8cd42d4df0d2d29d430e",
+          "bytes": 8197141
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "rock"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 204.8261224489796,
+      "fileName": "Zander Noriega - Ironbound.mp3",
+      "path": "objects/575730b8c1f04d701aa55c3acaf53b24685b25bbd9fc8cd42d4df0d2d29d430e.mp3",
+      "bytes": 8197141,
+      "sha256": "575730b8c1f04d701aa55c3acaf53b24685b25bbd9fc8cd42d4df0d2d29d430e"
+    },
+    {
+      "id": "zander-noriega.abelian",
+      "albumId": "preview.expansion-metal",
+      "title": "Abelian",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/abelian",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — Abelian. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - Abelian.mp3",
+          "sha256": "384c37d74793e52dd575132a036ff8e7cde085dbe1ae09d202e6d935f747be4e",
+          "bytes": 4923476
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 4,
+        "themes": []
+      },
+      "durationSeconds": 122.98448979591836,
+      "fileName": "Zander Noriega - Abelian.mp3",
+      "path": "objects/384c37d74793e52dd575132a036ff8e7cde085dbe1ae09d202e6d935f747be4e.mp3",
+      "bytes": 4923476,
+      "sha256": "384c37d74793e52dd575132a036ff8e7cde085dbe1ae09d202e6d935f747be4e"
+    },
+    {
+      "id": "zander-noriega.fight-them-until-we-cant",
+      "albumId": "preview.expansion-metal",
+      "title": "Fight Them Until We Can't",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/fight-them-until-we-cant",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — Fight Them Until We Can't. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - Fight Them Until We Cant.mp3",
+          "sha256": "dc87558e382425e2b6751b448579f32caeeafc9f6159b8cc92ff7550bc237ac2",
+          "bytes": 6646513
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal"
+        ],
+        "role": "any",
+        "energy": 4,
+        "themes": []
+      },
+      "durationSeconds": 166.0604081632653,
+      "fileName": "Zander Noriega - Fight Them Until We Cant.mp3",
+      "path": "objects/dc87558e382425e2b6751b448579f32caeeafc9f6159b8cc92ff7550bc237ac2.mp3",
+      "bytes": 6646513,
+      "sha256": "dc87558e382425e2b6751b448579f32caeeafc9f6159b8cc92ff7550bc237ac2"
+    },
+    {
+      "id": "zander-noriega.blinding-lights",
+      "albumId": "preview.expansion-rock",
+      "title": "Blinding Lights",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/blinding-lights",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — Blinding Lights. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - Blinding Lights.mp3",
+          "sha256": "39bab87bc4caa84d82d409bac0b7c44f54567e2c090f318556bdf48a6cdcd691",
+          "bytes": 6299607
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "rock"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 157.3877551020408,
+      "fileName": "Zander Noriega - Blinding Lights.mp3",
+      "path": "objects/39bab87bc4caa84d82d409bac0b7c44f54567e2c090f318556bdf48a6cdcd691.mp3",
+      "bytes": 6299607,
+      "sha256": "39bab87bc4caa84d82d409bac0b7c44f54567e2c090f318556bdf48a6cdcd691"
+    },
+    {
+      "id": "zander-noriega.darker-waves",
+      "albumId": "preview.expansion-electronic",
+      "title": "Darker Waves",
+      "artist": "Zander Noriega",
+      "artistURL": "https://twitter.com/ZanderNoriega",
+      "source": "https://opengameart.org/content/darker-waves",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Zander Noriega — Darker Waves. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Zander Noriega - Darker Waves.mp3",
+          "sha256": "27849453fb457c39726138ddd9974aa35307e713b9b04262edc09c05a1808b21",
+          "bytes": 4630905
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "gameplay",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 115.67020408163265,
+      "fileName": "Zander Noriega - Darker Waves.mp3",
+      "path": "objects/27849453fb457c39726138ddd9974aa35307e713b9b04262edc09c05a1808b21.mp3",
+      "bytes": 4630905,
+      "sha256": "27849453fb457c39726138ddd9974aa35307e713b9b04262edc09c05a1808b21"
+    },
+    {
+      "id": "peachtea.last-stand-lets-go",
+      "albumId": "preview.expansion-metal",
+      "title": "Last Stand Lets Go",
+      "artist": "Noah Cedeno (Peachtea)",
+      "source": "https://opengameart.org/content/last-stand-lets-go",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Noah Cedeno (Peachtea) — Last Stand Lets Go. CC0 1.0 Universal. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Peachtea-LastStandLetsGo.mp3",
+          "sha256": "94a15e5c78640ca23410acfdbf65b9ab4a6a26d93534ec973b4aa6ed1bddf6af",
+          "bytes": 2110508
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "metal",
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 4,
+        "themes": []
+      },
+      "durationSeconds": 92.60408163265306,
+      "fileName": "Peachtea-LastStandLetsGo.mp3",
+      "path": "objects/94a15e5c78640ca23410acfdbf65b9ab4a6a26d93534ec973b4aa6ed1bddf6af.mp3",
+      "bytes": 2110508,
+      "sha256": "94a15e5c78640ca23410acfdbf65b9ab4a6a26d93534ec973b4aa6ed1bddf6af"
+    },
+    {
+      "id": "congusbongus.the-demon-king",
+      "albumId": "preview.expansion-synth90s",
+      "title": "The Demon King",
+      "artist": "congusbongus",
+      "source": "https://opengameart.org/content/the-demon-king",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "congusbongus — The Demon King. CC BY 4.0 International. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "the_demon_king.ogg",
+          "sha256": "a2eec8319753e40f4a3a464147a8ba4ca3102d9401d6a19bef2912420af0aef5",
+          "bytes": 8198996
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s",
+          "metal"
+        ],
+        "role": "gameplay",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 237.79265306122448,
+      "fileName": "expansion-20260921-congusbongus.the-demon-king.mp3",
+      "path": "objects/8613eadc32ee33dc4889f138efc3c4e1865e61c853412adcb50b135e1515bc2e.mp3",
+      "bytes": 7609364,
+      "sha256": "8613eadc32ee33dc4889f138efc3c4e1865e61c853412adcb50b135e1515bc2e"
+    },
+    {
+      "id": "ragnar-random.super-scary-cave-dragon",
+      "albumId": "preview.expansion-synth90s-cues",
+      "title": "Super Scary Cave Dragon (Sega-style FM synth mix)",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Super Scary Cave Dragon (Sega-style FM synth mix). CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "26_-_super_scary_cave_dragon_sega-style_fm_synth_remix.ogg",
+          "sha256": "55183b25cac0394af185defd239d6bc575943b6dbf229a8466c025e20fb86442",
+          "bytes": 921579
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 54.3869387755102,
+      "fileName": "expansion-20260921-ragnar-random.super-scary-cave-dragon.mp3",
+      "path": "objects/8b46f7e941447e929c09cbe64921e963e4bc6ab3962332e42c070dc9de9c67e1.mp3",
+      "bytes": 1740382,
+      "sha256": "8b46f7e941447e929c09cbe64921e963e4bc6ab3962332e42c070dc9de9c67e1"
+    },
+    {
+      "id": "ragnar-random.dinosaur-spirit-guide",
+      "albumId": "preview.expansion-synth90s-cues",
+      "title": "Dinosaur Spirit Guide (Sega-style FM synth mix)",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Dinosaur Spirit Guide (Sega-style FM synth mix). CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "39_-_dinosaur_spirit_guide_sega-style_fm_synth_remix.ogg",
+          "sha256": "9e6543c1ac9d43521257c826c10a2c2e58a8a4b70b039930a7d3516b1137adf8",
+          "bytes": 1099772
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 76.04244897959184,
+      "fileName": "expansion-20260921-ragnar-random.dinosaur-spirit-guide.mp3",
+      "path": "objects/4c78ecf889cf63e02243f030b1e25f1f0f352247d3c0f4dd4ce74cb2583117a5.mp3",
+      "bytes": 2433358,
+      "sha256": "4c78ecf889cf63e02243f030b1e25f1f0f352247d3c0f4dd4ce74cb2583117a5"
+    },
+    {
+      "id": "ragnar-random.helgi-the-hero-bold",
+      "albumId": "preview.expansion-synth90s-cues",
+      "title": "Helgi The Hero Bold (Sega-style FM synth mix)",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Helgi The Hero Bold (Sega-style FM synth mix). CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "48_-_helgi_the_hero_bold_sega-style_fm_synth_remix.ogg",
+          "sha256": "7375d4da9878abe4e250cf42fefe22f6374ed736bb304aa56a2b006281c6b9a9",
+          "bytes": 957884
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 59.29795918367347,
+      "fileName": "expansion-20260921-ragnar-random.helgi-the-hero-bold.mp3",
+      "path": "objects/e2e0f54a07a3c227f842f81b5a9d5711e29d505866530aa6d18316037b3a64a1.mp3",
+      "bytes": 1897534,
+      "sha256": "e2e0f54a07a3c227f842f81b5a9d5711e29d505866530aa6d18316037b3a64a1"
+    },
+    {
+      "id": "ragnar-random.castle-of-the-goblin-queen",
+      "albumId": "preview.expansion-synth90s",
+      "title": "Castle Of The Goblin Queen (Sega-style FM synth mix)",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Castle Of The Goblin Queen (Sega-style FM synth mix). CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "52_-_castle_of_the_goblin_queen_sega-style_fm_synth_remix.ogg",
+          "sha256": "682051c7a787e0d61abd8bbdcc2859c92137ef79933f85a933b3dc2fb9f391bc",
+          "bytes": 1641996
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 126.35428571428571,
+      "fileName": "expansion-20260921-ragnar-random.castle-of-the-goblin-queen.mp3",
+      "path": "objects/d6ed263bd431951a17010a3d31d60e514aece937bcf4bd51aca442cc09162142.mp3",
+      "bytes": 4043337,
+      "sha256": "d6ed263bd431951a17010a3d31d60e514aece937bcf4bd51aca442cc09162142"
+    },
+    {
+      "id": "ragnar-random.hostile-planet",
+      "albumId": "preview.expansion-chiptune-cues",
+      "title": "Hostile Planet",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Hostile Planet. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "31_-_hostile_planet.ogg",
+          "sha256": "0f84144b56c46e4784425250506ab9de0527f942fa4935173e5d7845df6851d3",
+          "bytes": 2362116
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 53.36816326530612,
+      "fileName": "expansion-20260921-ragnar-random.hostile-planet.mp3",
+      "path": "objects/b629204a2617990696ed110d9177c43e99c2fc7b92d9b0cc9b28e1e7a8a443e3.mp3",
+      "bytes": 1707781,
+      "sha256": "b629204a2617990696ed110d9177c43e99c2fc7b92d9b0cc9b28e1e7a8a443e3"
+    },
+    {
+      "id": "ragnar-random.the-creeper",
+      "albumId": "preview.expansion-chiptune",
+      "title": "The Creeper",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — The Creeper. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "35_-_the_creeper.ogg",
+          "sha256": "dc2df66e3a167c1fabab3b1ef408b745866010043513a40ca8760da6ad7d045e",
+          "bytes": 5233454
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 90.98448979591836,
+      "fileName": "expansion-20260921-ragnar-random.the-creeper.mp3",
+      "path": "objects/af00dced5a911446c2e6c3c5f42361b74bdaf252f5aea020ad49f682cda0b0c1.mp3",
+      "bytes": 2911503,
+      "sha256": "af00dced5a911446c2e6c3c5f42361b74bdaf252f5aea020ad49f682cda0b0c1"
+    },
+    {
+      "id": "ragnar-random.chick-with-weapon",
+      "albumId": "preview.expansion-chiptune",
+      "title": "Chick With Weapon",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Chick With Weapon. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "36_-_chick_with_weapon.ogg",
+          "sha256": "cafebc92b20cb0c3999e6ed2c2464001218bcdb0ee0fa726a73d0c357b035dbf",
+          "bytes": 7012150
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 100.83265306122449,
+      "fileName": "expansion-20260921-ragnar-random.chick-with-weapon.mp3",
+      "path": "objects/4d3a746a85c475498a8f4426536d2a1fc3337e4904c55a687d827f386f50004a.mp3",
+      "bytes": 3226644,
+      "sha256": "4d3a746a85c475498a8f4426536d2a1fc3337e4904c55a687d827f386f50004a"
+    },
+    {
+      "id": "ragnar-random.reason-of-the-itch",
+      "albumId": "preview.expansion-chiptune-cues",
+      "title": "Reason Of The Itch",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Reason Of The Itch. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "37_-_reason_of_the_itch.ogg",
+          "sha256": "46873f9e44a5b503612bb44a773d112c5549fcaa1252d8309b6f093ad7257dee",
+          "bytes": 2566202
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 45.79265306122449,
+      "fileName": "expansion-20260921-ragnar-random.reason-of-the-itch.mp3",
+      "path": "objects/3a92a37aa184c85e0e38ca9116d3707ebb63c29d8e5fa77b645f3c9e7cd2f902.mp3",
+      "bytes": 1465364,
+      "sha256": "3a92a37aa184c85e0e38ca9116d3707ebb63c29d8e5fa77b645f3c9e7cd2f902"
+    },
+    {
+      "id": "ragnar-random.this-mad-gnosis",
+      "albumId": "preview.expansion-chiptune",
+      "title": "This Mad Gnosis",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — This Mad Gnosis. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "38_-_this_mad_gnosis.ogg",
+          "sha256": "0cd85ffc322f3de028158c4f01447e1c55db23f7e092a678b19d863889554649",
+          "bytes": 5421345
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 90.04408163265306,
+      "fileName": "expansion-20260921-ragnar-random.this-mad-gnosis.mp3",
+      "path": "objects/5ddd44a06548f11ec5bdfe81cc51e863ade55f753ccfede58d9848a4d154ba06.mp3",
+      "bytes": 2881410,
+      "sha256": "5ddd44a06548f11ec5bdfe81cc51e863ade55f753ccfede58d9848a4d154ba06"
+    },
+    {
+      "id": "ragnar-random.we-got-the-crud",
+      "albumId": "preview.expansion-chiptune-cues",
+      "title": "We Got The Crud",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — We Got The Crud. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "42_-_we_got_the_crud.ogg",
+          "sha256": "f56ca85ae837db6cf9920be17d538349cb4bf64bd7bfbd939ffe98245e851b8b",
+          "bytes": 4375180
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 67.36979591836734,
+      "fileName": "expansion-20260921-ragnar-random.we-got-the-crud.mp3",
+      "path": "objects/2c26b4ed893f5b816fee12fa2f0bdb17a31d8560b7858d89ed6272a8866c9c8c.mp3",
+      "bytes": 2155833,
+      "sha256": "2c26b4ed893f5b816fee12fa2f0bdb17a31d8560b7858d89ed6272a8866c9c8c"
+    },
+    {
+      "id": "ragnar-random.digestive-malady",
+      "albumId": "preview.expansion-chiptune-cues",
+      "title": "Digestive Malady",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Digestive Malady. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "44_-_digestive_malady.ogg",
+          "sha256": "3a895c6f81566426cb52654921161c8d8b87a7e3a325697c7cffdb271d5ccbc5",
+          "bytes": 3109775
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 64.02612244897959,
+      "fileName": "expansion-20260921-ragnar-random.digestive-malady.mp3",
+      "path": "objects/64066f4a06e7c7dd64033e31fa404da9ff3535bbbcb0b7e80399c552123d5b52.mp3",
+      "bytes": 2048835,
+      "sha256": "64066f4a06e7c7dd64033e31fa404da9ff3535bbbcb0b7e80399c552123d5b52"
+    },
+    {
+      "id": "ragnar-random.jonathan-livingston-sea-cucumber",
+      "albumId": "preview.expansion-chiptune-cues",
+      "title": "Jonathan Livingston Sea Cucumber",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Jonathan Livingston Sea Cucumber. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "45_-_jonathan_livingston_sea_cucumber.ogg",
+          "sha256": "023054eca4aafe1561467e57663ecea5f5aad14cda6b435ca88d9462dea649ab",
+          "bytes": 2558511
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 45.32244897959184,
+      "fileName": "expansion-20260921-ragnar-random.jonathan-livingston-sea-cucumber.mp3",
+      "path": "objects/abdd83e954c7ab59e1e5a1174e12e7e18c978367c15025572a54610e8211abae.mp3",
+      "bytes": 1450318,
+      "sha256": "abdd83e954c7ab59e1e5a1174e12e7e18c978367c15025572a54610e8211abae"
+    },
+    {
+      "id": "ragnar-random.cassette-culture",
+      "albumId": "preview.expansion-chiptune-cues",
+      "title": "Cassette Culture",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Cassette Culture. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "47_-_cassette_culture.ogg",
+          "sha256": "2b47cd8ba58d7fc226b96f506256c0cded1022c915c061e5b05753396da55166",
+          "bytes": 2127843
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 48.03918367346939,
+      "fileName": "expansion-20260921-ragnar-random.cassette-culture.mp3",
+      "path": "objects/a17902981d0ab1de0bc495be5d1656f9079ad43d76b94b5ef230bef07a702e1a.mp3",
+      "bytes": 1537253,
+      "sha256": "a17902981d0ab1de0bc495be5d1656f9079ad43d76b94b5ef230bef07a702e1a"
+    },
+    {
+      "id": "ragnar-random.viroid-planet",
+      "albumId": "preview.expansion-chiptune",
+      "title": "Viroid Planet",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/node/133854",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Viroid Planet. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "53_-_viroid_planet.ogg",
+          "sha256": "519a999a70b2594cc7de7383fa3a1fa4edf9cbf89d576f70cc6d9a4d3f97dc20",
+          "bytes": 5126042
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 135.0530612244898,
+      "fileName": "expansion-20260921-ragnar-random.viroid-planet.mp3",
+      "path": "objects/44b337d6ddf62e508c16207b0cc98679d2403c35db032430efc515852c33dacc.mp3",
+      "bytes": 4321698,
+      "sha256": "44b337d6ddf62e508c16207b0cc98679d2403c35db032430efc515852c33dacc"
+    },
+    {
+      "id": "congusbongus.rhythm-garden",
+      "albumId": "preview.expansion-electronic",
+      "title": "Rhythm Garden",
+      "artist": "congusbongus",
+      "source": "https://opengameart.org/content/rhythm-garden",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "congusbongus — Rhythm Garden. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "rhythm_garden.ogg",
+          "sha256": "c4800b0c891ce0c4cf670bd821d3d237d294f32bf0546276e56cd4e82bcecfb3",
+          "bytes": 7122087
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 207.20326530612246,
+      "fileName": "expansion-20260921-congusbongus.rhythm-garden.mp3",
+      "path": "objects/3e8b8926c561a6656ed6e4a0c4cc7cccec809007843056d37152ce00295a6981.mp3",
+      "bytes": 6630504,
+      "sha256": "3e8b8926c561a6656ed6e4a0c4cc7cccec809007843056d37152ce00295a6981"
+    },
+    {
+      "id": "congusbongus.second-cruise",
+      "albumId": "preview.expansion-electronic",
+      "title": "Second Cruise",
+      "artist": "congusbongus",
+      "source": "https://opengameart.org/content/second-cruise",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "congusbongus — Second Cruise. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "second_cruise.ogg",
+          "sha256": "d5a22af0772059c26ae0661210572c341cd3308162eb4d103cab7d770250cdbf",
+          "bytes": 4410022
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 281.0775510204082,
+      "fileName": "expansion-20260921-congusbongus.second-cruise.mp3",
+      "path": "objects/a94a518bc895aac281a8f4b546c590dab313e6391de739b12fe6e32536072791.mp3",
+      "bytes": 8994481,
+      "sha256": "a94a518bc895aac281a8f4b546c590dab313e6391de739b12fe6e32536072791"
+    },
+    {
+      "id": "zane-little-music.rhythm-factory",
+      "albumId": "preview.expansion-electronic",
+      "title": "Rhythm Factory",
+      "artist": "Zane Little Music",
+      "source": "https://opengameart.org/content/rhythm-factory",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Zane Little Music — Rhythm Factory. CC0 1.0 Universal. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "rhythm_factory.mp3",
+          "sha256": "5126faf85adffc64f22a4cd176b84ed47b6014c03328ba8380fdb24efca11f90",
+          "bytes": 8951846
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "gameplay",
+        "energy": 4,
+        "themes": []
+      },
+      "durationSeconds": 223.79102040816326,
+      "fileName": "rhythm_factory.mp3",
+      "path": "objects/5126faf85adffc64f22a4cd176b84ed47b6014c03328ba8380fdb24efca11f90.mp3",
+      "bytes": 8951846,
+      "sha256": "5126faf85adffc64f22a4cd176b84ed47b6014c03328ba8380fdb24efca11f90"
+    },
+    {
+      "id": "snabisch.at-the-beginning",
+      "albumId": "preview.expansion-synth90s",
+      "title": "At the beginning",
+      "artist": "Snabisch",
+      "source": "https://opengameart.org/content/at-the-beginning",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Snabisch — At the beginning. CC BY 4.0 International. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "At the beginning.mp3",
+          "sha256": "ffb085ff6ba6a0191a8bba10d71db94822a3c36f703a5fb5f33f4b3d80874c31",
+          "bytes": 12039421
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 300.95673469387754,
+      "fileName": "At the beginning.mp3",
+      "path": "objects/ffb085ff6ba6a0191a8bba10d71db94822a3c36f703a5fb5f33f4b3d80874c31.mp3",
+      "bytes": 12039421,
+      "sha256": "ffb085ff6ba6a0191a8bba10d71db94822a3c36f703a5fb5f33f4b3d80874c31"
+    },
+    {
+      "id": "snabisch.the-organ",
+      "albumId": "preview.expansion-synth90s",
+      "title": "The Organ",
+      "artist": "Snabisch",
+      "source": "https://opengameart.org/content/the-organ-0",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Snabisch — The Organ. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "The Organ.mp3",
+          "sha256": "88e339e870c4f4ec8a2061b00686117b03decee32707c5b2566e7d13b6910fef",
+          "bytes": 4521381
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 113.00571428571429,
+      "fileName": "The Organ.mp3",
+      "path": "objects/88e339e870c4f4ec8a2061b00686117b03decee32707c5b2566e7d13b6910fef.mp3",
+      "bytes": 4521381,
+      "sha256": "88e339e870c4f4ec8a2061b00686117b03decee32707c5b2566e7d13b6910fef"
+    },
+    {
+      "id": "snabisch.adn",
+      "albumId": "preview.expansion-synth90s-cues",
+      "title": "ADN",
+      "artist": "Snabisch",
+      "source": "https://opengameart.org/content/adn",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Snabisch — ADN. CC BY 3.0 Unported. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "ADN.mp3",
+          "sha256": "ea025d386c8598dd966d13c2f0758417ff97198172cfbd7a2a1b25a9b3cedfbf",
+          "bytes": 1217831
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "synth90s"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 76.04244897959184,
+      "fileName": "ADN.mp3",
+      "path": "objects/ea025d386c8598dd966d13c2f0758417ff97198172cfbd7a2a1b25a9b3cedfbf.mp3",
+      "bytes": 1217831,
+      "sha256": "ea025d386c8598dd966d13c2f0758417ff97198172cfbd7a2a1b25a9b3cedfbf"
+    },
+    {
+      "id": "snabisch.where-i-am",
+      "albumId": "preview.expansion-ambient-cues",
+      "title": "Where I´am",
+      "artist": "Snabisch",
+      "source": "https://opengameart.org/content/where-i%C2%B4am",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Snabisch — Where I´am. CC BY 4.0 International. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Sound 1.mp3",
+          "sha256": "63082bcdf83c78759205dc0bdb86584c9d2e2afb31000721d56dd129982b88cb",
+          "bytes": 2861038
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "ambient"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 71.49714285714286,
+      "fileName": "Sound 1.mp3",
+      "path": "objects/63082bcdf83c78759205dc0bdb86584c9d2e2afb31000721d56dd129982b88cb.mp3",
+      "bytes": 2861038,
+      "sha256": "63082bcdf83c78759205dc0bdb86584c9d2e2afb31000721d56dd129982b88cb"
+    },
+    {
+      "id": "joth.black-diamond",
+      "albumId": "preview.expansion-electronic",
+      "title": "Black Diamond",
+      "artist": "Joth",
+      "source": "https://opengameart.org/content/black-diamond",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Joth — Black Diamond. CC0 1.0 Universal. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Black Diamond.mp3",
+          "sha256": "9fd1c9a97740411e7dcaebdc9af17ab017cf070a82089a48503765a24b7bedf4",
+          "bytes": 4033222
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "gameplay",
+        "energy": 4,
+        "themes": []
+      },
+      "durationSeconds": 201.45632653061224,
+      "fileName": "Black Diamond.mp3",
+      "path": "objects/9fd1c9a97740411e7dcaebdc9af17ab017cf070a82089a48503765a24b7bedf4.mp3",
+      "bytes": 4033222,
+      "sha256": "9fd1c9a97740411e7dcaebdc9af17ab017cf070a82089a48503765a24b7bedf4"
+    },
+    {
+      "id": "joth.party-sector",
+      "albumId": "preview.expansion-electronic",
+      "title": "Party Sector",
+      "artist": "Joth",
+      "source": "https://opengameart.org/content/party-sector",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Joth — Party Sector. CC0 1.0 Universal. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "Party Sector.mp3",
+          "sha256": "77e1ad0bd0a7c5625a12eaa1c8099408ede6959b2ee2dbf5bace85d09a602ada",
+          "bytes": 1925141
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 96.05224489795918,
+      "fileName": "Party Sector.mp3",
+      "path": "objects/77e1ad0bd0a7c5625a12eaa1c8099408ede6959b2ee2dbf5bace85d09a602ada.mp3",
+      "bytes": 1925141,
+      "sha256": "77e1ad0bd0a7c5625a12eaa1c8099408ede6959b2ee2dbf5bace85d09a602ada"
+    },
+    {
+      "id": "joth.bossa-nova",
+      "albumId": "preview.expansion-chiptune-cues",
+      "title": "Bossa Nova",
+      "artist": "Joth",
+      "source": "https://opengameart.org/content/bossa-nova",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Joth — Bossa Nova. CC0 1.0 Universal. Exact creator MP3.",
+      "changes": "Exact creator MP3; audio bytes unchanged.",
+      "conversion": {
+        "kind": "exact-creator-mp3",
+        "original": {
+          "fileName": "8bit Bossa.mp3",
+          "sha256": "0ee835fd279ac5fa15f9346744cbafc2ba800c1c0671b78ca9abe2b4353402f7",
+          "bytes": 1196325
+        },
+        "transform": null,
+        "evidence": null
+      },
+      "tags": {
+        "genres": [
+          "chiptune"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 59.61142857142857,
+      "fileName": "8bit Bossa.mp3",
+      "path": "objects/0ee835fd279ac5fa15f9346744cbafc2ba800c1c0671b78ca9abe2b4353402f7.mp3",
+      "bytes": 1196325,
+      "sha256": "0ee835fd279ac5fa15f9346744cbafc2ba800c1c0671b78ca9abe2b4353402f7"
+    },
+    {
+      "id": "tricks-and-traps.experiment-g",
+      "albumId": "preview.expansion-electronic",
+      "title": "Experiment G",
+      "artist": "Alexander Ehlers (Tricks & Traps)",
+      "source": "https://opengameart.org/content/t-t-free-cyberpunk-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Alexander Ehlers (Tricks & Traps) — Experiment G. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "Experiment G.ogg",
+          "sha256": "6fd65c94679d6bcfe0fefc7d987a250888038108a35e33e6720651e12a310a21",
+          "bytes": 6276285
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 113.31918367346938,
+      "fileName": "expansion-20260921-tricks-and-traps.experiment-g.mp3",
+      "path": "objects/76f7c2e5f50824961cc1b169dbe6096b1c44a934d2c8f4c49a724fc602406c35.mp3",
+      "bytes": 3626213,
+      "sha256": "76f7c2e5f50824961cc1b169dbe6096b1c44a934d2c8f4c49a724fc602406c35"
+    },
+    {
+      "id": "tricks-and-traps.space-collisions",
+      "albumId": "preview.expansion-electronic",
+      "title": "Space Collisions",
+      "artist": "Alexander Ehlers (Tricks & Traps)",
+      "source": "https://opengameart.org/content/t-t-free-cyberpunk-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Alexander Ehlers (Tricks & Traps) — Space Collisions. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "Space Collisions.ogg",
+          "sha256": "c7da8afa181bee1cb7e9b3ac41a092b6d205946596c6972af8c5e347aaf4fa93",
+          "bytes": 7619425
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 136.3069387755102,
+      "fileName": "expansion-20260921-tricks-and-traps.space-collisions.mp3",
+      "path": "objects/28931f058fe83769115217f8de4eb91fd8ec2001bf5b5fc9d56621061ff59d5c.mp3",
+      "bytes": 4361822,
+      "sha256": "28931f058fe83769115217f8de4eb91fd8ec2001bf5b5fc9d56621061ff59d5c"
+    },
+    {
+      "id": "tricks-and-traps.simulation-unknown",
+      "albumId": "preview.expansion-electronic",
+      "title": "Simulation Unknown",
+      "artist": "Alexander Ehlers (Tricks & Traps)",
+      "source": "https://opengameart.org/content/t-t-free-cyberpunk-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Alexander Ehlers (Tricks & Traps) — Simulation Unknown. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "Simulation Unknown.ogg",
+          "sha256": "b609e23db3beeca9ba64306d62ce046eadf3b1911a4586b10a37f4a265cd20fe",
+          "bytes": 8786302
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 156.05551020408163,
+      "fileName": "expansion-20260921-tricks-and-traps.simulation-unknown.mp3",
+      "path": "objects/2f50bfab8dfe1a857a5ab35f0f07247f3c47ca5579eda3786a946c253c3317fb.mp3",
+      "bytes": 4993776,
+      "sha256": "2f50bfab8dfe1a857a5ab35f0f07247f3c47ca5579eda3786a946c253c3317fb"
+    },
+    {
+      "id": "tricks-and-traps.electric-stream",
+      "albumId": "preview.expansion-electronic-cues",
+      "title": "Electric Stream",
+      "artist": "Alexander Ehlers (Tricks & Traps)",
+      "source": "https://opengameart.org/content/t-t-free-cyberpunk-pack-2",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Alexander Ehlers (Tricks & Traps) — Electric Stream. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "electric_stream_180bpm.ogg",
+          "sha256": "4021eaa200b2611f6ee004e0c7896f3c2f9f0815a903b5a36d16296c696ce22a",
+          "bytes": 4500064
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 80.43102040816326,
+      "fileName": "expansion-20260921-tricks-and-traps.electric-stream.mp3",
+      "path": "objects/53f4aabfa0b926af5c23af9a33c8d5c93b86780004d09cc2276bbad964d4c022.mp3",
+      "bytes": 2573792,
+      "sha256": "53f4aabfa0b926af5c23af9a33c8d5c93b86780004d09cc2276bbad964d4c022"
+    },
+    {
+      "id": "tricks-and-traps.new-factory",
+      "albumId": "preview.expansion-electronic",
+      "title": "New Factory",
+      "artist": "Alexander Ehlers (Tricks & Traps)",
+      "source": "https://opengameart.org/content/t-t-free-cyberpunk-pack-2",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Alexander Ehlers (Tricks & Traps) — New Factory. CC0 1.0 Universal. Converted from OGG to MP3; no musical edits.",
+      "changes": "Converted OGG to MP3; no musical edits.",
+      "conversion": {
+        "kind": "ogg-to-mp3",
+        "original": {
+          "fileName": "new_factory_129bpm.ogg",
+          "sha256": "3365dd3d25697a54e843678d75f49732cd0bc88bfd3ccb574b39f0ed65fa7291",
+          "bytes": 7322355
+        },
+        "transform": "CoreAudio Vorbis decode to PCM16, LAME MP3 encode; full duration; no resampling, trim, gain, normalization, fade or remix. Lossy derivative; OGG original retained.",
+        "evidence": "provenance/expansion-derivatives.json"
+      },
+      "tags": {
+        "genres": [
+          "electronic"
+        ],
+        "role": "any",
+        "energy": 3,
+        "themes": []
+      },
+      "durationSeconds": 130.2726530612245,
+      "fileName": "expansion-20260921-tricks-and-traps.new-factory.mp3",
+      "path": "objects/d4ae034c6ad065a6f85b7924dd10a719231889a78bc0e90730157d91124dc8f2.mp3",
+      "bytes": 4168724,
+      "sha256": "d4ae034c6ad065a6f85b7924dd10a719231889a78bc0e90730157d91124dc8f2"
+    }
+  ]
+}
