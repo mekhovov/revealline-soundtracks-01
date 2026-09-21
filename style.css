@@ -231,6 +231,69 @@ code,
 .guide li {
   margin: 0.6rem 0;
 }
+.playlist-downloads {
+  border-top: 1px solid #30394a;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+.playlist-downloads > p,
+.playlist-instructions {
+  max-width: 850px;
+  color: #c0c9db;
+}
+.playlist-instructions li {
+  margin: 0.6rem 0;
+}
+.playlist-packs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  align-items: start;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.playlist-pack {
+  min-width: 0;
+  border: 1px solid #354057;
+  border-radius: 12px;
+  background: #1a2030;
+  padding: 1rem;
+}
+.playlist-pack h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0;
+}
+.pack-meta {
+  color: #a9b4ce;
+  font-size: 0.85rem;
+  margin: 0.6rem 0;
+}
+.playlist-download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.6rem 0;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.playlist-downloads summary {
+  min-height: 44px;
+  padding: 0.6rem 0;
+}
+.playlist-credit-list {
+  padding-left: 1.1rem;
+}
+.playlist-credit-list li {
+  margin: 0.8rem 0;
+}
+.playlist-credit-list a {
+  overflow-wrap: anywhere;
+}
+.playlist-credit-list p {
+  margin: 0.25rem 0;
+}
 footer {
   border-top: 1px solid #30394a;
   padding: 1rem 0 3rem;

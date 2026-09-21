@@ -18,13 +18,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 1430,
-      "sha256": "a1648cb4b0c04c28ac8f4e1114e93139725ca9d38c06d543ffde1b81fbd699b6"
+      "bytes": 3692,
+      "sha256": "f0ba81ec21c2a321a762857068beea0377a4ad1f55d12cd0ea46bbd3ad526f7e"
     },
     {
       "path": "index.html",
-      "bytes": 91346,
-      "sha256": "938a85984ef3c5a299c433969cc959ab94ef01cbd83a547427c36f8bcb95a293"
+      "bytes": 128954,
+      "sha256": "bf4c511c9c37d63bfeafce5ff2220ede424bebbf6fc49c10f1cf0d8f88931b55"
     },
     {
       "path": "inventory.json",
@@ -393,8 +393,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 4087,
-      "sha256": "b0958140e1d36883bec5b63310141c852f2721063aa95ebb17c8a7670af832bb"
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
     }
   ],
   "provenance": {
