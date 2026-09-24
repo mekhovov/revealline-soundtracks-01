@@ -1,0 +1,40 @@
+{
+  "format": "revealline-core-intake-failure-evidence.v1",
+  "runs": [
+    {
+      "id": 35943657893,
+      "head": "d1f5bee2cf582cfe7735ec3f30200031f9caf21c",
+      "gate": "Acquire and measure candidates",
+      "failure": "Three retro download filenames differed from exact creator links. Partial artifacts retained."
+    },
+    {
+      "id": 35943774127,
+      "head": "3e82a333c259cc06d5a77f3885d644f3c4666f68",
+      "gate": "Acquire and measure candidates",
+      "failure": "Same three exact-link rejections. Artifact10786126674 preserves partial source/MP3/evidence."
+    },
+    {
+      "id": 35943850666,
+      "head": "611c452af99aa0caeaf47949fe95819399e18f54",
+      "gate": "Acquire and measure candidates",
+      "failure": "Same three exact-link rejections; unchanged70 verification passed."
+    },
+    {
+      "id": 35944115394,
+      "head": "601f8caff07816e557df232ec2bb8af27721b9cb",
+      "gate": "Acquire and measure candidates",
+      "artifactId": 10786421075,
+      "artifactSha256": "a63b113efa2572191d2daefdd9fff22a352cd58e98142c66cf4831cad80d8362",
+      "failure": "Angry Bullfrogs Riding Motorbikes is shorter than the60-second intake minimum.13other candidates passed; rejected candidate excluded from revised manifest. No duration gate waiver."
+    },
+    {
+      "id": 35944483804,
+      "head": "64fc7951267cfe00da0d37b6a47d7543c70acb4b",
+      "gate": "Acquire and measure candidates",
+      "artifactId": 10785887686,
+      "artifactSha256": "c7d132fb150d09e622b36abc3f9a0b747503429e046f57f2ee2a0dab3b9ee544",
+      "failure": "Creator source returned HTTP502 for Shadows Awaken Within after bounded retries. Other12 passed. Fresh run35944843598 later passed all13; no partial run labelled success."
+    }
+  ],
+  "listeningApproval": false
+}

@@ -1,0 +1,13 @@
+{
+  "format": "revealline-soundtrack-preview-batches.v1",
+  "batches": [
+    {
+      "id": "core-20260924",
+      "manifest": {
+        "path": "batches/core-20260924/deployment-manifest.json",
+        "bytes": 4327,
+        "sha256": "18e819a76d78e7a7567c152975b3dde98d8cdda0f5f44004d73581cd7f6098f9"
+      }
+    }
+  ]
+}
