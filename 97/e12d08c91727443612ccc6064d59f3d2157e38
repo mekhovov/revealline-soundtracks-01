@@ -1,0 +1,40 @@
+intake/prepare_approved_directions.py
+  s_f8296d264eaab0::t_60ebdb8194f0ed 1-70
+intake/itch_source.py
+  s_f8296d264eaab0::t_229caf8c3b65ff 10,15,48-50,160-214,277
+  s_f8296d264eaab0::t_bdbae645e55526 274
+.github/workflows/approved-directions-intake.yml
+  s_f8296d264eaab0::t_60ebdb8194f0ed 1-61
+intake/test_approved_directions.py
+  s_f8296d264eaab0::t_a16a63995296c8 1-222
+intake/approved-directions-audition-20260925.md
+  s_f8296d264eaab0::t_84612be061e2ff 1-48,50-59
+  s_f8296d264eaab0::t_bdbae645e55526 49
+intake/approved_directions_pins.py
+  s_f8296d264eaab0::t_229caf8c3b65ff 1-51,60-74
+  s_f8296d264eaab0::t_1a3264eb6e9e77 52-59
+intake/test_itch_audio.py
+  s_f8296d264eaab0::t_229caf8c3b65ff 11,53,73
+intake/itch_audio.py
+  s_f8296d264eaab0::t_229caf8c3b65ff 17-19,23,36,46-48,84-88
+intake/approved-directions-audition-20260925.json
+  s_f8296d264eaab0::t_42490e2dd51708 1-318
+intake/test_itch_source.py
+  s_f8296d264eaab0::t_229caf8c3b65ff 65-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "97e12d08c91727443612ccc6064d59f3d2157e38",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
