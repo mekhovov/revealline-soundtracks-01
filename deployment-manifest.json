@@ -18,18 +18,43 @@
     },
     {
       "path": "README.md",
-      "bytes": 3692,
-      "sha256": "f0ba81ec21c2a321a762857068beea0377a4ad1f55d12cd0ea46bbd3ad526f7e"
+      "bytes": 4486,
+      "sha256": "7e787ccb603da6850b9571ef60d911060a29afb39e655c67b41374b51b62e736"
+    },
+    {
+      "path": "UPLOAD_GUIDE.md",
+      "bytes": 4063,
+      "sha256": "95b194130052474628a55ac1de6baf60b591a3caee48d072cbdfc9cd3d76c8c1"
+    },
+    {
+      "path": "catalogue.json",
+      "bytes": 120672,
+      "sha256": "cdbdb11fb4f20cea938869a5f68b343cc1d5816bcbb904102550e17f8c754746"
     },
     {
       "path": "index.html",
-      "bytes": 128954,
-      "sha256": "bf4c511c9c37d63bfeafce5ff2220ede424bebbf6fc49c10f1cf0d8f88931b55"
+      "bytes": 4615,
+      "sha256": "bfdaa3fb0574c505580abf1f22026ed9ff0a3e4ff2d03dae44fd606c5bde646b"
     },
     {
       "path": "inventory.json",
       "bytes": 15081,
       "sha256": "2706445dafe995f6c4dc044ad5e92031cae60627699f6a72985e67a972064ccd"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 9915,
+      "sha256": "74087b8c8d2108492048a51aff9a97ddbd2e6f14d9afd362f898743f6964eecc"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 103709,
+      "sha256": "4d10e0cf9074c6d72c7896db9f6e1c9c8d132a34ac4eca0a7c5deeed6eb82950"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5837,
+      "sha256": "2240d061fe6c01bceafd7817d62ae7f1bd5e374957b61360e960de0daccc989a"
     },
     {
       "path": "objects/00073ec8ed2031e75a72d11e4933fdef45ecd22930f0dbf6117447f9888dd539.mp3",
@@ -380,21 +405,6 @@
       "path": "objects/ffb085ff6ba6a0191a8bba10d71db94822a3c36f703a5fb5f33f4b3d80874c31.mp3",
       "bytes": 12039421,
       "sha256": "ffb085ff6ba6a0191a8bba10d71db94822a3c36f703a5fb5f33f4b3d80874c31"
-    },
-    {
-      "path": "player.mjs",
-      "bytes": 3385,
-      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
-    },
-    {
-      "path": "preview-catalogue.json",
-      "bytes": 103709,
-      "sha256": "4d10e0cf9074c6d72c7896db9f6e1c9c8d132a34ac4eca0a7c5deeed6eb82950"
-    },
-    {
-      "path": "style.css",
-      "bytes": 5239,
-      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
     }
   ],
   "provenance": {

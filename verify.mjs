@@ -25,6 +25,8 @@ const STATIC = new Set([
   'index.html',
   'style.css',
   'player.mjs',
+  'catalogue.json',
+  'UPLOAD_GUIDE.md',
   'inventory.json',
   'preview-catalogue.json',
   '.nojekyll',
@@ -41,6 +43,7 @@ const REQUIRED = [
   'README.md',
   'CREDITS.md',
 ];
+const ROOT_REQUIRED = [...REQUIRED, 'catalogue.json', 'UPLOAD_GUIDE.md'];
 const PRIVATE = new Set([
   '.git',
   '.github',
@@ -134,7 +137,8 @@ function validatePayloadDeclarations(manifest, inventory, catalogue, expected) {
     total += entry.bytes;
   }
   demand(
-    REQUIRED.every((name) => files.has(name)) && total < MAX_SITE_BYTES,
+    (expected.baseURL ? REQUIRED : ROOT_REQUIRED).every((name) => files.has(name)) &&
+      total < MAX_SITE_BYTES,
     'Missing site file or excessive total size.',
   );
   demand(files.get('.nojekyll').bytes === 0, '.nojekyll must be empty.');

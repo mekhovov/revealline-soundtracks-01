@@ -2,9 +2,13 @@
 
 [Listen and download](https://mekhovov.github.io/revealline-soundtracks-01/)
 
-70 creator recordings, 354,986,122 exact MP3 bytes. Every objects/<sha256>.mp3 file is committed for reuse. Files are free to use under their individually listed CC0, CC BY 3.0 or CC BY 4.0 licenses; retain the required attribution and change notices in [CREDITS.md](CREDITS.md). The creators do not endorse this game.
+The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 104 unique recordings and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
 
-This is a preview music archive, separate from the frozen RevealLine game release. It does not approve musical quality, grant Content ID clearance or automatically admit tracks into the game's trusted catalogue. UA-FPV and rejected AI recordings are excluded. No master files or duplicate album packages are stored in the Pages payload.
+The original collection preserves 354,986,122 exact MP3 bytes. Every `objects/<sha256>.mp3` file is committed for reuse. Files are free to use under their individually listed CC0, CC BY 3.0 or CC BY 4.0 licenses; retain the required attribution and change notices in [CREDITS.md](CREDITS.md) and each batch. The creators do not endorse this game.
+
+This is a preview music archive, separate from the frozen RevealLine game release. Publication makes a recording available to the archive player and online game browser; it does not approve musical quality, grant Content ID clearance or automatically admit tracks into the game's standard playlists. UA-FPV and rejected AI recordings are excluded. No master files or duplicate album packages are stored in the Pages payload.
+
+To publish another permitted MP3 or album, follow [UPLOAD_GUIDE.md](UPLOAD_GUIDE.md). The checked-in intake tool creates an immutable batch, updates the batch index and rebuilds the public catalogue. CI refuses stale catalogue output, duplicate identities/hashes, missing credit and unsupported licences.
 
 ## Ready-made playlist previews
 
@@ -25,6 +29,6 @@ If an older preview copy is already installed, keep it and its backup: changed c
 
 ## Verify and deploy
 
-Run `node verify.mjs` to read and hash every public file. Run `node verify.mjs --stage public` to prepare the exact Pages payload. The GitHub Actions workflow independently verifies and publishes it on main. `deployment-manifest.json` pins public files, `inventory.json` pins every immutable MP3 object, and `preview-catalogue.json` maps recordings to creator/source/license/conversion metadata. Keep old object paths immutable when extending the archive.
+Run `node intake/build-unified-catalogue.mjs --check`, then `node verify.mjs` to read and hash every public file. Run `node verify.mjs --stage public` to prepare the exact Pages payload. The GitHub Actions workflow independently verifies and publishes it on main. `deployment-manifest.json` pins public files, `inventory.json` pins every immutable original-collection MP3 object, each batch carries its own equivalent pins, and `catalogue.json` joins their public playback metadata. Keep old object paths immutable when extending the archive.
 
 Authoring sources: [RevealLine soundtrack PR](https://github.com/mekhovov/revealline/pull/209). Source register, authorization and inventory hashes are embedded in the catalogue and deployment manifest.
