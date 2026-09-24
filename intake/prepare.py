@@ -57,6 +57,10 @@ CREATOR_IDENTITIES = {CREATOR_SOURCE: CREATOR_IDENTITY}
 for slug, title, download in (
     ('the-dobermann', 'The Dobermann', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/The_Dobermann.mp3'),
     ('folklore', 'Folklore', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Folklore.mp3'),
+    ('anemo', 'Anemo', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Anemo.mp3'),
+    ('trial-of-thorns', 'Trial of Thorns', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Trial_of_Thorns.mp3'),
+    ('riffs-two', 'Riffs Two', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Riffs_Two.mp3'),
+    ('apocalypse', 'Apocalypse', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Apocalypse.mp3'),
 ):
     source = 'https://creatorchords.com/music/' + slug + '/'
     CREATOR_IDENTITIES[source] = {
@@ -72,6 +76,18 @@ CREATOR_URLS = frozenset((CREATOR_LICENSING, CREATOR_FAQ,
     *(r['download'] for r in CREATOR_IDENTITIES.values())))
 CREATOR_SOURCE_LIMITS = {source: CREATOR_SOURCE_LIMIT if source == CREATOR_SOURCE else 16 * 1024 ** 2
                          for source in CREATOR_IDENTITIES}
+
+# These new pages expose their authoritative recording in one mainTrack element.
+# Related recommendations must not establish a page/recording identity binding.
+CREATOR_MAIN_TRACK_SOURCES = frozenset(
+    'https://creatorchords.com/music/' + slug + '/'
+    for slug in ('anemo', 'trial-of-thorns', 'riffs-two', 'apocalypse')
+)
+for source in CREATOR_MAIN_TRACK_SOURCES:
+    CREATOR_IDENTITIES[source].update({
+        'instrumentalReview': 'pending', 'fullTrackListening': False,
+        'gameplayReview': 'pending',
+    })
 
 
 def digest(body):
@@ -165,16 +181,30 @@ class SourceLinks(HTMLParser):
     def __init__(self):
         super().__init__()
         self.links = []
+        self.main_tracks = []
 
     def handle_starttag(self, tag, attrs):
         self.links.extend(value for key, value in attrs
                           if key in ('href', 'src', 'data-src') and value)
+        if any(key == 'id' and value == 'mainTrack' for key, value in attrs):
+            # Duplicate identity attributes have ambiguous browser/parser semantics.
+            keys = [key for key, _ in attrs]
+            if any(keys.count(key) != 1 for key in ('id', 'data-title', 'data-src')):
+                self.main_tracks.append(None)
+            else:
+                self.main_tracks.append(dict(attrs))
 
 
 def validate_source_page(row, body):
     source = body.decode('utf8')
     parser = SourceLinks()
     parser.feed(source)
+    if row['source'] in CREATOR_MAIN_TRACK_SOURCES:
+        expected = CREATOR_IDENTITIES[row['source']]
+        if (len(parser.main_tracks) != 1 or parser.main_tracks[0] is None
+                or parser.main_tracks[0].get('data-title') != expected['title']
+                or parser.main_tracks[0].get('data-src') != expected['download']):
+            raise ValueError('Primary creator player differs from the reviewed recording')
     linked = {unquote(urljoin(row['source'], link)) for link in parser.links}
     if unquote(row['download']) not in linked:
         raise ValueError('Exact download is not linked by the reviewed creator page')
