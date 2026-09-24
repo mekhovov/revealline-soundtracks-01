@@ -3,7 +3,9 @@ name: Prepare core soundtrack candidates
 on:
   pull_request:
     paths:
-      - 'intake/**'
+      - 'intake/core-20260924.json'
+      - 'intake/prepare.py'
+      - 'intake/test_prepare.py'
       - '.github/workflows/core-intake.yml'
   workflow_dispatch:
 

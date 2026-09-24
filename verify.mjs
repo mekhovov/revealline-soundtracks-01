@@ -19,6 +19,8 @@ const EXPECTED_AUDIO_BYTES = 354986122;
 const MAX_FILE_BYTES = 100000000;
 const MAX_SITE_BYTES = 800000000;
 const MANIFEST = 'deployment-manifest.json';
+const BATCHES = 'batches.json';
+const BATCH_ID = /^[a-z0-9][a-z0-9-]{0,63}$/;
 const STATIC = new Set([
   'index.html',
   'style.css',
@@ -39,7 +41,14 @@ const REQUIRED = [
   'README.md',
   'CREDITS.md',
 ];
-const PRIVATE = new Set(['.git', '.github', 'verify.mjs', 'render.mjs', 'intake']);
+const PRIVATE = new Set([
+  '.git',
+  '.github',
+  'verify.mjs',
+  'test-verify.mjs',
+  'render.mjs',
+  'intake',
+]);
 const LICENSES = new Set([
   'https://creativecommons.org/publicdomain/zero/1.0/',
   'https://creativecommons.org/licenses/by/3.0/',
@@ -51,7 +60,8 @@ const objectPath = (value) =>
 const demand = (value, message) => {
   if (!value) throw new Error(message);
 };
-const plain = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+const plain = (value) =>
+  value !== null && typeof value === 'object' && !Array.isArray(value);
 function exactKeys(value, keys, label) {
   demand(
     plain(value) &&
@@ -92,9 +102,12 @@ function pin(value) {
   return value;
 }
 
-/** Metadata-only boundary, exported to allow small synthetic refusal checks. */
-export function validateDeclarations(manifest, inventory, catalogue) {
-  exactKeys(manifest, ['format', 'id', 'expected', 'files', 'provenance'], 'deployment manifest');
+function validatePayloadDeclarations(manifest, inventory, catalogue, expected) {
+  exactKeys(
+    manifest,
+    ['format', 'id', 'expected', 'files', 'provenance'],
+    'deployment manifest',
+  );
   demand(
     manifest.format === 'revealline-soundtrack-preview-deployment.v1' &&
       typeof manifest.id === 'string' &&
@@ -103,9 +116,9 @@ export function validateDeclarations(manifest, inventory, catalogue) {
   );
   exactKeys(manifest.expected, ['trackCount', 'audioBytes'], 'expected payload');
   demand(
-    manifest.expected.trackCount === EXPECTED_TRACKS &&
-      manifest.expected.audioBytes === EXPECTED_AUDIO_BYTES,
-    'Deployment differs from the pinned 70-recording payload.',
+    manifest.expected.trackCount === expected.trackCount &&
+      manifest.expected.audioBytes === expected.audioBytes,
+    'Deployment differs from its pinned recording payload.',
   );
   demand(plain(manifest.provenance), 'Deployment provenance must be an object.');
   demand(
@@ -130,7 +143,7 @@ export function validateDeclarations(manifest, inventory, catalogue) {
     inventory.format === 'revealline-soundtrack-archive.v1' &&
       inventory.id === manifest.id &&
       Array.isArray(inventory.files) &&
-      inventory.files.length === EXPECTED_TRACKS,
+      inventory.files.length === expected.trackCount,
     'Archive identity/count differs.',
   );
   const objects = new Map();
@@ -150,8 +163,8 @@ export function validateDeclarations(manifest, inventory, catalogue) {
     audioBytes += entry.bytes;
   }
   demand(
-    audioBytes === EXPECTED_AUDIO_BYTES &&
-      [...files.keys()].filter(objectPath).length === EXPECTED_TRACKS,
+    audioBytes === expected.audioBytes &&
+      [...files.keys()].filter(objectPath).length === expected.trackCount,
     'Audio total or deployed object count differs.',
   );
   demand(
@@ -161,16 +174,19 @@ export function validateDeclarations(manifest, inventory, catalogue) {
       catalogue.gameCatalogueAdmission === false &&
       catalogue.listeningApproval === 'not-reviewed' &&
       Array.isArray(catalogue.tracks) &&
-      catalogue.tracks.length === EXPECTED_TRACKS,
-    'Preview catalogue must contain exactly 70 unapproved preview recordings.',
+      catalogue.tracks.length === expected.trackCount,
+    'Preview catalogue must contain exactly its declared unapproved preview recordings.',
   );
   exactKeys(catalogue.archive, ['id', 'baseURL', 'inventorySha256'], 'preview archive');
   demand(
     catalogue.archive.id === manifest.id &&
       typeof catalogue.archive.baseURL === 'string' &&
-      /^https:\/\/mekhovov\.github\.io\/revealline-soundtracks-[0-9]+\/$/.test(
-        catalogue.archive.baseURL,
-      ) &&
+      (expected.baseURL
+        ? catalogue.archive.baseURL === expected.baseURL
+        : /^https:\/\/mekhovov\.github\.io\/revealline-soundtracks-[0-9]+\/$/.test(
+            catalogue.archive.baseURL,
+          )) &&
+      catalogue.archive.baseURL === new URL(catalogue.archive.baseURL).href &&
       catalogue.archive.inventorySha256 === files.get('inventory.json').sha256,
     'Preview archive differs from the project-owned inventory.',
   );
@@ -211,7 +227,81 @@ export function validateDeclarations(manifest, inventory, catalogue) {
     seen.add(track.path);
     ids.add(track.id);
   }
-  return { files, totalBytes: total, audioBytes, trackCount: seen.size };
+  return {
+    files,
+    totalBytes: total,
+    audioBytes,
+    trackCount: seen.size,
+    recordingIds: ids,
+  };
+}
+
+/** Root publication keeps its historical 70-track/byte boundary unchanged. */
+export function validateDeclarations(manifest, inventory, catalogue) {
+  return validatePayloadDeclarations(manifest, inventory, catalogue, {
+    trackCount: EXPECTED_TRACKS,
+    audioBytes: EXPECTED_AUDIO_BYTES,
+  });
+}
+
+export function validateBatchDeclarations(
+  manifest,
+  inventory,
+  catalogue,
+  { id, baseURL },
+) {
+  demand(
+    typeof id === 'string' && BATCH_ID.test(id) && id === id.trim(),
+    'Invalid preview batch identity.',
+  );
+  demand(
+    typeof baseURL === 'string' &&
+      /^https:\/\/mekhovov\.github\.io\/revealline-soundtracks-[0-9]+\/$/.test(baseURL) &&
+      baseURL === new URL(baseURL).href,
+    'Preview batches require a project-owned root URL.',
+  );
+  demand(
+    manifest?.id === id &&
+      Number.isSafeInteger(manifest.expected?.trackCount) &&
+      manifest.expected.trackCount >= 1 &&
+      manifest.expected.trackCount <= 20 &&
+      Number.isSafeInteger(manifest.expected.audioBytes) &&
+      manifest.expected.audioBytes > 0,
+    'Preview batch must declare 1–20 recordings and their exact audio bytes.',
+  );
+  return validatePayloadDeclarations(manifest, inventory, catalogue, {
+    ...manifest.expected,
+    baseURL: `${baseURL}batches/${id}/`,
+  });
+}
+
+export function validateBatchIndex(value) {
+  exactKeys(value, ['format', 'batches'], 'preview batch index');
+  demand(
+    value.format === 'revealline-soundtrack-preview-batches.v1' &&
+      Array.isArray(value.batches) &&
+      value.batches.length <= 32,
+    'Invalid preview batch index.',
+  );
+  const ids = new Set();
+  for (const entry of value.batches) {
+    exactKeys(entry, ['id', 'manifest'], 'preview batch declaration');
+    exactKeys(entry.manifest, ['path', 'bytes', 'sha256'], 'preview batch manifest pin');
+    demand(
+      typeof entry.id === 'string' &&
+        BATCH_ID.test(entry.id) &&
+        entry.id === entry.id.trim() &&
+        !ids.has(entry.id) &&
+        entry.manifest.path === `batches/${entry.id}/${MANIFEST}` &&
+        Number.isSafeInteger(entry.manifest.bytes) &&
+        entry.manifest.bytes > 0 &&
+        entry.manifest.bytes <= 512 * 1024 &&
+        validHash(entry.manifest.sha256),
+      'Invalid or duplicate preview batch pin.',
+    );
+    ids.add(entry.id);
+  }
+  return value.batches;
 }
 
 async function json(root, name, maxBytes) {
@@ -256,17 +346,23 @@ async function hashFile(file, expectedBytes) {
   }
 }
 
-export async function verifyPreviewSite(source, { staged = false } = {}) {
+async function verifyPayloadSite(source, { staged = false, batchId, baseURL } = {}) {
   const root = await realpath(source);
   const manifest = await json(root, MANIFEST, 512 * 1024);
   const inventory = await json(root, 'inventory.json', 256 * 1024);
   const catalogue = await json(root, 'preview-catalogue.json', 1024 * 1024);
-  const result = validateDeclarations(manifest, inventory, catalogue);
+  const result = batchId
+    ? validateBatchDeclarations(manifest, inventory, catalogue, {
+        id: batchId,
+        baseURL,
+      })
+    : validateDeclarations(manifest, inventory, catalogue);
   const actual = new Set();
   for (const name of await readdir(root)) {
     const stat = await lstat(path.join(root, name));
     demand(!stat.isSymbolicLink(), `Symbolic link refused: ${name}`);
-    if (!staged && PRIVATE.has(name)) continue;
+    if (!batchId && !staged && PRIVATE.has(name)) continue;
+    if (!batchId && [BATCHES, 'batches'].includes(name)) continue;
     if (name === 'objects') {
       demand(stat.isDirectory(), 'objects must be an ordinary directory.');
       for (const object of await readdir(path.join(root, name))) {
@@ -287,11 +383,15 @@ export async function verifyPreviewSite(source, { staged = false } = {}) {
     }
   }
   demand(
-    actual.size === result.files.size && [...actual].every((name) => result.files.has(name)),
+    actual.size === result.files.size &&
+      [...actual].every((name) => result.files.has(name)),
     'Public files differ from the exact deployment manifest.',
   );
   const manifestStat = await lstat(path.join(root, MANIFEST));
-  demand(result.totalBytes + manifestStat.size < MAX_SITE_BYTES, 'Site exceeds its 800 MB budget.');
+  demand(
+    result.totalBytes + manifestStat.size < MAX_SITE_BYTES,
+    'Site exceeds its 800 MB budget.',
+  );
   for (const entry of result.files.values()) {
     demand(
       (await hashFile(path.join(root, entry.path), entry.bytes)) === entry.sha256,
@@ -308,7 +408,130 @@ export async function verifyPreviewSite(source, { staged = false } = {}) {
         JSON.stringify(catalogue),
     'Deployment metadata changed during verification.',
   );
-  return { ...result, root, manifestSha256, totalBytes: result.totalBytes + manifestStat.size };
+  return {
+    ...result,
+    root,
+    manifestSha256,
+    manifestBytes: manifestStat.size,
+    baseURL: catalogue.archive.baseURL,
+    totalBytes: result.totalBytes + manifestStat.size,
+  };
+}
+
+/** Also exported for tiny file/hash tests without the historic 338 MiB payload. */
+export async function verifyPreviewBatch(source, { id, baseURL, manifest }) {
+  validateBatchIndex({
+    format: 'revealline-soundtrack-preview-batches.v1',
+    batches: [{ id, manifest }],
+  });
+  const stat = await lstat(source);
+  demand(
+    stat.isDirectory() && !stat.isSymbolicLink(),
+    'Preview batch must be an ordinary directory.',
+  );
+  const result = await verifyPayloadSite(source, {
+    staged: true,
+    batchId: id,
+    baseURL,
+  });
+  demand(
+    result.manifestSha256 === manifest.sha256 && result.manifestBytes === manifest.bytes,
+    'Preview batch deployment manifest differs from its explicit pin.',
+  );
+  return result;
+}
+
+/** Combine results only after both payloads have passed their own byte checks. */
+export function appendVerifiedPreviewBatch(result, entry, batch) {
+  demand(
+    result.trackCount + batch.trackCount <= 256 &&
+      result.totalBytes + batch.totalBytes < MAX_SITE_BYTES,
+    'Combined previews exceed 256 recordings or the 800 MB site budget.',
+  );
+  const hashes = new Set(
+    [...result.files.values()]
+      .filter((file) => /(?:^|\/)objects\//.test(file.path))
+      .map((file) => file.sha256),
+  );
+  for (const id of batch.recordingIds)
+    demand(
+      !result.recordingIds.has(id),
+      'A preview batch duplicates an existing recording identity.',
+    );
+  for (const file of batch.files.values())
+    if (objectPath(file.path))
+      demand(
+        !hashes.has(file.sha256),
+        'A preview batch duplicates an existing recording hash.',
+      );
+  for (const id of batch.recordingIds) result.recordingIds.add(id);
+  for (const file of batch.files.values())
+    result.files.set(`batches/${entry.id}/${file.path}`, {
+      ...file,
+      path: `batches/${entry.id}/${file.path}`,
+    });
+  result.files.set(entry.manifest.path, entry.manifest);
+  result.trackCount += batch.trackCount;
+  result.audioBytes += batch.audioBytes;
+  result.totalBytes += batch.totalBytes;
+}
+
+export async function verifyPreviewSite(source, { staged = false } = {}) {
+  const result = await verifyPayloadSite(source, { staged });
+  const root = result.root;
+  let declaration,
+    declarationBytes = 0;
+  try {
+    declaration = await json(root, BATCHES, 512 * 1024);
+    declarationBytes = (await lstat(path.join(root, BATCHES))).size;
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  const batches = declaration ? validateBatchIndex(declaration) : [];
+  const expectedIds = new Set(batches.map((entry) => entry.id));
+  let actualIds = [];
+  try {
+    const stat = await lstat(path.join(root, 'batches'));
+    demand(
+      stat.isDirectory() && !stat.isSymbolicLink(),
+      'batches must be an ordinary directory.',
+    );
+    actualIds = await readdir(path.join(root, 'batches'));
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  demand(
+    actualIds.length === expectedIds.size && actualIds.every((id) => expectedIds.has(id)),
+    'Preview batch directories differ from the explicit declarations.',
+  );
+  for (const entry of batches) {
+    const batch = await verifyPreviewBatch(path.join(root, 'batches', entry.id), {
+      id: entry.id,
+      baseURL: result.baseURL,
+      manifest: entry.manifest,
+    });
+    appendVerifiedPreviewBatch(result, entry, batch);
+  }
+  result.batchesSha256 = null;
+  if (declaration) {
+    result.batchesSha256 = await hashFile(path.join(root, BATCHES), declarationBytes);
+    demand(
+      JSON.stringify(await json(root, BATCHES, 512 * 1024)) ===
+        JSON.stringify(declaration),
+      'Preview batch declarations changed during verification.',
+    );
+    result.files.set(BATCHES, {
+      path: BATCHES,
+      bytes: declarationBytes,
+      sha256: result.batchesSha256,
+    });
+    result.totalBytes += declarationBytes;
+  }
+  demand(
+    result.trackCount <= 256 && result.totalBytes < MAX_SITE_BYTES,
+    'Combined previews exceed 256 recordings or the 800 MB site budget.',
+  );
+  return result;
 }
 
 export async function stagePreviewSite(source, destination) {
@@ -316,7 +539,12 @@ export async function stagePreviewSite(source, destination) {
   const parent = await realpath(path.dirname(path.resolve(destination)));
   const target = path.join(parent, path.basename(destination));
   demand(
-    target !== verified.root && !target.startsWith(path.join(verified.root, 'objects') + path.sep),
+    target !== verified.root &&
+      !['objects', 'batches'].some(
+        (name) =>
+          target === path.join(verified.root, name) ||
+          target.startsWith(path.join(verified.root, name) + path.sep),
+      ),
     'Invalid staging destination.',
   );
   let remaining = verified.totalBytes;
@@ -332,13 +560,20 @@ export async function stagePreviewSite(source, destination) {
   await mkdir(path.join(target, 'objects'));
   const entries = [
     ...verified.files.values(),
-    { path: MANIFEST, bytes: (await lstat(path.join(verified.root, MANIFEST))).size },
+    {
+      path: MANIFEST,
+      bytes: (await lstat(path.join(verified.root, MANIFEST))).size,
+    },
   ];
   for (const entry of entries) {
     await reserve();
     const original = path.join(verified.root, entry.path);
     const output = path.join(target, entry.path);
-    demand(!(await lstat(original)).isSymbolicLink(), 'Source became a symlink during staging.');
+    await mkdir(path.dirname(output), { recursive: true });
+    demand(
+      !(await lstat(original)).isSymbolicLink(),
+      'Source became a symlink during staging.',
+    );
     try {
       await link(original, output);
     } catch (error) {
@@ -349,7 +584,8 @@ export async function stagePreviewSite(source, destination) {
   }
   const staged = await verifyPreviewSite(target, { staged: true });
   demand(
-    staged.manifestSha256 === verified.manifestSha256,
+    staged.manifestSha256 === verified.manifestSha256 &&
+      staged.batchesSha256 === verified.batchesSha256,
     'Staged manifest differs from the verified source.',
   );
   return staged;
@@ -362,9 +598,12 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--root' && args[i + 1]) source = path.resolve(args[++i]);
     else if (args[i] === '--stage' && args[i + 1]) stage = path.resolve(args[++i]);
-    else throw new Error('Usage: node verify.mjs [--root SOURCE] [--stage NEW_DIRECTORY]');
+    else
+      throw new Error('Usage: node verify.mjs [--root SOURCE] [--stage NEW_DIRECTORY]');
   }
-  const result = stage ? await stagePreviewSite(source, stage) : await verifyPreviewSite(source);
+  const result = stage
+    ? await stagePreviewSite(source, stage)
+    : await verifyPreviewSite(source);
   console.log(
     JSON.stringify(
       {
@@ -373,6 +612,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
         audioBytes: result.audioBytes,
         publicBytes: result.totalBytes,
         manifestSha256: result.manifestSha256,
+        batchesSha256: result.batchesSha256,
         staged: Boolean(stage),
       },
       null,

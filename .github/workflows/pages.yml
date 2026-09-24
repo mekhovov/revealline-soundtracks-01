@@ -3,13 +3,14 @@ name: Deploy licensed soundtrack previews
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: licensed-soundtrack-pages
+  group: licensed-soundtrack-pages-${{ github.event.pull_request.number || 'main' }}
   cancel-in-progress: false
 
 jobs:
@@ -20,6 +21,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.22.2
+      - name: Check immutable root pins and batch admission boundaries
+        run: node --test test-verify.mjs
       - name: Verify and stage the exact public payload
         run: node verify.mjs --stage public
       - name: Upload verified Pages artifact
@@ -28,6 +31,7 @@ jobs:
           path: public
 
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: verify
     runs-on: ubuntu-24.04
     permissions:
