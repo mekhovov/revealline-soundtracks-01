@@ -1,0 +1,28 @@
+intake/test_second_directions.py
+  s_f8296d264eaab0::t_1790b9cdb403a2 72,161-162
+intake/second_directions_pins.py
+  s_f8296d264eaab0::t_1790b9cdb403a2 46-47,72
+intake/second-directions-audition-20260925.md
+  s_f8296d264eaab0::t_9153915e564cc6 30,65-73
+  s_f8296d264eaab0::t_28fb96f9ab465a 74
+intake/second-directions-audition-20260925.json
+  s_f8296d264eaab0::t_908e816d9cb424 304-305,308,310-312,325,327-328,331
+intake/prepare_second_directions.py
+  s_f8296d264eaab0::t_2a6c48b1622ee3 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1de27a79cf4e0051aa6858e7eadc1b9b0ca8f55e",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
