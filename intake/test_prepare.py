@@ -1,6 +1,10 @@
 import copy
 import unittest
-from prepare import allowed_url, validate_manifest
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from types import SimpleNamespace
+from unittest.mock import patch
+from prepare import allowed_url, validate_manifest, reserve, reserve_row, verify_inspector, RESERVE, TOTAL_LIMIT
 
 
 class IntakeTests(unittest.TestCase):
@@ -31,6 +35,20 @@ class IntakeTests(unittest.TestCase):
             item = copy.deepcopy(self.value)
             item['tracks'][0][key] = value
             with self.assertRaises(ValueError): validate_manifest(item)
+
+    def test_reserve_accounts_for_derivative_and_evidence(self):
+        with patch('prepare.shutil.disk_usage', return_value=SimpleNamespace(free=RESERVE + 64 * 1024 ** 2)):
+            with self.assertRaises(ValueError): reserve(Path('.'))
+
+    def test_retained_budget_refuses_before_next_row(self):
+        with TemporaryDirectory() as folder:
+            file = Path(folder) / 'retained'
+            with file.open('wb') as handle: handle.truncate(TOTAL_LIMIT - 90 * 1024 ** 2)
+            with self.assertRaises(ValueError): reserve_row(Path(folder))
+
+    def test_inspector_revision_is_verified_before_acquisition(self):
+        with patch('prepare.command', return_value=SimpleNamespace(stdout='wrong-revision\n')):
+            with self.assertRaises(ValueError): verify_inspector(Path('.'))
 
 
 if __name__ == '__main__':

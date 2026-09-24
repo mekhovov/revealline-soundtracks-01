@@ -17,6 +17,8 @@ from urllib.request import Request, urlopen
 RESERVE = 1024 ** 3
 SOURCE_LIMIT = 64 * 1024 ** 2
 TOTAL_LIMIT = 650 * 1024 ** 2
+ROW_RESERVATION = 96 * 1024 ** 2  # bounded source, 12-minute MP3, page and receipts
+INSPECTOR_REVISION = '71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3'
 LICENSES = {'CC0 1.0 Universal': 'https://creativecommons.org/publicdomain/zero/1.0/',
             'CC BY 4.0 International': 'https://creativecommons.org/licenses/by/4.0/'}
 
@@ -93,9 +95,16 @@ def loudness(file, target=-16, peak=-1.5):
     return facts
 
 
-def reserve(root, requested=SOURCE_LIMIT):
+def reserve(root, requested=ROW_RESERVATION):
     if shutil.disk_usage(root).free < RESERVE + requested:
         raise ValueError('Intake must leave at least 1 GiB free')
+
+
+def reserve_row(root):
+    used = sum(file.stat().st_size for file in root.rglob('*') if file.is_file())
+    if used + ROW_RESERVATION > TOTAL_LIMIT:
+        raise ValueError('Next recording would exceed the 650 MiB production reservation')
+    reserve(root)
 
 
 def inspect_mp3(file, game_root):
@@ -106,9 +115,25 @@ def inspect_mp3(file, game_root):
     return json.loads(command(['node', '--input-type=module', '-e', code, str(file)]).stdout)
 
 
+def verify_inspector(game_root):
+    revision = command(['git', '-C', str(game_root), 'rev-parse', 'HEAD']).stdout.strip()
+    if revision != INSPECTOR_REVISION:
+        raise ValueError('Game inspector checkout differs from the reviewed revision')
+    pins = []
+    for name in ('mp3.mjs', 'data-json.mjs', 'soundtrack.mjs', 'soundtrack-rights.mjs', 'ui/music.mjs', 'content/soundtrack-catalogue.mjs'):
+        relative = 'game/' + name
+        expected = subprocess.run(['git', '-C', str(game_root), 'show', 'HEAD:' + relative], capture_output=True, check=True).stdout
+        actual = (game_root / relative).read_bytes()
+        if expected != actual:
+            raise ValueError('Game inspector files differ from the reviewed source')
+        pins.append({'path': relative, 'sha256': digest(actual)})
+    return {'revision': revision, 'files': pins}
+
+
 def prepare(manifest, output, game_root):
     manifest_bytes = manifest.read_bytes()
     rows = validate_manifest(json.loads(manifest_bytes))['tracks']
+    inspector = verify_inspector(game_root)
     if output.exists():
         raise ValueError('Choose a fresh output directory; never overwrite evidence')
     reserve(output.parent)
@@ -119,21 +144,24 @@ def prepare(manifest, output, game_root):
                'checkedAt': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
                'runnerRevision': os.environ.get('GITHUB_SHA'), 'runnerRun': os.environ.get('GITHUB_RUN_ID'),
                'ffmpeg': command(['ffmpeg', '-version']).stdout.splitlines()[0],
-               'gameInspectorRevision': '71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3',
+               'gameInspector': inspector,
                'listeningApproval': False, 'tracks': [], 'failures': []}
     known = json.loads(Path('preview-catalogue.json').read_text())['tracks']
     known_hashes = {track['sha256'] for track in known}
     known_titles = {re.sub(r'[^a-z0-9]', '', track['title'].lower()) for track in known}
     pages = {}
+    source_hashes = set()
     for row in rows:
+        partial = {'id': row['id'], 'source': row['source'], 'download': row['download'], 'loudnessAttempts': []}
         try:
-            reserve(output)
+            reserve_row(output)
             if row['source'] not in pages:
                 body, final = fetch(row['source'], 2 * 1024 ** 2)
                 source_hash = digest(body)
                 (output / 'evidence' / (source_hash + '.html')).write_bytes(body)
                 pages[row['source']] = (body, source_hash, final)
             source_body, source_hash, source_final = pages[row['source']]
+            partial['sourceSnapshot'] = {'path': 'evidence/' + source_hash + '.html', 'sha256': source_hash, 'url': source_final}
             normalized = unquote(html.unescape(source_body.decode('utf8')))
             if unquote(row['download']) not in normalized:
                 raise ValueError('Exact download is not linked by the reviewed creator page')
@@ -141,11 +169,13 @@ def prepare(manifest, output, game_root):
                 raise ValueError('Expected licence link is absent from creator snapshot')
             body, final = fetch(row['download'], SOURCE_LIMIT)
             source_sha = digest(body)
-            if source_sha in known_hashes or re.sub(r'[^a-z0-9]', '', row['title'].lower()) in known_titles:
+            if source_sha in known_hashes or source_sha in source_hashes or re.sub(r'[^a-z0-9]', '', row['title'].lower()) in known_titles:
                 raise ValueError('Recording already exists in the admitted collection')
+            source_hashes.add(source_sha)
             suffix = Path(urlparse(final).path).suffix
             original = output / 'originals' / (source_sha + suffix)
             original.write_bytes(body)
+            partial['original'] = {'path': str(original.relative_to(output)), 'sha256': source_sha, 'bytes': len(body), 'url': final}
             del body
             probe = json.loads(command(['ffprobe', '-v', 'error', '-select_streams', 'a:0',
                                         '-show_entries', 'format=duration:stream=sample_rate,channels',
@@ -155,7 +185,8 @@ def prepare(manifest, output, game_root):
                 raise ValueError('Recording is outside the 1–12 minute candidate envelope')
             command(['ffmpeg', '-v', 'error', '-xerror', '-nostdin', '-i', str(original), '-map', '0:a:0', '-f', 'null', '-'])
             measured = loudness(original)
-            normalized_path = output / 'candidate.mp3'
+            partial['sourceLoudness'] = measured
+            normalized_path = output / ('candidate-' + row['id'] + '.mp3')
             measured_output = None
             for peak in (-1.5, -2.0, -2.5):
                 filter_value = (f'loudnorm=I=-16:TP={peak}:LRA=11:measured_I={measured["input_i"]}'
@@ -167,6 +198,7 @@ def prepare(manifest, output, game_root):
                          '-c:a', 'libmp3lame', '-b:a', '256k', '-id3v2_version', '3', str(normalized_path)])
                 command(['ffmpeg', '-v', 'error', '-xerror', '-nostdin', '-i', str(normalized_path), '-f', 'null', '-'])
                 measured_output = loudness(normalized_path)
+                partial['loudnessAttempts'].append({'targetPeak': peak, 'measurement': measured_output})
                 if -17 <= float(measured_output['input_i']) <= -15 and float(measured_output['input_tp']) <= -1:
                     break
             else:
@@ -187,7 +219,10 @@ def prepare(manifest, output, game_root):
                 'changes': 'Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.'})
             print(f'Prepared {row["id"]}: {duration:.1f}s, {measured_output["input_i"]} LUFS, {measured_output["input_tp"]} dBTP', flush=True)
         except Exception as error:
-            receipt['failures'].append({'id': row['id'], 'error': str(error)})
+            attempted = output / ('candidate-' + row['id'] + '.mp3')
+            if attempted.is_file():
+                partial['failedDerivative'] = {'path': attempted.name, 'bytes': attempted.stat().st_size, 'sha256': digest(attempted.read_bytes())}
+            receipt['failures'].append({**partial, 'error': str(error)})
             print(f'FAILED {row["id"]}: {error}', flush=True)
         write_json(output / 'receipt.json', receipt)
         if sum(file.stat().st_size for file in output.rglob('*') if file.is_file()) > TOTAL_LIMIT:
