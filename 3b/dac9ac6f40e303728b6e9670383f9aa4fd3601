@@ -1,0 +1,29 @@
+.github/workflows/approved-directions-intake.yml
+  s_f8296d264eaab0::t_b64a93a1896a7e 10-12,17-23,29-43,45-46,89-133
+intake/test_approved_assembly.py
+  s_f8296d264eaab0::t_320384a9730269 1-77,99-215
+  s_f8296d264eaab0::t_84691f17a9481c 78-98
+intake/approved-directions-publication.md
+  s_f8296d264eaab0::t_84691f17a9481c 1-23
+intake/build-unified-catalogue.mjs
+  s_f8296d264eaab0::t_b64a93a1896a7e 92
+intake/assemble_approved_directions.py
+  s_f8296d264eaab0::t_b64a93a1896a7e 16-17,190-203,238
+  s_f8296d264eaab0::t_921f41144ca155 1-15,18-189,204-237,239-360
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3bdac9ac6f40e303728b6e9670383f9aa4fd3601",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
