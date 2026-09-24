@@ -48,6 +48,14 @@
         "bytes": 2415,
         "sha256": "fb0a0ac6362d565eaab3dfd2b3967a92397877f9e35fa52ec4a9ec26ad36fd42"
       }
+    },
+    {
+      "id": "metal-groove-yannz-audition-20260924",
+      "manifest": {
+        "path": "batches/metal-groove-yannz-audition-20260924/deployment-manifest.json",
+        "bytes": 2421,
+        "sha256": "9cb9d37246ed1668a5b16039d4345677f717810b226aa881c27e9c47f04b8b4b"
+      }
     }
   ]
 }

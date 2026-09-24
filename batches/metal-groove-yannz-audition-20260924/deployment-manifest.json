@@ -1,0 +1,76 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "metal-groove-yannz-audition-20260924",
+  "expected": {
+    "trackCount": 4,
+    "audioBytes": 19101744
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 3775,
+      "sha256": "fa9297cc43bb3ade3d9a0a63f2ec81cce59892396beb08c839ca4f0757079aab"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1478,
+      "sha256": "3ee3095362a1e4636fcf7cb765346793c73a4787021c57919cf9b3123153bf06"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9097,
+      "sha256": "c09ddcaf31e71e6efb542cb63075bac396cebc524db3477ac59186b928056022"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 972,
+      "sha256": "c50d9d8c91b7bc17965d12a37b78a6429d57e11fb9ed92eda188df73b6ad0e0f"
+    },
+    {
+      "path": "objects/84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04.mp3",
+      "bytes": 5195276,
+      "sha256": "84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04"
+    },
+    {
+      "path": "objects/8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6.mp3",
+      "bytes": 8065820,
+      "sha256": "8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6"
+    },
+    {
+      "path": "objects/a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde.mp3",
+      "bytes": 4302515,
+      "sha256": "a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde"
+    },
+    {
+      "path": "objects/a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec.mp3",
+      "bytes": 1538133,
+      "sha256": "a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 12135,
+      "sha256": "e8409f64e11d4aa143d83cd9651e7f27d4f2142b4624253ed53be685b5d734f9"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "run": 36004806070,
+    "artifactId": 10810521176,
+    "artifactSha256": "4c3c0556359efc76c52322a4c6cde3b09116f572f9da929d58d9a827a382636e",
+    "listeningApproval": false
+  }
+}

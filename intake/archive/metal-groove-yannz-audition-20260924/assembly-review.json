@@ -1,0 +1,57 @@
+{
+  "status": "technical-assembly-verified-listening-pending",
+  "checkedAt": "2026-09-24T13:31:50Z",
+  "sourceBase": "c1696d20c139acc98623b8c5a3eda9c17e6fbcee",
+  "sourceHead": "23aabfff17a85d65564cb0a5020a9acb1531d0c6",
+  "runnerRevision": "28903dcc0fed67fc25f1bdd2bd1f8bb89a9bbb37",
+  "mergedSource": "71c9b62aaaf0f485fe8c4fb3274f43b939effe3b",
+  "sourceTree": "2d0a398452979711e95d0df1d129b6a81aefeb3e",
+  "sourceRun": 36004806070,
+  "artifactId": 10810521176,
+  "artifactSha256": "4c3c0556359efc76c52322a4c6cde3b09116f572f9da929d58d9a827a382636e",
+  "artifactBytes": 57879598,
+  "originalArtifactReview": "https://github.com/mekhovov/revealline-soundtracks-01/pull/11#pullrequestreview-5305039662",
+  "checks": {
+    "artifactDigestAndExactBytes": true,
+    "all16MemberHashesAndCRC": true,
+    "headRunnerAndMergedSourceTreeEqual": true,
+    "sourceManifestExact": true,
+    "fiveNativeAndDeliveryHashes": true,
+    "creatorSourceAndLicenseBindingsReviewed": true,
+    "existingCoreDuplicateNotRepublished": true,
+    "sixGameInspectorHashesRetained": true,
+    "completeDecodeReceipts": true,
+    "loudnessAndTruePeakTargets": true,
+    "all62HostedTestsPassed": true,
+    "allPendingReviewFlagsPreserved": true,
+    "unchangedPlayerAndStyleBytes": true,
+    "actualVolumeIncludingAllMetadataBelow64MiB": true
+  },
+  "newBatch": {
+    "id": "metal-groove-yannz-audition-20260924",
+    "manifest": {
+      "path": "batches/metal-groove-yannz-audition-20260924/deployment-manifest.json",
+      "bytes": 2421,
+      "sha256": "9cb9d37246ed1668a5b16039d4345677f717810b226aa881c27e9c47f04b8b4b"
+    },
+    "audioBytes": 19101744,
+    "metadataBytes": 38502,
+    "totalBytes": 19140246
+  },
+  "limits": {
+    "artifactZipBytes": 57879598,
+    "metadataReservationBytes": 524288,
+    "batchMaximumBytes": 67108864
+  },
+  "remaining": [
+    "Independent publication PR review",
+    "Hosted inventory verification and Pages staging",
+    "Public deployment and direct byte/playback verification",
+    "Complete listening and style review",
+    "Transitions, warning audibility and repeated-loop fatigue",
+    "Game admission and release",
+    "Physical device qualification"
+  ],
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false
+}
