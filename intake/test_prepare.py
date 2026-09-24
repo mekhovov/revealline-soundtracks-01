@@ -41,6 +41,10 @@ class IntakeTests(unittest.TestCase):
         self.assertEqual(candidate_duration_bounds({'role': 'menu'}), (60, 720))
         self.assertEqual(candidate_duration_bounds({'role': 'boss-cue'}), (30, 720))
         self.assertEqual(candidate_duration_bounds({'role': 'Boss-Cue'}), (60, 720))
+        self.assertEqual(candidate_duration_bounds({'minimumDurationSeconds': 180}), (180, 720))
+        for value in (True, 59, 721, '180'):
+            with self.assertRaises(ValueError):
+                candidate_duration_bounds({'minimumDurationSeconds': value})
 
     def test_no_licence_or_listening_escalation(self):
         for key, value in (('licenseURL', 'https://example.com/free'), ('status', 'approved'), ('download', 'https://opengameart.org/preview')):

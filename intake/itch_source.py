@@ -12,7 +12,12 @@ import json
 import re
 from urllib.parse import parse_qs, unquote, urlencode, urlparse
 from urllib.request import HTTPRedirectHandler, HTTPCookieProcessor, Request, build_opener
-from approved_directions_pins import SOURCE_PINS as NEW_SOURCES, UPLOAD_PINS as NEW_UPLOADS, DESCRIPTION_HASHES
+from approved_directions_pins import (SOURCE_PINS as NEW_SOURCES,
+                                      UPLOAD_PINS as NEW_UPLOADS,
+                                      DESCRIPTION_HASHES as NEW_DESCRIPTION_HASHES)
+from second_directions_pins import (SOURCE_PINS as SECOND_SOURCES,
+                                    UPLOAD_PINS as SECOND_UPLOADS,
+                                    DESCRIPTION_HASHES as SECOND_DESCRIPTION_HASHES)
 
 PAGE_LIMIT = 2 * 1024 ** 2
 CDN_HOST = 'itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com'
@@ -48,6 +53,9 @@ UPLOAD_PINS = {
 LEGACY_TRACK_IDS = frozenset(UPLOAD_PINS)
 SOURCE_PINS.update(NEW_SOURCES)
 UPLOAD_PINS.update(NEW_UPLOADS)
+SOURCE_PINS.update(SECOND_SOURCES)
+UPLOAD_PINS.update(SECOND_UPLOADS)
+DESCRIPTION_HASHES = {**NEW_DESCRIPTION_HASHES, **SECOND_DESCRIPTION_HASHES}
 
 
 class SourceChanged(ValueError):
