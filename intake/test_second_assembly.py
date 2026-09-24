@@ -28,6 +28,40 @@ class SecondAssemblyConfigurationTests(unittest.TestCase):
         self.assertEqual(subject.CONFIG['BINDING_FORMAT'], 'revealline-second-directions-intake-binding.v1')
         self.assertEqual(set(subject.CONFIG['BATCH_IDS']), {'synth90s', 'metal'})
 
+    def test_configured_artifact_name_and_workflow_path_are_enforced(self):
+        saved = {name: getattr(assembler, name) for name in subject.CONFIG}
+        try:
+            subject.configure()
+            metadata = {
+                'id': assembler.ARTIFACT,
+                'size_in_bytes': assembler.ZIP_BYTES,
+                'digest': 'sha256:' + assembler.ZIP_SHA,
+                'expired': False,
+                'name': assembler.ARTIFACT_NAME,
+                'workflow_run': {'head_sha': assembler.SOURCE_HEAD, 'id': assembler.RUN},
+            }
+            run = {
+                'id': assembler.RUN,
+                'head_sha': assembler.SOURCE_HEAD,
+                'conclusion': 'success',
+                'event': 'pull_request',
+                'path': assembler.WORKFLOW_PATH,
+            }
+            source = {'sha': assembler.SOURCE_HEAD, 'tree': {'sha': assembler.SOURCE_TREE}}
+            runner = {
+                'sha': assembler.RUNNER,
+                'tree': {'sha': assembler.SOURCE_TREE},
+                'parents': [{'sha': assembler.SOURCE_BASE}, {'sha': assembler.SOURCE_HEAD}],
+            }
+            assembler.validate_remote(metadata, run, source, runner)
+            with self.assertRaisesRegex(ValueError, 'artifact metadata'):
+                assembler.validate_remote({**metadata, 'name': 'wrong-artifact'}, run, source, runner)
+            with self.assertRaisesRegex(ValueError, 'workflow identity'):
+                assembler.validate_remote(metadata, {**run, 'path': 'wrong-workflow.yml'}, source, runner)
+        finally:
+            for name, value in saved.items():
+                setattr(assembler, name, value)
+
     def test_main_applies_configuration_before_calling_guarded_assembler(self):
         saved = {name: getattr(assembler, name) for name in subject.CONFIG}
         saved.update({
