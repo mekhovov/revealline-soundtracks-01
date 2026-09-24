@@ -5,7 +5,10 @@ on:
     paths:
       - 'intake/approved-directions-audition-20260925.json'
       - 'intake/approved_directions_pins.py'
+      - 'intake/second_directions_pins.py'
       - 'intake/prepare_approved_directions.py'
+      - 'intake/prepare.py'
+      - 'intake/test_prepare.py'
       - 'intake/test_approved_directions.py'
       - 'intake/assemble_approved_directions.py'
       - 'intake/test_approved_assembly.py'

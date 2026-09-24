@@ -8,7 +8,7 @@ from types import SimpleNamespace
 from unittest.mock import patch
 from prepare import (allowed_redirect, allowed_url, candidate_duration_bounds,
                      commons_api_url, commons_metadata, validate_commons_original, validate_manifest,
-                     reserve, reserve_row, verify_inspector, COMMONS_CHANGE_NOTICE,
+                     public_recording_fingerprints, reserve, reserve_row, verify_inspector, COMMONS_CHANGE_NOTICE,
                      RESERVE, SOURCE_LIMIT, TOTAL_LIMIT)
 
 
@@ -41,6 +41,10 @@ class IntakeTests(unittest.TestCase):
         self.assertEqual(candidate_duration_bounds({'role': 'menu'}), (60, 720))
         self.assertEqual(candidate_duration_bounds({'role': 'boss-cue'}), (30, 720))
         self.assertEqual(candidate_duration_bounds({'role': 'Boss-Cue'}), (60, 720))
+        self.assertEqual(candidate_duration_bounds({'minimumDurationSeconds': 180}), (180, 720))
+        for value in (True, 59, 721, '180'):
+            with self.assertRaises(ValueError):
+                candidate_duration_bounds({'minimumDurationSeconds': value})
 
     def test_no_licence_or_listening_escalation(self):
         for key, value in (('licenseURL', 'https://example.com/free'), ('status', 'approved'), ('download', 'https://opengameart.org/preview')):
@@ -61,6 +65,46 @@ class IntakeTests(unittest.TestCase):
     def test_inspector_revision_is_verified_before_acquisition(self):
         with patch('prepare.command', return_value=SimpleNamespace(stdout='wrong-revision\n')):
             with self.assertRaises(ValueError): verify_inspector(Path('.'))
+
+    def test_deduplication_covers_unified_deliveries_and_native_sources(self):
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'batches/example').mkdir(parents=True)
+            (root / 'catalogue.json').write_text(json.dumps({'tracks': [{
+                'title': 'Public derivative', 'audio': {'sha256': 'a' * 64},
+            }]}))
+            (root / 'preview-catalogue.json').write_text(json.dumps({'tracks': [{
+                'title': 'Foundation recording', 'sha256': 'b' * 64,
+                'conversion': {'original': {'sha256': 'c' * 64}},
+            }]}))
+            (root / 'batches/example/preview-catalogue.json').write_text(json.dumps({
+                # Public batch previews store the exact native identity at
+                # top-level `original`, independently of the displayed title
+                # and normalized delivery hash.
+                'tracks': [{'title': 'Renamed public recording', 'sha256': 'd' * 64,
+                            'original': {'sha256': 'e' * 64}}],
+            }))
+            hashes, titles = public_recording_fingerprints(root)
+            self.assertEqual(hashes, {character * 64 for character in 'abcde'})
+            self.assertEqual(titles,
+                             {'publicderivative', 'foundationrecording',
+                              'renamedpublicrecording'})
+
+    def test_deduplication_refuses_missing_unified_or_malformed_hashes(self):
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            with self.assertRaisesRegex(ValueError, 'Unified'):
+                public_recording_fingerprints(root)
+            (root / 'catalogue.json').write_text(json.dumps({
+                'tracks': [{'title': 'Changed', 'audio': {'sha256': 'not-a-hash'}}],
+            }))
+            with self.assertRaisesRegex(ValueError, 'invalid recording hash'):
+                public_recording_fingerprints(root)
+            (root / 'catalogue.json').write_text(json.dumps({
+                'tracks': [{'title': 'Changed', 'original': {'sha256': 'not-a-hash'}}],
+            }))
+            with self.assertRaisesRegex(ValueError, 'invalid recording hash'):
+                public_recording_fingerprints(root)
 
 
 class CommonsIntakeTests(unittest.TestCase):

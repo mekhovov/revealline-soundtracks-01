@@ -203,6 +203,11 @@ class IntakeRedirectHandler(HTTPRedirectHandler):
 
 def candidate_duration_bounds(row):
     """Allow a short boss cue without weakening the full-recording envelope."""
+    if 'minimumDurationSeconds' in row:
+        minimum = row['minimumDurationSeconds']
+        if type(minimum) is not int or not 60 <= minimum <= 720:
+            raise ValueError('Explicit recording duration floor is invalid')
+        return (minimum, 720)
     return (30, 720) if row.get('role') == 'boss-cue' else (60, 720)
 
 
@@ -511,6 +516,50 @@ def verify_inspector(game_root):
     return {'revision': revision, 'files': pins}
 
 
+def public_recording_fingerprints(root=Path('.')):
+    """Return byte and title identities across the unified public collection.
+
+    ``catalogue.json`` contains every public delivery, while the preview
+    catalogues retain exact native-source hashes that can differ from their
+    normalized MP3 derivatives.  Checking both prevents a later intake from
+    re-encoding an already public recording and evading derivative-only
+    deduplication.
+    """
+    paths = [root / 'catalogue.json', root / 'preview-catalogue.json']
+    paths.extend(sorted((root / 'batches').glob('*/preview-catalogue.json')))
+    hashes, titles = set(), set()
+    for path in paths:
+        if not path.is_file():
+            if path == root / 'catalogue.json':
+                raise ValueError('Unified public catalogue is missing')
+            continue
+        try:
+            tracks = json.loads(path.read_text())['tracks']
+        except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+            raise ValueError('Public catalogue cannot be checked for duplicates') from None
+        if not isinstance(tracks, list):
+            raise ValueError('Public catalogue cannot be checked for duplicates')
+        for track in tracks:
+            if not isinstance(track, dict) or not isinstance(track.get('title'), str):
+                raise ValueError('Public catalogue recording identity is incomplete')
+            titles.add(re.sub(r'[^a-z0-9]', '', track['title'].lower()))
+            candidates = [track.get('sha256')]
+            audio = track.get('audio')
+            if isinstance(audio, dict):
+                candidates.append(audio.get('sha256'))
+            original = track.get('original')
+            if isinstance(original, dict):
+                candidates.append(original.get('sha256'))
+            conversion = track.get('conversion')
+            if isinstance(conversion, dict) and isinstance(conversion.get('original'), dict):
+                candidates.append(conversion['original'].get('sha256'))
+            for value in (candidate for candidate in candidates if candidate is not None):
+                if not isinstance(value, str) or not re.fullmatch(r'[0-9a-f]{64}', value):
+                    raise ValueError('Public catalogue contains an invalid recording hash')
+                hashes.add(value)
+    return hashes, titles
+
+
 def prepare(manifest, output, game_root):
     manifest_bytes = manifest.read_bytes()
     rows = validate_manifest(json.loads(manifest_bytes))['tracks']
@@ -527,9 +576,7 @@ def prepare(manifest, output, game_root):
                'ffmpeg': command(['ffmpeg', '-version']).stdout.splitlines()[0],
                'gameInspector': inspector,
                'listeningApproval': False, 'tracks': [], 'failures': []}
-    known = json.loads(Path('preview-catalogue.json').read_text())['tracks']
-    known_hashes = {track['sha256'] for track in known}
-    known_titles = {re.sub(r'[^a-z0-9]', '', track['title'].lower()) for track in known}
+    known_hashes, known_titles = public_recording_fingerprints()
     pages = {}
     source_hashes = set()
     for row in rows:
@@ -575,7 +622,7 @@ def prepare(manifest, output, game_root):
             duration = float(probe['format']['duration'])
             minimum_duration, maximum_duration = candidate_duration_bounds(row)
             if not minimum_duration <= duration <= maximum_duration:
-                envelope = '30 seconds–12 minutes for an explicit boss cue' if minimum_duration == 30 else '1–12 minutes'
+                envelope = f'{minimum_duration}–{maximum_duration} seconds'
                 raise ValueError(f'Recording is outside the {envelope} candidate envelope')
             command(['ffmpeg', '-v', 'error', '-xerror', '-nostdin', '-i', str(original), '-map', '0:a:0', '-f', 'null', '-'])
             measured = loudness(original)

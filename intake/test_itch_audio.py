@@ -101,12 +101,19 @@ class ItchAudioTests(unittest.TestCase):
         # binds identity and its safe native filename/format is retained verbatim.
         self.assertEqual(subject.native_filename(headers('Synthasia.flac', 'audio/flac'), 'Synthasia')[1], '.flac')
 
+    def test_quoted_filename_comma_is_not_a_combined_header(self):
+        name = 'Keep My Rhythm, If You Can.ogg'
+        self.assertEqual(subject.native_filename(headers(name, 'audio/ogg'), name),
+                         (name, '.ogg', 'audio/ogg'))
+
     def test_header_duplicates_combined_values_conflicts_and_unsafe_paths_rejected(self):
         invalid = [
             'inline; filename="Race to Mars.mp3"',
             'attachment; filename="Race to Mars.mp3", attachment; filename="other.mp3"',
             'attachment; filename="Race to Mars.mp3"; filename="other.mp3"',
             'attachment; filename="Race to Mars.mp3"; filename*=UTF-8\'\'Other.mp3',
+            'attachment; filename="unterminated.mp3',
+            'attachment; filename="dangling\\',
         ]
         invalid += ['attachment; filename="' + name + '"' for name in (
             '../song.mp3', '..\\song.mp3', '%2e%2e%2fsong.mp3', 'song∕other.mp3',

@@ -15,12 +15,19 @@ from urllib.request import Request, build_opener
 from itch_source import (MetadataClient, NoRedirects, SOURCE_PINS, UPLOAD_PINS,
                          LICENSE_URL, SourceChanged, checked_cdn, require, resolve)
 from approved_directions_pins import (SOURCE_PINS as NEW_SOURCES,
-                                      UPLOAD_PINS as NEW_UPLOADS, DESCRIPTION_HASHES,
+                                      UPLOAD_PINS as NEW_UPLOADS,
+                                      DESCRIPTION_HASHES as NEW_DESCRIPTION_HASHES,
                                       details as audition_details)
+from second_directions_pins import (SOURCE_PINS as SECOND_SOURCES,
+                                    UPLOAD_PINS as SECOND_UPLOADS,
+                                    DESCRIPTION_HASHES as SECOND_DESCRIPTION_HASHES,
+                                    details as second_audition_details)
 
 SOURCE_LIMIT = 64 * 1024 ** 2
 ARTISTS = {'dos88': 'DOS-88', 'escp': 'escp', 'davidkbd': 'David KBD'}
 ARTISTS.update({source: 'David KBD' for source in NEW_SOURCES})
+ARTISTS.update({source: 'David KBD' for source in SECOND_SOURCES})
+DESCRIPTION_HASHES = {**NEW_DESCRIPTION_HASHES, **SECOND_DESCRIPTION_HASHES}
 FORMATS = {
     '.mp3': ({'audio/mpeg', 'audio/mp3'}, {'mp3'}, {'mp3'}),
     '.ogg': ({'audio/ogg', 'application/ogg'}, {'ogg'}, {'vorbis', 'opus'}),
@@ -45,6 +52,8 @@ def identity(track_id):
     }
     if track_id in NEW_UPLOADS:
         result.update(audition_details(track_id))
+    elif track_id in SECOND_UPLOADS:
+        result.update(second_audition_details(track_id))
     return result
 
 
@@ -92,9 +101,24 @@ class EvidenceClient:
 def native_filename(headers, upload_name):
     values = headers.get_all('Content-Disposition', [])
     require(len(values) == 1 and len(values[0]) <= 2048
-            and ',' not in values[0]
             and not any(ord(c) < 32 or ord(c) == 127 for c in values[0]),
             'Missing or ambiguous native Content-Disposition')
+    # A comma is valid inside a quoted filename (for example
+    # ``filename="Keep My Rhythm, If You Can.ogg"``), but an unquoted comma
+    # can join multiple field values into one string.  Message.get_params()
+    # otherwise accepts that combined form, so reject it before parsing while
+    # retaining quoted-string escaping semantics.
+    quoted = escaped = False
+    for character in values[0]:
+        if escaped:
+            escaped = False
+        elif quoted and character == '\\':
+            escaped = True
+        elif character == '"':
+            quoted = not quoted
+        elif character == ',' and not quoted:
+            require(False, 'Missing or ambiguous native Content-Disposition')
+    require(not quoted and not escaped, 'Missing or ambiguous native Content-Disposition')
     message = Message()
     message['Content-Disposition'] = values[0]
     params = message.get_params(header='content-disposition', unquote=True)
