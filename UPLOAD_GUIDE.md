@@ -47,7 +47,7 @@ A YouTube upload, a public-domain melody, or possession of an MP3 does not estab
 node intake/add-upload.mjs --manifest /absolute/path/to/upload.json
 ```
 
-4. The command checks file and archive limits before reading audio, preserves at least 1 GiB of free disk, rejects existing IDs/hashes and writes the validated MP3 bytes to `batches/<batch-id>/objects/<sha256>.mp3`. It verifies the complete staged batch before transactionally publishing the batch, index, catalogue and root pins. A failed admission leaves the published archive unchanged.
+4. The command takes the archive writer lock, checks file and archive limits before reading audio, preserves at least 1 GiB of free disk, rejects existing IDs/hashes and writes the validated MP3 bytes to `batches/<batch-id>/objects/<sha256>.mp3`. It verifies the complete staged batch before transactionally publishing the batch, index, catalogue and root pins. A failed admission leaves the published archive unchanged; if both a commit and its rollback fail, the error names the retained recovery directory.
 5. Run the same checks as CI:
 
 ```sh

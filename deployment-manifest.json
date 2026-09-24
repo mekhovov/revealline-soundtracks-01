@@ -23,8 +23,8 @@
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 3943,
-      "sha256": "aa12a1791c3463f59ed7e7b08385ddfa69e1eabd1eaa466e60197ede0b45977a"
+      "bytes": 4063,
+      "sha256": "95b194130052474628a55ac1de6baf60b591a3caee48d072cbdfc9cd3d76c8c1"
     },
     {
       "path": "catalogue.json",
@@ -43,8 +43,8 @@
     },
     {
       "path": "player.mjs",
-      "bytes": 9742,
-      "sha256": "99688f19c391f888269ac00ae16bb26c93d08bd37358ddbb70a79e56e63230ae"
+      "bytes": 9915,
+      "sha256": "74087b8c8d2108492048a51aff9a97ddbd2e6f14d9afd362f898743f6964eecc"
     },
     {
       "path": "preview-catalogue.json",

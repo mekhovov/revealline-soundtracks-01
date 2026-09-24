@@ -1,12 +1,13 @@
-import { createHash } from 'node:crypto';
-import { readFile, writeFile } from 'node:fs/promises';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { createHash } from "node:crypto";
+import { readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
-const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
+const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
+const digest = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const readJSON = async (repositoryRoot, overrides, file) => {
-  const bytes = overrides?.get(file) ?? (await readFile(path.join(repositoryRoot, file)));
+  const bytes =
+    overrides?.get(file) ?? (await readFile(path.join(repositoryRoot, file)));
   return { bytes, value: JSON.parse(bytes) };
 };
 
@@ -33,27 +34,50 @@ function normalizedTags(track) {
         ...(track.tags?.genres ?? []),
         ...(track.tags?.themes ?? []),
         track.tags?.role,
-        Number.isFinite(track.tags?.energy) ? `energy ${track.tags.energy}` : null,
+        Number.isFinite(track.tags?.energy)
+          ? `energy ${track.tags.energy}`
+          : null,
       ];
   return [...new Set(source.filter(Boolean).map((tag) => String(tag).trim()))];
 }
 
-function publicTrack(track, { batchId, basePath, status, listeningApproval, admitted }) {
-  demand(typeof track.id === 'string' && track.id, 'Track identity is required.');
-  demand(typeof track.title === 'string' && track.title, `Missing title for ${track.id}.`);
-  demand(typeof track.artist === 'string' && track.artist, `Missing artist for ${track.id}.`);
-  demand(/^[a-f0-9]{64}$/.test(track.sha256), `Invalid hash for ${track.id}.`);
-  demand(Number.isSafeInteger(track.bytes) && track.bytes > 0, `Invalid bytes for ${track.id}.`);
+function publicTrack(
+  track,
+  { batchId, basePath, status, listeningApproval, admitted },
+) {
   demand(
-    typeof track.path === 'string' && /^objects\/[a-f0-9]{64}\.mp3$/.test(track.path),
+    typeof track.id === "string" && track.id,
+    "Track identity is required.",
+  );
+  demand(
+    typeof track.title === "string" && track.title,
+    `Missing title for ${track.id}.`,
+  );
+  demand(
+    typeof track.artist === "string" && track.artist,
+    `Missing artist for ${track.id}.`,
+  );
+  demand(/^[a-f0-9]{64}$/.test(track.sha256), `Invalid hash for ${track.id}.`);
+  demand(
+    Number.isSafeInteger(track.bytes) && track.bytes > 0,
+    `Invalid bytes for ${track.id}.`,
+  );
+  demand(
+    typeof track.path === "string" &&
+      /^objects\/[a-f0-9]{64}\.mp3$/.test(track.path),
     `Invalid MP3 path for ${track.id}.`,
   );
-  demand(track.path === `objects/${track.sha256}.mp3`, `MP3 hash path differs for ${track.id}.`);
+  demand(
+    track.path === `objects/${track.sha256}.mp3`,
+    `MP3 hash path differs for ${track.id}.`,
+  );
   return {
     id: track.id,
     title: track.title,
     artist: track.artist,
-    durationSeconds: Number.isFinite(track.durationSeconds) ? track.durationSeconds : null,
+    durationSeconds: Number.isFinite(track.durationSeconds)
+      ? track.durationSeconds
+      : null,
     tags: normalizedTags(track),
     source: track.source,
     license: track.license ?? null,
@@ -61,11 +85,11 @@ function publicTrack(track, { batchId, basePath, status, listeningApproval, admi
     credit: track.credit,
     fileName: track.fileName ?? `${track.title}.mp3`,
     archiveId: batchId,
-    collection: batchId === 'foundation-70' ? 'Foundation collection' : batchId,
+    collection: batchId === "foundation-70" ? "Foundation collection" : batchId,
     status,
     listeningApproval,
     gameCatalogueAdmission: admitted === true,
-    contentId: track.contentId ?? 'unknown',
+    contentId: track.contentId ?? "unknown",
     recordingModeEligible: track.recordingModeEligible === true,
     audio: {
       path: `${basePath}${track.path}`,
@@ -76,35 +100,42 @@ function publicTrack(track, { batchId, basePath, status, listeningApproval, admi
   };
 }
 
-export async function buildUnifiedCatalogue({ repositoryRoot = root, overrides = new Map() } = {}) {
-  const rootCatalogue = await readJSON(repositoryRoot, overrides, 'preview-catalogue.json');
-  const batchIndex = await readJSON(repositoryRoot, overrides, 'batches.json');
-  demand(
-    rootCatalogue.value.format === 'revealline-licensed-preview-catalogue.v1',
-    'Unexpected root catalogue format.',
+export async function buildUnifiedCatalogue({
+  repositoryRoot = root,
+  overrides = new Map(),
+} = {}) {
+  const rootCatalogue = await readJSON(
+    repositoryRoot,
+    overrides,
+    "preview-catalogue.json",
   );
-  demand(batchIndex.value.batches.length <= 32, 'Too many published batches.');
+  const batchIndex = await readJSON(repositoryRoot, overrides, "batches.json");
+  demand(
+    rootCatalogue.value.format === "revealline-licensed-preview-catalogue.v1",
+    "Unexpected root catalogue format.",
+  );
+  demand(batchIndex.value.batches.length <= 32, "Too many published batches.");
   const batchIds = new Set();
   demand(
-    batchIndex.value.format === 'revealline-soundtrack-preview-batches.v1',
-    'Unexpected batch index format.',
+    batchIndex.value.format === "revealline-soundtrack-preview-batches.v1",
+    "Unexpected batch index format.",
   );
 
   const sourceCatalogues = [
     {
-      id: 'foundation-70',
-      path: 'preview-catalogue.json',
-      basePath: '',
+      id: "foundation-70",
+      path: "preview-catalogue.json",
+      basePath: "",
       catalogue: rootCatalogue.value,
       sha256: digest(rootCatalogue.bytes),
     },
   ];
   for (const declaration of batchIndex.value.batches) {
     demand(
-      typeof declaration.id === 'string' &&
+      typeof declaration.id === "string" &&
         /^[a-z0-9][a-z0-9-]{0,63}$/.test(declaration.id) &&
         !batchIds.has(declaration.id),
-      'Invalid or duplicate batch identity.',
+      "Invalid or duplicate batch identity.",
     );
     batchIds.add(declaration.id);
     const file = `batches/${declaration.id}/preview-catalogue.json`;
@@ -153,13 +184,13 @@ export async function buildUnifiedCatalogue({ repositoryRoot = root, overrides =
   }
 
   const tracks = [...byHash.values()];
-  demand(tracks.length <= 256, 'Unified catalogue exceeds 256 recordings.');
+  demand(tracks.length <= 256, "Unified catalogue exceeds 256 recordings.");
   const audioBytes = tracks.reduce((sum, track) => sum + track.audio.bytes, 0);
   return {
-    format: 'revealline-public-soundtrack-catalogue.v1',
+    format: "revealline-public-soundtrack-catalogue.v1",
     archive: {
-      id: 'revealline-soundtracks-01',
-      baseURL: 'https://mekhovov.github.io/revealline-soundtracks-01/',
+      id: "revealline-soundtracks-01",
+      baseURL: "https://mekhovov.github.io/revealline-soundtracks-01/",
     },
     sources: sourceCatalogues.map(({ id, path: file, sha256, catalogue }) => ({
       id,
@@ -184,22 +215,30 @@ export function serializeCatalogue(catalogue) {
   return `${JSON.stringify(catalogue, null, 2)}\n`;
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+if (
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+) {
   const catalogue = await buildUnifiedCatalogue();
   const serialized = serializeCatalogue(catalogue);
-  const output = path.join(root, 'catalogue.json');
-  if (process.argv.includes('--write')) {
+  const output = path.join(root, "catalogue.json");
+  if (process.argv.includes("--write")) {
     await writeFile(output, serialized);
     console.log(
       `Wrote ${catalogue.counts.uniqueRecordings} unique recordings from ${catalogue.sources.length} collections.`,
     );
-  } else if (process.argv.includes('--check')) {
-    const current = await readFile(output, 'utf8');
-    demand(current === serialized, 'catalogue.json is stale; run with --write.');
+  } else if (process.argv.includes("--check")) {
+    const current = await readFile(output, "utf8");
+    demand(
+      current === serialized,
+      "catalogue.json is stale; run with --write.",
+    );
     console.log(
       `Verified ${catalogue.counts.uniqueRecordings} unique recordings from ${catalogue.sources.length} collections.`,
     );
   } else {
-    throw new Error('Usage: node intake/build-unified-catalogue.mjs --write|--check');
+    throw new Error(
+      "Usage: node intake/build-unified-catalogue.mjs --write|--check",
+    );
   }
 }
