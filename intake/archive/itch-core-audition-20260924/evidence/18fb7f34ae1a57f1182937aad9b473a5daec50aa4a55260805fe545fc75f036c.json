@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "escp.synthasia",
+  "source": "https://escpmusic.itch.io/synthasia",
+  "gameId": 4662919,
+  "uploadId": 17878086,
+  "uploadName": "Synthasia",
+  "title": "Synthasia",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/4662919/17878086",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "e s c p - - Synthasia - 08 Synthasia.mp3",
+    "suffix": ".mp3",
+    "contentType": "audio/mpeg",
+    "bytes": 14026956,
+    "sha256": "f500bfd462dc65c7b7174d9b45b6fa446df6beca3cea14c2199c6b7d15345181"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://escpmusic.itch.io/synthasia",
+    "creator": "escp",
+    "pageSha256": "9a37a5109e8fb2c95f2f20bb01be92085f05787b0ec9bd308042aeff6b682d82",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

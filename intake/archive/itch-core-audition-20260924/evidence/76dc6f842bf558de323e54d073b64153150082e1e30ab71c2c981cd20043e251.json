@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "dos88.city-stomper",
+  "source": "https://dos88.itch.io/dos-88-music-library",
+  "gameId": 66639,
+  "uploadId": 206074,
+  "uploadName": "DOS-88 - City Stomper.mp3",
+  "title": "City Stomper",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/66639/206074",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DOS-88 - City Stomper.mp3",
+    "suffix": ".mp3",
+    "contentType": "audio/mp3",
+    "bytes": 7745832,
+    "sha256": "64bedb96b8ff1c2101c86dfacb1c5f37c1825df9f68a7d575613b0da9b722cbf"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://dos88.itch.io/dos-88-music-library",
+    "creator": "DOS-88",
+    "pageSha256": "408e591dd8c35597df54eee11ca23e4313253145df4812fcaab25e72523b69f9",
+    "observedLicenseLink": "https://itch.io/soundtracks/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

@@ -24,6 +24,22 @@
         "bytes": 1987,
         "sha256": "5c5004bc364fdb3bf18e993b329045c6ffbe35b57178113194eb1834c99d27d2"
       }
+    },
+    {
+      "id": "metal-eternity-audition-20260924",
+      "manifest": {
+        "path": "batches/metal-eternity-audition-20260924/deployment-manifest.json",
+        "bytes": 2447,
+        "sha256": "b183eacdd26d0b4834f02ab1f9015299efef652ad06da4c8d509c70117c3dee3"
+      }
+    },
+    {
+      "id": "synth-audition-20260924",
+      "manifest": {
+        "path": "batches/synth-audition-20260924/deployment-manifest.json",
+        "bytes": 2870,
+        "sha256": "bcb591795b8eea0e2cbe931f9eb793cc41a5b04f9b1f6dec3fa8ba7549c9cd61"
+      }
     }
   ]
 }

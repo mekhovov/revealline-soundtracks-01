@@ -1,0 +1,36 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "synth-audition-20260924",
+  "files": [
+    {
+      "path": "objects/d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c.mp3",
+      "sha256": "d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c",
+      "bytes": 6938166
+    },
+    {
+      "path": "objects/978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644.mp3",
+      "sha256": "978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644",
+      "bytes": 7875231
+    },
+    {
+      "path": "objects/40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684.mp3",
+      "sha256": "40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684",
+      "bytes": 7873559
+    },
+    {
+      "path": "objects/d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6.mp3",
+      "sha256": "d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6",
+      "bytes": 6195035
+    },
+    {
+      "path": "objects/3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752.mp3",
+      "sha256": "3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752",
+      "bytes": 10909614
+    },
+    {
+      "path": "objects/28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847.mp3",
+      "sha256": "28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847",
+      "bytes": 11151195
+    }
+  ]
+}

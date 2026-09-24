@@ -1,0 +1,26 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-eternity-audition-20260924",
+  "files": [
+    {
+      "path": "objects/2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30.mp3",
+      "sha256": "2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30",
+      "bytes": 8065820
+    },
+    {
+      "path": "objects/991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d.mp3",
+      "sha256": "991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d",
+      "bytes": 9048860
+    },
+    {
+      "path": "objects/ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0.mp3",
+      "sha256": "ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0",
+      "bytes": 6281970
+    },
+    {
+      "path": "objects/c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae.mp3",
+      "sha256": "c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae",
+      "bytes": 6880488
+    }
+  ]
+}

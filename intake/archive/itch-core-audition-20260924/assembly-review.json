@@ -1,0 +1,65 @@
+{
+  "status": "technical-assembly-verified-listening-pending",
+  "sourceBase": "ada6a708222de9e399a36751e9aecef4238c746a",
+  "sourceRun": 35953731494,
+  "artifactId": 10789299056,
+  "artifactSha256": "dc25de7d967f87d38a058c8755db1b253ae0ad38588826fd4a12445580f0b45b",
+  "checks": {
+    "artifactDigestAndBytes": true,
+    "all32MembersHashesAndCRC": true,
+    "sourceAndRunnerTreeEqual": true,
+    "sourceManifestExact": true,
+    "tenSourceBindingsAndNativeHashes": true,
+    "tenDeliveryHashes": true,
+    "sixGameInspectorSourceHashes": true,
+    "completeDecodeReceipts": true,
+    "loudnessAndTruePeakTargets": true,
+    "all49HostedTestsPassed": true,
+    "allPendingReviewFlagsPreserved": true,
+    "oldPathsUnchangedExceptBatchIndex": true,
+    "existingDeclarationValidatorsPassed": true,
+    "eachNewVolumeBelow64MiB": true
+  },
+  "declarations": {
+    "declarationsValid": true,
+    "tracks": 96,
+    "audioBytes": 519645620,
+    "publicBytes": 520152260,
+    "batches": 5
+  },
+  "newBatches": [
+    {
+      "id": "metal-eternity-audition-20260924",
+      "manifest": {
+        "path": "batches/metal-eternity-audition-20260924/deployment-manifest.json",
+        "bytes": 2447,
+        "sha256": "b183eacdd26d0b4834f02ab1f9015299efef652ad06da4c8d509c70117c3dee3"
+      },
+      "totalBytes": 30312566
+    },
+    {
+      "id": "synth-audition-20260924",
+      "manifest": {
+        "path": "batches/synth-audition-20260924/deployment-manifest.json",
+        "bytes": 2870,
+        "sha256": "bcb591795b8eea0e2cbe931f9eb793cc41a5b04f9b1f6dec3fa8ba7549c9cd61"
+      },
+      "totalBytes": 50986442
+    }
+  ],
+  "limits": {
+    "zipMemoryMaximumBytes": 201326592,
+    "uncompressedMaximumBytes": 681574400,
+    "localMediaFilesWritten": 0
+  },
+  "remaining": [
+    "Independent review of this publication PR",
+    "Hosted verify and Pages staging",
+    "Direct public byte/playback verification after deployment",
+    "Full listening, transitions and warning audibility",
+    "Game admission and release",
+    "Physical device qualification"
+  ],
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false
+}

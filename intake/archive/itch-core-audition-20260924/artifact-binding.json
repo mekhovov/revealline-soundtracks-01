@@ -1,0 +1,20 @@
+{
+  "run": 35953731494,
+  "head": "fcb562746794b3d8faafd967e43e13948e5aa809",
+  "runnerRevision": "b457bd9eba79acc121b7d8ed53f64885bc5c9768",
+  "sourceTree": "d84d3c034264c4d60c9a040124817ae3822f1fa4",
+  "artifactId": 10789299056,
+  "artifactSha256": "dc25de7d967f87d38a058c8755db1b253ae0ad38588826fd4a12445580f0b45b",
+  "artifactBytes": 157728652,
+  "uncompressedBytes": 157721000,
+  "sourceManifestSha256": "02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9",
+  "hostedTests": {
+    "jobId": 107487524721,
+    "count": 49,
+    "conclusion": "success",
+    "rawLogSha256": "4c647087a2475091522ffbed8df8630abe941e15a510f6c2143d2aabcbfc2523",
+    "excerptPath": "hosted-tests.txt"
+  },
+  "listeningApproval": false,
+  "gameCatalogueAdmission": false
+}

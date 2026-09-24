@@ -1,0 +1,77 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "metal-eternity-audition-20260924",
+  "expected": {
+    "trackCount": 4,
+    "audioBytes": 30277138
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 2698,
+      "sha256": "5fd4d0da3cb1934683dafbd1ae6d10a936ba442a9c24a458aa9a87d5844457b1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 795,
+      "sha256": "ac7c87a8b839092517807b59f523be04ca0eaf5f79c6f4fa120ef68052aae495"
+    },
+    {
+      "path": "index.html",
+      "bytes": 8919,
+      "sha256": "73b492bdb47ddc42ea25618018b3fc79a4b06f10d48f7f0be04e5e80a16aabb7"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 968,
+      "sha256": "3149e0df489d92b020c13d83d8630cd83af8b32964e2463d1a316bea02453337"
+    },
+    {
+      "path": "objects/2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30.mp3",
+      "bytes": 8065820,
+      "sha256": "2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30"
+    },
+    {
+      "path": "objects/991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d.mp3",
+      "bytes": 9048860,
+      "sha256": "991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d"
+    },
+    {
+      "path": "objects/c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae.mp3",
+      "bytes": 6880488,
+      "sha256": "c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae"
+    },
+    {
+      "path": "objects/ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0.mp3",
+      "bytes": 6281970,
+      "sha256": "ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 10977,
+      "sha256": "0712a0bc5a1b39647348192a8154519e4a4ae45997f5da60d39702e05bed3da8"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "run": 35953731494,
+    "artifactId": 10789299056,
+    "artifactSha256": "dc25de7d967f87d38a058c8755db1b253ae0ad38588826fd4a12445580f0b45b",
+    "deliveryVolumeNumber": 1,
+    "listeningApproval": false
+  }
+}

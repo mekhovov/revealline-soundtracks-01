@@ -1,0 +1,843 @@
+{
+  "format": "revealline-core-intake-receipt.v1",
+  "sourceManifestSha256": "02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9",
+  "checkedAt": "2026-09-24T04:00:40Z",
+  "runnerRevision": "b457bd9eba79acc121b7d8ed53f64885bc5c9768",
+  "runnerRun": "35953731494",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "gameInspector": {
+    "revision": "71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "files": [
+      {
+        "path": "game/mp3.mjs",
+        "sha256": "d4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a"
+      },
+      {
+        "path": "game/data-json.mjs",
+        "sha256": "bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823"
+      },
+      {
+        "path": "game/soundtrack.mjs",
+        "sha256": "ec03303d295b4f7997f4b8c3c3573cf2bdddcd81f92700d98710d38933f89843"
+      },
+      {
+        "path": "game/soundtrack-rights.mjs",
+        "sha256": "8c1c10927cf5c1f7360374ca1a4d64a7dec3c312b197ace89201c37d75793f04"
+      },
+      {
+        "path": "game/ui/music.mjs",
+        "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+      },
+      {
+        "path": "game/content/soundtrack-catalogue.mjs",
+        "sha256": "0618993ff8ff9508d1ab4295920c07d0b5a8f6f34df683538029754b438dc44f"
+      }
+    ]
+  },
+  "listeningApproval": false,
+  "tracks": [
+    {
+      "id": "dos88.crash-landing",
+      "title": "Crash Landing",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "acquisition": "itch-public-free-download",
+      "gameId": 66639,
+      "uploadId": 206068,
+      "uploadName": "Crash Landing.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: Crash Landing by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/b61a116d3b0b61b129f0426f5c40193e04631f7d573284d83c723b5dfab4f55c.json",
+        "sha256": "b61a116d3b0b61b129f0426f5c40193e04631f7d573284d83c723b5dfab4f55c",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/ec43c763a896a229b14337ded3b4f7e910df4dc46be38e23e029540ff7ff565d.mp3",
+        "sha256": "ec43c763a896a229b14337ded3b4f7e910df4dc46be38e23e029540ff7ff565d",
+        "bytes": 8670955,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206068,
+        "fileName": "Crash Landing.mp3",
+        "contentType": "audio/mp3"
+      },
+      "delivery": {
+        "path": "objects/d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c.mp3",
+        "sha256": "d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c",
+        "bytes": 6938166
+      },
+      "asset": {
+        "sha256": "d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c",
+        "bytes": 6938166,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 8300,
+        "durationSeconds": 216.81632653061226
+      },
+      "durationSeconds": 216.772125,
+      "sourceLoudness": {
+        "input_i": "-17.16",
+        "input_tp": "-3.95",
+        "input_lra": "2.40",
+        "input_thresh": "-27.22",
+        "output_i": "-15.61",
+        "output_tp": "-1.50",
+        "output_lra": "2.00",
+        "output_thresh": "-25.66",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.39"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-2.94",
+        "input_lra": "2.40",
+        "input_thresh": "-26.06",
+        "output_i": "-15.61",
+        "output_tp": "-1.50",
+        "output_lra": "2.00",
+        "output_thresh": "-25.66",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.39"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "dos88.race-to-mars",
+      "title": "Race to Mars",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "acquisition": "itch-public-free-download",
+      "gameId": 66639,
+      "uploadId": 206071,
+      "uploadName": "Race to Mars.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: Race to Mars by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/9aea69a34054cf39bba3a25b60863a63e51670581afc5c05f223cdc8f754a232.json",
+        "sha256": "9aea69a34054cf39bba3a25b60863a63e51670581afc5c05f223cdc8f754a232",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/d2b29e881ac10030613cad6272eaace6bdcad23f39e07d66fc5690382bf15c08.mp3",
+        "sha256": "d2b29e881ac10030613cad6272eaace6bdcad23f39e07d66fc5690382bf15c08",
+        "bytes": 9846413,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206071,
+        "fileName": "Race to Mars.mp3",
+        "contentType": "audio/mp3"
+      },
+      "delivery": {
+        "path": "objects/978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644.mp3",
+        "sha256": "978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644",
+        "bytes": 7875231
+      },
+      "asset": {
+        "sha256": "978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644",
+        "bytes": 7875231,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 9421,
+        "durationSeconds": 246.0995918367347
+      },
+      "durationSeconds": 246.055375,
+      "sourceLoudness": {
+        "input_i": "-13.30",
+        "input_tp": "-1.01",
+        "input_lra": "2.10",
+        "input_thresh": "-23.54",
+        "output_i": "-16.03",
+        "output_tp": "-3.40",
+        "output_lra": "2.20",
+        "output_thresh": "-26.19",
+        "normalization_type": "dynamic",
+        "target_offset": "0.03"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-3.95",
+        "input_lra": "2.10",
+        "input_thresh": "-26.24",
+        "output_i": "-16.03",
+        "output_tp": "-3.38",
+        "output_lra": "2.20",
+        "output_thresh": "-26.19",
+        "normalization_type": "dynamic",
+        "target_offset": "0.03"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "dos88.automata-v2",
+      "title": "Automata v2",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "acquisition": "itch-public-free-download",
+      "gameId": 66639,
+      "uploadId": 206072,
+      "uploadName": "DOS-88 - Automatav2.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: Automata v2 by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/42851d853f8fc3bc20e3081254af0ae7ef1f7673fd255e41db24e5cf40016ccc.json",
+        "sha256": "42851d853f8fc3bc20e3081254af0ae7ef1f7673fd255e41db24e5cf40016ccc",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/3ec07cb7a862d0f58a56eaeb10bb50172bb645850424489ca4687b2a02fef07d.mp3",
+        "sha256": "3ec07cb7a862d0f58a56eaeb10bb50172bb645850424489ca4687b2a02fef07d",
+        "bytes": 9843987,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206072,
+        "fileName": "DOS-88 - Automatav2.mp3",
+        "contentType": "audio/mp3"
+      },
+      "delivery": {
+        "path": "objects/40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684.mp3",
+        "sha256": "40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684",
+        "bytes": 7873559
+      },
+      "asset": {
+        "sha256": "40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684",
+        "bytes": 7873559,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 9419,
+        "durationSeconds": 246.04734693877552
+      },
+      "durationSeconds": 245.9951,
+      "sourceLoudness": {
+        "input_i": "-11.90",
+        "input_tp": "-1.52",
+        "input_lra": "0.60",
+        "input_thresh": "-21.90",
+        "output_i": "-15.57",
+        "output_tp": "-3.39",
+        "output_lra": "1.30",
+        "output_thresh": "-25.57",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.43"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.55",
+        "input_lra": "0.60",
+        "input_thresh": "-26.00",
+        "output_i": "-15.57",
+        "output_tp": "-3.30",
+        "output_lra": "1.30",
+        "output_thresh": "-25.57",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.43"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "dos88.city-stomper",
+      "title": "City Stomper",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "acquisition": "itch-public-free-download",
+      "gameId": 66639,
+      "uploadId": 206074,
+      "uploadName": "DOS-88 - City Stomper.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: City Stomper by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/76dc6f842bf558de323e54d073b64153150082e1e30ab71c2c981cd20043e251.json",
+        "sha256": "76dc6f842bf558de323e54d073b64153150082e1e30ab71c2c981cd20043e251",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/64bedb96b8ff1c2101c86dfacb1c5f37c1825df9f68a7d575613b0da9b722cbf.mp3",
+        "sha256": "64bedb96b8ff1c2101c86dfacb1c5f37c1825df9f68a7d575613b0da9b722cbf",
+        "bytes": 7745832,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206074,
+        "fileName": "DOS-88 - City Stomper.mp3",
+        "contentType": "audio/mp3"
+      },
+      "delivery": {
+        "path": "objects/d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6.mp3",
+        "sha256": "d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6",
+        "bytes": 6195035
+      },
+      "asset": {
+        "sha256": "d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6",
+        "bytes": 6195035,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 7411,
+        "durationSeconds": 193.5934693877551
+      },
+      "durationSeconds": 193.541225,
+      "sourceLoudness": {
+        "input_i": "-11.47",
+        "input_tp": "-3.22",
+        "input_lra": "2.40",
+        "input_thresh": "-21.57",
+        "output_i": "-16.18",
+        "output_tp": "-7.96",
+        "output_lra": "2.30",
+        "output_thresh": "-26.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.18"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-7.46",
+        "input_lra": "2.40",
+        "input_thresh": "-26.09",
+        "output_i": "-16.18",
+        "output_tp": "-7.69",
+        "output_lra": "2.30",
+        "output_thresh": "-26.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.18"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "escp.twilight-city",
+      "title": "Twilight City",
+      "artist": "escp",
+      "artistURL": "https://escpmusic.itch.io",
+      "source": "https://escpmusic.itch.io/synthasia",
+      "acquisition": "itch-public-free-download",
+      "gameId": 4662919,
+      "uploadId": 17878087,
+      "uploadName": "Twilight City",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: Twilight City by escp (https://escpmusic.itch.io/synthasia). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/808c7cc2025647cec25b2b0c47a7638da3d43bb3ce4b8dc0c93d4930858df6cc.json",
+        "sha256": "808c7cc2025647cec25b2b0c47a7638da3d43bb3ce4b8dc0c93d4930858df6cc",
+        "url": "https://escpmusic.itch.io/synthasia",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/517651d5aec14ef8d16d739e5bc21c5b70e4ede85594d0dd47d718e5049ecf7f.mp3",
+        "sha256": "517651d5aec14ef8d16d739e5bc21c5b70e4ede85594d0dd47d718e5049ecf7f",
+        "bytes": 13731199,
+        "source": "https://escpmusic.itch.io/synthasia",
+        "uploadId": 17878087,
+        "fileName": "e s c p - - Synthasia - 06 Twilight City.mp3",
+        "contentType": "audio/mpeg"
+      },
+      "delivery": {
+        "path": "objects/3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752.mp3",
+        "sha256": "3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752",
+        "bytes": 10909614
+      },
+      "asset": {
+        "sha256": "3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752",
+        "bytes": 10909614,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 13051,
+        "durationSeconds": 340.92408163265304
+      },
+      "durationSeconds": 340.897959,
+      "sourceLoudness": {
+        "input_i": "-10.67",
+        "input_tp": "1.84",
+        "input_lra": "8.40",
+        "input_thresh": "-21.16",
+        "output_i": "-15.29",
+        "output_tp": "-1.50",
+        "output_lra": "8.10",
+        "output_thresh": "-25.60",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.71"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-3.39",
+        "input_lra": "8.50",
+        "input_thresh": "-26.46",
+        "output_i": "-15.29",
+        "output_tp": "-1.50",
+        "output_lra": "8.10",
+        "output_thresh": "-25.60",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.71"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "escp.synthasia",
+      "title": "Synthasia",
+      "artist": "escp",
+      "artistURL": "https://escpmusic.itch.io",
+      "source": "https://escpmusic.itch.io/synthasia",
+      "acquisition": "itch-public-free-download",
+      "gameId": 4662919,
+      "uploadId": 17878086,
+      "uploadName": "Synthasia",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: Synthasia by escp (https://escpmusic.itch.io/synthasia). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/18fb7f34ae1a57f1182937aad9b473a5daec50aa4a55260805fe545fc75f036c.json",
+        "sha256": "18fb7f34ae1a57f1182937aad9b473a5daec50aa4a55260805fe545fc75f036c",
+        "url": "https://escpmusic.itch.io/synthasia",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/f500bfd462dc65c7b7174d9b45b6fa446df6beca3cea14c2199c6b7d15345181.mp3",
+        "sha256": "f500bfd462dc65c7b7174d9b45b6fa446df6beca3cea14c2199c6b7d15345181",
+        "bytes": 14026956,
+        "source": "https://escpmusic.itch.io/synthasia",
+        "uploadId": 17878086,
+        "fileName": "e s c p - - Synthasia - 08 Synthasia.mp3",
+        "contentType": "audio/mpeg"
+      },
+      "delivery": {
+        "path": "objects/28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847.mp3",
+        "sha256": "28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847",
+        "bytes": 11151195
+      },
+      "asset": {
+        "sha256": "28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847",
+        "bytes": 11151195,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 13340,
+        "durationSeconds": 348.4734693877551
+      },
+      "durationSeconds": 348.447347,
+      "sourceLoudness": {
+        "input_i": "-12.21",
+        "input_tp": "0.11",
+        "input_lra": "8.70",
+        "input_thresh": "-22.50",
+        "output_i": "-15.68",
+        "output_tp": "-1.50",
+        "output_lra": "8.70",
+        "output_thresh": "-25.83",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.32"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.01",
+        "input_tp": "-3.33",
+        "input_lra": "8.70",
+        "input_thresh": "-26.29",
+        "output_i": "-15.68",
+        "output_tp": "-1.50",
+        "output_lra": "8.70",
+        "output_thresh": "-25.83",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.32"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "davidkbd.desolation",
+      "title": "The Desolation of a Civilization",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 976471,
+      "uploadId": 6033123,
+      "uploadName": "DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: The Desolation of a Civilization by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/7714a35d11129ffead2c9395787bd1e0f1b012d18667feb09df2aa02240b0248.json",
+        "sha256": "7714a35d11129ffead2c9395787bd1e0f1b012d18667feb09df2aa02240b0248",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/e24890d8f8b3db4df74fd37f8b17b21eb47ba43233479263151c6b283481f9f8.ogg",
+        "sha256": "e24890d8f8b3db4df74fd37f8b17b21eb47ba43233479263151c6b283481f9f8",
+        "bytes": 3350129,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033123,
+        "fileName": "DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "delivery": {
+        "path": "objects/2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30.mp3",
+        "sha256": "2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30",
+        "bytes": 8065820
+      },
+      "asset": {
+        "sha256": "2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30",
+        "bytes": 8065820,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 9649,
+        "durationSeconds": 252.05551020408163
+      },
+      "durationSeconds": 252.0,
+      "sourceLoudness": {
+        "input_i": "-11.56",
+        "input_tp": "-0.49",
+        "input_lra": "8.00",
+        "input_thresh": "-21.99",
+        "output_i": "-15.01",
+        "output_tp": "-1.50",
+        "output_lra": "7.60",
+        "output_thresh": "-25.22",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.99"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-4.92",
+        "input_lra": "8.10",
+        "input_thresh": "-26.43",
+        "output_i": "-15.00",
+        "output_tp": "-1.50",
+        "output_lra": "7.60",
+        "output_thresh": "-25.22",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.00"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "davidkbd.agony-space-deep",
+      "title": "Agony Space-deep",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 976471,
+      "uploadId": 6033127,
+      "uploadName": "DavidKBD - Eternity Pack - 02 - Agony Space-deep - oneshoot.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: Agony Space-deep by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/193cdef9f8b1d0229073cd617078060a9abb9c21e3c1d7303e35b825a1155a65.json",
+        "sha256": "193cdef9f8b1d0229073cd617078060a9abb9c21e3c1d7303e35b825a1155a65",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/c53b5e3218089b51c6aac6dc92d1e98a6b7837b32ece2be69352d7ee3755561c.ogg",
+        "sha256": "c53b5e3218089b51c6aac6dc92d1e98a6b7837b32ece2be69352d7ee3755561c",
+        "bytes": 3808905,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033127,
+        "fileName": "DavidKBD - Eternity Pack - 02 - Agony Space-deep - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "delivery": {
+        "path": "objects/991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d.mp3",
+        "sha256": "991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d",
+        "bytes": 9048860
+      },
+      "asset": {
+        "sha256": "991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d",
+        "bytes": 9048860,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 10825,
+        "durationSeconds": 282.7755102040816
+      },
+      "durationSeconds": 282.705873,
+      "sourceLoudness": {
+        "input_i": "-11.15",
+        "input_tp": "-0.23",
+        "input_lra": "6.70",
+        "input_thresh": "-21.56",
+        "output_i": "-15.48",
+        "output_tp": "-1.50",
+        "output_lra": "7.60",
+        "output_thresh": "-25.71",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.52"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.06",
+        "input_lra": "6.80",
+        "input_thresh": "-26.40",
+        "output_i": "-15.47",
+        "output_tp": "-1.50",
+        "output_lra": "7.60",
+        "output_thresh": "-25.71",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.53"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "davidkbd.god-of-darkness",
+      "title": "God of Darkness",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 976471,
+      "uploadId": 6033130,
+      "uploadName": "DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: God of Darkness by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/623d0fefe8a56cdf0e0e35270788b37e62412ecc4d371ce8544eeda3aa21515a.json",
+        "sha256": "623d0fefe8a56cdf0e0e35270788b37e62412ecc4d371ce8544eeda3aa21515a",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/05e41ee8a099b3bfc9df7f55ebbb0ce484bf95f5d252b6e6c84ff18f6167408e.ogg",
+        "sha256": "05e41ee8a099b3bfc9df7f55ebbb0ce484bf95f5d252b6e6c84ff18f6167408e",
+        "bytes": 2588663,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033130,
+        "fileName": "DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "delivery": {
+        "path": "objects/ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0.mp3",
+        "sha256": "ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0",
+        "bytes": 6281970
+      },
+      "asset": {
+        "sha256": "ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0",
+        "bytes": 6281970,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 7515,
+        "durationSeconds": 196.31020408163266
+      },
+      "durationSeconds": 196.235283,
+      "sourceLoudness": {
+        "input_i": "-10.42",
+        "input_tp": "-0.29",
+        "input_lra": "1.10",
+        "input_thresh": "-20.58",
+        "output_i": "-15.37",
+        "output_tp": "-1.50",
+        "output_lra": "1.70",
+        "output_thresh": "-25.47",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.63"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.92",
+        "input_lra": "1.10",
+        "input_thresh": "-26.15",
+        "output_i": "-15.37",
+        "output_tp": "-1.50",
+        "output_lra": "1.70",
+        "output_thresh": "-25.47",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.63"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "davidkbd.suffocation",
+      "title": "Suffocation",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 976471,
+      "uploadId": 6033135,
+      "uploadName": "DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "credit": "Music: Suffocation by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/40fcc60803fe067e3b23222887a95176842a6baed669d7c71513bd81643ba555.json",
+        "sha256": "40fcc60803fe067e3b23222887a95176842a6baed669d7c71513bd81643ba555",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/2041effbf317cc38af02e6c44db7a112eb14301dc04d9599f3f49c9afca2bf00.ogg",
+        "sha256": "2041effbf317cc38af02e6c44db7a112eb14301dc04d9599f3f49c9afca2bf00",
+        "bytes": 2836820,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033135,
+        "fileName": "DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "delivery": {
+        "path": "objects/c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae.mp3",
+        "sha256": "c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae",
+        "bytes": 6880488
+      },
+      "asset": {
+        "sha256": "c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae",
+        "bytes": 6880488,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 8231,
+        "durationSeconds": 215.0138775510204
+      },
+      "durationSeconds": 214.941179,
+      "sourceLoudness": {
+        "input_i": "-10.46",
+        "input_tp": "0.27",
+        "input_lra": "3.40",
+        "input_thresh": "-20.75",
+        "output_i": "-16.33",
+        "output_tp": "-1.59",
+        "output_lra": "3.10",
+        "output_thresh": "-26.50",
+        "normalization_type": "dynamic",
+        "target_offset": "0.33"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.28",
+        "input_lra": "3.40",
+        "input_thresh": "-26.27",
+        "output_i": "-16.33",
+        "output_tp": "-1.58",
+        "output_lra": "3.10",
+        "output_thresh": "-26.50",
+        "normalization_type": "dynamic",
+        "target_offset": "0.33"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    }
+  ],
+  "failures": [],
+  "deliveryVolumes": [
+    {
+      "family": "metal",
+      "number": 1,
+      "audioBytes": 30277138,
+      "metadataReservationBytes": 524288,
+      "maximumBytes": 67108864,
+      "tracks": [
+        "davidkbd.desolation",
+        "davidkbd.agony-space-deep",
+        "davidkbd.god-of-darkness",
+        "davidkbd.suffocation"
+      ],
+      "status": "size-checked-plan-listening-pending"
+    },
+    {
+      "family": "synth90s",
+      "number": 2,
+      "audioBytes": 50942800,
+      "metadataReservationBytes": 524288,
+      "maximumBytes": 67108864,
+      "tracks": [
+        "dos88.crash-landing",
+        "dos88.race-to-mars",
+        "dos88.automata-v2",
+        "dos88.city-stomper",
+        "escp.twilight-city",
+        "escp.synthasia"
+      ],
+      "status": "size-checked-plan-listening-pending"
+    }
+  ]
+}
