@@ -128,6 +128,11 @@ class IntakeRedirectHandler(HTTPRedirectHandler):
         return super().redirect_request(request, fp, code, message, headers, newurl)
 
 
+def candidate_duration_bounds(row):
+    """Allow a short boss cue without weakening the full-recording envelope."""
+    return (30, 720) if row.get('role') == 'boss-cue' else (60, 720)
+
+
 def validate_manifest(value):
     if value.get('format') != 'revealline-core-intake.v1' or not 1 <= len(value.get('tracks', [])) <= 20:
         raise ValueError('Unsupported or excessive intake')
@@ -388,8 +393,10 @@ def prepare(manifest, output, game_root):
                 validate_native_probe(suffix, probe)
             verify_storage(output)
             duration = float(probe['format']['duration'])
-            if not 60 <= duration <= 720:
-                raise ValueError('Recording is outside the 1–12 minute candidate envelope')
+            minimum_duration, maximum_duration = candidate_duration_bounds(row)
+            if not minimum_duration <= duration <= maximum_duration:
+                envelope = '30 seconds–12 minutes for an explicit boss cue' if minimum_duration == 30 else '1–12 minutes'
+                raise ValueError(f'Recording is outside the {envelope} candidate envelope')
             command(['ffmpeg', '-v', 'error', '-xerror', '-nostdin', '-i', str(original), '-map', '0:a:0', '-f', 'null', '-'])
             measured = loudness(original)
             partial['sourceLoudness'] = measured
