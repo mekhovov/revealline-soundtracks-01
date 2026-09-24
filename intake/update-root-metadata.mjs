@@ -12,6 +12,7 @@ const PUBLIC_METADATA = [
   "catalogue.json",
   "index.html",
   "inventory.json",
+  "playback-policy.mjs",
   "player.mjs",
   "preview-catalogue.json",
   "style.css",

@@ -18,13 +18,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4486,
-      "sha256": "7e787ccb603da6850b9571ef60d911060a29afb39e655c67b41374b51b62e736"
+      "bytes": 4559,
+      "sha256": "3f66574fbaef4179a6a65f32f2c6d7d28581a90b650866c31bc9770b67ca8b19"
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 4063,
-      "sha256": "95b194130052474628a55ac1de6baf60b591a3caee48d072cbdfc9cd3d76c8c1"
+      "bytes": 6065,
+      "sha256": "dd037774a9fde46cf14ca636f976673ec9a91527fa5e3f76bee8b50a538da80c"
     },
     {
       "path": "catalogue.json",
@@ -33,8 +33,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 4615,
-      "sha256": "bfdaa3fb0574c505580abf1f22026ed9ff0a3e4ff2d03dae44fd606c5bde646b"
+      "bytes": 4972,
+      "sha256": "3c1ec76d03266639e64123d1455d605036ed80ab33ac04162a8fae1dc31d121e"
     },
     {
       "path": "inventory.json",
@@ -42,9 +42,14 @@
       "sha256": "2706445dafe995f6c4dc044ad5e92031cae60627699f6a72985e67a972064ccd"
     },
     {
+      "path": "playback-policy.mjs",
+      "bytes": 1772,
+      "sha256": "96b80d084d2a0a1546e820d3fa278a9f2c5220f60e84886d06ab6c699ff4f59b"
+    },
+    {
       "path": "player.mjs",
-      "bytes": 9915,
-      "sha256": "74087b8c8d2108492048a51aff9a97ddbd2e6f14d9afd362f898743f6964eecc"
+      "bytes": 10420,
+      "sha256": "cdff8ff75dd267219b6dcfdea7aee1420e07d23856208306d65c5661af1a1bd2"
     },
     {
       "path": "preview-catalogue.json",
@@ -53,8 +58,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 5837,
-      "sha256": "2240d061fe6c01bceafd7817d62ae7f1bd5e374957b61360e960de0daccc989a"
+      "bytes": 6606,
+      "sha256": "02c4a3dc9ac6ae9f59261f964cd7e5833b797a434a5bb7c994b8cb4acfff32bc"
     },
     {
       "path": "objects/00073ec8ed2031e75a72d11e4933fdef45ecd22930f0dbf6117447f9888dd539.mp3",

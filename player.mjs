@@ -1,11 +1,21 @@
+import {
+  STYLE_GROUPS,
+  buildPlaybackQueue,
+  matchesStyles,
+  stylesOf,
+} from './playback-policy.mjs';
+
 const audio = document.querySelector("#audio");
 const now = document.querySelector("#now-playing");
 const nowSource = document.querySelector("#now-source");
 const status = document.querySelector("#playback-status");
 const search = document.querySelector("#search");
-const genre = document.querySelector("#genre");
+const stylesHost = document.querySelector("#styles");
+const stylesAll = document.querySelector("#styles-all");
+const stylesNone = document.querySelector("#styles-none");
 const collection = document.querySelector("#collection");
-const shuffle = document.querySelector("#shuffle");
+const order = document.querySelector("#order");
+const repeat = document.querySelector("#repeat");
 const pause = document.querySelector("#pause");
 const nextButton = document.querySelector("#next");
 const playResults = document.querySelector("#play-results");
@@ -19,6 +29,7 @@ let rows = [];
 let current = null;
 let queue = [];
 let generation = 0;
+const styleChecks = new Map();
 
 const text = (node, value) => {
   node.textContent = value ?? "";
@@ -36,30 +47,21 @@ const formatDuration = (seconds) => {
   return `${Math.floor(rounded / 60)}:${String(rounded % 60).padStart(2, "0")}`;
 };
 const formatBytes = (bytes) => `${(bytes / 1024 / 1024).toFixed(2)} MiB`;
-const stylesOf = (track) => {
-  const value = track.tags.join(" ").toLowerCase();
-  const styles = [];
-  if (value.includes("ukrain")) styles.push("ukrainian");
-  if (value.includes("metal")) styles.push("metal");
-  if (/synth|electro|tracker|fm|dance|techno/.test(value)) styles.push("synth");
-  if (/chiptune|8-bit|fakebit/.test(value)) styles.push("chiptune");
-  if (/rock|punk/.test(value)) styles.push("rock");
-  if (/ambient|atmospher/.test(value)) styles.push("ambient");
-  return styles.length ? [...new Set(styles)] : ["other"];
-};
 const searchable = (track) =>
   [track.title, track.artist, track.collection, track.license, ...track.tags]
     .filter(Boolean)
     .join(" ")
     .toLocaleLowerCase();
 const visible = () => rows.filter((row) => !row.hidden);
+const selectedStyles = () =>
+  [...styleChecks].filter(([, input]) => input.checked).map(([style]) => style);
 
 function refresh() {
   const term = search.value.trim().toLocaleLowerCase();
   for (const row of rows) {
     row.hidden =
       !row.dataset.search.includes(term) ||
-      (genre.value && !row.trackStyles.includes(genre.value)) ||
+      !matchesStyles(row.trackStyles, selectedStyles()) ||
       (collection.value && row.dataset.collection !== collection.value);
   }
   const found = visible().length;
@@ -69,19 +71,12 @@ function refresh() {
   queue = [];
 }
 
-function refill() {
-  queue = visible();
-  if (shuffle.checked) {
-    for (let index = queue.length - 1; index > 0; index--) {
-      const swap = Math.floor(Math.random() * (index + 1));
-      [queue[index], queue[swap]] = [queue[swap], queue[index]];
-    }
-    if (queue.length > 1 && queue[0] === current)
-      [queue[0], queue[1]] = [queue[1], queue[0]];
-  } else if (current && queue.includes(current)) {
-    const offset = queue.indexOf(current) + 1;
-    queue = [...queue.slice(offset), ...queue.slice(0, offset)];
-  }
+function refill({ after = current } = {}) {
+  queue = buildPlaybackQueue(visible(), {
+    order: order.value,
+    current: after,
+    wrap: repeat.value === 'all',
+  });
 }
 
 function updateMediaSession(track) {
@@ -127,11 +122,15 @@ async function play(row) {
   }
 }
 
-function next() {
-  if (!queue.length) refill();
+function next({ natural = false } = {}) {
+  if (natural && repeat.value === 'one' && current) return void play(current);
+  if (!queue.length && repeat.value === 'all') refill();
   const row = queue.shift();
   if (row) void play(row);
-  else status.textContent = "No recordings match the current filters.";
+  else
+    status.textContent = visible().length
+      ? 'The selected queue has finished.'
+      : 'No recordings match the current filters.';
 }
 
 function renderTrack(track, index) {
@@ -152,7 +151,7 @@ function renderTrack(track, index) {
   playButton.addEventListener("click", () => {
     queue = [];
     void play(row);
-    refill();
+    refill({ after: row });
     queue = queue.filter((candidate) => candidate !== row);
   });
 
@@ -227,6 +226,17 @@ async function loadCatalogue() {
       option.value = source.id;
       collection.append(option);
     }
+    for (const [style, label] of STYLE_GROUPS) {
+      const choice = element('label', 'style-choice');
+      const input = element('input');
+      input.type = 'checkbox';
+      input.value = style;
+      input.checked = true;
+      input.addEventListener('change', refresh);
+      styleChecks.set(style, input);
+      choice.append(input, document.createTextNode(label));
+      stylesHost.append(choice);
+    }
     summary.textContent = `${catalogue.counts.uniqueRecordings} unique recordings across ${catalogue.sources.length} collections. Search, filter and keep them playing in one endless queue.`;
     refresh();
     const requested = new URL(location.href).searchParams.get("track");
@@ -245,13 +255,23 @@ async function loadCatalogue() {
 }
 
 search.addEventListener("input", refresh);
-genre.addEventListener("change", refresh);
 collection.addEventListener("change", refresh);
-shuffle.addEventListener("change", () => {
+order.addEventListener("change", () => {
   queue = [];
 });
-playResults.addEventListener("click", () => {
+repeat.addEventListener("change", () => {
   queue = [];
+});
+stylesAll.addEventListener('click', () => {
+  for (const input of styleChecks.values()) input.checked = true;
+  refresh();
+});
+stylesNone.addEventListener('click', () => {
+  for (const input of styleChecks.values()) input.checked = false;
+  refresh();
+});
+playResults.addEventListener("click", () => {
+  queue = buildPlaybackQueue(visible(), { order: order.value, current: null });
   next();
 });
 nextButton.addEventListener("click", next);
@@ -269,7 +289,7 @@ audio.addEventListener("play", () => {
 audio.addEventListener("pause", () => {
   pause.textContent = "Resume";
 });
-audio.addEventListener("ended", next);
+audio.addEventListener("ended", () => next({ natural: true }));
 audio.addEventListener("error", () => {
   status.textContent =
     "This recording could not load. Try Next or download its MP3.";

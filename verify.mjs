@@ -25,6 +25,7 @@ const STATIC = new Set([
   'index.html',
   'style.css',
   'player.mjs',
+  'playback-policy.mjs',
   'catalogue.json',
   'UPLOAD_GUIDE.md',
   'inventory.json',
@@ -43,7 +44,12 @@ const REQUIRED = [
   'README.md',
   'CREDITS.md',
 ];
-const ROOT_REQUIRED = [...REQUIRED, 'catalogue.json', 'UPLOAD_GUIDE.md'];
+const ROOT_REQUIRED = [
+  ...REQUIRED,
+  'playback-policy.mjs',
+  'catalogue.json',
+  'UPLOAD_GUIDE.md',
+];
 const PRIVATE = new Set([
   '.git',
   '.github',
