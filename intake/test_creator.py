@@ -22,7 +22,7 @@ class CreatorIntakeTests(unittest.TestCase):
                           '<p>My music is in the Smart Content ID database.</p>').encode()
 
     def test_existing_thirteen_and_ukrainian_manifest_remain_pending(self):
-        core = json.loads((Path(__file__).parent / 'core-20260924.json').read_text())
+        core = json.loads((Path(__file__).parent / 'archive/core-20260924/source-manifest.json').read_text())
         self.assertEqual(len(validate_manifest(core)['tracks']), 13)
         self.assertIs(validate_manifest(self.manifest), self.manifest)
         self.assertFalse(self.manifest['publicationApproval'])

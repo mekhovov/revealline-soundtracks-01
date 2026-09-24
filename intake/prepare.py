@@ -47,6 +47,28 @@ CREATOR_IDENTITY = {
 }
 
 
+# Exact creator page/download pairs. Acquisition never grants musical approval.
+CREATOR_IDENTITIES = {CREATOR_SOURCE: CREATOR_IDENTITY}
+for slug, title, download in (
+    ('the-dobermann', 'The Dobermann', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/The_Dobermann.mp3'),
+    ('folklore', 'Folklore', 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Folklore.mp3'),
+):
+    source = 'https://creatorchords.com/music/' + slug + '/'
+    CREATOR_IDENTITIES[source] = {
+        'id': 'alexander-nakarada.' + slug, 'title': title,
+        'artist': 'Alexander Nakarada', 'artistURL': 'https://creatorchords.com',
+        'source': source, 'download': download,
+        'license': 'CC BY 4.0 International', 'licenseURL': LICENSES['CC BY 4.0 International'],
+        'licensingInfo': CREATOR_LICENSING, 'creatorFAQ': CREATOR_FAQ,
+        'contentId': True, 'recordingModeEligible': False, 'family': 'metal',
+    }
+CREATOR_URLS = frozenset((CREATOR_LICENSING, CREATOR_FAQ,
+    *(r['source'] for r in CREATOR_IDENTITIES.values()),
+    *(r['download'] for r in CREATOR_IDENTITIES.values())))
+CREATOR_SOURCE_LIMITS = {source: CREATOR_SOURCE_LIMIT if source == CREATOR_SOURCE else 16 * 1024 ** 2
+                         for source in CREATOR_IDENTITIES}
+
+
 def digest(body):
     return hashlib.sha256(body).hexdigest()
 
@@ -97,9 +119,10 @@ def validate_manifest(value):
             raise ValueError('Unsupported exact source licence')
         if not allowed_url(row['source']) or not allowed_url(row['download']):
             raise ValueError('Unapproved source host')
-        if row['source'] == CREATOR_SOURCE:
+        if row['source'] in CREATOR_IDENTITIES:
+            identity = CREATOR_IDENTITIES[row['source']]
             if any(row.get(key) != expected or type(row.get(key)) is not type(expected)
-                   for key, expected in CREATOR_IDENTITY.items()):
+                   for key, expected in identity.items()):
                 raise ValueError('Creator recording differs from the reviewed identity and licence evidence')
         elif (urlparse(row['source']).hostname != 'opengameart.org'
               or urlparse(row['download']).hostname != 'opengameart.org'
@@ -164,7 +187,7 @@ def snapshot(url, output, pages):
 def collect_evidence(row, output, pages, partial):
     body, partial['sourceSnapshot'] = snapshot(row['source'], output, pages)
     validate_source_page(row, body)
-    if row['source'] == CREATOR_SOURCE:
+    if row['source'] in CREATOR_IDENTITIES:
         licensing, partial['licensingInfoSnapshot'] = snapshot(CREATOR_LICENSING, output, pages)
         _, partial['creatorFAQSnapshot'] = snapshot(CREATOR_FAQ, output, pages)
         text = html.unescape(licensing.decode('utf8'))
@@ -254,7 +277,7 @@ def prepare(manifest, output, game_root):
         try:
             reserve_row(output)
             evidence = collect_evidence(row, output, pages, partial)
-            body, final = fetch(row['download'], CREATOR_SOURCE_LIMIT if row['source'] == CREATOR_SOURCE else SOURCE_LIMIT)
+            body, final = fetch(row['download'], CREATOR_SOURCE_LIMITS.get(row['source'], SOURCE_LIMIT))
             source_sha = digest(body)
             if source_sha in known_hashes or source_sha in source_hashes or re.sub(r'[^a-z0-9]', '', row['title'].lower()) in known_titles:
                 raise ValueError('Recording already exists in the admitted collection')
