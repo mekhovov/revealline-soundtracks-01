@@ -26,6 +26,14 @@
       "artifactId": 10786421075,
       "artifactSha256": "a63b113efa2572191d2daefdd9fff22a352cd58e98142c66cf4831cad80d8362",
       "failure": "Angry Bullfrogs Riding Motorbikes is shorter than the60-second intake minimum.13other candidates passed; rejected candidate excluded from revised manifest. No duration gate waiver."
+    },
+    {
+      "id": 35944483804,
+      "head": "64fc7951267cfe00da0d37b6a47d7543c70acb4b",
+      "gate": "Acquire and measure candidates",
+      "artifactId": 10785887686,
+      "artifactSha256": "c7d132fb150d09e622b36abc3f9a0b747503429e046f57f2ee2a0dab3b9ee544",
+      "failure": "Creator source returned HTTP502 for Shadows Awaken Within after bounded retries. Other12 passed. Fresh run35944843598 later passed all13; no partial run labelled success."
     }
   ],
   "listeningApproval": false
