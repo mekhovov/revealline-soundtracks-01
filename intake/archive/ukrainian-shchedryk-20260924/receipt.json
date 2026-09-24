@@ -1,0 +1,132 @@
+{
+  "format": "revealline-core-intake-receipt.v1",
+  "sourceManifestSha256": "aa27b4eefe63baa61bb8e447a4fe34afdfcd059fee0759f6c27e4157c5f78c99",
+  "checkedAt": "2026-09-24T02:02:36Z",
+  "runnerRevision": "97c5c2bd59f9d6f82b37d380c11c9fc4e8817fff",
+  "runnerRun": "35945483057",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "gameInspector": {
+    "revision": "71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "files": [
+      {
+        "path": "game/mp3.mjs",
+        "sha256": "d4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a"
+      },
+      {
+        "path": "game/data-json.mjs",
+        "sha256": "bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823"
+      },
+      {
+        "path": "game/soundtrack.mjs",
+        "sha256": "ec03303d295b4f7997f4b8c3c3573cf2bdddcd81f92700d98710d38933f89843"
+      },
+      {
+        "path": "game/soundtrack-rights.mjs",
+        "sha256": "8c1c10927cf5c1f7360374ca1a4d64a7dec3c312b197ace89201c37d75793f04"
+      },
+      {
+        "path": "game/ui/music.mjs",
+        "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+      },
+      {
+        "path": "game/content/soundtrack-catalogue.mjs",
+        "sha256": "0618993ff8ff9508d1ab4295920c07d0b5a8f6f34df683538029754b438dc44f"
+      }
+    ]
+  },
+  "listeningApproval": false,
+  "tracks": [
+    {
+      "id": "alexander-nakarada.carol-of-the-bells-metal-version",
+      "title": "Carol of the Bells (Metal Version)",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/carol-of-the-bells-metal-version/",
+      "download": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Carol_of_the_Bells_Metal_Version.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "licensingInfo": "https://creatorchords.com/licensing-info/",
+      "creatorFAQ": "https://creatorchords.com/faq/",
+      "credit": "Music: Carol of the Bells (Metal Version) by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "family": "ukrainian",
+      "tags": [
+        "metal",
+        "Ukrainian melody",
+        "Shchedryk adaptation"
+      ],
+      "contentId": true,
+      "recordingModeEligible": false,
+      "culturalDescriptor": "Ukrainian-melody metal adaptation",
+      "culturalSource": "https://ui.org.ua/wp-content/uploads/2022/12/programme_notes-from-ukraine.pdf",
+      "culturalReview": "pending",
+      "instrumentalReview": "pending",
+      "compositionNote": "A metal adaptation of the melody associated with Mykola Leontovych's Shchedryk; it is not evidence of a traditional Ukrainian ensemble performance. Alternate Shchedryk arrangements are not additional distinct compositions.",
+      "status": "rights-reviewed-listening-pending",
+      "sourceSnapshot": {
+        "path": "evidence/ed760722892d8db1e2621dc071f9c310dc879dfb755e8af082def4c92917411e.html",
+        "sha256": "ed760722892d8db1e2621dc071f9c310dc879dfb755e8af082def4c92917411e",
+        "url": "https://creatorchords.com/music/carol-of-the-bells-metal-version/"
+      },
+      "licensingInfoSnapshot": {
+        "path": "evidence/30fada71473deb4865a07f04cb8191b3d3a3dc687d2128e8f011134d25a0d330.html",
+        "sha256": "30fada71473deb4865a07f04cb8191b3d3a3dc687d2128e8f011134d25a0d330",
+        "url": "https://creatorchords.com/licensing-info/"
+      },
+      "creatorFAQSnapshot": {
+        "path": "evidence/1fb6ceca03dfed77324eae629be4bd7fce7ea4311c16c50874a63d1c2388da3c.html",
+        "sha256": "1fb6ceca03dfed77324eae629be4bd7fce7ea4311c16c50874a63d1c2388da3c",
+        "url": "https://creatorchords.com/faq/"
+      },
+      "original": {
+        "path": "originals/db8fa3869ba3ee0de01531d6a4a40e5d64b0e6c099333b8c470dacbc1d853be4.mp3",
+        "sha256": "db8fa3869ba3ee0de01531d6a4a40e5d64b0e6c099333b8c470dacbc1d853be4",
+        "bytes": 10905817,
+        "url": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Carol_of_the_Bells_Metal_Version.mp3"
+      },
+      "delivery": {
+        "path": "objects/d4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58.mp3",
+        "sha256": "d4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58",
+        "bytes": 8641768
+      },
+      "asset": {
+        "sha256": "d4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58",
+        "bytes": 8641768,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 10338,
+        "durationSeconds": 270.05387755102043
+      },
+      "durationSeconds": 270.027755,
+      "sourceLoudness": {
+        "input_i": "-13.06",
+        "input_tp": "-1.51",
+        "input_lra": "4.70",
+        "input_thresh": "-23.12",
+        "output_i": "-15.22",
+        "output_tp": "-1.50",
+        "output_lra": "3.70",
+        "output_thresh": "-25.26",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.78"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-4.56",
+        "input_lra": "4.70",
+        "input_thresh": "-26.05",
+        "output_i": "-15.22",
+        "output_tp": "-1.50",
+        "output_lra": "3.70",
+        "output_thresh": "-25.26",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.78"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    }
+  ],
+  "failures": []
+}

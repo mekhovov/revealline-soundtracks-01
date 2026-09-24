@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import html
+from html.parser import HTMLParser
 import json
 import math
 import os
@@ -11,8 +12,8 @@ import re
 import shutil
 import subprocess
 import time
-from urllib.parse import unquote, urlparse
-from urllib.request import Request, urlopen
+from urllib.parse import unquote, urljoin, urlparse
+from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 RESERVE = 1024 ** 3
 SOURCE_LIMIT = 64 * 1024 ** 2
@@ -21,6 +22,29 @@ ROW_RESERVATION = 96 * 1024 ** 2  # bounded source, 12-minute MP3, page and rece
 INSPECTOR_REVISION = '71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3'
 LICENSES = {'CC0 1.0 Universal': 'https://creativecommons.org/publicdomain/zero/1.0/',
             'CC BY 4.0 International': 'https://creativecommons.org/licenses/by/4.0/'}
+CREATOR_SOURCE = 'https://creatorchords.com/music/carol-of-the-bells-metal-version/'
+CREATOR_DOWNLOAD = 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Carol_of_the_Bells_Metal_Version.mp3'
+CREATOR_LICENSING = 'https://creatorchords.com/licensing-info/'
+CREATOR_FAQ = 'https://creatorchords.com/faq/'
+CREATOR_URLS = frozenset((CREATOR_SOURCE, CREATOR_DOWNLOAD, CREATOR_LICENSING, CREATOR_FAQ))
+CREATOR_SOURCE_LIMIT = 11 * 1024 ** 2
+CREATOR_IDENTITY = {
+    'id': 'alexander-nakarada.carol-of-the-bells-metal-version',
+    'title': 'Carol of the Bells (Metal Version)',
+    'artist': 'Alexander Nakarada',
+    'artistURL': 'https://creatorchords.com',
+    'source': CREATOR_SOURCE,
+    'download': CREATOR_DOWNLOAD,
+    'license': 'CC BY 4.0 International',
+    'licenseURL': LICENSES['CC BY 4.0 International'],
+    'licensingInfo': CREATOR_LICENSING,
+    'creatorFAQ': CREATOR_FAQ,
+    'contentId': True,
+    'recordingModeEligible': False,
+    'culturalDescriptor': 'Ukrainian-melody metal adaptation',
+    'culturalReview': 'pending',
+    'instrumentalReview': 'pending',
+}
 
 
 def digest(body):
@@ -32,9 +56,33 @@ def write_json(path, value):
 
 
 def allowed_url(value):
-    url = urlparse(value)
-    return (url.scheme == 'https' and url.hostname == 'opengameart.org'
-            and url.port in (None, 443) and not url.username and not url.password)
+    if value in CREATOR_URLS:
+        return True
+    try:
+        url = urlparse(value)
+        return (url.scheme == 'https' and url.hostname == 'opengameart.org'
+                and url.port in (None, 443) and not url.username and not url.password
+                and not url.fragment and not any(ord(char) < 33 for char in value))
+    except (TypeError, ValueError):
+        return False
+
+
+def allowed_redirect(origin, destination):
+    if origin in CREATOR_URLS:
+        return destination == origin
+    return allowed_url(destination) and urlparse(destination).hostname == 'opengameart.org'
+
+
+class IntakeRedirectHandler(HTTPRedirectHandler):
+    def __init__(self, origin):
+        super().__init__()
+        self.origin = origin
+
+    def redirect_request(self, request, fp, code, message, headers, newurl):
+        # Validate before urllib sends anything to the redirect destination.
+        if not allowed_redirect(self.origin, newurl):
+            raise ValueError('Unexpected redirect destination')
+        return super().redirect_request(request, fp, code, message, headers, newurl)
 
 
 def validate_manifest(value):
@@ -49,8 +97,14 @@ def validate_manifest(value):
             raise ValueError('Unsupported exact source licence')
         if not allowed_url(row['source']) or not allowed_url(row['download']):
             raise ValueError('Unapproved source host')
-        if not urlparse(row['download']).path.startswith('/sites/default/files/'):
-            raise ValueError('Not an author-provided download')
+        if row['source'] == CREATOR_SOURCE:
+            if any(row.get(key) != expected or type(row.get(key)) is not type(expected)
+                   for key, expected in CREATOR_IDENTITY.items()):
+                raise ValueError('Creator recording differs from the reviewed identity and licence evidence')
+        elif (urlparse(row['source']).hostname != 'opengameart.org'
+              or urlparse(row['download']).hostname != 'opengameart.org'
+              or not urlparse(row['download']).path.startswith('/sites/default/files/')):
+            raise ValueError('Not an author-provided source/download pair')
         if row.get('status') != 'rights-reviewed-listening-pending':
             raise ValueError('Intake cannot grant listening approval')
     return value
@@ -60,11 +114,12 @@ def fetch(url, limit):
     if not allowed_url(url):
         raise ValueError('Unapproved source host')
     request = Request(url, headers={'User-Agent': 'RevealLine soundtrack archival intake/1.0'})
+    opener = build_opener(IntakeRedirectHandler(url))
     for attempt in range(3):
         try:
-            with urlopen(request, timeout=60) as response:
-                if not allowed_url(response.url):
-                    raise ValueError('Unexpected redirect host')
+            with opener.open(request, timeout=60) as response:
+                if not allowed_redirect(url, response.url):
+                    raise ValueError('Unexpected redirect destination')
                 body = response.read(limit + 1)
                 if len(body) > limit:
                     raise ValueError('Source exceeds bounded intake size')
@@ -73,6 +128,49 @@ def fetch(url, limit):
             if attempt == 2:
                 raise
             time.sleep(2 ** attempt)
+
+
+class SourceLinks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = []
+
+    def handle_starttag(self, tag, attrs):
+        self.links.extend(value for key, value in attrs
+                          if key in ('href', 'src', 'data-src') and value)
+
+
+def validate_source_page(row, body):
+    source = body.decode('utf8')
+    parser = SourceLinks()
+    parser.feed(source)
+    linked = {unquote(urljoin(row['source'], link)) for link in parser.links}
+    if unquote(row['download']) not in linked:
+        raise ValueError('Exact download is not linked by the reviewed creator page')
+    normalized = unquote(html.unescape(source))
+    if row['licenseURL'].removeprefix('https://') not in normalized:
+        raise ValueError('Expected licence link is absent from creator snapshot')
+
+
+def snapshot(url, output, pages):
+    if url not in pages:
+        body, final = fetch(url, 2 * 1024 ** 2)
+        sha = digest(body)
+        (output / 'evidence' / (sha + '.html')).write_bytes(body)
+        pages[url] = (body, {'path': 'evidence/' + sha + '.html', 'sha256': sha, 'url': final})
+    return pages[url]
+
+
+def collect_evidence(row, output, pages, partial):
+    body, partial['sourceSnapshot'] = snapshot(row['source'], output, pages)
+    validate_source_page(row, body)
+    if row['source'] == CREATOR_SOURCE:
+        licensing, partial['licensingInfoSnapshot'] = snapshot(CREATOR_LICENSING, output, pages)
+        _, partial['creatorFAQSnapshot'] = snapshot(CREATOR_FAQ, output, pages)
+        text = html.unescape(licensing.decode('utf8'))
+        if row['licenseURL'] not in text or 'Smart Content ID' not in text:
+            raise ValueError('Creator licence or Content ID evidence has changed; review it before acquisition')
+    return {key: value for key, value in partial.items() if key.endswith('Snapshot')}
 
 
 def command(args):
@@ -155,19 +253,8 @@ def prepare(manifest, output, game_root):
         partial = {'id': row['id'], 'source': row['source'], 'download': row['download'], 'loudnessAttempts': []}
         try:
             reserve_row(output)
-            if row['source'] not in pages:
-                body, final = fetch(row['source'], 2 * 1024 ** 2)
-                source_hash = digest(body)
-                (output / 'evidence' / (source_hash + '.html')).write_bytes(body)
-                pages[row['source']] = (body, source_hash, final)
-            source_body, source_hash, source_final = pages[row['source']]
-            partial['sourceSnapshot'] = {'path': 'evidence/' + source_hash + '.html', 'sha256': source_hash, 'url': source_final}
-            normalized = unquote(html.unescape(source_body.decode('utf8')))
-            if unquote(row['download']) not in normalized:
-                raise ValueError('Exact download is not linked by the reviewed creator page')
-            if row['licenseURL'].removeprefix('https://') not in normalized:
-                raise ValueError('Expected licence link is absent from creator snapshot')
-            body, final = fetch(row['download'], SOURCE_LIMIT)
+            evidence = collect_evidence(row, output, pages, partial)
+            body, final = fetch(row['download'], CREATOR_SOURCE_LIMIT if row['source'] == CREATOR_SOURCE else SOURCE_LIMIT)
             source_sha = digest(body)
             if source_sha in known_hashes or source_sha in source_hashes or re.sub(r'[^a-z0-9]', '', row['title'].lower()) in known_titles:
                 raise ValueError('Recording already exists in the admitted collection')
@@ -211,7 +298,7 @@ def prepare(manifest, output, game_root):
             facts = inspect_mp3(normalized_path, game_root)
             destination = output / 'objects' / (audio_hash + '.mp3')
             normalized_path.rename(destination)
-            receipt['tracks'].append({**row, 'sourceSnapshot': {'path': 'evidence/' + source_hash + '.html', 'sha256': source_hash, 'url': source_final},
+            receipt['tracks'].append({**row, **evidence,
                 'original': {'path': str(original.relative_to(output)), 'sha256': source_sha, 'bytes': original.stat().st_size, 'url': final},
                 'delivery': {'path': str(destination.relative_to(output)), 'sha256': audio_hash, 'bytes': len(data)},
                 'asset': facts, 'durationSeconds': duration, 'sourceLoudness': measured, 'encodedLoudness': measured_output,

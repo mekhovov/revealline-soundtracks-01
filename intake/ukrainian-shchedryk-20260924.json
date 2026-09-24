@@ -1,0 +1,30 @@
+{
+  "format": "revealline-core-intake.v1",
+  "batch": "ukrainian-shchedryk-20260924",
+  "publicationApproval": false,
+  "tracks": [
+    {
+      "id": "alexander-nakarada.carol-of-the-bells-metal-version",
+      "title": "Carol of the Bells (Metal Version)",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/carol-of-the-bells-metal-version/",
+      "download": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Carol_of_the_Bells_Metal_Version.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "licensingInfo": "https://creatorchords.com/licensing-info/",
+      "creatorFAQ": "https://creatorchords.com/faq/",
+      "credit": "Music: Carol of the Bells (Metal Version) by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "family": "ukrainian",
+      "tags": ["metal", "Ukrainian melody", "Shchedryk adaptation"],
+      "contentId": true,
+      "recordingModeEligible": false,
+      "culturalDescriptor": "Ukrainian-melody metal adaptation",
+      "culturalSource": "https://ui.org.ua/wp-content/uploads/2022/12/programme_notes-from-ukraine.pdf",
+      "culturalReview": "pending",
+      "instrumentalReview": "pending",
+      "compositionNote": "A metal adaptation of the melody associated with Mykola Leontovych's Shchedryk; it is not evidence of a traditional Ukrainian ensemble performance. Alternate Shchedryk arrangements are not additional distinct compositions.",
+      "status": "rights-reviewed-listening-pending"
+    }
+  ]
+}
