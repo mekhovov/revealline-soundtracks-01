@@ -1,0 +1,524 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": "not-reviewed",
+  "archive": {
+    "id": "core-20260924",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/core-20260924/",
+    "inventorySha256": "0d5d12811a92b9b66d307fd82e54d9183e1282ef600a0db2ec2b6e95792fda59"
+  },
+  "source": {
+    "run": 35944843598,
+    "artifactSha256": "0b95238aa7bb27a89b12864f35ac1df850e7a69dae5b7fea3257a764ebf58f5c"
+  },
+  "tracks": [
+    {
+      "id": "vitalezzz.curse-of-the-moon",
+      "title": "Curse of the Moon",
+      "artist": "Vitalezzz",
+      "source": "https://opengameart.org/content/curse-of-the-moon",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vitalezzz — Curse of the Moon",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/b25c013bb34589455948a97b3073b3a805b776506a501b07c3f6311f01b0280c.mp3",
+      "sha256": "b25c013bb34589455948a97b3073b3a805b776506a501b07c3f6311f01b0280c",
+      "bytes": 6876308,
+      "artistURL": null,
+      "genres": [
+        "metal"
+      ],
+      "durationSeconds": 214.831,
+      "originalFilename": "curse_of_the_moon_2.mp3",
+      "original": {
+        "path": "originals/fcb27e47cdc86378fa04a7e45d4cef76b8d53bdbc4f08bed314cfdcc19ad510f.mp3",
+        "sha256": "fcb27e47cdc86378fa04a7e45d4cef76b8d53bdbc4f08bed314cfdcc19ad510f",
+        "bytes": 8593296,
+        "url": "https://opengameart.org/sites/default/files/curse_of_the_moon_2.mp3"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-7.69",
+        "input_lra": "5.50",
+        "input_thresh": "-26.10",
+        "output_i": "-15.53",
+        "output_tp": "-6.30",
+        "output_lra": "5.50",
+        "output_thresh": "-25.58",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.47"
+      }
+    },
+    {
+      "id": "vitalezzz.realm-of-torment",
+      "title": "Realm of Torment",
+      "artist": "Vitalezzz",
+      "source": "https://opengameart.org/content/realm-of-torment",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vitalezzz — Realm of Torment",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/bce13f7d710bbaf899fbd1557c67ec83b830f722653a8f8b102ddd1f528b1038.mp3",
+      "sha256": "bce13f7d710bbaf899fbd1557c67ec83b830f722653a8f8b102ddd1f528b1038",
+      "bytes": 6324602,
+      "artistURL": null,
+      "genres": [
+        "metal"
+      ],
+      "durationSeconds": 197.5902,
+      "originalFilename": "realm_of_torment_4.mp3",
+      "original": {
+        "path": "originals/46d121928c2874319d7d7a56ed261b4517d93caf650a669f97a1a3cb956f9c98.mp3",
+        "sha256": "46d121928c2874319d7d7a56ed261b4517d93caf650a669f97a1a3cb956f9c98",
+        "bytes": 7903664,
+        "url": "https://opengameart.org/sites/default/files/realm_of_torment_4.mp3"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-3.77",
+        "input_lra": "4.60",
+        "input_thresh": "-26.18",
+        "output_i": "-14.92",
+        "output_tp": "-1.50",
+        "output_lra": "4.50",
+        "output_thresh": "-25.02",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.08"
+      }
+    },
+    {
+      "id": "vitalezzz.shadows-awaken-within",
+      "title": "Shadows Awaken Within",
+      "artist": "Vitalezzz",
+      "source": "https://opengameart.org/content/shadows-awaken-within",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vitalezzz — Shadows Awaken Within",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/b7d469f620a3af55976e21047a39cfb65f90d2fee1e42bc7edfdccceb2536bcf.mp3",
+      "sha256": "b7d469f620a3af55976e21047a39cfb65f90d2fee1e42bc7edfdccceb2536bcf",
+      "bytes": 7139622,
+      "artistURL": null,
+      "genres": [
+        "metal"
+      ],
+      "durationSeconds": 223.059575,
+      "originalFilename": "shadows_awaken_within_0.mp3",
+      "original": {
+        "path": "originals/9dd20dfd74fc3751fc75ea9e053c5f84c694e7e550e4c3c4341c07fbaf4d6cb5.mp3",
+        "sha256": "9dd20dfd74fc3751fc75ea9e053c5f84c694e7e550e4c3c4341c07fbaf4d6cb5",
+        "bytes": 8922439,
+        "url": "https://opengameart.org/sites/default/files/shadows_awaken_within_0.mp3"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-7.25",
+        "input_lra": "5.70",
+        "input_thresh": "-26.38",
+        "output_i": "-15.41",
+        "output_tp": "-1.50",
+        "output_lra": "5.40",
+        "output_thresh": "-25.67",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.59"
+      }
+    },
+    {
+      "id": "vitalezzz.unholy-surge",
+      "title": "Unholy Surge",
+      "artist": "Vitalezzz",
+      "source": "https://opengameart.org/content/unholy-surge",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vitalezzz — Unholy Surge",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/f1ee5f93832ccfcbcbfaa6e5ad60684ce764e0116a4edbaf97c1ccaaf489626c.mp3",
+      "sha256": "f1ee5f93832ccfcbcbfaa6e5ad60684ce764e0116a4edbaf97c1ccaaf489626c",
+      "bytes": 6330453,
+      "artistURL": null,
+      "genres": [
+        "metal"
+      ],
+      "durationSeconds": 197.76,
+      "originalFilename": "unholy_surge_2.mp3",
+      "original": {
+        "path": "originals/b79e061e81d0eabe284b3c52aaadd0573fa41fd66611e235defa399fdac4c171.mp3",
+        "sha256": "b79e061e81d0eabe284b3c52aaadd0573fa41fd66611e235defa399fdac4c171",
+        "bytes": 7910458,
+        "url": "https://opengameart.org/sites/default/files/unholy_surge_2.mp3"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.04",
+        "input_lra": "6.60",
+        "input_thresh": "-26.10",
+        "output_i": "-14.75",
+        "output_tp": "-1.50",
+        "output_lra": "4.50",
+        "output_thresh": "-24.80",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.25"
+      }
+    },
+    {
+      "id": "bogart-vgm.german-industrial-metal",
+      "title": "German Industrial Metal",
+      "artist": "Bogart VGM",
+      "source": "https://opengameart.org/content/german-industrial-metal",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Bogart VGM — German Industrial Metal",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65.mp3",
+      "sha256": "39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65",
+      "bytes": 4105239,
+      "artistURL": "https://www.facebook.com/BogartVGM/",
+      "genres": [
+        "metal"
+      ],
+      "durationSeconds": 128.1249,
+      "originalFilename": "German Industrial Metal_0.mp3",
+      "original": {
+        "path": "originals/3410bc97d922bacf57253cd7bde3eb1b1553a9e680b7af3cf96a55dcd4d548dd.mp3",
+        "sha256": "3410bc97d922bacf57253cd7bde3eb1b1553a9e680b7af3cf96a55dcd4d548dd",
+        "bytes": 5124996,
+        "url": "https://opengameart.org/sites/default/files/German%20Industrial%20Metal_0.mp3"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-1.89",
+        "input_lra": "3.70",
+        "input_thresh": "-26.25",
+        "output_i": "-15.71",
+        "output_tp": "-1.50",
+        "output_lra": "2.50",
+        "output_thresh": "-25.72",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.29"
+      }
+    },
+    {
+      "id": "mintodog.heavy-boss-battle-1",
+      "title": "Heavy Boss Battle 1",
+      "artist": "MintoDog",
+      "source": "https://opengameart.org/content/heavy-boss-battle-1",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "MintoDog — Heavy Boss Battle 1",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/825a3b7d279a4bcdb8ac6b7c2654002deecb09a5527d99df709035f8c83a9a04.mp3",
+      "sha256": "825a3b7d279a4bcdb8ac6b7c2654002deecb09a5527d99df709035f8c83a9a04",
+      "bytes": 3458238,
+      "artistURL": null,
+      "genres": [
+        "metal"
+      ],
+      "durationSeconds": 108.042449,
+      "originalFilename": "heavy_boss_battle_1_bpm200.mp3",
+      "original": {
+        "path": "originals/3d638e984a31a09be0a119245d892c6dadca441370e7800be73f8683506e690d.mp3",
+        "sha256": "3d638e984a31a09be0a119245d892c6dadca441370e7800be73f8683506e690d",
+        "bytes": 4322869,
+        "url": "https://opengameart.org/sites/default/files/heavy_boss_battle_1_bpm200.mp3"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.94",
+        "input_lra": "0.90",
+        "input_thresh": "-26.00",
+        "output_i": "-15.94",
+        "output_tp": "-5.62",
+        "output_lra": "0.90",
+        "output_thresh": "-25.94",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.06"
+      }
+    },
+    {
+      "id": "ragnar-random.street-punks-fighting-to-save-the-princess",
+      "title": "Street Punks Fighting to Save the Princess",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/content/fakebit-chiptune-music-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Street Punks Fighting to Save the Princess",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/bb3a758848e665c14b41226d49e7780f00622a6053d646ed4df1be6d3a8e7a27.mp3",
+      "sha256": "bb3a758848e665c14b41226d49e7780f00622a6053d646ed4df1be6d3a8e7a27",
+      "bytes": 2049715,
+      "artistURL": null,
+      "genres": [
+        "synth90s"
+      ],
+      "durationSeconds": 63.999932,
+      "originalFilename": "09_-_street_punks_fighting_to_save_the_princess_2.ogg",
+      "original": {
+        "path": "originals/db9930211d9721b2298eacd11908ba680205dc55600412f1ffd691ffaa0bff7f.ogg",
+        "sha256": "db9930211d9721b2298eacd11908ba680205dc55600412f1ffd691ffaa0bff7f",
+        "bytes": 2834565,
+        "url": "https://opengameart.org/sites/default/files/09_-_street_punks_fighting_to_save_the_princess_2.ogg"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.01",
+        "input_tp": "-3.29",
+        "input_lra": "3.60",
+        "input_thresh": "-26.01",
+        "output_i": "-15.56",
+        "output_tp": "-2.48",
+        "output_lra": "3.40",
+        "output_thresh": "-25.56",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.44"
+      }
+    },
+    {
+      "id": "ragnar-random.rock-city-ransom",
+      "title": "Rock City Ransom",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/content/fakebit-chiptune-music-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Rock City Ransom",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/ba5c10722e83e82a9dbc9c227bae2be3482b484873e7685fd17e880a6a6be25c.mp3",
+      "sha256": "ba5c10722e83e82a9dbc9c227bae2be3482b484873e7685fd17e880a6a6be25c",
+      "bytes": 2049715,
+      "artistURL": null,
+      "genres": [
+        "synth90s"
+      ],
+      "durationSeconds": 63.999932,
+      "originalFilename": "15_-_rock_city_ransom_chiptune_version.ogg",
+      "original": {
+        "path": "originals/5b9260a37d4d3e2086f9ea035bef253c9e51981ea1b460b9c035bebb9cde8db5.ogg",
+        "sha256": "5b9260a37d4d3e2086f9ea035bef253c9e51981ea1b460b9c035bebb9cde8db5",
+        "bytes": 2834610,
+        "url": "https://opengameart.org/sites/default/files/15_-_rock_city_ransom_chiptune_version.ogg"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-4.96",
+        "input_lra": "1.40",
+        "input_thresh": "-26.00",
+        "output_i": "-16.07",
+        "output_tp": "-5.07",
+        "output_lra": "1.30",
+        "output_thresh": "-26.07",
+        "normalization_type": "dynamic",
+        "target_offset": "0.07"
+      }
+    },
+    {
+      "id": "ragnar-random.nario-versus-zonik",
+      "title": "Nario Versus Zonik",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/content/fakebit-chiptune-music-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Nario Versus Zonik",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/f40dc26c6a1b20f0d9a3146487d3d501f78e2b923410db006e12022c7fa7d376.mp3",
+      "sha256": "f40dc26c6a1b20f0d9a3146487d3d501f78e2b923410db006e12022c7fa7d376",
+      "bytes": 2306342,
+      "artistURL": null,
+      "genres": [
+        "synth90s"
+      ],
+      "durationSeconds": 72.0,
+      "originalFilename": "20_-_nario_versus_zonik_1.ogg",
+      "original": {
+        "path": "originals/c0a17a5e8243afaaa6558a77c96107916d3bafa1bedb600f5caf908a5160d760.ogg",
+        "sha256": "c0a17a5e8243afaaa6558a77c96107916d3bafa1bedb600f5caf908a5160d760",
+        "bytes": 3188947,
+        "url": "https://opengameart.org/sites/default/files/20_-_nario_versus_zonik_1.ogg"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-1.45",
+        "input_lra": "2.80",
+        "input_thresh": "-25.99",
+        "output_i": "-16.07",
+        "output_tp": "-1.50",
+        "output_lra": "2.80",
+        "output_thresh": "-26.07",
+        "normalization_type": "dynamic",
+        "target_offset": "0.07"
+      }
+    },
+    {
+      "id": "ragnar-random.welcome-to-warp-zone",
+      "title": "Welcome to Warp Zone",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/content/fakebit-chiptune-music-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Welcome to Warp Zone",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/2f8841e647a76194df8bb034a31d09f692f496ba1a9569075982c9ccebf1feb8.mp3",
+      "sha256": "2f8841e647a76194df8bb034a31d09f692f496ba1a9569075982c9ccebf1feb8",
+      "bytes": 2229438,
+      "artistURL": null,
+      "genres": [
+        "synth90s"
+      ],
+      "durationSeconds": 69.6,
+      "originalFilename": "40_-_welcome_to_warp_zone.ogg",
+      "original": {
+        "path": "originals/3acbd8da9a0a4ba718659f5d940a34fa817df5d479c37f16989e71c4c065175f.ogg",
+        "sha256": "3acbd8da9a0a4ba718659f5d940a34fa817df5d479c37f16989e71c4c065175f",
+        "bytes": 4034112,
+        "url": "https://opengameart.org/sites/default/files/40_-_welcome_to_warp_zone.ogg"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-6.47",
+        "input_lra": "1.70",
+        "input_thresh": "-26.20",
+        "output_i": "-15.91",
+        "output_tp": "-6.47",
+        "output_lra": "1.50",
+        "output_thresh": "-26.03",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.09"
+      }
+    },
+    {
+      "id": "ragnar-random.here-a-captive-heart-busted",
+      "title": "Here a Captive Heart Busted",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/content/fakebit-chiptune-music-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Here a Captive Heart Busted",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/cfe5e16f81c600bbadb6bd0553b1e626aab072d95b5a7be3b9a80a3f28c1f4b9.mp3",
+      "sha256": "cfe5e16f81c600bbadb6bd0553b1e626aab072d95b5a7be3b9a80a3f28c1f4b9",
+      "bytes": 2170924,
+      "artistURL": null,
+      "genres": [
+        "synth90s"
+      ],
+      "durationSeconds": 67.764694,
+      "originalFilename": "41_-_here_a_captive_heart_busted.ogg",
+      "original": {
+        "path": "originals/e91082bc5f46429710aff3fd3fe5710ed763821a7d9895622005823283f1773c.ogg",
+        "sha256": "e91082bc5f46429710aff3fd3fe5710ed763821a7d9895622005823283f1773c",
+        "bytes": 4574882,
+        "url": "https://opengameart.org/sites/default/files/41_-_here_a_captive_heart_busted.ogg"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.32",
+        "input_lra": "1.60",
+        "input_thresh": "-26.17",
+        "output_i": "-15.89",
+        "output_tp": "-5.44",
+        "output_lra": "1.40",
+        "output_thresh": "-25.98",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.11"
+      }
+    },
+    {
+      "id": "ragnar-random.the-story-so-far-fm",
+      "title": "The Story So Far (Sega-style FM Synth Remix)",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/content/fakebit-chiptune-music-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — The Story So Far (Sega-style FM Synth Remix)",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/1f5d207652539fe4d52d143b5f8f3a860e6a2bbe6a9b451d09f2481ffe54ab29.mp3",
+      "sha256": "1f5d207652539fe4d52d143b5f8f3a860e6a2bbe6a9b451d09f2481ffe54ab29",
+      "bytes": 2415848,
+      "artistURL": null,
+      "genres": [
+        "synth90s"
+      ],
+      "durationSeconds": 75.428549,
+      "originalFilename": "49_-_the_story_so_far_sega-style_fm_synth_remix.ogg",
+      "original": {
+        "path": "originals/b96234e64ca352d51e21f10c0f08f9cc69b6fae2070a777569096399fa45dee1.ogg",
+        "sha256": "b96234e64ca352d51e21f10c0f08f9cc69b6fae2070a777569096399fa45dee1",
+        "bytes": 1016965,
+        "url": "https://opengameart.org/sites/default/files/49_-_the_story_so_far_sega-style_fm_synth_remix.ogg"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-3.68",
+        "input_lra": "2.50",
+        "input_thresh": "-26.00",
+        "output_i": "-15.18",
+        "output_tp": "-2.98",
+        "output_lra": "1.60",
+        "output_thresh": "-25.18",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.82"
+      }
+    },
+    {
+      "id": "ragnar-random.savage-circuitboard",
+      "title": "Savage Circuitboard",
+      "artist": "Ragnar Random",
+      "source": "https://opengameart.org/content/fakebit-chiptune-music-pack",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ragnar Random — Savage Circuitboard",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/37b6d89bd0315dac96ac4bb28c3fba634a12eac7753bfcf19db57f737915dd93.mp3",
+      "sha256": "37b6d89bd0315dac96ac4bb28c3fba634a12eac7753bfcf19db57f737915dd93",
+      "bytes": 10037751,
+      "artistURL": null,
+      "genres": [
+        "synth90s"
+      ],
+      "durationSeconds": 313.614127,
+      "originalFilename": "51_-_savage_circuitboard.ogg",
+      "original": {
+        "path": "originals/4d6fcf81c004c75c05efad58f855d5c6f88de71f2adae01dd16c2af36365fe57.ogg",
+        "sha256": "4d6fcf81c004c75c05efad58f855d5c6f88de71f2adae01dd16c2af36365fe57",
+        "bytes": 16698303,
+        "url": "https://opengameart.org/sites/default/files/51_-_savage_circuitboard.ogg"
+      },
+      "contentId": "unknown",
+      "reviewStatus": "pending",
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-1.47",
+        "input_lra": "1.30",
+        "input_thresh": "-26.03",
+        "output_i": "-16.01",
+        "output_tp": "-1.50",
+        "output_lra": "1.20",
+        "output_thresh": "-26.04",
+        "normalization_type": "dynamic",
+        "target_offset": "0.01"
+      }
+    }
+  ]
+}

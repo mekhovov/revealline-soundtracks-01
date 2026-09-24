@@ -1,0 +1,121 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "core-20260924",
+  "expected": {
+    "trackCount": 13,
+    "audioBytes": 57494195
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 5678,
+      "sha256": "c7698164281f17e0122fd2b0bf0f16629658a598da3f9b8ceb23cf89245056db"
+    },
+    {
+      "path": "README.md",
+      "bytes": 329,
+      "sha256": "489798af99d32e1b5568b29b4edd63da4c780a23de901dc0c48e557a6c9febc6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 17017,
+      "sha256": "3a143c351912196dac41df48809f79ab0861873d5348aadf22a77a8e808a532f"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 2876,
+      "sha256": "0d5d12811a92b9b66d307fd82e54d9183e1282ef600a0db2ec2b6e95792fda59"
+    },
+    {
+      "path": "objects/1f5d207652539fe4d52d143b5f8f3a860e6a2bbe6a9b451d09f2481ffe54ab29.mp3",
+      "bytes": 2415848,
+      "sha256": "1f5d207652539fe4d52d143b5f8f3a860e6a2bbe6a9b451d09f2481ffe54ab29"
+    },
+    {
+      "path": "objects/2f8841e647a76194df8bb034a31d09f692f496ba1a9569075982c9ccebf1feb8.mp3",
+      "bytes": 2229438,
+      "sha256": "2f8841e647a76194df8bb034a31d09f692f496ba1a9569075982c9ccebf1feb8"
+    },
+    {
+      "path": "objects/37b6d89bd0315dac96ac4bb28c3fba634a12eac7753bfcf19db57f737915dd93.mp3",
+      "bytes": 10037751,
+      "sha256": "37b6d89bd0315dac96ac4bb28c3fba634a12eac7753bfcf19db57f737915dd93"
+    },
+    {
+      "path": "objects/39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65.mp3",
+      "bytes": 4105239,
+      "sha256": "39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65"
+    },
+    {
+      "path": "objects/825a3b7d279a4bcdb8ac6b7c2654002deecb09a5527d99df709035f8c83a9a04.mp3",
+      "bytes": 3458238,
+      "sha256": "825a3b7d279a4bcdb8ac6b7c2654002deecb09a5527d99df709035f8c83a9a04"
+    },
+    {
+      "path": "objects/b25c013bb34589455948a97b3073b3a805b776506a501b07c3f6311f01b0280c.mp3",
+      "bytes": 6876308,
+      "sha256": "b25c013bb34589455948a97b3073b3a805b776506a501b07c3f6311f01b0280c"
+    },
+    {
+      "path": "objects/b7d469f620a3af55976e21047a39cfb65f90d2fee1e42bc7edfdccceb2536bcf.mp3",
+      "bytes": 7139622,
+      "sha256": "b7d469f620a3af55976e21047a39cfb65f90d2fee1e42bc7edfdccceb2536bcf"
+    },
+    {
+      "path": "objects/ba5c10722e83e82a9dbc9c227bae2be3482b484873e7685fd17e880a6a6be25c.mp3",
+      "bytes": 2049715,
+      "sha256": "ba5c10722e83e82a9dbc9c227bae2be3482b484873e7685fd17e880a6a6be25c"
+    },
+    {
+      "path": "objects/bb3a758848e665c14b41226d49e7780f00622a6053d646ed4df1be6d3a8e7a27.mp3",
+      "bytes": 2049715,
+      "sha256": "bb3a758848e665c14b41226d49e7780f00622a6053d646ed4df1be6d3a8e7a27"
+    },
+    {
+      "path": "objects/bce13f7d710bbaf899fbd1557c67ec83b830f722653a8f8b102ddd1f528b1038.mp3",
+      "bytes": 6324602,
+      "sha256": "bce13f7d710bbaf899fbd1557c67ec83b830f722653a8f8b102ddd1f528b1038"
+    },
+    {
+      "path": "objects/cfe5e16f81c600bbadb6bd0553b1e626aab072d95b5a7be3b9a80a3f28c1f4b9.mp3",
+      "bytes": 2170924,
+      "sha256": "cfe5e16f81c600bbadb6bd0553b1e626aab072d95b5a7be3b9a80a3f28c1f4b9"
+    },
+    {
+      "path": "objects/f1ee5f93832ccfcbcbfaa6e5ad60684ce764e0116a4edbaf97c1ccaaf489626c.mp3",
+      "bytes": 6330453,
+      "sha256": "f1ee5f93832ccfcbcbfaa6e5ad60684ce764e0116a4edbaf97c1ccaaf489626c"
+    },
+    {
+      "path": "objects/f40dc26c6a1b20f0d9a3146487d3d501f78e2b923410db006e12022c7fa7d376.mp3",
+      "bytes": 2306342,
+      "sha256": "f40dc26c6a1b20f0d9a3146487d3d501f78e2b923410db006e12022c7fa7d376"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 21862,
+      "sha256": "e7078056057ae9478a72be60a02044fd9dd78c8c5a41a94bd1c790e73be618db"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "run": 35944843598,
+    "artifactId": 10786113658,
+    "artifactSha256": "0b95238aa7bb27a89b12864f35ac1df850e7a69dae5b7fea3257a764ebf58f5c",
+    "listeningApproval": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "status": "pending",
+  "tracks": [
+    {
+      "id": "vitalezzz.curse-of-the-moon",
+      "sha256": "b25c013bb34589455948a97b3073b3a805b776506a501b07c3f6311f01b0280c",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "vitalezzz.realm-of-torment",
+      "sha256": "bce13f7d710bbaf899fbd1557c67ec83b830f722653a8f8b102ddd1f528b1038",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "vitalezzz.shadows-awaken-within",
+      "sha256": "b7d469f620a3af55976e21047a39cfb65f90d2fee1e42bc7edfdccceb2536bcf",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "vitalezzz.unholy-surge",
+      "sha256": "f1ee5f93832ccfcbcbfaa6e5ad60684ce764e0116a4edbaf97c1ccaaf489626c",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "bogart-vgm.german-industrial-metal",
+      "sha256": "39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "mintodog.heavy-boss-battle-1",
+      "sha256": "825a3b7d279a4bcdb8ac6b7c2654002deecb09a5527d99df709035f8c83a9a04",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "ragnar-random.street-punks-fighting-to-save-the-princess",
+      "sha256": "bb3a758848e665c14b41226d49e7780f00622a6053d646ed4df1be6d3a8e7a27",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "ragnar-random.rock-city-ransom",
+      "sha256": "ba5c10722e83e82a9dbc9c227bae2be3482b484873e7685fd17e880a6a6be25c",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "ragnar-random.nario-versus-zonik",
+      "sha256": "f40dc26c6a1b20f0d9a3146487d3d501f78e2b923410db006e12022c7fa7d376",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "ragnar-random.welcome-to-warp-zone",
+      "sha256": "2f8841e647a76194df8bb034a31d09f692f496ba1a9569075982c9ccebf1feb8",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "ragnar-random.here-a-captive-heart-busted",
+      "sha256": "cfe5e16f81c600bbadb6bd0553b1e626aab072d95b5a7be3b9a80a3f28c1f4b9",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "ragnar-random.the-story-so-far-fm",
+      "sha256": "1f5d207652539fe4d52d143b5f8f3a860e6a2bbe6a9b451d09f2481ffe54ab29",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "ragnar-random.savage-circuitboard",
+      "sha256": "37b6d89bd0315dac96ac4bb28c3fba634a12eac7753bfcf19db57f737915dd93",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}
