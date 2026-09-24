@@ -1,0 +1,19 @@
+.github/workflows/core-intake.yml
+  s_f8296d264eaab0::t_963d66d89f9d17 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "611c452af99aa0caeaf47949fe95819399e18f54",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
