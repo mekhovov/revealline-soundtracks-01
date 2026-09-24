@@ -12,6 +12,11 @@ import {
   verifyPreviewBatch,
   appendVerifiedPreviewBatch,
 } from './verify.mjs';
+import {
+  buildUnifiedCatalogue,
+  serializeCatalogue,
+} from './intake/build-unified-catalogue.mjs';
+import { validateUploadManifest } from './intake/add-upload.mjs';
 
 const source = fileURLToPath(new URL('./', import.meta.url));
 const baseURL = 'https://mekhovov.github.io/revealline-soundtracks-01/';
@@ -94,11 +99,11 @@ async function fixture(t) {
     object,
   };
 }
-test('original70 root manifest, inventory and every static pin remain unchanged', async () => {
+test('root manifest preserves the original70 audio boundary and pins the current public shell', async () => {
   const body = await readFile(path.join(source, 'deployment-manifest.json'));
   assert.equal(
     hash(body),
-    '46ea74eb7e4240d48145f29080c0fa8094f5c2325290f95686645aab56488558',
+    'c0bc4e397bd60caaffe5d52439fabb0670882fc3294e1fae42d86fba63e9454b',
   );
   const manifest = JSON.parse(body),
     inventory = JSON.parse(await readFile(path.join(source, 'inventory.json'))),
@@ -115,6 +120,50 @@ test('original70 root manifest, inventory and every static pin remain unchanged'
   }
   manifest.expected.trackCount = 71;
   assert.throws(() => validateDeclarations(manifest, inventory, catalogue), /pinned/);
+});
+test('unified catalogue reproducibly exposes every published batch on the root page', async () => {
+  const generated = await buildUnifiedCatalogue();
+  const committed = await readFile(path.join(source, 'catalogue.json'), 'utf8');
+  assert.equal(committed, serializeCatalogue(generated));
+  assert.deepEqual(generated.counts, {
+    declaredTracks: 104,
+    uniqueRecordings: 104,
+    duplicateAliases: 0,
+    audioBytes: 568542177,
+  });
+  for (const title of [
+    "Revenge's Waiting",
+    'Pixel Damnation',
+    'Anemo',
+    'Trial of Thorns',
+    'Carol of the Bells (Metal Version)',
+  ]) assert(generated.tracks.some((track) => track.title === title), `Missing ${title}`);
+});
+test('local MP3 intake requires exact public credit and supported redistribution rights', () => {
+  const valid = {
+    batchId: 'creator-album-20260924',
+    title: 'Creator — Album',
+    description: 'A reviewed public upload.',
+    tracks: [
+      {
+        id: 'creator.song',
+        file: '/tmp/song.mp3',
+        title: 'Song',
+        artist: 'Creator',
+        source: 'https://creator.example/song',
+        license: 'CC BY 4.0 International',
+        licenseURL: 'https://creativecommons.org/licenses/by/4.0/',
+        credit: 'Song by Creator, CC BY 4.0.',
+        tags: ['metal', 'gameplay'],
+      },
+    ],
+  };
+  assert.deepEqual(validateUploadManifest(valid), valid);
+  for (const changed of [
+    { tracks: [{ ...valid.tracks[0], licenseURL: 'https://example.com/custom' }] },
+    { tracks: [valid.tracks[0], valid.tracks[0]] },
+    { tracks: [{ ...valid.tracks[0], source: 'file:///tmp/song' }] },
+  ]) assert.throws(() => validateUploadManifest({ ...valid, ...changed }));
 });
 test('a declared tiny preview batch verifies its exact static and object bytes reproducibly', async (t) => {
   const f = await fixture(t);
