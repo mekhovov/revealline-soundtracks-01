@@ -71,6 +71,32 @@ Local use requires at least 1 GiB free after reservation. No model, sample libra
 or complete source collection is downloaded. Active production is bounded to
 650 MiB. Process one recording at a time; no decoded PCM album is written.
 
+## Ukrainian Commons audition
+
+`ukrainian-commons-audition-20260925.json` keeps three CC BY 3.0 recordings in
+a separate listening-pending intake: the Ukrainian Air Force Band and three
+Vinnytsia choirs performing **Oi u luzi chervona kalyna**, the Zoretsvit and
+Kalyna ensembles performing **A v kryvoho tantsia**, and Kate Orange performing
+the folk lullaby **Oi khodyt son kolo vikon**. Their proposed gameplay, world
+and menu roles cover high, medium and low energy without counting another
+Shchedryk arrangement as a distinct composition.
+
+The Commons acquisition mode accepts an exact `File:` title instead of a media
+URL from the manifest. On the hosted runner it resolves that title through the
+Wikimedia Commons API, requires one bounded WebM original with matching CC BY
+3.0 metadata, requires the manifest-pinned byte count and API SHA-1, binds the
+returned `upload.wikimedia.org` URL, then
+retains both the original and the computed SHA-256-addressed MP3 derivative.
+The API response and file page are stored as rights-evidence snapshots. Every
+row keeps cultural, instrumental, gameplay, complete-listening and Content ID
+review pending; recording mode remains disabled.
+
+`.github/workflows/ukrainian-commons-intake.yml` creates the distinct
+`ukrainian-commons-audition-candidates` 30-day artifact. It has read-only
+repository permissions and cannot publish the candidates or add them to the
+game catalogue. The change notice records extraction from WebM, MP3 conversion,
+loudness normalization and omission of video.
+
 Run the non-network tests with:
 
 ```sh
