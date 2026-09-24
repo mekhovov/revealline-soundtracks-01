@@ -76,13 +76,31 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 4
+    },
+    {
+      "id": "synth-approved-directions-audition-20260925",
+      "path": "batches/synth-approved-directions-audition-20260925/preview-catalogue.json",
+      "sha256": "945a4fcd18f7ccd94df1a06c9f84565bbe04d881eb774636873172e58c0aed55",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 6
+    },
+    {
+      "id": "metal-approved-directions-audition-20260925",
+      "path": "batches/metal-approved-directions-audition-20260925/preview-catalogue.json",
+      "sha256": "c164e4a5af90f6880126286ded01e6b8b319840a6515ecf941864c5fa0932aba",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 6
     }
   ],
   "counts": {
-    "declaredTracks": 104,
-    "uniqueRecordings": 104,
+    "declaredTracks": 116,
+    "uniqueRecordings": 116,
     "duplicateAliases": 0,
-    "audioBytes": 568542177
+    "audioBytes": 648516683
   },
   "tracks": [
     {
@@ -3115,6 +3133,378 @@
         "path": "batches/metal-groove-yannz-audition-20260924/objects/84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04.mp3",
         "bytes": 5195276,
         "sha256": "84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04"
+      },
+      "aliases": []
+    },
+    {
+      "id": "bogart-vgm.retroracing-nightlife",
+      "title": "Retroracing Nightlife",
+      "artist": "Bogart VGM",
+      "durationSeconds": 162.2898,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://opengameart.org/content/retroracing-nightlife",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Retroracing Nightlife by Bogart VGM (https://www.facebook.com/BogartVGM/). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Retroracing Nightlife.mp3",
+      "archiveId": "synth-approved-directions-audition-20260925",
+      "collection": "synth-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-approved-directions-audition-20260925/objects/24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70.mp3",
+        "bytes": 5199456,
+        "sha256": "24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.electric-pulse",
+      "title": "Electric Pulse",
+      "artist": "David KBD",
+      "durationSeconds": 222.545465,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Electric Pulse by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Electric Pulse.mp3",
+      "archiveId": "synth-approved-directions-audition-20260925",
+      "collection": "synth-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-approved-directions-audition-20260925/objects/9de5c8f6d03b54bb34e84143a29622a2285fec82f402c9b407d15caac82c3076.mp3",
+        "bytes": 7123740,
+        "sha256": "9de5c8f6d03b54bb34e84143a29622a2285fec82f402c9b407d15caac82c3076"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.retrochrome-nights",
+      "title": "Retrochrome Nights",
+      "artist": "David KBD",
+      "durationSeconds": 237.714286,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Retrochrome Nights by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Retrochrome Nights.mp3",
+      "archiveId": "synth-approved-directions-audition-20260925",
+      "collection": "synth-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-approved-directions-audition-20260925/objects/106ea5a4e63a70cdc9f918408cf9d99ae2b5dd7f8fa48b74886d41d8857f566f.mp3",
+        "bytes": 7608573,
+        "sha256": "106ea5a4e63a70cdc9f918408cf9d99ae2b5dd7f8fa48b74886d41d8857f566f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.vapor-trails-pursuit",
+      "title": "Vapor Trails Pursuit",
+      "artist": "David KBD",
+      "durationSeconds": 248.727279,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Vapor Trails Pursuit by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Vapor Trails Pursuit.mp3",
+      "archiveId": "synth-approved-directions-audition-20260925",
+      "collection": "synth-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-approved-directions-audition-20260925/objects/519df08420964790ef3f8cacc3cb107b83f598f38dcee9388eeeeb752e8b485f.mp3",
+        "bytes": 7961330,
+        "sha256": "519df08420964790ef3f8cacc3cb107b83f598f38dcee9388eeeeb752e8b485f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.electric-dreams-of-infinity",
+      "title": "Electric Dreams of Infinity",
+      "artist": "David KBD",
+      "durationSeconds": 213.818186,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Electric Dreams of Infinity by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Electric Dreams of Infinity.mp3",
+      "archiveId": "synth-approved-directions-audition-20260925",
+      "collection": "synth-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-approved-directions-audition-20260925/objects/e8cf290592ef5d23b01937c909988e7d61d1adb5eb7722bb92f6f7a19b7d6d7e.mp3",
+        "bytes": 6844543,
+        "sha256": "e8cf290592ef5d23b01937c909988e7d61d1adb5eb7722bb92f6f7a19b7d6d7e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.digital-horizon",
+      "title": "Digital Horizon",
+      "artist": "David KBD",
+      "durationSeconds": 252,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Digital Horizon by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Digital Horizon.mp3",
+      "archiveId": "synth-approved-directions-audition-20260925",
+      "collection": "synth-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-approved-directions-audition-20260925/objects/1d74cf71415145b9f9aee9d38cba0b0932da2ac5df6ac38ffb4c430eb86855d9.mp3",
+        "bytes": 8065820,
+        "sha256": "1d74cf71415145b9f9aee9d38cba0b0932da2ac5df6ac38ffb4c430eb86855d9"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.plasma-storm",
+      "title": "Plasma Storm",
+      "artist": "David KBD",
+      "durationSeconds": 148.181814,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Plasma Storm by David KBD (https://davidkbd.itch.io/interstellar-edm-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Plasma Storm.mp3",
+      "archiveId": "metal-approved-directions-audition-20260925",
+      "collection": "metal-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-approved-directions-audition-20260925/objects/46625cd1d7b6a7dd8926becf99acd61413c0d0b0b8c9c70ab7881e212dbf2825.mp3",
+        "bytes": 4743880,
+        "sha256": "46625cd1d7b6a7dd8926becf99acd61413c0d0b0b8c9c70ab7881e212dbf2825"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.meteor-shower",
+      "title": "Meteor Shower",
+      "artist": "David KBD",
+      "durationSeconds": 317.5,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Meteor Shower by David KBD (https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Meteor Shower.mp3",
+      "archiveId": "metal-approved-directions-audition-20260925",
+      "collection": "metal-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-approved-directions-audition-20260925/objects/ac6ad23995ac9b9f2793096022891c9e2895a4dca294e39344d5a2668fb02e59.mp3",
+        "bytes": 10162303,
+        "sha256": "ac6ad23995ac9b9f2793096022891c9e2895a4dca294e39344d5a2668fb02e59"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.urban-hairbanger",
+      "title": "Urban Hairbanger",
+      "artist": "David KBD",
+      "durationSeconds": 146.823537,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/hair-and-kuckles-technometal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Urban Hairbanger by David KBD (https://davidkbd.itch.io/hair-and-kuckles-technometal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Urban Hairbanger.mp3",
+      "archiveId": "metal-approved-directions-audition-20260925",
+      "collection": "metal-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-approved-directions-audition-20260925/objects/e5eb806f81369cdaa79cd6dc0272439b4e05f988d2e30da9644a2469fa83ed75.mp3",
+        "bytes": 4700413,
+        "sha256": "e5eb806f81369cdaa79cd6dc0272439b4e05f988d2e30da9644a2469fa83ed75"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.grave-rot-requiem",
+      "title": "Grave Rot Requiem",
+      "artist": "David KBD",
+      "durationSeconds": 134.47059,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Grave Rot Requiem by David KBD (https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Grave Rot Requiem.mp3",
+      "archiveId": "metal-approved-directions-audition-20260925",
+      "collection": "metal-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-approved-directions-audition-20260925/objects/382f1069470ebe851a000120c43e5c5786298045631a31e27ff7a37eeb2e66a7.mp3",
+        "bytes": 4305023,
+        "sha256": "382f1069470ebe851a000120c43e5c5786298045631a31e27ff7a37eeb2e66a7"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.devoured-by-darkness",
+      "title": "Devoured by Darkness",
+      "artist": "David KBD",
+      "durationSeconds": 187.428571,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Devoured by Darkness by David KBD (https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Devoured by Darkness.mp3",
+      "archiveId": "metal-approved-directions-audition-20260925",
+      "collection": "metal-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-approved-directions-audition-20260925/objects/eb36bcaaa6827aa332e1c4c2ec1dc331a5fc7cc50982fe3b313ecb04e6383720.mp3",
+        "bytes": 5999430,
+        "sha256": "eb36bcaaa6827aa332e1c4c2ec1dc331a5fc7cc50982fe3b313ecb04e6383720"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.tear-their-fate",
+      "title": "Tear their fate",
+      "artist": "David KBD",
+      "durationSeconds": 226.8,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Tear their fate by David KBD (https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Tear their fate.mp3",
+      "archiveId": "metal-approved-directions-audition-20260925",
+      "collection": "metal-approved-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-approved-directions-audition-20260925/objects/339d379793d95c36ef832234dc2e7e3e8ba11723c1d24405ed2bef963041638f.mp3",
+        "bytes": 7259995,
+        "sha256": "339d379793d95c36ef832234dc2e7e3e8ba11723c1d24405ed2bef963041638f"
       },
       "aliases": []
     }

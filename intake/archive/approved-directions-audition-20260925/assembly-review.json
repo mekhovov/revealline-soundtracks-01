@@ -1,0 +1,51 @@
+{
+  "format": "revealline-audition-assembly.v1",
+  "artifactId": 10836959665,
+  "artifactBytes": 128698822,
+  "artifactSha256": "b632cb216cbb64db5bb08287a0e63eaebfdbf347d173f1cfe5c796c79670885c",
+  "sourceRun": 36067987427,
+  "sourceHead": "ce8ec098b9d400f8a4b2fdba77f8dc548e09375e",
+  "runnerRevision": "4c58001367033ede0f2566a572e4813426d61267",
+  "sourceTree": "c19d3cb93ddfd3d0a947a2cb94adb86ef1f91d4f",
+  "mergedSource": "0df64cecbe82c6d000780562e3ca0718981e64d0",
+  "sourceManifestSha256": "0b6ec9c6a04b90f7a283848fa064558a53df9a50a9c1858e0aa3ddf9abc4b532",
+  "assemblyRevision": "3bdac9ac6f40e303728b6e9670383f9aa4fd3601",
+  "assemblyRun": "36069527248",
+  "originalArtifactInspection": "Verified by this hosted assembler; independent publication review pending",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false,
+  "default": false,
+  "status": "hosted-byte-verification-complete-independent-review-pending",
+  "recordings": 12,
+  "publicRecordings": 116,
+  "preservedExistingEntries": 104,
+  "memberCount": 41,
+  "productionBytes": 208763726,
+  "volumes": [
+    {
+      "id": "synth-approved-directions-audition-20260925",
+      "totalBytes": 42854387,
+      "manifest": {
+        "path": "batches/synth-approved-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2996,
+        "sha256": "c93fd3b1ce14cad20e7608da6e281be3f0709a829ba8490fb547dac079dc4d2a"
+      }
+    },
+    {
+      "id": "metal-approved-directions-audition-20260925",
+      "totalBytes": 37221421,
+      "manifest": {
+        "path": "batches/metal-approved-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2997,
+        "sha256": "6a0d6cf52b1bcbc45beb5fbada05c5eac6bf3dba7a061324e24276dcdbef1795"
+      }
+    }
+  ],
+  "remaining": [
+    "Independent original-artifact and publication PR review",
+    "Public byte and playback verification",
+    "Full listening, musical fit, transitions and warning audibility",
+    "Game admission and defaults",
+    "Offline and physical-device qualification"
+  ]
+}

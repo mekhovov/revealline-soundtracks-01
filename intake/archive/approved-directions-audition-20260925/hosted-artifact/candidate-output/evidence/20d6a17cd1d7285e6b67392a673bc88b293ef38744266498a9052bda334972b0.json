@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.electric-pulse",
+  "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+  "gameId": 2187961,
+  "uploadId": 8382056,
+  "uploadName": "DavidKBD - Electric Pulse - 01 - Electric Pulse-full.ogg",
+  "title": "Electric Pulse",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2187961/8382056",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Electric Pulse - 01 - Electric Pulse-full.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 3730639,
+    "sha256": "27696140ddab61bf5fcd1f614971a8475baf7fbcb1a7ade28cdbba8136a11af8"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "54aa1965580daed3be9b88e27e18a2cb02b13202ea036fab805fdcb2201a0dc6",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "e5f046ff6701a9642cc1d53467b89e15acf1c4ba62e5efad16bba6f3c87e2d4f",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

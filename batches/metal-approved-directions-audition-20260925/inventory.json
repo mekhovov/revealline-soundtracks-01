@@ -1,0 +1,36 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-approved-directions-audition-20260925",
+  "files": [
+    {
+      "path": "objects/46625cd1d7b6a7dd8926becf99acd61413c0d0b0b8c9c70ab7881e212dbf2825.mp3",
+      "bytes": 4743880,
+      "sha256": "46625cd1d7b6a7dd8926becf99acd61413c0d0b0b8c9c70ab7881e212dbf2825"
+    },
+    {
+      "path": "objects/ac6ad23995ac9b9f2793096022891c9e2895a4dca294e39344d5a2668fb02e59.mp3",
+      "bytes": 10162303,
+      "sha256": "ac6ad23995ac9b9f2793096022891c9e2895a4dca294e39344d5a2668fb02e59"
+    },
+    {
+      "path": "objects/e5eb806f81369cdaa79cd6dc0272439b4e05f988d2e30da9644a2469fa83ed75.mp3",
+      "bytes": 4700413,
+      "sha256": "e5eb806f81369cdaa79cd6dc0272439b4e05f988d2e30da9644a2469fa83ed75"
+    },
+    {
+      "path": "objects/382f1069470ebe851a000120c43e5c5786298045631a31e27ff7a37eeb2e66a7.mp3",
+      "bytes": 4305023,
+      "sha256": "382f1069470ebe851a000120c43e5c5786298045631a31e27ff7a37eeb2e66a7"
+    },
+    {
+      "path": "objects/eb36bcaaa6827aa332e1c4c2ec1dc331a5fc7cc50982fe3b313ecb04e6383720.mp3",
+      "bytes": 5999430,
+      "sha256": "eb36bcaaa6827aa332e1c4c2ec1dc331a5fc7cc50982fe3b313ecb04e6383720"
+    },
+    {
+      "path": "objects/339d379793d95c36ef832234dc2e7e3e8ba11723c1d24405ed2bef963041638f.mp3",
+      "bytes": 7259995,
+      "sha256": "339d379793d95c36ef832234dc2e7e3e8ba11723c1d24405ed2bef963041638f"
+    }
+  ]
+}

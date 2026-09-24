@@ -1,0 +1,88 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "synth-approved-directions-audition-20260925",
+  "expected": {
+    "trackCount": 6,
+    "audioBytes": 42803462
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 3793,
+      "sha256": "7d46384b9a1fac10db61040acb7b9325b65c49eeb939dbf47b28435e5425024a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 436,
+      "sha256": "c0dce166de99ab1b2011443ed4a02eaac41ae300ea1ac775048a439fadf86283"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11614,
+      "sha256": "48c17da14065065af1b82e1ef8572f766b4a4b7fb555a1e7e4103294d5785205"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 1407,
+      "sha256": "ec11671102bffd12ea4bfa8f63e471592cbdf1fc917226101aa8dc4f400fe362"
+    },
+    {
+      "path": "objects/106ea5a4e63a70cdc9f918408cf9d99ae2b5dd7f8fa48b74886d41d8857f566f.mp3",
+      "bytes": 7608573,
+      "sha256": "106ea5a4e63a70cdc9f918408cf9d99ae2b5dd7f8fa48b74886d41d8857f566f"
+    },
+    {
+      "path": "objects/1d74cf71415145b9f9aee9d38cba0b0932da2ac5df6ac38ffb4c430eb86855d9.mp3",
+      "bytes": 8065820,
+      "sha256": "1d74cf71415145b9f9aee9d38cba0b0932da2ac5df6ac38ffb4c430eb86855d9"
+    },
+    {
+      "path": "objects/24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70.mp3",
+      "bytes": 5199456,
+      "sha256": "24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70"
+    },
+    {
+      "path": "objects/519df08420964790ef3f8cacc3cb107b83f598f38dcee9388eeeeb752e8b485f.mp3",
+      "bytes": 7961330,
+      "sha256": "519df08420964790ef3f8cacc3cb107b83f598f38dcee9388eeeeb752e8b485f"
+    },
+    {
+      "path": "objects/9de5c8f6d03b54bb34e84143a29622a2285fec82f402c9b407d15caac82c3076.mp3",
+      "bytes": 7123740,
+      "sha256": "9de5c8f6d03b54bb34e84143a29622a2285fec82f402c9b407d15caac82c3076"
+    },
+    {
+      "path": "objects/e8cf290592ef5d23b01937c909988e7d61d1adb5eb7722bb92f6f7a19b7d6d7e.mp3",
+      "bytes": 6844543,
+      "sha256": "e8cf290592ef5d23b01937c909988e7d61d1adb5eb7722bb92f6f7a19b7d6d7e"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 22055,
+      "sha256": "945a4fcd18f7ccd94df1a06c9f84565bbe04d881eb774636873172e58c0aed55"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "sourceRun": 36067987427,
+    "artifactId": 10836959665,
+    "artifactSha256": "b632cb216cbb64db5bb08287a0e63eaebfdbf347d173f1cfe5c796c79670885c",
+    "sourceManifestSha256": "0b6ec9c6a04b90f7a283848fa064558a53df9a50a9c1858e0aa3ddf9abc4b532",
+    "gameCatalogueAdmission": false,
+    "listeningApproval": false
+  }
+}

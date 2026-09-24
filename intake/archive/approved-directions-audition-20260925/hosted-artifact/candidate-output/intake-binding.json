@@ -1,0 +1,19 @@
+{
+  "format": "revealline-approved-directions-intake-binding.v1",
+  "sourceManifestSha256": "0b6ec9c6a04b90f7a283848fa064558a53df9a50a9c1858e0aa3ddf9abc4b532",
+  "runnerRevision": "4c58001367033ede0f2566a572e4813426d61267",
+  "eventHeadRevision": "ce8ec098b9d400f8a4b2fdba77f8dc548e09375e",
+  "runnerRun": "36067987427",
+  "workflowRef": "mekhovov/revealline-soundtracks-01/.github/workflows/approved-directions-intake.yml@refs/pull/16/merge",
+  "sourceFiles": {
+    "intake/approved_directions_pins.py": "66d16626bd881975c17341568e35f8259a6f0b44ca07c43a5ffabc0c2d6b60a8",
+    "intake/itch_source.py": "e661377fb3b0e766cd2941497917de4a5452f01d881e88df084eb7e28d190da1",
+    "intake/itch_audio.py": "98bd0c809dcabd518da65024f7a379a9ebfaadd40eb2a3db7b5f557672775012",
+    "intake/prepare.py": "1d07350e038667b05c07abd7dcfe87e155c8ad868de591637dfc5b5548b18de5",
+    "intake/prepare_approved_directions.py": "af7cd340be51058e0fc160cf2da65001f32d180e997019ab3b641e1b421e8b3f",
+    ".github/workflows/approved-directions-intake.yml": "c2e86f71b3319e7bc84832270ab5f4e9e650969d9695771a8649e489fee51dc9"
+  },
+  "publicationApproval": false,
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false
+}

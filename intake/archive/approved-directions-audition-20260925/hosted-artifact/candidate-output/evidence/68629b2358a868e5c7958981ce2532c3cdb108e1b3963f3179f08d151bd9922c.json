@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.retrochrome-nights",
+  "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+  "gameId": 2187961,
+  "uploadId": 8382060,
+  "uploadName": "DavidKBD - Electric Pulse - 04 - Retrochrome Nights-full.ogg",
+  "title": "Retrochrome Nights",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2187961/8382060",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Electric Pulse - 04 - Retrochrome Nights-full.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 4000684,
+    "sha256": "91257ac29064bc40bda40e5f89f5fc27470e910f0ea8848ed7fec0cdf477317a"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "5d7ab1e54e1550065c86b861455b50a21e36a94eb77088e634bc6114dd1e74aa",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "e5f046ff6701a9642cc1d53467b89e15acf1c4ba62e5efad16bba6f3c87e2d4f",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}
