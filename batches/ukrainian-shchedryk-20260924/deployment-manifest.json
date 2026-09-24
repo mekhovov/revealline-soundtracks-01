@@ -1,0 +1,61 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "ukrainian-shchedryk-20260924",
+  "expected": {
+    "trackCount": 1,
+    "audioBytes": 8641768
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 1263,
+      "sha256": "9119328216ac740768896583a69e08c078e4f9d2963d62fafc1e5fee9cc150ae"
+    },
+    {
+      "path": "README.md",
+      "bytes": 444,
+      "sha256": "69c830bf2abdf1b461c63859fc1a701c5d7e5f268ebaa3e7f42a8cb1d14849bb"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4447,
+      "sha256": "c0323feb75546e6e8da59cb0ffba7dc3227d47d2c4ba91a3d6b7b93506a75a79"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 322,
+      "sha256": "e2105712f3b9d5817d8e4b6e381fa46bad932e0cfcd4c1ae6a1c62553c92128b"
+    },
+    {
+      "path": "objects/d4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58.mp3",
+      "bytes": 8641768,
+      "sha256": "d4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 2880,
+      "sha256": "b2051194ff84b9fb667f5433505b213516c084eb0f78dc988b335827111cd21e"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "run": 35945483057,
+    "artifactId": 10786189256,
+    "artifactSha256": "279e0ba70296e38263f1c239a62f2594272d6f2e74f86ffb8de0301386ac75c2",
+    "listeningApproval": false
+  }
+}

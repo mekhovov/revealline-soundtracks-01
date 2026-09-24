@@ -8,6 +8,14 @@
         "bytes": 4327,
         "sha256": "18e819a76d78e7a7567c152975b3dde98d8cdda0f5f44004d73581cd7f6098f9"
       }
+    },
+    {
+      "id": "ukrainian-shchedryk-20260924",
+      "manifest": {
+        "path": "batches/ukrainian-shchedryk-20260924/deployment-manifest.json",
+        "bytes": 1768,
+        "sha256": "540347c20980e758dc0a4471f86c63e8e9d930f8fcae483d4395719a1dc6d2aa"
+      }
     }
   ]
 }
