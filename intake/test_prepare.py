@@ -1,4 +1,5 @@
 import copy
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -6,7 +7,7 @@ from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 from unittest.mock import patch
 from prepare import (allowed_redirect, allowed_url, candidate_duration_bounds,
-                     commons_api_url, commons_metadata, validate_manifest,
+                     commons_api_url, commons_metadata, validate_commons_original, validate_manifest,
                      reserve, reserve_row, verify_inspector, COMMONS_CHANGE_NOTICE,
                      RESERVE, SOURCE_LIMIT, TOTAL_LIMIT)
 
@@ -145,6 +146,20 @@ class CommonsIntakeTests(unittest.TestCase):
         self.assertEqual(metadata['url'], self.info['url'])
         self.assertEqual(metadata['bytes'], self.info['size'])
         self.assertEqual(metadata['sha1'], self.info['sha1'])
+
+    def test_commons_downloaded_bytes_match_the_api_revision(self):
+        body = b'exact reviewed Commons original'
+        metadata = {
+            'url': self.info['url'],
+            'bytes': len(body),
+            'sha1': hashlib.sha1(body, usedforsecurity=False).hexdigest(),
+        }
+        self.assertIsNone(validate_commons_original(metadata, body, self.info['url']))
+
+        substituted = b'same length substituted payload'
+        self.assertEqual(len(substituted), len(body))
+        with self.assertRaisesRegex(ValueError, 'SHA-1'):
+            validate_commons_original(metadata, substituted, self.info['url'])
 
     def test_commons_api_rejects_ambiguous_or_changed_metadata(self):
         cases = []

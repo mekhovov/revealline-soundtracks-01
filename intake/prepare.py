@@ -401,6 +401,15 @@ def commons_evidence(row, output, pages, partial):
                       'sourceSnapshot': partial['sourceSnapshot']}
 
 
+def validate_commons_original(metadata, body, final):
+    """Bind the downloaded original bytes to the exact Commons API revision."""
+    if final != metadata['url'] or len(body) != metadata['bytes']:
+        raise ValueError('Commons original differs from the API-bound recording')
+    actual_sha1 = hashlib.sha1(body, usedforsecurity=False).hexdigest()
+    if actual_sha1 != metadata['sha1']:
+        raise ValueError('Commons original SHA-1 differs from the API-bound recording')
+
+
 def command(args):
     result = subprocess.run(args, capture_output=True, text=True, timeout=240)
     if result.returncode:
@@ -539,8 +548,7 @@ def prepare(manifest, output, game_root):
             elif is_commons:
                 metadata, evidence = commons_evidence(row, output, pages, partial)
                 body, final = fetch(metadata['url'], metadata['bytes'])
-                if final != metadata['url'] or len(body) != metadata['bytes']:
-                    raise ValueError('Commons original differs from the API-bound recording')
+                validate_commons_original(metadata, body, final)
                 suffix = '.webm'
                 source_details = {'url': final, 'commonsTitle': row['commonsTitle'],
                                   'reportedBytes': metadata['bytes'], 'apiSha1': metadata['sha1'],
