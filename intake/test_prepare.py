@@ -1,0 +1,37 @@
+import copy
+import unittest
+from prepare import allowed_url, validate_manifest
+
+
+class IntakeTests(unittest.TestCase):
+    def setUp(self):
+        self.value = {'format': 'revealline-core-intake.v1', 'tracks': [{
+            'id': 'artist.song', 'source': 'https://opengameart.org/content/song',
+            'download': 'https://opengameart.org/sites/default/files/song.mp3',
+            'license': 'CC0 1.0 Universal', 'licenseURL': 'https://creativecommons.org/publicdomain/zero/1.0/',
+            'status': 'rights-reviewed-listening-pending'}]}
+
+    def test_valid_pending_intake(self):
+        self.assertIs(validate_manifest(self.value), self.value)
+
+    def test_unknown_hosts_and_credentials(self):
+        for url in ('http://opengameart.org/a', 'https://evil.test/a', 'https://u:p@opengameart.org/a', 'https://opengameart.org:444/a'):
+            self.assertFalse(allowed_url(url))
+
+    def test_duplicate_and_traversal_ids(self):
+        for identifier in ('../song', '/song', 'a/b'):
+            item = copy.deepcopy(self.value)
+            item['tracks'][0]['id'] = identifier
+            with self.assertRaises(ValueError): validate_manifest(item)
+        self.value['tracks'] *= 2
+        with self.assertRaises(ValueError): validate_manifest(self.value)
+
+    def test_no_licence_or_listening_escalation(self):
+        for key, value in (('licenseURL', 'https://example.com/free'), ('status', 'approved'), ('download', 'https://opengameart.org/preview')):
+            item = copy.deepcopy(self.value)
+            item['tracks'][0][key] = value
+            with self.assertRaises(ValueError): validate_manifest(item)
+
+
+if __name__ == '__main__':
+    unittest.main()

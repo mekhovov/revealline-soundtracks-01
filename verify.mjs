@@ -39,7 +39,7 @@ const REQUIRED = [
   'README.md',
   'CREDITS.md',
 ];
-const PRIVATE = new Set(['.git', '.github', 'verify.mjs', 'render.mjs']);
+const PRIVATE = new Set(['.git', '.github', 'verify.mjs', 'render.mjs', 'intake']);
 const LICENSES = new Set([
   'https://creativecommons.org/publicdomain/zero/1.0/',
   'https://creativecommons.org/licenses/by/3.0/',
