@@ -1,0 +1,22 @@
+intake/test_prepare.py
+  s_f8296d264eaab0::t_c9adf024cd9de9 81-85,90-91,103-104
+  s_f8296d264eaab0::t_990bab33d52eeb 105-107
+intake/prepare.py
+  s_f8296d264eaab0::t_c9adf024cd9de9 550-552
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "39b09d5269f0fa9a32786fdb705eb8e69a5cf33f",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
