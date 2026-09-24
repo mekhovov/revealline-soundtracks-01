@@ -14,10 +14,15 @@ import subprocess
 import time
 from urllib.parse import unquote, urljoin, urlparse
 from urllib.request import HTTPRedirectHandler, Request, build_opener
+from itch_audio import acquire as acquire_itch, validate_row as validate_itch_row, validate_native_probe
 
 RESERVE = 1024 ** 3
 SOURCE_LIMIT = 64 * 1024 ** 2
 TOTAL_LIMIT = 650 * 1024 ** 2
+SCRATCH_LIMIT = 256 * 1024 ** 2
+DERIVATIVE_LIMIT = 24 * 1024 ** 2  # more than 12 minutes at 256 kbps
+VOLUME_LIMIT = 64 * 1024 ** 2
+VOLUME_METADATA_RESERVATION = 512 * 1024
 ROW_RESERVATION = 96 * 1024 ** 2  # bounded source, 12-minute MP3, page and receipts
 INSPECTOR_REVISION = '71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3'
 LICENSES = {'CC0 1.0 Universal': 'https://creativecommons.org/publicdomain/zero/1.0/',
@@ -117,6 +122,9 @@ def validate_manifest(value):
         ids.add(row['id'])
         if row.get('licenseURL') != LICENSES.get(row.get('license')):
             raise ValueError('Unsupported exact source licence')
+        if row.get('acquisition') == 'itch-public-free-download':
+            validate_itch_row(row)
+            continue
         if not allowed_url(row['source']) or not allowed_url(row['download']):
             raise ValueError('Unapproved source host')
         if row['source'] in CREATOR_IDENTITIES:
@@ -225,7 +233,53 @@ def reserve_row(root):
     used = sum(file.stat().st_size for file in root.rglob('*') if file.is_file())
     if used + ROW_RESERVATION > TOTAL_LIMIT:
         raise ValueError('Next recording would exceed the 650 MiB production reservation')
+    scratch = sum(file.stat().st_size for file in root.glob('candidate-*.mp3') if file.is_file())
+    if scratch + DERIVATIVE_LIMIT > SCRATCH_LIMIT:
+        raise ValueError('Next recording would exceed the 256 MiB scratch reservation')
     reserve(root)
+
+
+def verify_storage(root):
+    files = [file for file in root.rglob('*') if file.is_file()]
+    if sum(file.stat().st_size for file in files) > TOTAL_LIMIT:
+        raise ValueError('Active production storage exceeds 650 MiB')
+    if sum(file.stat().st_size for file in root.glob('candidate-*.mp3') if file.is_file()) > SCRATCH_LIMIT:
+        raise ValueError('Active scratch exceeds 256 MiB')
+    reserve(root, requested=0)
+
+
+def delivery_volumes(tracks):
+    """Partition actual MP3 bytes; no oversized collection is labelled a 64 MiB album."""
+    volumes = []
+    families = sorted({track.get('family', 'unassigned') for track in tracks})
+    for family in families:
+        volume = None
+        for track in (row for row in tracks if row.get('family', 'unassigned') == family):
+            size = track['delivery']['bytes']
+            if type(size) is not int or not 0 < size <= VOLUME_LIMIT - VOLUME_METADATA_RESERVATION:
+                raise ValueError('Delivery recording exceeds the optional volume budget')
+            if volume is None or volume['audioBytes'] + size + VOLUME_METADATA_RESERVATION > VOLUME_LIMIT:
+                volume = {'family': family, 'number': len(volumes) + 1, 'audioBytes': 0,
+                          'metadataReservationBytes': VOLUME_METADATA_RESERVATION,
+                          'maximumBytes': VOLUME_LIMIT, 'tracks': [],
+                          'status': 'size-checked-plan-listening-pending'}
+                volumes.append(volume)
+            volume['audioBytes'] += size
+            volume['tracks'].append(track['id'])
+    return volumes
+
+
+def itch_evidence(row, output, partial):
+    body, receipt = acquire_itch(row)
+    # Resolution receipt contains only pinned identities and a CDN path, never
+    # authorization/session material. Preserve a semantic, hashed source snapshot.
+    encoded = (json.dumps(receipt, ensure_ascii=False, indent=2) + '\n').encode('utf8')
+    sha = digest(encoded)
+    path = 'evidence/' + sha + '.json'
+    (output / path).write_bytes(encoded)
+    partial['sourceSnapshot'] = {'path': path, 'sha256': sha, 'url': row['source'],
+                                 'snapshotKind': 'itch-public-license-and-native-acquisition'}
+    return body, receipt['native'], {'sourceSnapshot': partial['sourceSnapshot']}
 
 
 def inspect_mp3(file, game_root):
@@ -273,23 +327,36 @@ def prepare(manifest, output, game_root):
     pages = {}
     source_hashes = set()
     for row in rows:
-        partial = {'id': row['id'], 'source': row['source'], 'download': row['download'], 'loudnessAttempts': []}
+        partial = {'id': row['id'], 'source': row['source'], 'loudnessAttempts': []}
+        if 'download' in row:
+            partial['download'] = row['download']
         try:
             reserve_row(output)
-            evidence = collect_evidence(row, output, pages, partial)
-            body, final = fetch(row['download'], CREATOR_SOURCE_LIMITS.get(row['source'], SOURCE_LIMIT))
+            is_itch = row.get('acquisition') == 'itch-public-free-download'
+            if is_itch:
+                body, native, evidence = itch_evidence(row, output, partial)
+                suffix = native['suffix']
+                source_details = {'source': row['source'], 'uploadId': row['uploadId'],
+                                  'fileName': native['fileName'], 'contentType': native['contentType']}
+            else:
+                evidence = collect_evidence(row, output, pages, partial)
+                body, final = fetch(row['download'], CREATOR_SOURCE_LIMITS.get(row['source'], SOURCE_LIMIT))
+                suffix = Path(urlparse(final).path).suffix
+                source_details = {'url': final}
             source_sha = digest(body)
             if source_sha in known_hashes or source_sha in source_hashes or re.sub(r'[^a-z0-9]', '', row['title'].lower()) in known_titles:
                 raise ValueError('Recording already exists in the admitted collection')
             source_hashes.add(source_sha)
-            suffix = Path(urlparse(final).path).suffix
             original = output / 'originals' / (source_sha + suffix)
             original.write_bytes(body)
-            partial['original'] = {'path': str(original.relative_to(output)), 'sha256': source_sha, 'bytes': len(body), 'url': final}
+            partial['original'] = {'path': str(original.relative_to(output)), 'sha256': source_sha, 'bytes': len(body), **source_details}
             del body
-            probe = json.loads(command(['ffprobe', '-v', 'error', '-select_streams', 'a:0',
-                                        '-show_entries', 'format=duration:stream=sample_rate,channels',
+            probe = json.loads(command(['ffprobe', '-v', 'error',
+                                        '-show_entries', 'format=duration,format_name:stream=codec_type,codec_name,sample_rate,channels:stream_disposition=attached_pic',
                                         '-of', 'json', str(original)]).stdout)
+            if is_itch:
+                validate_native_probe(suffix, probe)
+            verify_storage(output)
             duration = float(probe['format']['duration'])
             if not 60 <= duration <= 720:
                 raise ValueError('Recording is outside the 1–12 minute candidate envelope')
@@ -305,7 +372,11 @@ def prepare(manifest, output, game_root):
                                 ':linear=true:print_format=json')
                 command(['ffmpeg', '-v', 'error', '-y', '-nostdin', '-i', str(original), '-map', '0:a:0',
                          '-map_metadata', '-1', '-vn', '-af', filter_value, '-ar', '44100', '-ac', '2',
-                         '-c:a', 'libmp3lame', '-b:a', '256k', '-id3v2_version', '3', str(normalized_path)])
+                         '-c:a', 'libmp3lame', '-b:a', '256k', '-id3v2_version', '3',
+                         '-fs', str(DERIVATIVE_LIMIT), str(normalized_path)])
+                if normalized_path.stat().st_size >= DERIVATIVE_LIMIT:
+                    raise ValueError('Derivative reached the scratch file limit')
+                verify_storage(output)
                 command(['ffmpeg', '-v', 'error', '-xerror', '-nostdin', '-i', str(normalized_path), '-f', 'null', '-'])
                 measured_output = loudness(normalized_path)
                 partial['loudnessAttempts'].append({'targetPeak': peak, 'measurement': measured_output})
@@ -322,11 +393,12 @@ def prepare(manifest, output, game_root):
             destination = output / 'objects' / (audio_hash + '.mp3')
             normalized_path.rename(destination)
             receipt['tracks'].append({**row, **evidence,
-                'original': {'path': str(original.relative_to(output)), 'sha256': source_sha, 'bytes': original.stat().st_size, 'url': final},
+                'original': {'path': str(original.relative_to(output)), 'sha256': source_sha, 'bytes': original.stat().st_size, **source_details},
                 'delivery': {'path': str(destination.relative_to(output)), 'sha256': audio_hash, 'bytes': len(data)},
                 'asset': facts, 'durationSeconds': duration, 'sourceLoudness': measured, 'encodedLoudness': measured_output,
                 'completeDecode': True, 'listeningApproval': False,
                 'changes': 'Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.'})
+            receipt['deliveryVolumes'] = delivery_volumes(receipt['tracks'])
             print(f'Prepared {row["id"]}: {duration:.1f}s, {measured_output["input_i"]} LUFS, {measured_output["input_tp"]} dBTP', flush=True)
         except Exception as error:
             attempted = output / ('candidate-' + row['id'] + '.mp3')
@@ -335,9 +407,9 @@ def prepare(manifest, output, game_root):
             receipt['failures'].append({**partial, 'error': str(error)})
             print(f'FAILED {row["id"]}: {error}', flush=True)
         write_json(output / 'receipt.json', receipt)
-        if sum(file.stat().st_size for file in output.rglob('*') if file.is_file()) > TOTAL_LIMIT:
-            raise ValueError('Active production storage exceeds 650 MiB')
+        verify_storage(output)
     write_json(output / 'review.json', {'status': 'pending', 'tracks': [{'id': r['id'], 'sha256': r['delivery']['sha256'], 'fullTrackListening': False, 'transitions': False, 'warningAudibility': False} for r in receipt['tracks']]})
+    verify_storage(output)
     if receipt['failures']:
         raise SystemExit('Partial intake retained; review receipt failures')
 

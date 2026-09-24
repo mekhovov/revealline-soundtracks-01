@@ -1,0 +1,87 @@
+{
+  "format": "revealline-itch-intake-source-review.v1",
+  "base": "40a283d9a2ed2f5a00837ae60273f3884a52e706",
+  "localMediaAcquired": false,
+  "localFilesWritten": false,
+  "testExecution": "Python memory-only module compilation and unittest execution; fixture reads supplied from authoritative Git blobs",
+  "tests": {
+    "passed": 46,
+    "failed": 0,
+    "excludedDiskWritingExistingTests": 3,
+    "hostedFullDiscoveryPending": true
+  },
+  "audioAcquired": false,
+  "listeningApproval": false,
+  "admitted": false,
+  "files": [
+    {
+      "path": "intake/itch_audio.py",
+      "bytes": 9224,
+      "sha256": "d480a03c6672957f134b4f20b2b873bdc86b698867e519b56f532e9913ae97fd"
+    },
+    {
+      "path": "intake/prepare.py",
+      "bytes": 21869,
+      "sha256": "8045b0228e35336e2656368605e5bcc0df13a0a308856b5c1bc38b5ed099c6f4"
+    },
+    {
+      "path": "intake/test_itch_audio.py",
+      "bytes": 14674,
+      "sha256": "00bf13d7e9397173b4767682be439e79d70db90970026f95fcdd2f76310daed6"
+    },
+    {
+      "path": "intake/core-20260924.json",
+      "bytes": 9147,
+      "sha256": "02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9"
+    },
+    {
+      "path": "intake/itch-core-audition-20260924.json",
+      "bytes": 9147,
+      "sha256": "02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9"
+    },
+    {
+      "path": "intake/verification/itch-core-20260924/memory-tests.txt",
+      "bytes": 7295,
+      "sha256": "e940dd42719a5e260fede4692a1cd2eed8ecaad1cb6ab1c68b081fc13a2bbc99"
+    },
+    {
+      "path": "intake/verification/itch-core-20260924/README.md",
+      "bytes": 3396,
+      "sha256": "03cddb4fc2b271fa5f5fff05d08fcfe39f9a5c6857284965da4714366e2f46b7"
+    }
+  ],
+  "testedModules": [
+    {
+      "name": "itch_source",
+      "sha256": "4f82131bb60130f9f58c259ab4725d9541f333c1d427e583f3c0aa9c24a87104"
+    },
+    {
+      "name": "itch_audio",
+      "sha256": "d480a03c6672957f134b4f20b2b873bdc86b698867e519b56f532e9913ae97fd"
+    },
+    {
+      "name": "prepare",
+      "sha256": "8045b0228e35336e2656368605e5bcc0df13a0a308856b5c1bc38b5ed099c6f4"
+    },
+    {
+      "name": "test_itch_source",
+      "sha256": "996f47c3a3dd66ffc6c72db6df214f08ba630c39d25139092404e97a19896bf1"
+    },
+    {
+      "name": "test_itch_audio",
+      "sha256": "00bf13d7e9397173b4767682be439e79d70db90970026f95fcdd2f76310daed6"
+    },
+    {
+      "name": "test_prepare",
+      "sha256": "c319ac44ee189961dd1c39f59be26e5386211d4c95058403a02e274d40546723"
+    },
+    {
+      "name": "test_creator",
+      "sha256": "98530921cf5d32eb80e11453eff8990ad950801f1967b2a190dcd4198ce1e559"
+    },
+    {
+      "name": "test_metal_creator",
+      "sha256": "47523759050d6f6a9bb0ff82848398e57f1d2312c9a3c14c7c1e84d0b7387ed1"
+    }
+  ]
+}
