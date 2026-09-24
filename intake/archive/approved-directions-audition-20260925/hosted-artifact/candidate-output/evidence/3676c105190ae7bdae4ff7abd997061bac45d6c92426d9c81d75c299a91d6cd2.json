@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.vapor-trails-pursuit",
+  "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+  "gameId": 2187961,
+  "uploadId": 8382528,
+  "uploadName": "DavidKBD - Electric Pulse - 09 - Vapor Trails Pursuit-full.ogg",
+  "title": "Vapor Trails Pursuit",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2187961/8382528",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Electric Pulse - 09 - Vapor Trails Pursuit-full.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 4159673,
+    "sha256": "b535fc24e7088d443ce7147f7d5a32c8517f07b4ef1651e347b50d2a8ab11f1e"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "a790ff889d3217f2fdd1fc9aa067bafa353ba0b730f494b494c188a98ffbd980",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "e5f046ff6701a9642cc1d53467b89e15acf1c4ba62e5efad16bba6f3c87e2d4f",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

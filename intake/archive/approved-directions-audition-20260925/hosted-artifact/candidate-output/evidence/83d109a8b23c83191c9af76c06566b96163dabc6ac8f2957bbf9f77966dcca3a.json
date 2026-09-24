@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.urban-hairbanger",
+  "source": "https://davidkbd.itch.io/hair-and-kuckles-technometal-music-pack",
+  "gameId": 1182848,
+  "uploadId": 4397475,
+  "uploadName": "DavidKBD - Hair And Knuckles Pack - 03 - Urban Hairbanger.ogg",
+  "title": "Urban Hairbanger",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/1182848/4397475",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Hair And Knuckles Pack - 03 - Urban Hairbanger.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 2686242,
+    "sha256": "6fc0f48e1f24e4a2a32e2990e51aa78da9ce955a2f77dbbae83fd024c3380739"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/hair-and-kuckles-technometal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "4e60636ce5085bf5b0cb5c65c120db51245307be43e0ee01a2b2994ad4dd766b",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "4b16d4b0833b64eb8f113a0dd48216b87b3c9e70376e434187e3d7a1dd5155c1",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

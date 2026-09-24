@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.plasma-storm",
+  "source": "https://davidkbd.itch.io/interstellar-edm-metal-music-pack",
+  "gameId": 1704727,
+  "uploadId": 6501647,
+  "uploadName": "DavidKBD - InterstellarPack - 02 - Plasma Storm.ogg",
+  "title": "Plasma Storm",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/1704727/6501647",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - InterstellarPack - 02 - Plasma Storm.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 2978247,
+    "sha256": "4cacd2ed17c75feaa7140e95d6c7312850b3b935064180f9ebf9f5e0ad4bb724"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/interstellar-edm-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "981a811fd723a5c6be775b4f7043c3f0cd126e0df20204bef7f8ec6a5cdfd533",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "9a5fff99c09da4f9f0c49859f473ac641f465b060e425413a3f6f0f8d47dfa0b",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

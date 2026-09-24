@@ -56,6 +56,22 @@
         "bytes": 2421,
         "sha256": "9cb9d37246ed1668a5b16039d4345677f717810b226aa881c27e9c47f04b8b4b"
       }
+    },
+    {
+      "id": "synth-approved-directions-audition-20260925",
+      "manifest": {
+        "path": "batches/synth-approved-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2996,
+        "sha256": "c93fd3b1ce14cad20e7608da6e281be3f0709a829ba8490fb547dac079dc4d2a"
+      }
+    },
+    {
+      "id": "metal-approved-directions-audition-20260925",
+      "manifest": {
+        "path": "batches/metal-approved-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2997,
+        "sha256": "6a0d6cf52b1bcbc45beb5fbada05c5eac6bf3dba7a061324e24276dcdbef1795"
+      }
     }
   ]
 }

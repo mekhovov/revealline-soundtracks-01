@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.grave-rot-requiem",
+  "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+  "gameId": 3755088,
+  "uploadId": 14549171,
+  "uploadName": "DavidKBD-01 - Grave Rot Requiem.ogg",
+  "title": "Grave Rot Requiem",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3755088/14549171",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-01 - Grave Rot Requiem.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 2721523,
+    "sha256": "247365a3eeb3a217a17fe8b1dbe64536ac810303f23f7082b42b54560a8f90c0"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "d3c5889662cd8455c218efbe65c51dad3cd32594dbebb8534fddc6d15d80cd4e",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "fcab6f9052b1cc95f341fa5ccfdf1ea7c0275ce0bcf885559989ecd21137bd73",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}
