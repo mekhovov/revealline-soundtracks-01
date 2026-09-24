@@ -37,8 +37,19 @@
         <button id="play-results" type="button">▶ Play results</button>
         <button id="pause" type="button" disabled>Pause</button>
         <button id="next" type="button" disabled>Next →</button>
-        <label><input id="shuffle" type="checkbox" checked> Shuffle</label>
-        <span>Repeat all</span>
+        <label>Order
+          <select id="order">
+            <option value="shuffle">Shuffle</option>
+            <option value="ordered">One after another</option>
+          </select>
+        </label>
+        <label>Repeat
+          <select id="repeat">
+            <option value="all">All selected songs</option>
+            <option value="one">Current song</option>
+            <option value="off">Stop at the end</option>
+          </select>
+        </label>
       </div>
       <p id="playback-status" role="status"></p>
     </section>
@@ -48,18 +59,14 @@
         <label class="search-field">Find a song, artist, tag or collection
           <input id="search" type="search" placeholder="Try “metal”, “YannZ” or “Shchedryk”" autocomplete="off">
         </label>
-        <label>Music style
-          <select id="genre">
-            <option value="">All styles</option>
-            <option value="metal">Metal</option>
-            <option value="synth">Synth & electronic</option>
-            <option value="ukrainian">Ukrainian</option>
-            <option value="chiptune">Chiptune</option>
-            <option value="rock">Rock</option>
-            <option value="ambient">Ambient</option>
-            <option value="other">Other</option>
-          </select>
-        </label>
+        <fieldset class="style-picker">
+          <legend>Music styles — choose any mix</legend>
+          <div id="styles"></div>
+          <div class="style-actions">
+            <button id="styles-all" type="button">All styles</button>
+            <button id="styles-none" type="button">Clear</button>
+          </div>
+        </fieldset>
         <label>Collection
           <select id="collection"><option value="">All collections</option></select>
         </label>
@@ -72,10 +79,10 @@
     <section class="guide" id="add-music">
       <p class="eyebrow">CATALOGUE INTAKE</p>
       <h2>Add an MP3 once; play it everywhere</h2>
-      <p>Use the repository intake command to hash, credit and publish a redistributable MP3. The generated catalogue is the same feed used by this page and by RevealLine’s in-game archive browser.</p>
+      <p>Select one MP3 or one folder. The repository automation discovers songs, reads available ID3 metadata, hashes and credits every recording, rebuilds this catalogue, runs verification and can open the pull request. The generated feed is used by this page and RevealLine’s in-game archive browser.</p>
       <ol>
         <li>Confirm public MP3 redistribution and game playback rights for the exact recording.</li>
-        <li>Run the checked-in intake command with the MP3, title, artist, source, licence and credit.</li>
+        <li>Run the checked-in intake command with the file or folder, exact source, licence and music styles. Add an artist only when the MP3 tags do not provide one.</li>
         <li>Open the generated archive pull request. CI verifies the exact bytes, metadata, duplicate hashes and catalogue output.</li>
         <li>After merge and Pages deployment, the recording appears here and in the game without copying it into a game release.</li>
       </ol>

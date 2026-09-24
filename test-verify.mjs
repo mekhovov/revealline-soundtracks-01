@@ -31,6 +31,13 @@ import {
   prepareUpload,
   validateUploadManifest,
 } from "./intake/add-upload.mjs";
+import {
+  STYLE_GROUPS,
+  buildPlaybackQueue,
+  matchesStyles,
+  stylesOf,
+} from './playback-policy.mjs';
+import { createUploadManifest, readID3 } from './intake/add-music.mjs';
 
 const source = fileURLToPath(new URL("./", import.meta.url));
 const baseURL = "https://mekhovov.github.io/revealline-soundtracks-01/";
@@ -181,6 +188,38 @@ test("unified catalogue reproducibly exposes every published batch on the root p
   assert(shchedryk.tags.some((tag) => /metal/i.test(tag)));
   assert(shchedryk.tags.some((tag) => /ukrain/i.test(tag)));
 });
+test('style selection supports mixed families and deterministic ordered or shuffled queues', () => {
+  assert.deepEqual(stylesOf({ tags: ['Ukrainian', 'metal', 'synthwave'] }), [
+    'ukrainian',
+    'metal',
+    'synth',
+  ]);
+  assert.equal(matchesStyles(['metal'], ['metal', 'ukrainian']), true);
+  assert.equal(matchesStyles(['ambient'], ['metal', 'ukrainian']), false);
+  assert.equal(matchesStyles(['metal'], []), false);
+  const rows = ['a', 'b', 'c'];
+  assert.deepEqual(
+    buildPlaybackQueue(rows, { order: 'ordered', current: 'b', wrap: true }),
+    ['c', 'a', 'b'],
+  );
+  assert.deepEqual(
+    buildPlaybackQueue(rows, { order: 'ordered', current: 'b', wrap: false }),
+    ['c'],
+  );
+  assert.deepEqual(
+    buildPlaybackQueue(rows, { order: 'shuffle', current: 'a', random: () => 0 }),
+    ['b', 'c', 'a'],
+  );
+  assert.equal(STYLE_GROUPS.length, 7);
+});
+test('root player exposes multi-style, queue-order and repeat controls', async () => {
+  const html = await readFile(path.join(source, 'index.html'), 'utf8');
+  const player = await readFile(path.join(source, 'player.mjs'), 'utf8');
+  for (const id of ['styles', 'styles-all', 'styles-none', 'order', 'repeat'])
+    assert.match(html, new RegExp(`id=["']${id}["']`));
+  assert.match(player, /matchesStyles/);
+  assert.match(player, /natural && repeat\.value === 'one'/);
+});
 test("local MP3 intake requires exact public credit and supported redistribution rights", () => {
   const valid = {
     batchId: "creator-album-20260924",
@@ -212,6 +251,68 @@ test("local MP3 intake requires exact public credit and supported redistribution
   ])
     assert.throws(() => validateUploadManifest({ ...valid, ...changed }));
 });
+test('one-file and folder automation derive metadata while keeping rights explicit', async (t) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-folder-intake-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  await writeFile(path.join(root, '02_Night-Drive.mp3'), Buffer.from('not parsed here'));
+  await writeFile(path.join(root, '01 Arcade Pulse.mp3'), Buffer.from('not parsed here'));
+  await writeFile(path.join(root, 'notes.txt'), Buffer.from('ignored'));
+  const manifest = await createUploadManifest(root, {
+    artist: 'Test Creator',
+    source: 'https://creator.example/album',
+    license: 'cc-by-4.0',
+    tags: ['synth', 'gameplay'],
+    confirmRights: true,
+    date: '20260924',
+  });
+  assert.match(manifest.batchId, /^soundtrack-folder-intake-[a-z0-9]+-20260924$/);
+  assert.deepEqual(
+    manifest.tracks.map((track) => track.title),
+    ['01 Arcade Pulse', '02 Night Drive'],
+  );
+  assert(manifest.tracks.every((track) => track.artist === 'Test Creator'));
+  assert(manifest.tracks.every((track) => track.license === 'CC BY 4.0 International'));
+  await assert.rejects(
+    createUploadManifest(root, {
+      artist: 'Test Creator',
+      source: 'https://creator.example/album',
+      license: 'cc0',
+      tags: ['synth'],
+    }),
+    /confirm-rights/,
+  );
+});
+test('folder automation reads common ID3v2.3 title and artist text frames', async (t) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-id3-intake-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const frame = (id, value) => {
+    const text = Buffer.concat([Buffer.from([3]), Buffer.from(value)]),
+      header = Buffer.alloc(10);
+    header.write(id, 0, 'ascii');
+    header.writeUInt32BE(text.length, 4);
+    return Buffer.concat([header, text]);
+  };
+  const body = Buffer.concat([frame('TIT2', 'Signal Run'), frame('TPE1', 'ID3 Artist')]),
+    header = Buffer.from([
+      0x49, 0x44, 0x33, 3, 0, 0,
+      (body.length >> 21) & 0x7f,
+      (body.length >> 14) & 0x7f,
+      (body.length >> 7) & 0x7f,
+      body.length & 0x7f,
+    ]),
+    file = path.join(root, 'fallback.mp3');
+  await writeFile(file, Buffer.concat([header, body, Buffer.from('audio')]));
+  assert.deepEqual(await readID3(file), { title: 'Signal Run', artist: 'ID3 Artist' });
+  const manifest = await createUploadManifest(file, {
+    source: 'https://creator.example/signal-run',
+    license: 'cc0',
+    tags: ['electro'],
+    confirmRights: true,
+    date: '20260924',
+  });
+  assert.equal(manifest.tracks[0].title, 'Signal Run');
+  assert.equal(manifest.tracks[0].artist, 'ID3 Artist');
+});
 
 async function uploadFixture(t, batchId = "upload-fixture") {
   const root = await mkdtemp(
@@ -229,6 +330,7 @@ async function uploadFixture(t, batchId = "upload-fixture") {
     "deployment-manifest.json",
     "index.html",
     "inventory.json",
+    "playback-policy.mjs",
     "player.mjs",
     "preview-catalogue.json",
     "style.css",
