@@ -28,6 +28,8 @@ CONFIG = {
     'TEMPLATE': 'batches/synth-approved-directions-audition-20260925',
     'TESTS_FILE': 'second-directions-tests.txt',
     'EXPECTED_TEST_COUNT': 104,
+    'ARTIFACT_NAME': 'second-directions-audition-candidates',
+    'WORKFLOW_PATH': '.github/workflows/second-directions-intake.yml',
     'BINDING_FORMAT': 'revealline-second-directions-intake-binding.v1',
     'SOURCE_FILES': (
         'intake/second_directions_pins.py',

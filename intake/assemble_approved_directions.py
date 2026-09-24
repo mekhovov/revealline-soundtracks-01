@@ -36,6 +36,8 @@ TITLES = {'synth90s': 'Synth and electro auditions', 'metal': 'EDM, techno and e
 TEMPLATE = 'batches/synth-audition-20260924'
 TESTS_FILE = 'approved-directions-tests.txt'
 EXPECTED_TEST_COUNT = 81
+ARTIFACT_NAME = 'approved-directions-audition-candidates'
+WORKFLOW_PATH = '.github/workflows/approved-directions-intake.yml'
 BINDING_FORMAT = 'revealline-approved-directions-intake-binding.v1'
 SOURCE_FILES = (
     'intake/approved_directions_pins.py',
@@ -87,12 +89,12 @@ def api(endpoint):
 def validate_remote(metadata, run, source, runner):
     demand(metadata.get('id') == ARTIFACT and metadata.get('size_in_bytes') == ZIP_BYTES
            and metadata.get('digest') == 'sha256:' + ZIP_SHA and metadata.get('expired') is False
-           and metadata.get('name') == 'approved-directions-audition-candidates'
+           and metadata.get('name') == ARTIFACT_NAME
            and metadata.get('workflow_run', {}).get('head_sha') == SOURCE_HEAD
            and metadata['workflow_run'].get('id') == RUN, 'Original artifact metadata changed')
     demand(run.get('id') == RUN and run.get('head_sha') == SOURCE_HEAD
            and run.get('conclusion') == 'success' and run.get('event') == 'pull_request'
-           and run.get('path') == '.github/workflows/approved-directions-intake.yml',
+           and run.get('path') == WORKFLOW_PATH,
            'Original workflow identity or result changed')
     demand(source.get('sha') == SOURCE_HEAD and runner.get('sha') == RUNNER
            and source.get('tree', {}).get('sha') == SOURCE_TREE

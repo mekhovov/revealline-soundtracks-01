@@ -23,6 +23,8 @@ class SecondAssemblyConfigurationTests(unittest.TestCase):
         self.assertEqual(subject.CONFIG['BASE_RECORDINGS'], 116)
         self.assertEqual(subject.CONFIG['PUBLIC_RECORDINGS'], 128)
         self.assertEqual(subject.CONFIG['EXPECTED_TEST_COUNT'], 104)
+        self.assertEqual(subject.CONFIG['ARTIFACT_NAME'], 'second-directions-audition-candidates')
+        self.assertEqual(subject.CONFIG['WORKFLOW_PATH'], '.github/workflows/second-directions-intake.yml')
         self.assertEqual(subject.CONFIG['BINDING_FORMAT'], 'revealline-second-directions-intake-binding.v1')
         self.assertEqual(set(subject.CONFIG['BATCH_IDS']), {'synth90s', 'metal'})
 
