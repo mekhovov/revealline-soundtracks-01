@@ -78,13 +78,17 @@ class IntakeTests(unittest.TestCase):
                 'conversion': {'original': {'sha256': 'c' * 64}},
             }]}))
             (root / 'batches/example/preview-catalogue.json').write_text(json.dumps({
-                'tracks': [{'title': 'Audition source', 'sha256': 'd' * 64,
-                            'conversion': {'original': {'sha256': 'e' * 64}}}],
+                # Public batch previews store the exact native identity at
+                # top-level `original`, independently of the displayed title
+                # and normalized delivery hash.
+                'tracks': [{'title': 'Renamed public recording', 'sha256': 'd' * 64,
+                            'original': {'sha256': 'e' * 64}}],
             }))
             hashes, titles = public_recording_fingerprints(root)
             self.assertEqual(hashes, {character * 64 for character in 'abcde'})
             self.assertEqual(titles,
-                             {'publicderivative', 'foundationrecording', 'auditionsource'})
+                             {'publicderivative', 'foundationrecording',
+                              'renamedpublicrecording'})
 
     def test_deduplication_refuses_missing_unified_or_malformed_hashes(self):
         with TemporaryDirectory() as folder:
@@ -93,6 +97,11 @@ class IntakeTests(unittest.TestCase):
                 public_recording_fingerprints(root)
             (root / 'catalogue.json').write_text(json.dumps({
                 'tracks': [{'title': 'Changed', 'audio': {'sha256': 'not-a-hash'}}],
+            }))
+            with self.assertRaisesRegex(ValueError, 'invalid recording hash'):
+                public_recording_fingerprints(root)
+            (root / 'catalogue.json').write_text(json.dumps({
+                'tracks': [{'title': 'Changed', 'original': {'sha256': 'not-a-hash'}}],
             }))
             with self.assertRaisesRegex(ValueError, 'invalid recording hash'):
                 public_recording_fingerprints(root)

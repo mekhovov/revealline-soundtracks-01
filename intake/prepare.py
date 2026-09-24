@@ -547,6 +547,9 @@ def public_recording_fingerprints(root=Path('.')):
             audio = track.get('audio')
             if isinstance(audio, dict):
                 candidates.append(audio.get('sha256'))
+            original = track.get('original')
+            if isinstance(original, dict):
+                candidates.append(original.get('sha256'))
             conversion = track.get('conversion')
             if isinstance(conversion, dict) and isinstance(conversion.get('original'), dict):
                 candidates.append(conversion['original'].get('sha256'))
