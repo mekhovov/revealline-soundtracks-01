@@ -34,6 +34,21 @@ BATCH_IDS = {'synth90s': 'synth-approved-directions-audition-20260925',
              'metal': 'metal-approved-directions-audition-20260925'}
 TITLES = {'synth90s': 'Synth and electro auditions', 'metal': 'EDM, techno and extreme metal auditions'}
 TEMPLATE = 'batches/synth-audition-20260924'
+TESTS_FILE = 'approved-directions-tests.txt'
+EXPECTED_TEST_COUNT = 81
+ARTIFACT_NAME = 'approved-directions-audition-candidates'
+WORKFLOW_PATH = '.github/workflows/approved-directions-intake.yml'
+BINDING_FORMAT = 'revealline-approved-directions-intake-binding.v1'
+SOURCE_FILES = (
+    'intake/approved_directions_pins.py',
+    'intake/itch_source.py',
+    'intake/itch_audio.py',
+    'intake/prepare.py',
+    'intake/prepare_approved_directions.py',
+    '.github/workflows/approved-directions-intake.yml',
+)
+BASE_RECORDINGS = 104
+PUBLIC_RECORDINGS = 116
 MAX_PRODUCTION = 650 * 1024 ** 2
 MAX_SCRATCH = 256 * 1024 ** 2
 MAX_VOLUME = 64 * 1024 ** 2
@@ -74,12 +89,12 @@ def api(endpoint):
 def validate_remote(metadata, run, source, runner):
     demand(metadata.get('id') == ARTIFACT and metadata.get('size_in_bytes') == ZIP_BYTES
            and metadata.get('digest') == 'sha256:' + ZIP_SHA and metadata.get('expired') is False
-           and metadata.get('name') == 'approved-directions-audition-candidates'
+           and metadata.get('name') == ARTIFACT_NAME
            and metadata.get('workflow_run', {}).get('head_sha') == SOURCE_HEAD
            and metadata['workflow_run'].get('id') == RUN, 'Original artifact metadata changed')
     demand(run.get('id') == RUN and run.get('head_sha') == SOURCE_HEAD
            and run.get('conclusion') == 'success' and run.get('event') == 'pull_request'
-           and run.get('path') == '.github/workflows/approved-directions-intake.yml',
+           and run.get('path') == WORKFLOW_PATH,
            'Original workflow identity or result changed')
     demand(source.get('sha') == SOURCE_HEAD and runner.get('sha') == RUNNER
            and source.get('tree', {}).get('sha') == SOURCE_TREE
@@ -117,7 +132,7 @@ def checked_members(data):
         total = 0
         for info in infos:
             name = info.filename
-            allowed = (name == 'approved-directions-tests.txt'
+            allowed = (name == TESTS_FILE
                        or re.fullmatch(r'candidate-output/(?:receipt|review|intake-binding|source-manifest)\.json', name)
                        or re.fullmatch(r'candidate-output/(?:objects|originals|evidence)/[0-9a-f]{64}\.(?:mp3|ogg|json|html)', name))
             demand(allowed and name not in names and not info.is_dir()
@@ -126,7 +141,8 @@ def checked_members(data):
                    'Unexpected, duplicate, unsafe or excessive artifact member')
             names.add(name)
             total += info.file_size
-        demand(total + len(data) < MAX_SCRATCH, 'Artifact working set exceeds 256 MiB')
+        demand(total < MAX_SCRATCH and len(data) < MAX_SCRATCH,
+               'Artifact archive or extracted member set exceeds 256 MiB')
         # ZipFile.read verifies each member CRC. All members are preserved exactly.
         return {info.filename: archive.read(info) for info in infos}
 
@@ -141,7 +157,7 @@ def checked_receipt(files, expected_source_files):
            and receipt.get('runnerRevision') == RUNNER and str(receipt.get('runnerRun')) == str(RUN)
            and receipt.get('failures') == [] and receipt.get('listeningApproval') is False,
            'Intake receipt is incomplete or bound to another run')
-    demand(binding.get('format') == 'revealline-approved-directions-intake-binding.v1'
+    demand(binding.get('format') == BINDING_FORMAT
            and binding.get('sourceManifestSha256') == MANIFEST_SHA256
            and binding.get('runnerRevision') == RUNNER and binding.get('eventHeadRevision') == SOURCE_HEAD
            and str(binding.get('runnerRun')) == str(RUN)
@@ -153,13 +169,13 @@ def checked_receipt(files, expected_source_files):
     demand(inspector.get('revision') == INSPECTOR_REVISION
            and inspector.get('files') == [{'path': p, 'sha256': h} for p, h in INSPECTOR_PINS.items()],
            'Pinned game inspector differs')
-    tests = files['approved-directions-tests.txt'].decode()
-    demand(re.search(r'Ran 81 tests in [0-9.]+s', tests) and '\nOK\n' in tests
+    tests = files[TESTS_FILE].decode()
+    demand(re.search(rf'Ran {EXPECTED_TEST_COUNT} tests in [0-9.]+s', tests) and '\nOK\n' in tests
            and 'FAILED' not in tests, 'Original hosted source tests did not pass')
     rows = receipt.get('tracks', [])
     demand([r.get('id') for r in rows] == [r['id'] for r in manifest['tracks']], 'Slate identities or order differ')
     used = {PREFIX + n for n in ('source-manifest.json', 'intake-binding.json', 'receipt.json', 'review.json')}
-    used.add('approved-directions-tests.txt')
+    used.add(TESTS_FILE)
     hashes = set()
     for row, source in zip(rows, manifest['tracks']):
         demand(all(type(row.get(k)) is type(v) and row.get(k) == v for k, v in source.items()),
@@ -286,15 +302,14 @@ def main():
     files = checked_members(data)
     del data
     expected_files = {}
-    for name in ('intake/approved_directions_pins.py', 'intake/itch_source.py', 'intake/itch_audio.py',
-                 'intake/prepare.py', 'intake/prepare_approved_directions.py',
-                 '.github/workflows/approved-directions-intake.yml'):
+    for name in SOURCE_FILES:
         blob = api(api_root + 'contents/' + name + '?ref=' + SOURCE_HEAD)
         demand(blob.get('type') == 'file' and blob.get('encoding') == 'base64', 'Original source file missing')
         expected_files[name] = digest(base64.b64decode(blob['content']))
     receipt = checked_receipt(files, expected_files)
     old_catalogue = json.loads(Path('catalogue.json').read_bytes())
-    demand(old_catalogue['counts']['uniqueRecordings'] == 104 and len(old_catalogue['tracks']) == 104,
+    demand(old_catalogue['counts']['uniqueRecordings'] == BASE_RECORDINGS
+           and len(old_catalogue['tracks']) == BASE_RECORDINGS,
            'Refresh against a changed archive baseline before assembly')
     known_ids = {r['id'] for r in old_catalogue['tracks']}
     known_hashes = {r['audio']['sha256'] for r in old_catalogue['tracks']}
@@ -339,15 +354,17 @@ def main():
     Path('batches.json').write_bytes(encoded(index))
     subprocess.run(['node', 'intake/build-unified-catalogue.mjs', '--write'], check=True)
     new_catalogue = json.loads(Path('catalogue.json').read_bytes())
-    demand(new_catalogue['counts']['uniqueRecordings'] == 116
-           and new_catalogue['tracks'][:104] == old_catalogue['tracks'], 'Existing public entries changed')
+    demand(new_catalogue['counts']['uniqueRecordings'] == PUBLIC_RECORDINGS
+           and new_catalogue['tracks'][:BASE_RECORDINGS] == old_catalogue['tracks'],
+           'Existing public entries changed')
     demand(all(r.get('default') is False and r['gameCatalogueAdmission'] is False
                and r['recordingModeEligible'] is False and r['contentId'] == 'unknown'
-               for r in new_catalogue['tracks'][104:]), 'New catalogue escalated policy')
+               for r in new_catalogue['tracks'][BASE_RECORDINGS:]), 'New catalogue escalated policy')
     subprocess.run(['node', 'intake/update-root-metadata.mjs'], check=True)
     Path(ARCHIVE, 'assembly-review.json').write_bytes(encoded({**binding,
         'status': 'hosted-byte-verification-complete-independent-review-pending',
-        'recordings': 12, 'publicRecordings': 116, 'preservedExistingEntries': 104,
+        'recordings': 12, 'publicRecordings': PUBLIC_RECORDINGS,
+        'preservedExistingEntries': BASE_RECORDINGS,
         'memberCount': len(files), 'productionBytes': production_bytes, 'volumes': volumes,
         'remaining': ['Independent original-artifact and publication PR review', 'Public byte and playback verification',
                       'Full listening, musical fit, transitions and warning audibility', 'Game admission and defaults',

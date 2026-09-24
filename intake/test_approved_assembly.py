@@ -115,6 +115,17 @@ class ApprovedAssemblyTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, 'artifact member'):
                     subject.checked_members(broken)
 
+    def test_archive_and_extracted_sets_each_obey_the_scratch_limit(self):
+        files, _, _ = fixture()
+        data = zipped(files)
+        with patch.multiple(subject, ZIP_BYTES=len(data), ZIP_SHA=subject.digest(data),
+                            MAX_SCRATCH=max(len(data), sum(map(len, files.values()))) + 1):
+            self.assertEqual(subject.checked_members(data), files)
+        with patch.multiple(subject, ZIP_BYTES=len(data), ZIP_SHA=subject.digest(data),
+                            MAX_SCRATCH=len(data)):
+            with self.assertRaisesRegex(ValueError, 'exceeds 256 MiB'):
+                subject.checked_members(data)
+
     def test_zip_duplicates_and_symlinks_are_rejected(self):
         files, _, _ = fixture()
         for symlink in (True, False):
