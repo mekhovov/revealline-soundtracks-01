@@ -1,0 +1,104 @@
+name: Prepare metal groove auditions
+
+on:
+  pull_request:
+    paths:
+      - "intake/metal-groove-audition-20260924.json"
+      - "intake/prepare.py"
+      - "intake/test_metal_groove.py"
+      - ".github/workflows/metal-groove-intake.yml"
+      - ".github/workflows/core-intake.yml"
+      - ".github/workflows/ukrainian-intake.yml"
+  workflow_dispatch:
+    inputs:
+      reviewed_head:
+        description: Exact source commit independently reviewed for this four-track intake
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: metal-groove-intake-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      EXPECTED_HEAD: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.EXPECTED_HEAD }}
+          persist-credentials: false
+      - name: Verify exact source and fixed four-track manifest
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
+          echo "3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7  intake/metal-groove-audition-20260924.json" | sha256sum --check --strict
+      - name: Require the independently reviewed commit for manual acquisition
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          REVIEWED_HEAD: ${{ inputs.reviewed_head }}
+        run: |
+          test "$REVIEWED_HEAD" = "$EXPECTED_HEAD"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - name: Verify unchanged published inventory
+        run: node verify.mjs
+      - name: Test non-network intake boundaries
+        run: python3 -m unittest discover -s intake -p 'test_*.py'
+      - name: Verify checks left tracked source unchanged
+        if: always()
+        run: |
+          git diff --exit-code
+          git diff --cached --exit-code
+
+  acquire:
+    if: github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Verify acquisition source and fixed manifest
+        env:
+          REVIEWED_HEAD: ${{ inputs.reviewed_head }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$REVIEWED_HEAD" = "$GITHUB_SHA"
+          echo "3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7  intake/metal-groove-audition-20260924.json" | sha256sum --check --strict
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - uses: actions/checkout@v4
+        with:
+          repository: mekhovov/revealline
+          ref: 71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3
+          path: .runtime
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /game/*.mjs
+            /game/ui/*.mjs
+            /game/content/*.mjs
+      - name: Install audio validation tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Prepare four pending auditions without publication or game admission
+        id: prepare
+        run: python3 intake/prepare.py --manifest intake/metal-groove-audition-20260924.json --output metal-groove-candidate-output --game-root .runtime
+      - name: Preserve original recordings and all partial evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: metal-groove-candidates-20260924
+          path: metal-groove-candidate-output/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0

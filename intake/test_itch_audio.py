@@ -60,11 +60,13 @@ class ItchAudioTests(unittest.TestCase):
             self.assertNotIn('ukrainian', item.values())
             self.assertNotIn('download', item)
 
-    def test_active_manifest_and_previous_creator_batch_are_preserved_exactly(self):
+    def test_historical_itch_manifest_and_previous_creator_batch_are_preserved_exactly(self):
         root = Path(__file__).parent
-        active = (root / 'core-20260924.json').read_bytes()
+        active = (root / 'archive/itch-core-audition-20260924/source-manifest.json').read_bytes()
         named = (root / 'itch-core-audition-20260924.json').read_bytes()
         self.assertEqual(active, named)
+        self.assertEqual(subject.hashlib.sha256(active).hexdigest(),
+                         '02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9')
         parsed = prepare.validate_manifest(json.loads(active))
         self.assertFalse(parsed['publicationApproval'])
         self.assertEqual({r['id'] for r in parsed['tracks']}, set(subject.UPLOAD_PINS))

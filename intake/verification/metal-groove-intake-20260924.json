@@ -1,0 +1,195 @@
+{
+  "format": "revealline-metal-groove-source-review.v1",
+  "checkedAt": "2026-09-24T05:41:38Z",
+  "sourceBase": "3bf8e97c9f6d6303582a09fbe67fd93cc4d1fce5",
+  "scope": "Four exact CreatorChords candidates in the existing core intake interface; no GitHub workflow changes. Source branch requires independent review before PR creation triggers acquisition.",
+  "python": "3.14.4",
+  "localStorage": "No filesystem writes, media acquisition, builds or production-guard bypass. Python modules and fixtures executed in memory.",
+  "sourcePages": [
+    {
+      "url": "https://creatorchords.com/music/anemo/",
+      "bytes": 77384,
+      "observedHtmlSha256": "701cb12e8a8dd4b0353d7848fad99194ff81a6f51560388c96ceb7ee242c1c19",
+      "ccBy4LinkObserved": true,
+      "smartContentIdNoticeObserved": false,
+      "primaryPlayer": {
+        "class": "track",
+        "id": "mainTrack",
+        "style": "display:none;",
+        "data-src": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Anemo.mp3",
+        "data-title": "Anemo",
+        "data-cover": "https://d19p7hqu4j8vx0.cloudfront.net/media/original_images/Anemo"
+      }
+    },
+    {
+      "url": "https://creatorchords.com/music/trial-of-thorns/",
+      "bytes": 77880,
+      "observedHtmlSha256": "fae598a74cbacb16bcd7f502f54e0d2d00ea3691dcfd9ff2177d0470f2077aa2",
+      "ccBy4LinkObserved": true,
+      "smartContentIdNoticeObserved": false,
+      "primaryPlayer": {
+        "class": "track",
+        "id": "mainTrack",
+        "style": "display:none;",
+        "data-src": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Trial_of_Thorns.mp3",
+        "data-title": "Trial of Thorns",
+        "data-cover": "https://d19p7hqu4j8vx0.cloudfront.net/media/original_images/Trial_of_Thorns"
+      }
+    },
+    {
+      "url": "https://creatorchords.com/music/riffs-two/",
+      "bytes": 77533,
+      "observedHtmlSha256": "005a363691bcd6a3d5cab67a3fdd0d20b25e7dc6e12c4a9b58be6b206e513b85",
+      "ccBy4LinkObserved": true,
+      "smartContentIdNoticeObserved": false,
+      "primaryPlayer": {
+        "class": "track",
+        "id": "mainTrack",
+        "style": "display:none;",
+        "data-src": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Riffs_Two.mp3",
+        "data-title": "Riffs Two",
+        "data-cover": "https://d19p7hqu4j8vx0.cloudfront.net/media/original_images/Riffs_Two"
+      }
+    },
+    {
+      "url": "https://creatorchords.com/music/apocalypse/",
+      "bytes": 77640,
+      "observedHtmlSha256": "2871dbf6406f088a326a8b0b4a1aa7e3098d9dc924d56ecb08f1bdf48f8703ff",
+      "ccBy4LinkObserved": true,
+      "smartContentIdNoticeObserved": false,
+      "primaryPlayer": {
+        "class": "track",
+        "id": "mainTrack",
+        "style": "display:none;",
+        "data-src": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Apocalypse.mp3",
+        "data-title": "Apocalypse",
+        "data-cover": "https://d19p7hqu4j8vx0.cloudfront.net/media/original_images/Apocalypse"
+      }
+    },
+    {
+      "url": "https://creatorchords.com/licensing-info/",
+      "bytes": 52201,
+      "observedHtmlSha256": "0ca324666025bd00e49f9659867d2d2f648f15af37cd53a113b6afda325e9ec6",
+      "ccBy4LinkObserved": true,
+      "smartContentIdNoticeObserved": true
+    },
+    {
+      "url": "https://creatorchords.com/faq/",
+      "bytes": 56326,
+      "observedHtmlSha256": "6252c7fa101d7d6bb5340203ddfb1c8a60a17e27e1eef97c9627108f0801a1aa",
+      "ccBy4LinkObserved": false,
+      "smartContentIdNoticeObserved": false
+    }
+  ],
+  "pageHashPolicy": "Observed HTML hashes identify this research request; dynamic related-song markup is not pinned. Acquisition will preserve fresh raw page snapshots and match primary identity plus licence/Content ID evidence.",
+  "memoryTests": {
+    "tests": 55,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "deferredFilesystemTests": [
+      "test_creator.CreatorIntakeTests.test_changed_content_id_notice_stops_acquisition_and_retains_snapshots",
+      "test_creator.CreatorIntakeTests.test_creator_snapshots_retain_exact_bytes_hashes_and_content_id_evidence",
+      "test_prepare.IntakeTests.test_retained_budget_refuses_before_next_row"
+    ],
+    "log": "test_creator_urls_are_exact_not_a_host_allowlist (test_creator.CreatorIntakeTests.test_creator_urls_are_exact_not_a_host_allowlist) ... ok\ntest_exact_data_src_binding_and_oga_relative_encoded_links (test_creator.CreatorIntakeTests.test_exact_data_src_binding_and_oga_relative_encoded_links) ... ok\ntest_existing_thirteen_and_ukrainian_manifest_remain_pending (test_creator.CreatorIntakeTests.test_existing_thirteen_and_ukrainian_manifest_remain_pending) ... ok\ntest_recording_identity_and_content_id_cannot_be_changed (test_creator.CreatorIntakeTests.test_recording_identity_and_content_id_cannot_be_changed) ... ok\ntest_redirects_rejected_before_requesting_unapproved_destination (test_creator.CreatorIntakeTests.test_redirects_rejected_before_requesting_unapproved_destination) ... ok\ntest_source_and_download_cannot_be_cross_paired (test_creator.CreatorIntakeTests.test_source_and_download_cannot_be_cross_paired) ... ok\ntest_source_link_mismatch_and_text_only_url_are_rejected (test_creator.CreatorIntakeTests.test_source_link_mismatch_and_text_only_url_are_rejected) ... ok\ntest_unapproved_initial_url_never_opens_connection (test_creator.CreatorIntakeTests.test_unapproved_initial_url_never_opens_connection) ... ok\ntest_acquisition_is_bounded_and_receipt_has_no_temporary_credentials (test_itch_audio.ItchAudioTests.test_acquisition_is_bounded_and_receipt_has_no_temporary_credentials) ... ok\ntest_attachment_filename_exact_and_extended_forms (test_itch_audio.ItchAudioTests.test_attachment_filename_exact_and_extended_forms) ... ok\ntest_decoder_must_match_native_extension_and_single_audio_stream (test_itch_audio.ItchAudioTests.test_decoder_must_match_native_extension_and_single_audio_stream) ... ok\ntest_exact_ten_identities_remain_pending_with_six_synth_and_four_metal (test_itch_audio.ItchAudioTests.test_exact_ten_identities_remain_pending_with_six_synth_and_four_metal) ... ok\ntest_header_duplicates_combined_values_conflicts_and_unsafe_paths_rejected (test_itch_audio.ItchAudioTests.test_header_duplicates_combined_values_conflicts_and_unsafe_paths_rejected) ... ok\ntest_historical_itch_manifest_and_previous_creator_batch_are_preserved_exactly (test_itch_audio.ItchAudioTests.test_historical_itch_manifest_and_previous_creator_batch_are_preserved_exactly) ... ok\ntest_identity_license_approval_and_extra_token_fields_fail_closed (test_itch_audio.ItchAudioTests.test_identity_license_approval_and_extra_token_fields_fail_closed) ... ok\ntest_network_errors_redacted_and_unregistered_cdn_never_requested (test_itch_audio.ItchAudioTests.test_network_errors_redacted_and_unregistered_cdn_never_requested) ... ok\ntest_octet_stream_requires_same_decoder_verification (test_itch_audio.ItchAudioTests.test_octet_stream_requires_same_decoder_verification) ... ok\ntest_oversize_length_duplicate_encoding_redirect_and_truncation_fail_closed (test_itch_audio.ItchAudioTests.test_oversize_length_duplicate_encoding_redirect_and_truncation_fail_closed) ... ok\ntest_production_scratch_and_free_space_guards_fail_before_acquisition (test_itch_audio.ItchAudioTests.test_production_scratch_and_free_space_guards_fail_before_acquisition) ... ok\ntest_semantic_evidence_and_original_filename_can_be_retained_without_signed_url (test_itch_audio.ItchAudioTests.test_semantic_evidence_and_original_filename_can_be_retained_without_signed_url) ... ok\ntest_size_based_delivery_volumes_split_and_preserve_every_track (test_itch_audio.ItchAudioTests.test_size_based_delivery_volumes_split_and_preserve_every_track) ... ok\ntest_unannounced_oversize_body_and_empty_response_are_rejected (test_itch_audio.ItchAudioTests.test_unannounced_oversize_body_and_empty_response_are_rejected) ... ok\ntest_all_ten_exact_candidates_resolve_metadata_without_media_requests (test_itch_source.ItchSourceTests.test_all_ten_exact_candidates_resolve_metadata_without_media_requests) ... ok\ntest_cdn_is_exact_creator_upload_and_signed_shape (test_itch_source.ItchSourceTests.test_cdn_is_exact_creator_upload_and_signed_shape) ... ok\ntest_client_limits_response_and_redacts_network_errors (test_itch_source.ItchSourceTests.test_client_limits_response_and_redacts_network_errors) ... ok\ntest_client_rejects_unregistered_origin_and_endpoints_without_io (test_itch_source.ItchSourceTests.test_client_rejects_unregistered_origin_and_endpoints_without_io) ... ok\ntest_encoded_download_key_stays_ephemeral_and_bounded (test_itch_source.ItchSourceTests.test_encoded_download_key_stays_ephemeral_and_bounded) ... ok\ntest_file_response_refuses_external_quarantined_or_changed_protocol (test_itch_source.ItchSourceTests.test_file_response_refuses_external_quarantined_or_changed_protocol) ... ok\ntest_generated_page_rejects_external_origin_credentials_query_and_traversal (test_itch_source.ItchSourceTests.test_generated_page_rejects_external_origin_credentials_query_and_traversal) ... ok\ntest_licence_change_stops_before_purchase (test_itch_source.ItchSourceTests.test_licence_change_stops_before_purchase) ... ok\ntest_paid_or_changed_game_and_missing_free_choice_fail_before_download (test_itch_source.ItchSourceTests.test_paid_or_changed_game_and_missing_free_choice_fail_before_download) ... ok\ntest_redirects_are_rejected_before_follow (test_itch_source.ItchSourceTests.test_redirects_are_rejected_before_follow) ... ok\ntest_tokens_are_not_exposed_by_repr_or_receipt (test_itch_source.ItchSourceTests.test_tokens_are_not_exposed_by_repr_or_receipt) ... ok\ntest_unknown_recording_never_requests (test_itch_source.ItchSourceTests.test_unknown_recording_never_requests) ... ok\ntest_wrong_duplicate_or_missing_upload_title_fails_before_file_endpoint (test_itch_source.ItchSourceTests.test_wrong_duplicate_or_missing_upload_title_fails_before_file_endpoint) ... ok\ntest_cross_pairs_and_changed_identity_or_approval_are_rejected (test_metal_creator.MetalCreatorIntakeTests.test_cross_pairs_and_changed_identity_or_approval_are_rejected) ... ok\ntest_exact_link_and_license_required (test_metal_creator.MetalCreatorIntakeTests.test_exact_link_and_license_required) ... ok\ntest_license_faq_and_content_id_retained (test_metal_creator.MetalCreatorIntakeTests.test_license_faq_and_content_id_retained) ... ok\ntest_no_host_wide_or_redirect_authority (test_metal_creator.MetalCreatorIntakeTests.test_no_host_wide_or_redirect_authority) ... ok\ntest_two_exact_pending_metal_candidates (test_metal_creator.MetalCreatorIntakeTests.test_two_exact_pending_metal_candidates) ... ok\ntest_active_core_manifest_exactly_matches_reviewed_four_track_batch (test_metal_groove.MetalGrooveIntakeTests.test_active_core_manifest_exactly_matches_reviewed_four_track_batch) ... ok\ntest_allowed_recordings_cannot_be_cross_paired (test_metal_groove.MetalGrooveIntakeTests.test_allowed_recordings_cannot_be_cross_paired) ... ok\ntest_ambiguous_or_changed_primary_player_is_rejected (test_metal_groove.MetalGrooveIntakeTests.test_ambiguous_or_changed_primary_player_is_rejected) ... ok\ntest_changed_primary_stops_before_later_evidence_or_audio (test_metal_groove.MetalGrooveIntakeTests.test_changed_primary_stops_before_later_evidence_or_audio) ... ok\ntest_four_exact_recordings_remain_pending_with_content_id (test_metal_groove.MetalGrooveIntakeTests.test_four_exact_recordings_remain_pending_with_content_id) ... ok\ntest_identity_license_style_and_approval_cannot_be_escalated (test_metal_groove.MetalGrooveIntakeTests.test_identity_license_style_and_approval_cannot_be_escalated) ... ok\ntest_license_and_content_id_evidence_must_still_match (test_metal_groove.MetalGrooveIntakeTests.test_license_and_content_id_evidence_must_still_match) ... ok\ntest_no_host_wide_url_or_cross_recording_redirect_authority (test_metal_groove.MetalGrooveIntakeTests.test_no_host_wide_url_or_cross_recording_redirect_authority) ... ok\ntest_recommendation_links_do_not_establish_primary_identity (test_metal_groove.MetalGrooveIntakeTests.test_recommendation_links_do_not_establish_primary_identity) ... ok\ntest_duplicate_and_traversal_ids (test_prepare.IntakeTests.test_duplicate_and_traversal_ids) ... ok\ntest_inspector_revision_is_verified_before_acquisition (test_prepare.IntakeTests.test_inspector_revision_is_verified_before_acquisition) ... ok\ntest_no_licence_or_listening_escalation (test_prepare.IntakeTests.test_no_licence_or_listening_escalation) ... ok\ntest_reserve_accounts_for_derivative_and_evidence (test_prepare.IntakeTests.test_reserve_accounts_for_derivative_and_evidence) ... ok\ntest_unknown_hosts_and_credentials (test_prepare.IntakeTests.test_unknown_hosts_and_credentials) ... ok\ntest_valid_pending_intake (test_prepare.IntakeTests.test_valid_pending_intake) ... ok\n\n----------------------------------------------------------------------\nRan 55 tests in 0.043s\n\nOK\n",
+    "sourceSha256": {
+      "intake/prepare.py": "4411cd88252ca230c7d99bb4ca6d4abf35d25b413c311c13c3c25e86cac8e6d5",
+      "intake/test_metal_groove.py": "48448ff532d2cec207f5e5a8e0dc6e05bf6cf4501a67544489fd85e817f02f3c",
+      "intake/metal-groove-audition-20260924.json": "3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7",
+      "intake/core-20260924.json": "3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7",
+      "intake/test_itch_audio.py": "0666a079480f74d84b248c5fb8189ad45696664162661d3b5d76b27338b5e9c5"
+    }
+  },
+  "guardMutationRegression": {
+    "description": "Candidate source with only the new primary-player validation block removed, restoring the prior link-only behavior; this is a deliberate guard mutation, not a claim that the old base already admitted these four tracks.",
+    "tests": 2,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0,
+    "deferredFilesystemTests": [
+      "test_creator.CreatorIntakeTests.test_changed_content_id_notice_stops_acquisition_and_retains_snapshots",
+      "test_creator.CreatorIntakeTests.test_creator_snapshots_retain_exact_bytes_hashes_and_content_id_evidence",
+      "test_prepare.IntakeTests.test_retained_budget_refuses_before_next_row"
+    ],
+    "log": "test_ambiguous_or_changed_primary_player_is_rejected (test_metal_groove.MetalGrooveIntakeTests.test_ambiguous_or_changed_primary_player_is_rejected) ... FAIL\ntest_recommendation_links_do_not_establish_primary_identity (test_metal_groove.MetalGrooveIntakeTests.test_recommendation_links_do_not_establish_primary_identity) ... FAIL\n\n======================================================================\nFAIL: test_ambiguous_or_changed_primary_player_is_rejected (test_metal_groove.MetalGrooveIntakeTests.test_ambiguous_or_changed_primary_player_is_rejected)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/__archive_memory__/intake/test_metal_groove.py\", line 93, in test_ambiguous_or_changed_primary_player_is_rejected\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_recommendation_links_do_not_establish_primary_identity (test_metal_groove.MetalGrooveIntakeTests.test_recommendation_links_do_not_establish_primary_identity)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/__archive_memory__/intake/test_metal_groove.py\", line 80, in test_recommendation_links_do_not_establish_primary_identity\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=2)\n",
+    "sourceSha256": {
+      "intake/prepare.py": "6b197514a7f69e7d5b91279d8cc40f167b1e46d2b302cdc7d02a29815c6a66e3",
+      "intake/test_metal_groove.py": "1203618844c2dc89f658e889361c88c6026e398a0761662ef038d1838d3051ff",
+      "intake/metal-groove-audition-20260924.json": "3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7"
+    }
+  },
+  "workflowValidation": [
+    {
+      "path": ".github/workflows/core-intake.yml",
+      "sha256": "2b49bd5d95f118ca84c45e27d5dead4c6f22d04e834c3d359970983d9be14ae1",
+      "triggers": [
+        "pull_request",
+        "workflow_dispatch"
+      ],
+      "featureBranchPushTriggersAcquisition": false
+    },
+    {
+      "path": ".github/workflows/ukrainian-intake.yml",
+      "sha256": "d79c59aff6ec2bba08b26cdc42ccfb76429b96aa4be8a55a938f7d625d5d2058",
+      "triggers": [
+        "pull_request",
+        "workflow_dispatch"
+      ],
+      "featureBranchPushTriggersAcquisition": false
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "11cf2b43d85892cc7c42ee8e135fff8a5f64e750988846412e00e16a1adaa7e5",
+      "triggers": [
+        "pull_request",
+        "push",
+        "workflow_dispatch"
+      ],
+      "featureBranchPushTriggersAcquisition": false
+    }
+  ],
+  "unchangedContracts": [
+    "16 MiB per new CreatorChords source",
+    "650 MiB active production",
+    "256 MiB scratch",
+    "24 MiB derivative",
+    "64 MiB optional volume including metadata reservation",
+    "1 GiB free-space reserve",
+    "pinned game MP3 inspector 71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "all published root and batch files"
+  ],
+  "independentReview": "pending exact source-branch review before PR creation",
+  "hostedTests": "pending all 58 tests, including three filesystem tests deferred from memory execution",
+  "acquisition": "not run",
+  "completeDecode": "pending",
+  "listeningApproval": false,
+  "gameCatalogueAdmission": false,
+  "publicationApproval": false,
+  "manifestBinding": {
+    "active": "intake/core-20260924.json",
+    "named": "intake/metal-groove-audition-20260924.json",
+    "sha256": "3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7",
+    "historicalPrevious": "intake/archive/itch-core-audition-20260924/source-manifest.json",
+    "historicalSha256": "02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9",
+    "historicalBytesUnchanged": true
+  },
+  "executionBoundary": {
+    "branchPushAcquiresAudio": false,
+    "pullRequestAcquiresFourTracks": true,
+    "pullRequestAlsoReacquiresPublishedShchedryk": true,
+    "reviewRequiredBeforePullRequestCreation": true,
+    "coreArtifact": "core-soundtrack-candidates",
+    "coreOutput": "candidate-output/",
+    "workflowFilesUnchanged": true,
+    "actualRunCheckoutMustBeBoundDuringArtifactReview": true
+  },
+  "uninstalledWorkflowProposal": {
+    "path": "intake/workflow-proposals/metal-groove-20260924/",
+    "executed": false,
+    "gitDataWorkflowPathResult": "HTTP 404",
+    "cliWorkflowScopePresent": false,
+    "connectorResult": "HTTP 403 Resource not accessible by integration",
+    "branchCreatedByFailedAttempt": false
+  }
+}
