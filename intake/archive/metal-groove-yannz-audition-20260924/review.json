@@ -1,0 +1,40 @@
+{
+  "status": "pending",
+  "tracks": [
+    {
+      "id": "yannz.pixel-damnation",
+      "sha256": "a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "yannz.revenges-waiting",
+      "sha256": "a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "alexandr-zhelanov.soul-ripper",
+      "sha256": "8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "bogart-vgm.german-industrial-metal",
+      "sha256": "39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "zane-little-music.achilles",
+      "sha256": "84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}

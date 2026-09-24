@@ -1,0 +1,300 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": "not-reviewed",
+  "archive": {
+    "id": "metal-groove-yannz-audition-20260924",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/metal-groove-yannz-audition-20260924/",
+    "inventorySha256": "c50d9d8c91b7bc17965d12a37b78a6429d57e11fb9ed92eda188df73b6ad0e0f"
+  },
+  "source": {
+    "run": 36004806070,
+    "artifactId": 10810521176,
+    "artifactSha256": "4c3c0556359efc76c52322a4c6cde3b09116f572f9da929d58d9a827a382636e",
+    "deliveryVolumeNumber": 1,
+    "sourceManifestURL": "https://github.com/mekhovov/revealline-soundtracks-01/blob/23aabfff17a85d65564cb0a5020a9acb1531d0c6/intake/core-20260924.json",
+    "retainedArchivePath": "intake/archive/metal-groove-yannz-audition-20260924/"
+  },
+  "tracks": [
+    {
+      "id": "yannz.pixel-damnation",
+      "title": "Pixel Damnation",
+      "artist": "Yanni Ziangos (YannZ)",
+      "artistURL": "https://yannz41.itch.io/",
+      "source": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz",
+      "download": "https://opengameart.org/sites/default/files/pixel_damnation_combat_loop.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "gameplay",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Pixel Damnation by Yanni Ziangos a.k.a. YannZ. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "publishedDuration": "2:19",
+      "substyles": [
+        "djent",
+        "industrial-metal",
+        "combat-loop"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be.html",
+        "sha256": "71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be",
+        "url": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz"
+      },
+      "original": {
+        "path": "originals/e676bc24a5fa45ddd056f24c3eedad7962306f7f630622bc787bc4e00054b0ce.mp3",
+        "sha256": "e676bc24a5fa45ddd056f24c3eedad7962306f7f630622bc787bc4e00054b0ce",
+        "bytes": 5604592,
+        "url": "https://opengameart.org/sites/default/files/pixel_damnation_combat_loop.mp3"
+      },
+      "durationSeconds": 134.403178,
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.81",
+        "input_lra": "2.40",
+        "input_thresh": "-26.03",
+        "output_i": "-15.89",
+        "output_tp": "-5.32",
+        "output_lra": "2.30",
+        "output_thresh": "-25.90",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.11"
+      },
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde.mp3",
+      "sha256": "a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde",
+      "bytes": 4302515,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "groove-first audition"
+      ],
+      "creatorSubstyles": [
+        "djent",
+        "industrial-metal",
+        "combat-loop"
+      ],
+      "originalFilename": "pixel_damnation_combat_loop.mp3",
+      "reviewStatus": "pending",
+      "substyleReview": "pending",
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "yannz.revenges-waiting",
+      "title": "Revenge's Waiting",
+      "artist": "Yanni Ziangos (YannZ)",
+      "artistURL": "https://yannz41.itch.io/",
+      "source": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz",
+      "download": "https://opengameart.org/sites/default/files/revenges_waiting_mini_combat_loop.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "boss-cue",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Revenge's Waiting by Yanni Ziangos a.k.a. YannZ. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "publishedDuration": "0:48",
+      "publishedMeter": "12/8",
+      "substyles": [
+        "djent",
+        "doom-metal",
+        "boss-loop"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be.html",
+        "sha256": "71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be",
+        "url": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz"
+      },
+      "original": {
+        "path": "originals/f60bbb16a6c3121d68905632b80040d9467a302852ce8d135e95370de7e1ff86.mp3",
+        "sha256": "f60bbb16a6c3121d68905632b80040d9467a302852ce8d135e95370de7e1ff86",
+        "bytes": 2148593,
+        "url": "https://opengameart.org/sites/default/files/revenges_waiting_mini_combat_loop.mp3"
+      },
+      "durationSeconds": 48.0032,
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-2.52",
+        "input_lra": "1.50",
+        "input_thresh": "-26.00",
+        "output_i": "-15.95",
+        "output_tp": "-2.40",
+        "output_lra": "1.40",
+        "output_thresh": "-25.95",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.05"
+      },
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec.mp3",
+      "sha256": "a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec",
+      "bytes": 1538133,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "groove-first audition"
+      ],
+      "creatorSubstyles": [
+        "djent",
+        "doom-metal",
+        "boss-loop"
+      ],
+      "originalFilename": "revenges_waiting_mini_combat_loop.mp3",
+      "reviewStatus": "pending",
+      "substyleReview": "pending",
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "alexandr-zhelanov.soul-ripper",
+      "title": "Soul Ripper",
+      "artist": "Alexandr Zhelanov",
+      "artistURL": "https://www.youtube.com/channel/UCxmng6_DMIayDwkiWGVzVRQ",
+      "source": "https://opengameart.org/content/soul-ripper",
+      "download": "https://opengameart.org/sites/default/files/soul_ripper_0.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "gameplay",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Soul Ripper by Alexandr Zhelanov. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "substyles": [
+        "industrial-metal",
+        "doom-like",
+        "brutal"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/77177412c5fdef5b0a2ccd990bca1e2cff7d743c12507b679771cb0119867710.html",
+        "sha256": "77177412c5fdef5b0a2ccd990bca1e2cff7d743c12507b679771cb0119867710",
+        "url": "https://opengameart.org/content/soul-ripper"
+      },
+      "original": {
+        "path": "originals/6df507a22313da2e920295a9e3ee4e45e4d2ca96d37cf344c7a7ecbc58f77f54.ogg",
+        "sha256": "6df507a22313da2e920295a9e3ee4e45e4d2ca96d37cf344c7a7ecbc58f77f54",
+        "bytes": 15166388,
+        "url": "https://opengameart.org/sites/default/files/soul_ripper_0.ogg"
+      },
+      "durationSeconds": 252.000021,
+      "encodedLoudness": {
+        "input_i": "-16.42",
+        "input_tp": "-2.05",
+        "input_lra": "10.50",
+        "input_thresh": "-27.17",
+        "output_i": "-16.01",
+        "output_tp": "-1.50",
+        "output_lra": "9.70",
+        "output_thresh": "-26.29",
+        "normalization_type": "dynamic",
+        "target_offset": "0.01"
+      },
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6.mp3",
+      "sha256": "8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6",
+      "bytes": 8065820,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "groove-first audition"
+      ],
+      "creatorSubstyles": [
+        "industrial-metal",
+        "doom-like",
+        "brutal"
+      ],
+      "originalFilename": "soul_ripper_0.ogg",
+      "reviewStatus": "pending",
+      "substyleReview": "pending",
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "zane-little-music.achilles",
+      "title": "Achilles",
+      "artist": "Zane Little Music",
+      "artistURL": "https://ko-fi.com/zanelittle",
+      "source": "https://opengameart.org/content/achilles",
+      "download": "https://opengameart.org/sites/default/files/achilles_2.mp3",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "gameplay",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Achilles by Zane Little Music. Released under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "substyles": [
+        "electronic-metal",
+        "death-metal",
+        "chiptune-accent"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/42569b384c0cbfc7df780812e09b56f414ce04f294f43e87a268959da219af48.html",
+        "sha256": "42569b384c0cbfc7df780812e09b56f414ce04f294f43e87a268959da219af48",
+        "url": "https://opengameart.org/content/achilles"
+      },
+      "original": {
+        "path": "originals/107779afad9882c8e31ae147e719ce0dab037bb7e1defbf19ee91764cf20a739.mp3",
+        "sha256": "107779afad9882c8e31ae147e719ce0dab037bb7e1defbf19ee91764cf20a739",
+        "bytes": 6492158,
+        "url": "https://opengameart.org/sites/default/files/achilles_2.mp3"
+      },
+      "durationSeconds": 162.298775,
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-5.58",
+        "input_lra": "4.30",
+        "input_thresh": "-26.15",
+        "output_i": "-14.85",
+        "output_tp": "-1.50",
+        "output_lra": "4.00",
+        "output_thresh": "-24.92",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.15"
+      },
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "path": "objects/84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04.mp3",
+      "sha256": "84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04",
+      "bytes": 5195276,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "groove-first audition"
+      ],
+      "creatorSubstyles": [
+        "electronic-metal",
+        "death-metal",
+        "chiptune-accent"
+      ],
+      "originalFilename": "achilles_2.mp3",
+      "reviewStatus": "pending",
+      "substyleReview": "pending",
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+Hosted intake test evidence
+Run: https://github.com/mekhovov/revealline-soundtracks-01/actions/runs/36004806070
+Job: 107650105719
+Source head: 23aabfff17a85d65564cb0a5020a9acb1531d0c6
+Actual runner checkout: 28903dcc0fed67fc25f1bdd2bd1f8bb89a9bbb37
+Full raw job-log SHA-256: ce8bccaf94f157664c4c1093733115b5d6fe14ed51cef91dd5f6f55c524d37c7
+
+2026-09-24T13:20:47.1039444Z Ran 62 tests in 0.120s
+2026-09-24T13:20:47.1039757Z OK
+2026-09-24T13:21:02.7823031Z Prepared yannz.pixel-damnation: 134.4s, -16.00 LUFS, -5.81 dBTP
+2026-09-24T13:21:08.7038082Z Prepared yannz.revenges-waiting: 48.0s, -16.00 LUFS, -2.52 dBTP
+2026-09-24T13:21:47.7991964Z Prepared alexandr-zhelanov.soul-ripper: 252.0s, -16.42 LUFS, -2.05 dBTP
+2026-09-24T13:22:02.5591790Z Prepared bogart-vgm.german-industrial-metal: 128.1s, -15.99 LUFS, -1.89 dBTP
+2026-09-24T13:22:20.6848940Z Prepared zane-little-music.achilles: 162.3s, -15.99 LUFS, -5.58 dBTP

@@ -1,0 +1,451 @@
+{
+  "format": "revealline-core-intake-receipt.v1",
+  "sourceManifestSha256": "46098246897c753a96d32c5991c05119f1538beb434e38b17d39c49f622ceaae",
+  "checkedAt": "2026-09-24T13:20:47Z",
+  "runnerRevision": "28903dcc0fed67fc25f1bdd2bd1f8bb89a9bbb37",
+  "runnerRun": "36004806070",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "gameInspector": {
+    "revision": "71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "files": [
+      {
+        "path": "game/mp3.mjs",
+        "sha256": "d4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a"
+      },
+      {
+        "path": "game/data-json.mjs",
+        "sha256": "bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823"
+      },
+      {
+        "path": "game/soundtrack.mjs",
+        "sha256": "ec03303d295b4f7997f4b8c3c3573cf2bdddcd81f92700d98710d38933f89843"
+      },
+      {
+        "path": "game/soundtrack-rights.mjs",
+        "sha256": "8c1c10927cf5c1f7360374ca1a4d64a7dec3c312b197ace89201c37d75793f04"
+      },
+      {
+        "path": "game/ui/music.mjs",
+        "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+      },
+      {
+        "path": "game/content/soundtrack-catalogue.mjs",
+        "sha256": "0618993ff8ff9508d1ab4295920c07d0b5a8f6f34df683538029754b438dc44f"
+      }
+    ]
+  },
+  "listeningApproval": false,
+  "tracks": [
+    {
+      "id": "yannz.pixel-damnation",
+      "title": "Pixel Damnation",
+      "artist": "Yanni Ziangos (YannZ)",
+      "artistURL": "https://yannz41.itch.io/",
+      "source": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz",
+      "download": "https://opengameart.org/sites/default/files/pixel_damnation_combat_loop.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "gameplay",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Pixel Damnation by Yanni Ziangos a.k.a. YannZ. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "publishedDuration": "2:19",
+      "substyles": [
+        "djent",
+        "industrial-metal",
+        "combat-loop"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be.html",
+        "sha256": "71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be",
+        "url": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz"
+      },
+      "original": {
+        "path": "originals/e676bc24a5fa45ddd056f24c3eedad7962306f7f630622bc787bc4e00054b0ce.mp3",
+        "sha256": "e676bc24a5fa45ddd056f24c3eedad7962306f7f630622bc787bc4e00054b0ce",
+        "bytes": 5604592,
+        "url": "https://opengameart.org/sites/default/files/pixel_damnation_combat_loop.mp3"
+      },
+      "delivery": {
+        "path": "objects/a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde.mp3",
+        "sha256": "a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde",
+        "bytes": 4302515
+      },
+      "asset": {
+        "sha256": "a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde",
+        "bytes": 4302515,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 5147,
+        "durationSeconds": 134.4522448979592
+      },
+      "durationSeconds": 134.403178,
+      "sourceLoudness": {
+        "input_i": "-10.05",
+        "input_tp": "0.19",
+        "input_lra": "2.40",
+        "input_thresh": "-20.08",
+        "output_i": "-15.89",
+        "output_tp": "-5.31",
+        "output_lra": "2.30",
+        "output_thresh": "-25.90",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.11"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.81",
+        "input_lra": "2.40",
+        "input_thresh": "-26.03",
+        "output_i": "-15.89",
+        "output_tp": "-5.32",
+        "output_lra": "2.30",
+        "output_thresh": "-25.90",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.11"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "yannz.revenges-waiting",
+      "title": "Revenge's Waiting",
+      "artist": "Yanni Ziangos (YannZ)",
+      "artistURL": "https://yannz41.itch.io/",
+      "source": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz",
+      "download": "https://opengameart.org/sites/default/files/revenges_waiting_mini_combat_loop.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "boss-cue",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Revenge's Waiting by Yanni Ziangos a.k.a. YannZ. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "publishedDuration": "0:48",
+      "publishedMeter": "12/8",
+      "substyles": [
+        "djent",
+        "doom-metal",
+        "boss-loop"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be.html",
+        "sha256": "71963e12481c363f4ee347cc750eb708964da3ea9edd14fd575cc428bbd692be",
+        "url": "https://opengameart.org/content/they%E2%80%99re-going-down-%E2%80%93-game-ost-pack-by-yannz"
+      },
+      "original": {
+        "path": "originals/f60bbb16a6c3121d68905632b80040d9467a302852ce8d135e95370de7e1ff86.mp3",
+        "sha256": "f60bbb16a6c3121d68905632b80040d9467a302852ce8d135e95370de7e1ff86",
+        "bytes": 2148593,
+        "url": "https://opengameart.org/sites/default/files/revenges_waiting_mini_combat_loop.mp3"
+      },
+      "delivery": {
+        "path": "objects/a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec.mp3",
+        "sha256": "a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec",
+        "bytes": 1538133
+      },
+      "asset": {
+        "sha256": "a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec",
+        "bytes": 1538133,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 1840,
+        "durationSeconds": 48.06530612244898
+      },
+      "durationSeconds": 48.0032,
+      "sourceLoudness": {
+        "input_i": "-13.17",
+        "input_tp": "0.27",
+        "input_lra": "1.60",
+        "input_thresh": "-23.17",
+        "output_i": "-15.95",
+        "output_tp": "-2.42",
+        "output_lra": "1.40",
+        "output_thresh": "-25.95",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.05"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-2.52",
+        "input_lra": "1.50",
+        "input_thresh": "-26.00",
+        "output_i": "-15.95",
+        "output_tp": "-2.40",
+        "output_lra": "1.40",
+        "output_thresh": "-25.95",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.05"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "alexandr-zhelanov.soul-ripper",
+      "title": "Soul Ripper",
+      "artist": "Alexandr Zhelanov",
+      "artistURL": "https://www.youtube.com/channel/UCxmng6_DMIayDwkiWGVzVRQ",
+      "source": "https://opengameart.org/content/soul-ripper",
+      "download": "https://opengameart.org/sites/default/files/soul_ripper_0.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "gameplay",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Soul Ripper by Alexandr Zhelanov. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "substyles": [
+        "industrial-metal",
+        "doom-like",
+        "brutal"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/77177412c5fdef5b0a2ccd990bca1e2cff7d743c12507b679771cb0119867710.html",
+        "sha256": "77177412c5fdef5b0a2ccd990bca1e2cff7d743c12507b679771cb0119867710",
+        "url": "https://opengameart.org/content/soul-ripper"
+      },
+      "original": {
+        "path": "originals/6df507a22313da2e920295a9e3ee4e45e4d2ca96d37cf344c7a7ecbc58f77f54.ogg",
+        "sha256": "6df507a22313da2e920295a9e3ee4e45e4d2ca96d37cf344c7a7ecbc58f77f54",
+        "bytes": 15166388,
+        "url": "https://opengameart.org/sites/default/files/soul_ripper_0.ogg"
+      },
+      "delivery": {
+        "path": "objects/8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6.mp3",
+        "sha256": "8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6",
+        "bytes": 8065820
+      },
+      "asset": {
+        "sha256": "8805d730816892643ac0708c1ad56cac41232609d09692e939894dcc8afb02d6",
+        "bytes": 8065820,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 9649,
+        "durationSeconds": 252.05551020408163
+      },
+      "durationSeconds": 252.000021,
+      "sourceLoudness": {
+        "input_i": "-8.85",
+        "input_tp": "1.67",
+        "input_lra": "12.20",
+        "input_thresh": "-19.65",
+        "output_i": "-14.83",
+        "output_tp": "-1.50",
+        "output_lra": "9.40",
+        "output_thresh": "-25.19",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.17"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.42",
+        "input_tp": "-2.05",
+        "input_lra": "10.50",
+        "input_thresh": "-27.17",
+        "output_i": "-16.01",
+        "output_tp": "-1.50",
+        "output_lra": "9.70",
+        "output_thresh": "-26.29",
+        "normalization_type": "dynamic",
+        "target_offset": "0.01"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "bogart-vgm.german-industrial-metal",
+      "title": "German Industrial Metal",
+      "artist": "Bogart VGM",
+      "artistURL": "https://www.facebook.com/BogartVGM/",
+      "source": "https://opengameart.org/content/german-industrial-metal",
+      "download": "https://opengameart.org/sites/default/files/German%20Industrial%20Metal_0.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "gameplay",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: German Industrial Metal by Bogart VGM (https://www.facebook.com/BogartVGM/). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "substyles": [
+        "industrial-metal",
+        "riff",
+        "synth"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/05580c521c1c514cb2bcad6fbd5b52468ec9d858d1448ebaf7b5c4f6671292af.html",
+        "sha256": "05580c521c1c514cb2bcad6fbd5b52468ec9d858d1448ebaf7b5c4f6671292af",
+        "url": "https://opengameart.org/content/german-industrial-metal"
+      },
+      "original": {
+        "path": "originals/3410bc97d922bacf57253cd7bde3eb1b1553a9e680b7af3cf96a55dcd4d548dd.mp3",
+        "sha256": "3410bc97d922bacf57253cd7bde3eb1b1553a9e680b7af3cf96a55dcd4d548dd",
+        "bytes": 5124996,
+        "url": "https://opengameart.org/sites/default/files/German%20Industrial%20Metal_0.mp3"
+      },
+      "delivery": {
+        "path": "objects/39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65.mp3",
+        "sha256": "39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65",
+        "bytes": 4105239
+      },
+      "asset": {
+        "sha256": "39bccf1a5e0dfc5d324b253e5d0909b51b0764921e61779d699b0e155b108b65",
+        "bytes": 4105239,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4911,
+        "durationSeconds": 128.2873469387755
+      },
+      "durationSeconds": 128.1249,
+      "sourceLoudness": {
+        "input_i": "-13.99",
+        "input_tp": "0.06",
+        "input_lra": "3.70",
+        "input_thresh": "-24.24",
+        "output_i": "-15.71",
+        "output_tp": "-1.50",
+        "output_lra": "2.40",
+        "output_thresh": "-25.72",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.29"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-1.89",
+        "input_lra": "3.70",
+        "input_thresh": "-26.25",
+        "output_i": "-15.71",
+        "output_tp": "-1.50",
+        "output_lra": "2.50",
+        "output_thresh": "-25.72",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.29"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "zane-little-music.achilles",
+      "title": "Achilles",
+      "artist": "Zane Little Music",
+      "artistURL": "https://ko-fi.com/zanelittle",
+      "source": "https://opengameart.org/content/achilles",
+      "download": "https://opengameart.org/sites/default/files/achilles_2.mp3",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contentId": null,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "role": "gameplay",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Achilles by Zane Little Music. Released under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "substyles": [
+        "electronic-metal",
+        "death-metal",
+        "chiptune-accent"
+      ],
+      "sourceSnapshot": {
+        "path": "evidence/42569b384c0cbfc7df780812e09b56f414ce04f294f43e87a268959da219af48.html",
+        "sha256": "42569b384c0cbfc7df780812e09b56f414ce04f294f43e87a268959da219af48",
+        "url": "https://opengameart.org/content/achilles"
+      },
+      "original": {
+        "path": "originals/107779afad9882c8e31ae147e719ce0dab037bb7e1defbf19ee91764cf20a739.mp3",
+        "sha256": "107779afad9882c8e31ae147e719ce0dab037bb7e1defbf19ee91764cf20a739",
+        "bytes": 6492158,
+        "url": "https://opengameart.org/sites/default/files/achilles_2.mp3"
+      },
+      "delivery": {
+        "path": "objects/84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04.mp3",
+        "sha256": "84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04",
+        "bytes": 5195276
+      },
+      "asset": {
+        "sha256": "84048a0beb764b0af09bd3e4627141c2f1231ba61c164df9ed255b1db6ccac04",
+        "bytes": 5195276,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 6215,
+        "durationSeconds": 162.35102040816327
+      },
+      "durationSeconds": 162.298775,
+      "sourceLoudness": {
+        "input_i": "-10.57",
+        "input_tp": "-0.37",
+        "input_lra": "4.20",
+        "input_thresh": "-20.73",
+        "output_i": "-14.86",
+        "output_tp": "-1.50",
+        "output_lra": "4.00",
+        "output_thresh": "-24.92",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.14"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-5.58",
+        "input_lra": "4.30",
+        "input_thresh": "-26.15",
+        "output_i": "-14.85",
+        "output_tp": "-1.50",
+        "output_lra": "4.00",
+        "output_thresh": "-24.92",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.15"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    }
+  ],
+  "failures": [],
+  "deliveryVolumes": [
+    {
+      "family": "metal",
+      "number": 1,
+      "audioBytes": 23206983,
+      "metadataReservationBytes": 524288,
+      "maximumBytes": 67108864,
+      "tracks": [
+        "yannz.pixel-damnation",
+        "yannz.revenges-waiting",
+        "alexandr-zhelanov.soul-ripper",
+        "bogart-vgm.german-industrial-metal",
+        "zane-little-music.achilles"
+      ],
+      "status": "size-checked-plan-listening-pending"
+    }
+  ]
+}
