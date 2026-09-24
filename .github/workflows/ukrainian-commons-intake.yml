@@ -1,0 +1,71 @@
+name: Prepare Ukrainian Commons audition candidates
+
+on:
+  pull_request:
+    paths:
+      - 'intake/ukrainian-commons-audition-20260925.json'
+      - 'intake/prepare.py'
+      - 'intake/test_prepare.py'
+      - '.github/workflows/ukrainian-commons-intake.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare-ukrainian-commons:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify unchanged published inventory
+        run: node verify.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - uses: actions/checkout@v4
+        with:
+          repository: mekhovov/revealline
+          ref: 71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3
+          path: .runtime
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /game/*.mjs
+            /game/ui/*.mjs
+            /game/content/*.mjs
+      - name: Install audio validation tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Test intake boundaries without acquiring media
+        run: python3 -m unittest discover -s intake -p 'test_*.py'
+      - name: Acquire and measure three listening-pending Commons recordings
+        run: >-
+          python3 intake/prepare.py
+          --manifest intake/ukrainian-commons-audition-20260925.json
+          --output ukrainian-commons-candidate-output
+          --game-root .runtime
+      - name: Report bounded receipt metadata
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          for name in ('receipt.json', 'review.json'):
+              path = Path('ukrainian-commons-candidate-output') / name
+              if not path.is_file():
+                  print(name + ': not created; inspect the preceding failure')
+                  continue
+              if path.stat().st_size > 2 * 1024 ** 2:
+                  raise ValueError('Unexpectedly large intake metadata')
+              body = path.read_bytes()
+              print(name + ' sha256=' + hashlib.sha256(body).hexdigest())
+              print(body.decode('utf8'))
+          PY
+      - name: Preserve original recordings, derivatives, and rights evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ukrainian-commons-audition-candidates
+          path: ukrainian-commons-candidate-output/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0

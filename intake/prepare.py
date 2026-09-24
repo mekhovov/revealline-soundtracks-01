@@ -12,7 +12,7 @@ import re
 import shutil
 import subprocess
 import time
-from urllib.parse import unquote, urljoin, urlparse
+from urllib.parse import parse_qs, unquote, urlencode, urljoin, urlparse
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 from itch_audio import acquire as acquire_itch, validate_row as validate_itch_row, validate_native_probe
 
@@ -26,7 +26,12 @@ VOLUME_METADATA_RESERVATION = 512 * 1024
 ROW_RESERVATION = 96 * 1024 ** 2  # bounded source, 12-minute MP3, page and receipts
 INSPECTOR_REVISION = '71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3'
 LICENSES = {'CC0 1.0 Universal': 'https://creativecommons.org/publicdomain/zero/1.0/',
+            'CC BY 3.0 Unported': 'https://creativecommons.org/licenses/by/3.0/',
             'CC BY 4.0 International': 'https://creativecommons.org/licenses/by/4.0/'}
+COMMONS_API = 'https://commons.wikimedia.org/w/api.php'
+COMMONS_ACQUISITION = 'wikimedia-commons-original'
+COMMONS_CHANGE_NOTICE = ('Audio extracted from the native WebM recording; converted to 256 kbps stereo MP3 '
+                         'at 44.1 kHz with two-pass loudness normalization; video omitted; native source retained unchanged.')
 CREATOR_SOURCE = 'https://creatorchords.com/music/carol-of-the-bells-metal-version/'
 CREATOR_DOWNLOAD = 'https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Carol_of_the_Bells_Metal_Version.mp3'
 CREATOR_LICENSING = 'https://creatorchords.com/licensing-info/'
@@ -98,14 +103,76 @@ def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
 
 
+def commons_title_from_source(value):
+    try:
+        url = urlparse(value)
+        if (url.scheme != 'https' or url.hostname != 'commons.wikimedia.org'
+                or url.port not in (None, 443) or url.username or url.password
+                or url.query or url.fragment or not url.path.startswith('/wiki/File:')):
+            return None
+        return unquote(url.path.removeprefix('/wiki/')).replace('_', ' ')
+    except (TypeError, ValueError):
+        return None
+
+
+def valid_commons_title(value):
+    return (isinstance(value, str)
+            and re.fullmatch(r'File:[^|/#\x00-\x1f]{1,240}\.webm', value, re.I) is not None)
+
+
+def commons_api_url(title):
+    return COMMONS_API + '?' + urlencode({
+        'action': 'query', 'format': 'json', 'formatversion': '2', 'prop': 'imageinfo',
+        'iiprop': 'url|size|mime|mediatype|sha1|extmetadata', 'titles': title,
+    })
+
+
+def allowed_commons_api_url(value):
+    try:
+        url = urlparse(value)
+        values = parse_qs(url.query, strict_parsing=True)
+        return (url.scheme == 'https' and url.hostname == 'commons.wikimedia.org'
+                and url.port in (None, 443) and not url.username and not url.password
+                and not url.fragment and url.path == '/w/api.php'
+                and values == {
+                    'action': ['query'], 'format': ['json'], 'formatversion': ['2'],
+                    'prop': ['imageinfo'],
+                    'iiprop': ['url|size|mime|mediatype|sha1|extmetadata'],
+                    'titles': values.get('titles', []),
+                }
+                and len(values.get('titles', [])) == 1
+                and valid_commons_title(values['titles'][0]))
+    except (TypeError, ValueError):
+        return False
+
+
+def allowed_commons_media_url(value):
+    try:
+        url = urlparse(value)
+        query = parse_qs(url.query, strict_parsing=True)
+        expected_query = {'utm_source': ['commons.wikimedia.org'],
+                          'utm_campaign': ['imageinfo'], 'utm_content': ['original']}
+        return (url.scheme == 'https' and url.hostname == 'upload.wikimedia.org'
+                and url.port in (None, 443) and not url.username and not url.password
+                and (not url.query or query == expected_query) and not url.fragment
+                and re.fullmatch(r'/wikipedia/commons/[0-9a-f]/[0-9a-f]{2}/[^/]+\.webm',
+                                 url.path, re.I)
+                and not any(ord(char) < 33 for char in value))
+    except (TypeError, ValueError):
+        return False
+
+
 def allowed_url(value):
     if value in CREATOR_URLS:
         return True
     try:
         url = urlparse(value)
-        return (url.scheme == 'https' and url.hostname == 'opengameart.org'
-                and url.port in (None, 443) and not url.username and not url.password
-                and not url.fragment and not any(ord(char) < 33 for char in value))
+        return ((url.scheme == 'https' and url.hostname == 'opengameart.org'
+                 and url.port in (None, 443) and not url.username and not url.password
+                 and not url.fragment and not any(ord(char) < 33 for char in value))
+                or commons_title_from_source(value) is not None
+                or allowed_commons_api_url(value)
+                or allowed_commons_media_url(value))
     except (TypeError, ValueError):
         return False
 
@@ -113,7 +180,13 @@ def allowed_url(value):
 def allowed_redirect(origin, destination):
     if origin in CREATOR_URLS:
         return destination == origin
-    return allowed_url(destination) and urlparse(destination).hostname == 'opengameart.org'
+    origin_host = urlparse(origin).hostname
+    destination_host = urlparse(destination).hostname
+    if origin_host == 'commons.wikimedia.org':
+        return allowed_url(destination) and destination_host == 'commons.wikimedia.org'
+    if origin_host == 'upload.wikimedia.org':
+        return allowed_commons_media_url(destination) and destination_host == 'upload.wikimedia.org'
+    return allowed_url(destination) and destination_host == 'opengameart.org'
 
 
 class IntakeRedirectHandler(HTTPRedirectHandler):
@@ -133,6 +206,32 @@ def candidate_duration_bounds(row):
     return (30, 720) if row.get('role') == 'boss-cue' else (60, 720)
 
 
+def validate_commons_row(row):
+    title = row.get('commonsTitle')
+    if (not valid_commons_title(title) or commons_title_from_source(row.get('source')) != title):
+        raise ValueError('Wikimedia Commons source and exact file title differ')
+    if 'download' in row:
+        raise ValueError('Wikimedia download must be resolved from the exact Commons API title')
+    if (type(row.get('commonsBytes')) is not int or not 0 < row['commonsBytes'] <= SOURCE_LIMIT
+            or not re.fullmatch(r'[a-f0-9]{40}', row.get('commonsSha1', ''))):
+        raise ValueError('Commons original byte count and SHA-1 must be pinned')
+    if (row.get('license') != 'CC BY 3.0 Unported'
+            or row.get('licenseURL') != LICENSES['CC BY 3.0 Unported']):
+        raise ValueError('Commons audition requires the reviewed CC BY 3.0 recording licence')
+    if (row.get('contentId') is not None or row.get('recordingModeEligible') is not False
+            or row.get('status') != 'rights-reviewed-listening-pending'
+            or row.get('fullTrackListening') is not False
+            or any(row.get(key) != 'pending'
+                   for key in ('culturalReview', 'instrumentalReview', 'gameplayReview'))):
+        raise ValueError('Commons audition review state must remain explicitly pending')
+    if row.get('changes') != COMMONS_CHANGE_NOTICE:
+        raise ValueError('Commons WebM conversion requires the exact change notice')
+    credit = row.get('credit')
+    if (not isinstance(credit, str) or row['licenseURL'] not in credit
+            or 'CC BY 3.0' not in credit or len(credit) > 2048):
+        raise ValueError('Commons attribution must include the exact licence and link')
+
+
 def validate_manifest(value):
     if value.get('format') != 'revealline-core-intake.v1' or not 1 <= len(value.get('tracks', [])) <= 20:
         raise ValueError('Unsupported or excessive intake')
@@ -143,6 +242,9 @@ def validate_manifest(value):
         ids.add(row['id'])
         if row.get('licenseURL') != LICENSES.get(row.get('license')):
             raise ValueError('Unsupported exact source licence')
+        if row.get('acquisition') == COMMONS_ACQUISITION:
+            validate_commons_row(row)
+            continue
         if row.get('acquisition') == 'itch-public-free-download':
             validate_itch_row(row)
             continue
@@ -159,6 +261,10 @@ def validate_manifest(value):
             raise ValueError('Not an author-provided source/download pair')
         if row.get('status') != 'rights-reviewed-listening-pending':
             raise ValueError('Intake cannot grant listening approval')
+    if any(row.get('acquisition') == COMMONS_ACQUISITION for row in value['tracks']):
+        if any(value.get(key) is not False
+               for key in ('publicationApproval', 'gameCatalogueAdmission', 'listeningApproval')):
+            raise ValueError('Commons intake cannot approve publication, game admission, or listening')
     return value
 
 
@@ -237,6 +343,71 @@ def collect_evidence(row, output, pages, partial):
         if row['licenseURL'] not in text or 'Smart Content ID' not in text:
             raise ValueError('Creator licence or Content ID evidence has changed; review it before acquisition')
     return {key: value for key, value in partial.items() if key.endswith('Snapshot')}
+
+
+def commons_metadata(row, body):
+    try:
+        value = json.loads(body)
+        pages = value['query']['pages']
+        if len(pages) != 1:
+            raise ValueError
+        page = pages[0]
+        infos = page['imageinfo']
+        if page.get('missing') or page.get('title') != row['commonsTitle'] or len(infos) != 1:
+            raise ValueError
+        info = infos[0]
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+        raise ValueError('Commons API did not return one exact file revision') from None
+    if commons_title_from_source(info.get('descriptionurl')) != row['commonsTitle']:
+        raise ValueError('Commons API description page differs from the reviewed source')
+    if (info.get('mime') != 'video/webm' or info.get('mediatype') != 'VIDEO'
+            or type(info.get('size')) is not int or not 0 < info['size'] <= SOURCE_LIMIT):
+        raise ValueError('Commons original is not a bounded WebM recording')
+    if not allowed_commons_media_url(info.get('url')):
+        raise ValueError('Commons original resolved outside the exact media host')
+    if not re.fullmatch(r'[a-z0-9]{31,40}', info.get('sha1', '')):
+        raise ValueError('Commons original is missing its API SHA-1 identity')
+    if info['size'] != row['commonsBytes'] or info['sha1'] != row['commonsSha1']:
+        raise ValueError('Commons original differs from the manifest-pinned revision')
+    metadata = info.get('extmetadata')
+    try:
+        licence_url = metadata['LicenseUrl']['value']
+        licence_name = metadata['LicenseShortName']['value']
+    except (KeyError, TypeError):
+        raise ValueError('Commons API licence metadata is absent') from None
+    if (licence_url.rstrip('/') + '/' != row['licenseURL']
+            or licence_name not in ('CC BY 3.0', 'CC BY 3.0 Unported')):
+        raise ValueError('Commons API licence metadata differs from the reviewed licence')
+    return {'url': info['url'], 'bytes': info['size'], 'sha1': info['sha1'],
+            'mime': info['mime'], 'mediaType': info['mediatype']}
+
+
+def commons_evidence(row, output, pages, partial):
+    api_url = commons_api_url(row['commonsTitle'])
+    body, final = fetch(api_url, 2 * 1024 ** 2)
+    if final != api_url:
+        raise ValueError('Commons API request unexpectedly redirected')
+    metadata = commons_metadata(row, body)
+    sha = digest(body)
+    api_path = 'evidence/' + sha + '.json'
+    (output / api_path).write_bytes(body)
+    partial['commonsApiSnapshot'] = {'path': api_path, 'sha256': sha, 'url': final,
+                                     'snapshotKind': 'wikimedia-commons-imageinfo'}
+    page, partial['sourceSnapshot'] = snapshot(row['source'], output, pages)
+    normalized = unquote(html.unescape(page.decode('utf8')))
+    if row['licenseURL'].removeprefix('https://') not in normalized:
+        raise ValueError('Expected Commons licence link is absent from the source snapshot')
+    return metadata, {'commonsApiSnapshot': partial['commonsApiSnapshot'],
+                      'sourceSnapshot': partial['sourceSnapshot']}
+
+
+def validate_commons_original(metadata, body, final):
+    """Bind the downloaded original bytes to the exact Commons API revision."""
+    if final != metadata['url'] or len(body) != metadata['bytes']:
+        raise ValueError('Commons original differs from the API-bound recording')
+    actual_sha1 = hashlib.sha1(body, usedforsecurity=False).hexdigest()
+    if actual_sha1 != metadata['sha1']:
+        raise ValueError('Commons original SHA-1 differs from the API-bound recording')
 
 
 def command(args):
@@ -368,11 +539,20 @@ def prepare(manifest, output, game_root):
         try:
             reserve_row(output)
             is_itch = row.get('acquisition') == 'itch-public-free-download'
+            is_commons = row.get('acquisition') == COMMONS_ACQUISITION
             if is_itch:
                 body, native, evidence = itch_evidence(row, output, partial)
                 suffix = native['suffix']
                 source_details = {'source': row['source'], 'uploadId': row['uploadId'],
                                   'fileName': native['fileName'], 'contentType': native['contentType']}
+            elif is_commons:
+                metadata, evidence = commons_evidence(row, output, pages, partial)
+                body, final = fetch(metadata['url'], metadata['bytes'])
+                validate_commons_original(metadata, body, final)
+                suffix = '.webm'
+                source_details = {'url': final, 'commonsTitle': row['commonsTitle'],
+                                  'reportedBytes': metadata['bytes'], 'apiSha1': metadata['sha1'],
+                                  'contentType': metadata['mime']}
             else:
                 evidence = collect_evidence(row, output, pages, partial)
                 body, final = fetch(row['download'], CREATOR_SOURCE_LIMITS.get(row['source'], SOURCE_LIMIT))
@@ -434,7 +614,7 @@ def prepare(manifest, output, game_root):
                 'delivery': {'path': str(destination.relative_to(output)), 'sha256': audio_hash, 'bytes': len(data)},
                 'asset': facts, 'durationSeconds': duration, 'sourceLoudness': measured, 'encodedLoudness': measured_output,
                 'completeDecode': True, 'listeningApproval': False,
-                'changes': 'Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.'})
+                'changes': row.get('changes', 'Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.')})
             receipt['deliveryVolumes'] = delivery_volumes(receipt['tracks'])
             print(f'Prepared {row["id"]}: {duration:.1f}s, {measured_output["input_i"]} LUFS, {measured_output["input_tp"]} dBTP', flush=True)
         except Exception as error:
