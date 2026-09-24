@@ -4,7 +4,8 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 from unittest.mock import patch
-from prepare import allowed_url, validate_manifest, reserve, reserve_row, verify_inspector, RESERVE, TOTAL_LIMIT
+from prepare import (allowed_url, candidate_duration_bounds, validate_manifest,
+                     reserve, reserve_row, verify_inspector, RESERVE, TOTAL_LIMIT)
 
 
 class IntakeTests(unittest.TestCase):
@@ -29,6 +30,13 @@ class IntakeTests(unittest.TestCase):
             with self.assertRaises(ValueError): validate_manifest(item)
         self.value['tracks'] *= 2
         with self.assertRaises(ValueError): validate_manifest(self.value)
+
+    def test_short_candidate_envelope_is_limited_to_explicit_boss_cues(self):
+        self.assertEqual(candidate_duration_bounds({}), (60, 720))
+        self.assertEqual(candidate_duration_bounds({'role': 'gameplay'}), (60, 720))
+        self.assertEqual(candidate_duration_bounds({'role': 'menu'}), (60, 720))
+        self.assertEqual(candidate_duration_bounds({'role': 'boss-cue'}), (30, 720))
+        self.assertEqual(candidate_duration_bounds({'role': 'Boss-Cue'}), (60, 720))
 
     def test_no_licence_or_listening_escalation(self):
         for key, value in (('licenseURL', 'https://example.com/free'), ('status', 'approved'), ('download', 'https://opengameart.org/preview')):

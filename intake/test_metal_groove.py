@@ -23,14 +23,14 @@ class MetalGrooveIntakeTests(unittest.TestCase):
                 f'data-src="{row["download"]}"></div>'
                 f'<a href="{row["licenseURL"]}">CC BY 4.0</a>').encode()
 
-    def test_active_core_manifest_exactly_matches_reviewed_four_track_batch(self):
+    def test_named_four_track_batch_matches_immutable_archive(self):
         root = Path(__file__).parent
-        active = (root / 'core-20260924.json').read_bytes()
         named = (root / 'metal-groove-audition-20260924.json').read_bytes()
-        self.assertEqual(active, named)
-        self.assertEqual(hashlib.sha256(active).hexdigest(),
+        archived = (root / 'archive/metal-groove-audition-20260924/source-manifest.json').read_bytes()
+        self.assertEqual(named, archived)
+        self.assertEqual(hashlib.sha256(named).hexdigest(),
                          '3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7')
-        self.assertEqual(json.loads(active)['batch'], 'metal-groove-audition-20260924')
+        self.assertEqual(json.loads(named)['batch'], 'metal-groove-audition-20260924')
 
     def test_four_exact_recordings_remain_pending_with_content_id(self):
         self.assertEqual({r['title'] for r in self.rows},

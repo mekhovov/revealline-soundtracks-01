@@ -5,13 +5,22 @@ This directory prepares separate candidate batches without changing the existing
 Pages staging. The game does not discover or admit these candidates.
 
 The active `core-20260924.json` is now byte-identical to
-`metal-groove-audition-20260924.json`: four Alexander Nakarada recordings,
-**Anemo, Trial of Thorns, Riffs Two and Apocalypse**. Each exact creator page
-offers CC BY 4.0 and each recording remains excluded from Recording mode because
-the creator reports Content ID registration. Source pages include unrelated
-recommendations, so these rows require a unique, matching primary player.
+`metal-groove-yannz-audition-20260924.json`: **Pixel Damnation** and
+**Revenge's Waiting** by YannZ, plus **Soul Ripper**, **German Industrial
+Metal** and **Achilles** as independent comparisons. The exact OpenGameArt
+creator pages publish CC BY 4.0 or CC0 and link the selected MP3/OGG files.
+Content ID remains unknown, so every recording stays excluded from Recording
+mode while rights evidence and complete listening remain pending.
 
-The preceding ten-track itch manifest is retained unchanged both at
+The user identified the YannZ groove/djent direction as the closest metal match
+so far. That is a direction decision, not listening approval or game admission.
+**Revenge's Waiting** is a 48-second 12/8 boss loop and does not count as a full
+gameplay composition. The intake will still measure and retain it for loop and
+transition review.
+
+The preceding four-track Nakarada manifest is retained unchanged at
+`metal-groove-audition-20260924.json` and in its immutable intake archive. The
+preceding ten-track itch manifest is retained unchanged both at
 `itch-core-audition-20260924.json` and
 `archive/itch-core-audition-20260924/source-manifest.json` (SHA-256
 `02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9`).
@@ -68,19 +77,20 @@ Run the non-network tests with:
 python3 -m unittest discover -s intake -p 'test_*.py'
 ```
 
-## Review before opening the four-track pull request
+## Review before opening the five-track pull request
 
 No workflow files change for this batch. The existing core workflow runs on
 matching pull requests or manual dispatch; it does not run for a branch push.
 Review the exact branch commit **before opening the PR**. Opening or updating
-a matching PR then runs tests and acquires the four-track active core manifest
+a matching PR then runs tests and acquires the five-track active core manifest
 into `candidate-output/`, preserving `core-soundtrack-candidates` as its
 30-day artifact. It does not merely validate source.
 
-The shared `prepare.py` change also matches the existing Ukrainian workflow:
-the same PR will reacquire the already-published Shchedryk candidate into its
-separate artifact. This does not replace its published bytes or renew musical
-approval. Preserve the new receipt and any failure evidence separately.
+This batch adds one narrow shared-acquisition rule: an explicit `boss-cue` may be
+30 seconds to 12 minutes, while every menu/gameplay candidate retains the normal
+1–12-minute envelope. The Ukrainian manifest and already-published Shchedryk
+bytes and approval evidence remain unchanged; its hosted workflow may rerun
+because it shares the reviewed preparation code.
 
 The earlier manual-only workflow proposal could not be installed with the
 available GitHub authorization. Its exact, uninstalled files and verification
