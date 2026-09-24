@@ -1,0 +1,41 @@
+intake/ukrainian-commons-audition-20260925.json
+  s_f8296d264eaab0::t_211f6cfb2bf2d9 15-16,43-44,71-72
+  s_f8296d264eaab0::t_9e3ca14832609d 28
+  s_f8296d264eaab0::t_37d01c7e1f02e3 1-14,17-27,29-42,45-70,73-93
+intake/prepare.py
+  s_f8296d264eaab0::t_5b475295dbbdfd 348-369,372-403
+  s_f8296d264eaab0::t_32b6b515f2d775 533,539-547,609
+  s_f8296d264eaab0::t_39613d0f8a0844 118-122,144,158-159,211
+  s_f8296d264eaab0::t_2bc1867254d0bb 152-154,157
+  s_f8296d264eaab0::t_6a2be59222ba24 15,29,31-34,106-117,123-143,145-151,155-156,160-164,170-175,183-189,209-210,212-214,218-234,245-247,264-267
+  s_f8296d264eaab0::t_211f6cfb2bf2d9 215-217,370-371
+intake/README.md
+  s_f8296d264eaab0::t_42f5f27f5fa8cd 74-86,89-99
+  s_f8296d264eaab0::t_211f6cfb2bf2d9 87-88
+intake/test_prepare.py
+  s_f8296d264eaab0::t_39613d0f8a0844 112
+  s_f8296d264eaab0::t_211f6cfb2bf2d9 73,167-169
+  s_f8296d264eaab0::t_9e3ca14832609d 114-118
+  s_f8296d264eaab0::t_400a27ab2bd938 2,8-11,65-72,74-86,89-111,113,119-122,125-166,170-182
+  s_f8296d264eaab0::t_2bc1867254d0bb 87-88
+  s_f8296d264eaab0::t_9628abb24479a8 123-124
+  s_f8296d264eaab0::t_79d5cd744254cc 183-184
+.github/workflows/ukrainian-commons-intake.yml
+  s_f8296d264eaab0::t_81b4f33dc9d47d 1-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6ba88b9156213128cef78d33015ca5620b0ac3ef",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
