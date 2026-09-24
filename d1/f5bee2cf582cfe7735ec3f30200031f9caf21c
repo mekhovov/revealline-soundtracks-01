@@ -1,0 +1,30 @@
+verify.mjs
+  s_f8296d264eaab0::t_148bcbb66ce52e 42
+.github/workflows/core-intake.yml
+  s_f8296d264eaab0::t_d0952dbda857a8 1-46
+intake/prepare.py
+  s_f8296d264eaab0::t_d0952dbda857a8 1-104,106-206
+  s_f8296d264eaab0::t_1826a457ec1332 105
+intake/test_prepare.py
+  s_f8296d264eaab0::t_d0952dbda857a8 1-37
+intake/README.md
+  s_f8296d264eaab0::t_148bcbb66ce52e 1-33
+intake/core-20260924.json
+  s_f8296d264eaab0::t_a64ad3102ea55e 1-174
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d1f5bee2cf582cfe7735ec3f30200031f9caf21c",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
