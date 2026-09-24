@@ -1,0 +1,26 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-groove-audition-20260924",
+  "files": [
+    {
+      "path": "objects/362081bf6dc541c933bd21028511f6019e9572fe2b6458d6f0d169e9af762711.mp3",
+      "sha256": "362081bf6dc541c933bd21028511f6019e9572fe2b6458d6f0d169e9af762711",
+      "bytes": 8897559
+    },
+    {
+      "path": "objects/b31e0318a1ef5c92e97d31c36e6bed9abf706dfd692a073b9b92078c6edfe8cd.mp3",
+      "sha256": "b31e0318a1ef5c92e97d31c36e6bed9abf706dfd692a073b9b92078c6edfe8cd",
+      "bytes": 7591854
+    },
+    {
+      "path": "objects/ede7c1320609b0ccde15e21ad63bb3bf1706fedec61f8413196bc5cebb73e82a.mp3",
+      "sha256": "ede7c1320609b0ccde15e21ad63bb3bf1706fedec61f8413196bc5cebb73e82a",
+      "bytes": 6353859
+    },
+    {
+      "path": "objects/e43e420cf5cbb9715b25de075380111867609a34e7a5cb3462b2c14793786b54.mp3",
+      "sha256": "e43e420cf5cbb9715b25de075380111867609a34e7a5cb3462b2c14793786b54",
+      "bytes": 6951541
+    }
+  ]
+}

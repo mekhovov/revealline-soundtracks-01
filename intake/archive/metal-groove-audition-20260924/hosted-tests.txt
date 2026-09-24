@@ -1,0 +1,17 @@
+Hosted intake test evidence
+Run: https://github.com/mekhovov/revealline-soundtracks-01/actions/runs/35961304793
+Job: 107510266514
+Source head: 31dded3fdc94bb0609d65e62883452084c8a8dff
+Actual runner checkout: c2fb2afba4b5e438ef40e059e35daed407c6ba74
+Full raw job-log SHA-256: 492e40a0f7b824f1a9ce68a4e769fc0e9648d8dc308a9f9b37e7e7962af2b8ba
+Exact test-step excerpt follows:
+
+2026-09-24T05:46:56.7795030Z ##[group]Run python3 -m unittest discover -s intake -p 'test_*.py'
+2026-09-24T05:46:56.7795547Z [36;1mpython3 -m unittest discover -s intake -p 'test_*.py'[0m
+2026-09-24T05:46:56.7859969Z shell: /usr/bin/bash -e {0}
+2026-09-24T05:46:56.7860232Z ##[endgroup]
+2026-09-24T05:46:57.0397095Z ..........................................................
+2026-09-24T05:46:57.0397877Z ----------------------------------------------------------------------
+2026-09-24T05:46:57.0398467Z Ran 58 tests in 0.121s
+2026-09-24T05:46:57.0398701Z 
+2026-09-24T05:46:57.0398830Z OK

@@ -1,0 +1,72 @@
+{
+  "status": "technical-assembly-verified-listening-pending",
+  "checkedAt": "2026-09-24T05:54:36Z",
+  "sourceBase": "d3c675c7183f651089461d0e42c364b850a03ebf",
+  "sourceHead": "31dded3fdc94bb0609d65e62883452084c8a8dff",
+  "runnerRevision": "c2fb2afba4b5e438ef40e059e35daed407c6ba74",
+  "sourceTree": "5a6391e7da080dd0c666507c288eeb43222c5c44",
+  "sourceRun": 35961304793,
+  "artifactId": 10792671587,
+  "artifactSha256": "a21be6365eba8d9da10156428d2fa7a7a5684d4621270915e10c95aacd7c6030",
+  "artifactBytes": 67887127,
+  "originalArtifactReview": "https://github.com/mekhovov/revealline-soundtracks-01/pull/9#issuecomment-5808496559",
+  "checks": {
+    "artifactDigestAndExactBytes": true,
+    "all16MembersHashesAndCRC": true,
+    "headAndMergedSourceTreeEqual": true,
+    "sourceAndRunnerTreeEqualIndependentlyReviewed": true,
+    "sourceManifestExact": true,
+    "fourNativeAndDeliveryHashes": true,
+    "creatorSourceAndLicenseBindingsIndependentlyReviewed": true,
+    "sixGameInspectorHashesIndependentlyReviewed": true,
+    "completeDecodeReceipts": true,
+    "loudnessAndTruePeakTargets": true,
+    "all58HostedTestsPassed": true,
+    "allPendingReviewFlagsPreserved": true,
+    "all96ExistingIdsTitlesNativeAndDeliveryHashesDeduplicated": true,
+    "existingDeclarationValidatorsPassed": true,
+    "unchangedPlayerAndStyleBytes": true,
+    "actualVolumeIncludingAllMetadataBelow64MiB": true
+  },
+  "declarations": {
+    "declarationsValid": true,
+    "tracks": 100,
+    "audioBytes": 549440433,
+    "publicBytes": 549987343,
+    "batches": 6,
+    "newBatchBytes": 29834805,
+    "newMetadataBytes": 39992,
+    "metadataReservationBytes": 524288,
+    "maximumBatchBytes": 67108864
+  },
+  "newBatch": {
+    "id": "metal-groove-audition-20260924",
+    "manifest": {
+      "path": "batches/metal-groove-audition-20260924/deployment-manifest.json",
+      "bytes": 2415,
+      "sha256": "fb0a0ac6362d565eaab3dfd2b3967a92397877f9e35fa52ec4a9ec26ad36fd42"
+    },
+    "audioBytes": 29794813,
+    "metadataBytes": 39992,
+    "totalBytes": 29834805
+  },
+  "limits": {
+    "zipMemoryMaximumBytes": 67887127,
+    "uncompressedMaximumBytes": 681574400,
+    "uncompressedActualBytes": 67883419,
+    "metadataReservationBytes": 524288,
+    "batchMaximumBytes": 67108864,
+    "localMediaFilesWritten": 0
+  },
+  "remaining": [
+    "Independent publication PR review",
+    "Hosted inventory verification and Pages staging",
+    "Public deployment and direct byte/playback verification",
+    "Complete listening, style fit and instrumental review",
+    "Transitions and warning audibility",
+    "Game admission and release",
+    "Physical device qualification"
+  ],
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false
+}
