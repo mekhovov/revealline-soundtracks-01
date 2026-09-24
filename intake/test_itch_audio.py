@@ -8,6 +8,7 @@ from types import SimpleNamespace
 from unittest.mock import Mock, patch
 import itch_audio as subject
 import prepare
+from itch_source import LEGACY_TRACK_IDS
 from test_itch_source import FixtureClient
 
 
@@ -49,7 +50,7 @@ def media_fixture(track_id='dos88.race-to-mars', body=b'native bytes', response_
 
 class ItchAudioTests(unittest.TestCase):
     def test_exact_ten_identities_remain_pending_with_six_synth_and_four_metal(self):
-        rows = [row(key) for key in subject.UPLOAD_PINS]
+        rows = [row(key) for key in sorted(LEGACY_TRACK_IDS)]
         manifest = {'format': 'revealline-core-intake.v1', 'tracks': rows}
         self.assertIs(prepare.validate_manifest(manifest), manifest)
         self.assertEqual([r['family'] for r in rows].count('synth90s'), 6)
@@ -69,7 +70,7 @@ class ItchAudioTests(unittest.TestCase):
                          '02a28c838d2f68b2a22ef29b6e432deebfe772e5f86bc1614b73839dceaa89f9')
         parsed = prepare.validate_manifest(json.loads(active))
         self.assertFalse(parsed['publicationApproval'])
-        self.assertEqual({r['id'] for r in parsed['tracks']}, set(subject.UPLOAD_PINS))
+        self.assertEqual({r['id'] for r in parsed['tracks']}, LEGACY_TRACK_IDS)
         previous = (root / 'archive/metal-nakarada-audition-20260924/source-manifest.json').read_bytes()
         self.assertEqual(subject.hashlib.sha256(previous).hexdigest(),
                          'c26eb3c1357beee40ea6ceac5001fb15651d5fb86d494722da1628e7bd65c1dd')

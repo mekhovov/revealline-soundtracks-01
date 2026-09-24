@@ -62,8 +62,8 @@ class FixtureClient:
 
 class ItchSourceTests(unittest.TestCase):
     def test_all_ten_exact_candidates_resolve_metadata_without_media_requests(self):
-        self.assertEqual(len(subject.UPLOAD_PINS), 10)
-        for track_id in subject.UPLOAD_PINS:
+        self.assertEqual(len(subject.LEGACY_TRACK_IDS), 10)
+        for track_id in subject.LEGACY_TRACK_IDS:
             with self.subTest(track_id=track_id):
                 client = FixtureClient(track_id)
                 result = subject.resolve(track_id, client)

@@ -7,10 +7,12 @@ the media-intake integration has its own review.
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from http.cookiejar import CookieJar
+import hashlib
 import json
 import re
 from urllib.parse import parse_qs, unquote, urlencode, urlparse
 from urllib.request import HTTPRedirectHandler, HTTPCookieProcessor, Request, build_opener
+from approved_directions_pins import SOURCE_PINS as NEW_SOURCES, UPLOAD_PINS as NEW_UPLOADS, DESCRIPTION_HASHES
 
 PAGE_LIMIT = 2 * 1024 ** 2
 CDN_HOST = 'itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com'
@@ -43,6 +45,9 @@ UPLOAD_PINS = {
     'davidkbd.suffocation': ('davidkbd', 6033135,
         'DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg', 'Suffocation'),
 }
+LEGACY_TRACK_IDS = frozenset(UPLOAD_PINS)
+SOURCE_PINS.update(NEW_SOURCES)
+UPLOAD_PINS.update(NEW_UPLOADS)
 
 
 class SourceChanged(ValueError):
@@ -152,6 +157,61 @@ class Page(HTMLParser):
             self.depth -= 1
 
 
+class SourceDescription(HTMLParser):
+    """Bind the reviewed creator description, without session state or comments.
+
+    Pinning all description text and links makes added standalone restrictions a
+    review event even when the site's CC BY category badge remains unchanged.
+    """
+
+    def __init__(self, body):
+        super().__init__(convert_charrefs=True)
+        self.depth = 0
+        self.active = None
+        self.count = 0
+        self.chunks = []
+        self.links = []
+        self.feed(body)
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'div':
+            self.depth += 1
+            if 'formatted_description' in attrs.get('class', '').split():
+                self.count += 1
+                require(self.active is None, 'Ambiguous nested creator description')
+                self.active = self.depth
+        if self.active is not None and tag == 'a':
+            self.links.append(attrs.get('href'))
+
+    def handle_endtag(self, tag):
+        if tag == 'div':
+            if self.active == self.depth:
+                self.active = None
+            self.depth -= 1
+
+    def handle_data(self, data):
+        if self.active is not None:
+            self.chunks.append(data)
+
+    def digest(self):
+        require(self.count == 1 and self.active is None and self.chunks,
+                'Missing, duplicate or incomplete creator description')
+        facts = {'text': ' '.join(' '.join(self.chunks).split()), 'links': self.links}
+        return hashlib.sha256(json.dumps(facts, ensure_ascii=False,
+                                        sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+
+
+def verify_source_license(creator, body):
+    require(SOURCE_PINS[creator][2] in Page(body).links,
+            'Published CC BY 4.0 asset licence changed')
+    if creator in DESCRIPTION_HASHES:
+        description = SourceDescription(body)
+        require(LICENSE_URL in description.links
+                and description.digest() == DESCRIPTION_HASHES[creator],
+                'Reviewed creator description or licence terms changed')
+
+
 def checked_json(body):
     try:
         value = json.loads(body)
@@ -211,10 +271,10 @@ class Resolution:
 def resolve(track_id, client=None):
     require(track_id in UPLOAD_PINS, 'Recording is not in the reviewed candidate slate')
     creator, upload_id, upload_name, title = UPLOAD_PINS[track_id]
-    source, game_id, license_link = SOURCE_PINS[creator]
+    source, game_id, _ = SOURCE_PINS[creator]
     client = client or MetadataClient(source)
     body = client.read(source)
-    require(license_link in Page(body).links, 'Published CC BY 4.0 asset licence changed')
+    verify_source_license(creator, body)
     body = client.read(source + '/purchase')
     purchase = Page(body)
     matches = re.findall(r"init_GamePurchase\('[^']+',\s*(\{[^;]+?\})\);", body)
