@@ -40,6 +40,23 @@ jobs:
         run: python3 -m unittest discover -s intake -p 'test_*.py'
       - name: Prepare one candidate without approving publication
         run: python3 intake/prepare.py --manifest intake/ukrainian-shchedryk-20260924.json --output ukrainian-candidate-output --game-root .runtime
+      - name: Report bounded receipt metadata without downloading audio
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          for name in ('receipt.json', 'review.json'):
+              path = Path('ukrainian-candidate-output') / name
+              if not path.is_file():
+                  print(name + ': not created; inspect the preceding failure')
+                  continue
+              if path.stat().st_size > 2 * 1024 ** 2:
+                  raise ValueError('Unexpectedly large intake metadata')
+              body = path.read_bytes()
+              print(name + ' sha256=' + hashlib.sha256(body).hexdigest())
+              print(body.decode('utf8'))
+          PY
       - name: Preserve original audio and all partial evidence
         if: always()
         uses: actions/upload-artifact@v4
