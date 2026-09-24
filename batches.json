@@ -72,6 +72,22 @@
         "bytes": 2997,
         "sha256": "6a0d6cf52b1bcbc45beb5fbada05c5eac6bf3dba7a061324e24276dcdbef1795"
       }
+    },
+    {
+      "id": "synth-second-directions-audition-20260925",
+      "manifest": {
+        "path": "batches/synth-second-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2994,
+        "sha256": "507065bebb203bb2ee5e8778842e030f12bec35751bd77099594dc52e81735ae"
+      }
+    },
+    {
+      "id": "metal-second-directions-audition-20260925",
+      "manifest": {
+        "path": "batches/metal-second-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2994,
+        "sha256": "94253251b96ca20a2ebd97b5379e22cdc6689dee4a16d1e216035885a6b26d05"
+      }
     }
   ]
 }

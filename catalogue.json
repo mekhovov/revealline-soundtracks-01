@@ -94,13 +94,31 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 6
+    },
+    {
+      "id": "synth-second-directions-audition-20260925",
+      "path": "batches/synth-second-directions-audition-20260925/preview-catalogue.json",
+      "sha256": "cccc2578f2f33881ac08100a2784c19cdbe55dad7019bc2b366956261d0d33ad",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 6
+    },
+    {
+      "id": "metal-second-directions-audition-20260925",
+      "path": "batches/metal-second-directions-audition-20260925/preview-catalogue.json",
+      "sha256": "cde132e38fca45451cd239cdea8868afa00e6cc7357e11a2eacc2bf0bef8786b",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 6
     }
   ],
   "counts": {
-    "declaredTracks": 116,
-    "uniqueRecordings": 116,
+    "declaredTracks": 128,
+    "uniqueRecordings": 128,
     "duplicateAliases": 0,
-    "audioBytes": 648516683
+    "audioBytes": 736228448
   },
   "tracks": [
     {
@@ -3505,6 +3523,378 @@
         "path": "batches/metal-approved-directions-audition-20260925/objects/339d379793d95c36ef832234dc2e7e3e8ba11723c1d24405ed2bef963041638f.mp3",
         "bytes": 7259995,
         "sha256": "339d379793d95c36ef832234dc2e7e3e8ba11723c1d24405ed2bef963041638f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.cyber-lights",
+      "title": "Cyber Lights",
+      "artist": "David KBD",
+      "durationSeconds": 242.086961,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Cyber Lights by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Cyber Lights.mp3",
+      "archiveId": "synth-second-directions-audition-20260925",
+      "collection": "synth-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-second-directions-audition-20260925/objects/0371b1cdafc0f08b87367117f264b4ebf63c32375741a2575fe0b8a8a4b3855f.mp3",
+        "bytes": 7749007,
+        "sha256": "0371b1cdafc0f08b87367117f264b4ebf63c32375741a2575fe0b8a8a4b3855f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.neon-arcadia-awakening",
+      "title": "Neon Arcadia Awakening",
+      "artist": "David KBD",
+      "durationSeconds": 214.956531,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Neon Arcadia Awakening by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Neon Arcadia Awakening.mp3",
+      "archiveId": "synth-second-directions-audition-20260925",
+      "collection": "synth-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-second-directions-audition-20260925/objects/2515d2cb8b890b1172cf400d4548ddb5f0160b562d125f402f440b69c447d3af.mp3",
+        "bytes": 6880488,
+        "sha256": "2515d2cb8b890b1172cf400d4548ddb5f0160b562d125f402f440b69c447d3af"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.time-warp",
+      "title": "Time Warp",
+      "artist": "David KBD",
+      "durationSeconds": 226.909093,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Time Warp by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Time Warp.mp3",
+      "archiveId": "synth-second-directions-audition-20260925",
+      "collection": "synth-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-second-directions-audition-20260925/objects/0bed55ed41ec4359988c07e5c9afa65fba58a8b3eb73b897de7e0106fedbb1db.mp3",
+        "bytes": 7263338,
+        "sha256": "0bed55ed41ec4359988c07e5c9afa65fba58a8b3eb73b897de7e0106fedbb1db"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.quantum-ripples-of-sound",
+      "title": "Quantum Ripples of Sound",
+      "artist": "David KBD",
+      "durationSeconds": 283.428571,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Quantum Ripples of Sound by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Quantum Ripples of Sound.mp3",
+      "archiveId": "synth-second-directions-audition-20260925",
+      "collection": "synth-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-second-directions-audition-20260925/objects/105fac4ac951454c19bee62c65b478405b59ddf1688fc38b799e131fb40ede0b.mp3",
+        "bytes": 9071430,
+        "sha256": "105fac4ac951454c19bee62c65b478405b59ddf1688fc38b799e131fb40ede0b"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.synthetic-power-surge",
+      "title": "Synthetic Power Surge",
+      "artist": "David KBD",
+      "durationSeconds": 233.739138,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Synthetic Power Surge by David KBD (https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Synthetic Power Surge.mp3",
+      "archiveId": "synth-second-directions-audition-20260925",
+      "collection": "synth-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-second-directions-audition-20260925/objects/54e8a8d62e161380824dda5d398ed1d975ce3ce764e575558a6c5f04eea60ddc.mp3",
+        "bytes": 7481513,
+        "sha256": "54e8a8d62e161380824dda5d398ed1d975ce3ce764e575558a6c5f04eea60ddc"
+      },
+      "aliases": []
+    },
+    {
+      "id": "bogart-vgm.neon-action-full",
+      "title": "Neon Action Full",
+      "artist": "Bogart VGM",
+      "durationSeconds": 209.664,
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://opengameart.org/content/neon-action",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Neon Action Full by Bogart VGM (https://opengameart.org/content/neon-action). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Neon Action Full.mp3",
+      "archiveId": "synth-second-directions-audition-20260925",
+      "collection": "synth-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-second-directions-audition-20260925/objects/c774b04088d0509254ea21a5d22c913f3d5b3c27210b552873f46ced88b3e2a6.mp3",
+        "bytes": 6711632,
+        "sha256": "c774b04088d0509254ea21a5d22c913f3d5b3c27210b552873f46ced88b3e2a6"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.solar-storm",
+      "title": "Solar Storm",
+      "artist": "David KBD",
+      "durationSeconds": 226,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Solar Storm by David KBD (https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Solar Storm.mp3",
+      "archiveId": "metal-second-directions-audition-20260925",
+      "collection": "metal-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-second-directions-audition-20260925/objects/f970376312c518988ce53f963432c2bd86b039655a80ca0118a33bf2a3515fec.mp3",
+        "bytes": 7234081,
+        "sha256": "f970376312c518988ce53f963432c2bd86b039655a80ca0118a33bf2a3515fec"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.galactic-battle",
+      "title": "Galactic Battle",
+      "artist": "David KBD",
+      "durationSeconds": 226.285714,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Galactic Battle by David KBD (https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Galactic Battle.mp3",
+      "archiveId": "metal-second-directions-audition-20260925",
+      "collection": "metal-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-second-directions-audition-20260925/objects/263567383813e1cfa75952436e1eb9cbfa2556a73d60499da0cccb0a5f0c3343.mp3",
+        "bytes": 7243276,
+        "sha256": "263567383813e1cfa75952436e1eb9cbfa2556a73d60499da0cccb0a5f0c3343"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.orbital-assault",
+      "title": "Orbital Assault",
+      "artist": "David KBD",
+      "durationSeconds": 186,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Orbital Assault by David KBD (https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Orbital Assault.mp3",
+      "archiveId": "metal-second-directions-audition-20260925",
+      "collection": "metal-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-second-directions-audition-20260925/objects/89c01c9f646c48bd6a1656bfa45a4b5af28a766b1d5f155f104a7902f628b5d9.mp3",
+        "bytes": 5954290,
+        "sha256": "89c01c9f646c48bd6a1656bfa45a4b5af28a766b1d5f155f104a7902f628b5d9"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.they-want-death",
+      "title": "They want death",
+      "artist": "David KBD",
+      "durationSeconds": 238.736848,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: They want death by David KBD (https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "They want death.mp3",
+      "archiveId": "metal-second-directions-audition-20260925",
+      "collection": "metal-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-second-directions-audition-20260925/objects/e0e1af7aadc0d4f0c13cc61c2157cf1c8d73b11ef6e97e55537bf6394bc46c0c.mp3",
+        "bytes": 7642009,
+        "sha256": "e0e1af7aadc0d4f0c13cc61c2157cf1c8d73b11ef6e97e55537bf6394bc46c0c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.cosmic-clash",
+      "title": "Cosmic Clash",
+      "artist": "David KBD",
+      "durationSeconds": 222,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Cosmic Clash by David KBD (https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Cosmic Clash.mp3",
+      "archiveId": "metal-second-directions-audition-20260925",
+      "collection": "metal-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-second-directions-audition-20260925/objects/5461d2a318b8da136b7723f0d2e1abcae7f35f36848e8668d40b141c17941291.mp3",
+        "bytes": 7106186,
+        "sha256": "5461d2a318b8da136b7723f0d2e1abcae7f35f36848e8668d40b141c17941291"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.sin-their-pity-their-agony",
+      "title": "Sin, their pity, their agony",
+      "artist": "David KBD",
+      "durationSeconds": 230.4,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Sin, their pity, their agony by David KBD (https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "fileName": "Sin, their pity, their agony.mp3",
+      "archiveId": "metal-second-directions-audition-20260925",
+      "collection": "metal-second-directions-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-second-directions-audition-20260925/objects/f7377e3b3f80ea14cf5e56a5d5e53248d1821be1787908d7d9e4a98066203d95.mp3",
+        "bytes": 7374515,
+        "sha256": "f7377e3b3f80ea14cf5e56a5d5e53248d1821be1787908d7d9e4a98066203d95"
       },
       "aliases": []
     }

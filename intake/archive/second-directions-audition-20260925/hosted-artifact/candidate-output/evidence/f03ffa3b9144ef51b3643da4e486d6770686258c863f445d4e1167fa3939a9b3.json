@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.sin-their-pity-their-agony",
+  "source": "https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack",
+  "gameId": 2246806,
+  "uploadId": 12451194,
+  "uploadName": "DavidKBD - Purgatory Pack vol2 - 05 - Sin, their pity, their agony.ogg",
+  "title": "Sin, their pity, their agony",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2246806/12451194",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Purgatory Pack vol2 - 05 - Sin, their pity, their agony.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 4612724,
+    "sha256": "f52cdefcc0ff649647efd82a713be3c236b0fd7f72ce60c425647cff84783a93"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "3d6c2ec1833189ae62cb5bd7ad6742f7fa9a1df593d1e22a45c142deb2d778b9",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "511fd39f74a9f243b56fc1c6e0d62a2178e55febbfec2964b4c0986d97572b70",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

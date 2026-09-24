@@ -1,0 +1,20 @@
+{
+  "format": "revealline-second-directions-intake-binding.v1",
+  "sourceManifestSha256": "54270c19d600c402004535283aa3044209fbc4e70e1d9926b04ec06a74067481",
+  "runnerRevision": "b3b435fa6ac788494d80b9af81d862fbb1ddd0f1",
+  "eventHeadRevision": "39b09d5269f0fa9a32786fdb705eb8e69a5cf33f",
+  "runnerRun": "36072262687",
+  "workflowRef": "mekhovov/revealline-soundtracks-01/.github/workflows/second-directions-intake.yml@refs/pull/17/merge",
+  "sourceFiles": {
+    "intake/second_directions_pins.py": "739c02e904c06e79225f8fe32745d3ddcfa59739dc06db89dc958094d1457522",
+    "intake/approved_directions_pins.py": "66d16626bd881975c17341568e35f8259a6f0b44ca07c43a5ffabc0c2d6b60a8",
+    "intake/itch_source.py": "37bf870ff17789f452f4e15b0fa1df3601fca8c60e1861297435b4dccdda86a4",
+    "intake/itch_audio.py": "c2b49a347d872434bec5c50ecdcc2e279051a52790de4f3f1bc2b5d05b10b2ce",
+    "intake/prepare.py": "a55df729528bd3d061771daf9311119ec99b56e59ff1e9c3c8ce936cfcd5dac5",
+    "intake/prepare_second_directions.py": "6e08de0372e179a3a1b47d1df52f984b9358f0cdc446cbdbf83b1b970f435779",
+    ".github/workflows/second-directions-intake.yml": "8584250168bb8ff9c6fa21203f855c1677bcd9e8337b82674ba56195eaad8ac0"
+  },
+  "publicationApproval": false,
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false
+}

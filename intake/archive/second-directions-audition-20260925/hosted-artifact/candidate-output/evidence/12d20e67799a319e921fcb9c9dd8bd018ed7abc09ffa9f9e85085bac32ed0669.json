@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.they-want-death",
+  "source": "https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack",
+  "gameId": 2246806,
+  "uploadId": 12451195,
+  "uploadName": "DavidKBD - Purgatory Pack vol2 - 02 - They want death.ogg",
+  "title": "They want death",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2246806/12451195",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Purgatory Pack vol2 - 02 - They want death.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 4776700,
+    "sha256": "849776fc7e070c485e48a748805bb11a801f76acdd8af6f33473af220b4742af"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "fbfd18bd10c965c7bc41cae4ac25c452c18bc84140a6a7e9426981033d477747",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "511fd39f74a9f243b56fc1c6e0d62a2178e55febbfec2964b4c0986d97572b70",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

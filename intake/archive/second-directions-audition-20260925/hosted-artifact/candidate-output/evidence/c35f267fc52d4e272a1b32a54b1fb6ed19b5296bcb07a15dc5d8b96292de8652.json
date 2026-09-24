@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.galactic-battle",
+  "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+  "gameId": 2445174,
+  "uploadId": 13507638,
+  "uploadName": "DavidKBD - Interstellar vol2 04 - Galactic Battle.ogg",
+  "title": "Galactic Battle",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2445174/13507638",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Interstellar vol2 04 - Galactic Battle.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 4047076,
+    "sha256": "819c59c894142fb69ffea51968e289deceaac165e44ac296242e480e050b150b"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "62300732491c7f9361e3d69ce6d22fc354e2179c06f737a0fde86c774a3ed86b",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "480e1b406343130318da6b0b2e961d84494b685c1b9126206349a2a824d976fb",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

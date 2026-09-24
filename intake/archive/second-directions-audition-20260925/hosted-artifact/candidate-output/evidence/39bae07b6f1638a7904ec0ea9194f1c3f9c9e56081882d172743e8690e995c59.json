@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.cosmic-clash",
+  "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+  "gameId": 2445174,
+  "uploadId": 13507640,
+  "uploadName": "DavidKBD - Interstellar vol2 05 - Cosmic Clash.ogg",
+  "title": "Cosmic Clash",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2445174/13507640",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Interstellar vol2 05 - Cosmic Clash.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 3698059,
+    "sha256": "a5fa4f0dda493bc5148400394512d794ec4f7f594b6d3489f16520357824fc8d"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "7996bf56b5c1fb8848787b8f4e4bfa1f4627a909d9ff9a4747142fdbabdd5a4d",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "480e1b406343130318da6b0b2e961d84494b685c1b9126206349a2a824d976fb",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

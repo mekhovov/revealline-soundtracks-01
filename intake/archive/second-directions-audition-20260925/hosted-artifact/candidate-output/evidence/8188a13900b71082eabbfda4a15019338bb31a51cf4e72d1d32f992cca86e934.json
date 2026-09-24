@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.cyber-lights",
+  "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+  "gameId": 2187961,
+  "uploadId": 8382058,
+  "uploadName": "DavidKBD - Electric Pulse - 03 - Cyber Lights-full.ogg",
+  "title": "Cyber Lights",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2187961/8382058",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Electric Pulse - 03 - Cyber Lights-full.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 4157462,
+    "sha256": "1dfdbbbf75ed12b071a17bfdc7d1998c4f4b5973258794c4c2bda55e62ac120c"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "8725c60c55559e24ab26807261cd60700e54c75bb18587721ad7c81c2dcb73be",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "e5f046ff6701a9642cc1d53467b89e15acf1c4ba62e5efad16bba6f3c87e2d4f",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

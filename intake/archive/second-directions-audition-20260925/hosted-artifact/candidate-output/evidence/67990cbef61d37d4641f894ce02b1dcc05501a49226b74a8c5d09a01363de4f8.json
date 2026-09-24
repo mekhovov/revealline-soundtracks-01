@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.solar-storm",
+  "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+  "gameId": 2445174,
+  "uploadId": 13507642,
+  "uploadName": "DavidKBD - Interstellar vol2 02 - Solar Storm.ogg",
+  "title": "Solar Storm",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/2445174/13507642",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Interstellar vol2 02 - Solar Storm.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 3952839,
+    "sha256": "f3dc4efc74d2b7b4e0851d2b69ec2410bf5e597b76ffaa5628e8d20eb24059a5"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "3dafe35bf4db34daf029543acd6548ec864b91a707a8e389a527d826ec660e12",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "480e1b406343130318da6b0b2e961d84494b685c1b9126206349a2a824d976fb",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

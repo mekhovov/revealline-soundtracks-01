@@ -1,0 +1,88 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "metal-second-directions-audition-20260925",
+  "expected": {
+    "trackCount": 6,
+    "audioBytes": 42554357
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 3660,
+      "sha256": "19e24841834df2af1a88e6b72c6e4b19eb8aa420ce64ef3029d2a55e249a7a0d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 449,
+      "sha256": "fcf7bdef731183b1f061ba8e927c6f5c701899f3021c28ffdb38ec56349901fb"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11496,
+      "sha256": "033aacdcd8234becab38e4ed24648c816758b6a2140e5b25e5f27ee73f52fc15"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 1405,
+      "sha256": "b9c69149b5fe80a13a4c72744aa7bf741d31e89c43317bead5962f325e7dc3b2"
+    },
+    {
+      "path": "objects/263567383813e1cfa75952436e1eb9cbfa2556a73d60499da0cccb0a5f0c3343.mp3",
+      "bytes": 7243276,
+      "sha256": "263567383813e1cfa75952436e1eb9cbfa2556a73d60499da0cccb0a5f0c3343"
+    },
+    {
+      "path": "objects/5461d2a318b8da136b7723f0d2e1abcae7f35f36848e8668d40b141c17941291.mp3",
+      "bytes": 7106186,
+      "sha256": "5461d2a318b8da136b7723f0d2e1abcae7f35f36848e8668d40b141c17941291"
+    },
+    {
+      "path": "objects/89c01c9f646c48bd6a1656bfa45a4b5af28a766b1d5f155f104a7902f628b5d9.mp3",
+      "bytes": 5954290,
+      "sha256": "89c01c9f646c48bd6a1656bfa45a4b5af28a766b1d5f155f104a7902f628b5d9"
+    },
+    {
+      "path": "objects/e0e1af7aadc0d4f0c13cc61c2157cf1c8d73b11ef6e97e55537bf6394bc46c0c.mp3",
+      "bytes": 7642009,
+      "sha256": "e0e1af7aadc0d4f0c13cc61c2157cf1c8d73b11ef6e97e55537bf6394bc46c0c"
+    },
+    {
+      "path": "objects/f7377e3b3f80ea14cf5e56a5d5e53248d1821be1787908d7d9e4a98066203d95.mp3",
+      "bytes": 7374515,
+      "sha256": "f7377e3b3f80ea14cf5e56a5d5e53248d1821be1787908d7d9e4a98066203d95"
+    },
+    {
+      "path": "objects/f970376312c518988ce53f963432c2bd86b039655a80ca0118a33bf2a3515fec.mp3",
+      "bytes": 7234081,
+      "sha256": "f970376312c518988ce53f963432c2bd86b039655a80ca0118a33bf2a3515fec"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 23661,
+      "sha256": "cde132e38fca45451cd239cdea8868afa00e6cc7357e11a2eacc2bf0bef8786b"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "sourceRun": 36072262687,
+    "artifactId": 10838153770,
+    "artifactSha256": "8f2dccf2de56f3ade27038def3e5395777cd3cee37c6580ce68439ac2eb7cc25",
+    "sourceManifestSha256": "54270c19d600c402004535283aa3044209fbc4e70e1d9926b04ec06a74067481",
+    "gameCatalogueAdmission": false,
+    "listeningApproval": false
+  }
+}
