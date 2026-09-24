@@ -4,8 +4,8 @@ This directory prepares a separate retro/metal candidate batch without changing
 the existing 70 published recordings or their immutable inventory. It is excluded
 from Pages staging. The game does not discover or admit these candidates.
 
-`core-20260924.json` records 14 distinct candidate compositions absent from the
-existing catalogue: six metal recordings and eight retro recordings. Source
+`core-20260924.json` records 13 distinct candidate compositions absent from the
+existing catalogue: six metal recordings and seven retro recordings. Source
 pages advertise CC0 or CC BY 4.0; the latter retains Bogart VGM's requested artist
 link. The exact downloaded page and recording must agree before preparation.
 
