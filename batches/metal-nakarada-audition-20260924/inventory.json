@@ -1,0 +1,16 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-nakarada-audition-20260924",
+  "files": [
+    {
+      "path": "objects/f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf.mp3",
+      "sha256": "f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf",
+      "bytes": 7685477
+    },
+    {
+      "path": "objects/30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95.mp3",
+      "sha256": "30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95",
+      "bytes": 9618120
+    }
+  ]
+}

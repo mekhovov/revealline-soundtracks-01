@@ -1,0 +1,107 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": "not-reviewed",
+  "archive": {
+    "id": "metal-nakarada-audition-20260924",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/metal-nakarada-audition-20260924/",
+    "inventorySha256": "96d30136562c2637660977a94ebf630cf9513607ed4e535af95bcca7e22eda3f"
+  },
+  "source": {
+    "run": 35952608258,
+    "artifactSha256": "93b67abe458886868f1ccfdbe16f279e4ecbb8778722a535d6c532b84c6fe9f7"
+  },
+  "tracks": [
+    {
+      "id": "alexander-nakarada.the-dobermann",
+      "title": "The Dobermann",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/the-dobermann/",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: The Dobermann by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 240.096,
+      "original": {
+        "path": "originals/a7553e8aff4bf229b3a3eefea186c021279233902e4a565a6e6fbcc6a8072ad7.mp3",
+        "sha256": "a7553e8aff4bf229b3a3eefea186c021279233902e4a565a6e6fbcc6a8072ad7",
+        "bytes": 9603840,
+        "url": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/The_Dobermann.mp3"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-3.13",
+        "input_lra": "10.50",
+        "input_thresh": "-26.27",
+        "output_i": "-16.51",
+        "output_tp": "-3.27",
+        "output_lra": "7.10",
+        "output_thresh": "-26.63",
+        "normalization_type": "dynamic",
+        "target_offset": "0.51"
+      },
+      "path": "objects/f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf.mp3",
+      "sha256": "f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf",
+      "bytes": 7685477,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "listening preview"
+      ],
+      "originalFilename": "The_Dobermann.mp3",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "alexander-nakarada.folklore",
+      "title": "Folklore",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/folklore/",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Folklore by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 300.538776,
+      "original": {
+        "path": "originals/be65d0bdb3c2834f666efa04ec0a248ed9c19fa956ee1fa907edea72fe14ea39.mp3",
+        "sha256": "be65d0bdb3c2834f666efa04ec0a248ed9c19fa956ee1fa907edea72fe14ea39",
+        "bytes": 12127426,
+        "url": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Folklore.mp3"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.08",
+        "input_tp": "-1.22",
+        "input_lra": "11.60",
+        "input_thresh": "-27.07",
+        "output_i": "-15.58",
+        "output_tp": "-1.50",
+        "output_lra": "10.40",
+        "output_thresh": "-25.87",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.42"
+      },
+      "path": "objects/30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95.mp3",
+      "sha256": "30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95",
+      "bytes": 9618120,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "listening preview"
+      ],
+      "originalFilename": "Folklore.mp3",
+      "reviewStatus": "pending"
+    }
+  ]
+}

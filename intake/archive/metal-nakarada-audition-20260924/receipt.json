@@ -1,0 +1,205 @@
+{
+  "format": "revealline-core-intake-receipt.v1",
+  "sourceManifestSha256": "c26eb3c1357beee40ea6ceac5001fb15651d5fb86d494722da1628e7bd65c1dd",
+  "checkedAt": "2026-09-24T03:44:03Z",
+  "runnerRevision": "e2258ff3d25d0f0cc39f669133cd1b46efd72401",
+  "runnerRun": "35952608258",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "gameInspector": {
+    "revision": "71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "files": [
+      {
+        "path": "game/mp3.mjs",
+        "sha256": "d4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a"
+      },
+      {
+        "path": "game/data-json.mjs",
+        "sha256": "bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823"
+      },
+      {
+        "path": "game/soundtrack.mjs",
+        "sha256": "ec03303d295b4f7997f4b8c3c3573cf2bdddcd81f92700d98710d38933f89843"
+      },
+      {
+        "path": "game/soundtrack-rights.mjs",
+        "sha256": "8c1c10927cf5c1f7360374ca1a4d64a7dec3c312b197ace89201c37d75793f04"
+      },
+      {
+        "path": "game/ui/music.mjs",
+        "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+      },
+      {
+        "path": "game/content/soundtrack-catalogue.mjs",
+        "sha256": "0618993ff8ff9508d1ab4295920c07d0b5a8f6f34df683538029754b438dc44f"
+      }
+    ]
+  },
+  "listeningApproval": false,
+  "tracks": [
+    {
+      "id": "alexander-nakarada.the-dobermann",
+      "title": "The Dobermann",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/the-dobermann/",
+      "download": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/The_Dobermann.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "licensingInfo": "https://creatorchords.com/licensing-info/",
+      "creatorFAQ": "https://creatorchords.com/faq/",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: The Dobermann by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "sourceSnapshot": {
+        "path": "evidence/aa83913c94ada6394d6c3472a0cc590c5c756ffdca571183f98b6f6f6dd2633e.html",
+        "sha256": "aa83913c94ada6394d6c3472a0cc590c5c756ffdca571183f98b6f6f6dd2633e",
+        "url": "https://creatorchords.com/music/the-dobermann/"
+      },
+      "licensingInfoSnapshot": {
+        "path": "evidence/7ab4749f1a201be85c6b29ec721e6caa882932f72b526e46c2d2f246eec5d529.html",
+        "sha256": "7ab4749f1a201be85c6b29ec721e6caa882932f72b526e46c2d2f246eec5d529",
+        "url": "https://creatorchords.com/licensing-info/"
+      },
+      "creatorFAQSnapshot": {
+        "path": "evidence/d3ca2aa84bd7922176bb644e49e0dbe5d25f15d70c720afeb865e2936680d600.html",
+        "sha256": "d3ca2aa84bd7922176bb644e49e0dbe5d25f15d70c720afeb865e2936680d600",
+        "url": "https://creatorchords.com/faq/"
+      },
+      "original": {
+        "path": "originals/a7553e8aff4bf229b3a3eefea186c021279233902e4a565a6e6fbcc6a8072ad7.mp3",
+        "sha256": "a7553e8aff4bf229b3a3eefea186c021279233902e4a565a6e6fbcc6a8072ad7",
+        "bytes": 9603840,
+        "url": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/The_Dobermann.mp3"
+      },
+      "delivery": {
+        "path": "objects/f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf.mp3",
+        "sha256": "f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf",
+        "bytes": 7685477
+      },
+      "asset": {
+        "sha256": "f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf",
+        "bytes": 7685477,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 9194,
+        "durationSeconds": 240.16979591836736
+      },
+      "durationSeconds": 240.096,
+      "sourceLoudness": {
+        "input_i": "-15.48",
+        "input_tp": "-4.41",
+        "input_lra": "14.20",
+        "input_thresh": "-26.29",
+        "output_i": "-16.24",
+        "output_tp": "-3.45",
+        "output_lra": "10.50",
+        "output_thresh": "-26.49",
+        "normalization_type": "dynamic",
+        "target_offset": "0.24"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-3.13",
+        "input_lra": "10.50",
+        "input_thresh": "-26.27",
+        "output_i": "-16.51",
+        "output_tp": "-3.27",
+        "output_lra": "7.10",
+        "output_thresh": "-26.63",
+        "normalization_type": "dynamic",
+        "target_offset": "0.51"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "alexander-nakarada.folklore",
+      "title": "Folklore",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/folklore/",
+      "download": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Folklore.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "licensingInfo": "https://creatorchords.com/licensing-info/",
+      "creatorFAQ": "https://creatorchords.com/faq/",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Folklore by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending",
+      "sourceSnapshot": {
+        "path": "evidence/98ee737fa29d8776843035178cae789b5139202d404f183f91e19f540344741f.html",
+        "sha256": "98ee737fa29d8776843035178cae789b5139202d404f183f91e19f540344741f",
+        "url": "https://creatorchords.com/music/folklore/"
+      },
+      "licensingInfoSnapshot": {
+        "path": "evidence/7ab4749f1a201be85c6b29ec721e6caa882932f72b526e46c2d2f246eec5d529.html",
+        "sha256": "7ab4749f1a201be85c6b29ec721e6caa882932f72b526e46c2d2f246eec5d529",
+        "url": "https://creatorchords.com/licensing-info/"
+      },
+      "creatorFAQSnapshot": {
+        "path": "evidence/d3ca2aa84bd7922176bb644e49e0dbe5d25f15d70c720afeb865e2936680d600.html",
+        "sha256": "d3ca2aa84bd7922176bb644e49e0dbe5d25f15d70c720afeb865e2936680d600",
+        "url": "https://creatorchords.com/faq/"
+      },
+      "original": {
+        "path": "originals/be65d0bdb3c2834f666efa04ec0a248ed9c19fa956ee1fa907edea72fe14ea39.mp3",
+        "sha256": "be65d0bdb3c2834f666efa04ec0a248ed9c19fa956ee1fa907edea72fe14ea39",
+        "bytes": 12127426,
+        "url": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Folklore.mp3"
+      },
+      "delivery": {
+        "path": "objects/30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95.mp3",
+        "sha256": "30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95",
+        "bytes": 9618120
+      },
+      "asset": {
+        "sha256": "30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95",
+        "bytes": 9618120,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 11506,
+        "durationSeconds": 300.56489795918367
+      },
+      "durationSeconds": 300.538776,
+      "sourceLoudness": {
+        "input_i": "-13.45",
+        "input_tp": "-1.40",
+        "input_lra": "19.90",
+        "input_thresh": "-24.68",
+        "output_i": "-14.25",
+        "output_tp": "-1.50",
+        "output_lra": "10.10",
+        "output_thresh": "-24.66",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.75"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.08",
+        "input_tp": "-1.22",
+        "input_lra": "11.60",
+        "input_thresh": "-27.07",
+        "output_i": "-15.58",
+        "output_tp": "-1.50",
+        "output_lra": "10.40",
+        "output_thresh": "-25.87",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.42"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    }
+  ],
+  "failures": []
+}

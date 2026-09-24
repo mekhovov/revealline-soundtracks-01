@@ -1,0 +1,66 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "metal-nakarada-audition-20260924",
+  "expected": {
+    "trackCount": 2,
+    "audioBytes": 17303597
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 1748,
+      "sha256": "03011358dce0d870590f244592202bf5ee8473c4282161553278d8fc4f60512b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 555,
+      "sha256": "bcfa429f8ff0b039b5a4073814ebfa9560a779294ffd2c356de123abb57ea7ca"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5582,
+      "sha256": "6862c2c86554e2b8f7e9a7e9b060ca9a48d968a8825be7e1e2165ff26be127a6"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 540,
+      "sha256": "96d30136562c2637660977a94ebf630cf9513607ed4e535af95bcca7e22eda3f"
+    },
+    {
+      "path": "objects/30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95.mp3",
+      "bytes": 9618120,
+      "sha256": "30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95"
+    },
+    {
+      "path": "objects/f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf.mp3",
+      "bytes": 7685477,
+      "sha256": "f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 4400,
+      "sha256": "fdee2d5c76fcfbcfde60127666172f23003a309714c54eb99453fa5f17ee177f"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "run": 35952608258,
+    "artifactId": 10789351700,
+    "artifactSha256": "93b67abe458886868f1ccfdbe16f279e4ecbb8778722a535d6c532b84c6fe9f7",
+    "listeningApproval": false
+  }
+}

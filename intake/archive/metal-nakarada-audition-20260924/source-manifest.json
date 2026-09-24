@@ -1,0 +1,43 @@
+{
+  "format": "revealline-core-intake.v1",
+  "batch": "metal-nakarada-audition-20260924",
+  "publicationApproval": false,
+  "tracks": [
+    {
+      "id": "alexander-nakarada.the-dobermann",
+      "title": "The Dobermann",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/the-dobermann/",
+      "download": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/The_Dobermann.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "licensingInfo": "https://creatorchords.com/licensing-info/",
+      "creatorFAQ": "https://creatorchords.com/faq/",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: The Dobermann by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending"
+    },
+    {
+      "id": "alexander-nakarada.folklore",
+      "title": "Folklore",
+      "artist": "Alexander Nakarada",
+      "artistURL": "https://creatorchords.com",
+      "source": "https://creatorchords.com/music/folklore/",
+      "download": "https://d19p7hqu4j8vx0.cloudfront.net/media/media/data/mp3s/Folklore.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "licensingInfo": "https://creatorchords.com/licensing-info/",
+      "creatorFAQ": "https://creatorchords.com/faq/",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "family": "metal",
+      "status": "rights-reviewed-listening-pending",
+      "credit": "Music: Folklore by Alexander Nakarada (https://creatorchords.com). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "instrumentalReview": "pending"
+    }
+  ]
+}
