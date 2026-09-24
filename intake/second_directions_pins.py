@@ -43,9 +43,8 @@ UPLOAD_PINS = {
         'DavidKBD - Interstellar vol2 09 - Orbital Assault.ogg', 'Orbital Assault'),
     'davidkbd.they-want-death': ('davidkbd-purgatory2', 12451195,
         'DavidKBD - Purgatory Pack vol2 - 02 - They want death.ogg', 'They want death'),
-    'davidkbd.insanity-is-your-flame': ('davidkbd-purgatory2', 12451193,
-        'DavidKBD - Purgatory Pack vol2 - 04 - Insanity is your flame.ogg',
-        'Insanity is your flame'),
+    'davidkbd.cosmic-clash': ('davidkbd-interstellar2', 13507640,
+        'DavidKBD - Interstellar vol2 05 - Cosmic Clash.ogg', 'Cosmic Clash'),
     'davidkbd.sin-their-pity-their-agony': ('davidkbd-purgatory2', 12451194,
         'DavidKBD - Purgatory Pack vol2 - 05 - Sin, their pity, their agony.ogg',
         'Sin, their pity, their agony'),
@@ -70,7 +69,7 @@ REFERENCE_DURATIONS = {
     'davidkbd.galactic-battle': 253,
     'davidkbd.orbital-assault': 203,
     'davidkbd.they-want-death': 251,
-    'davidkbd.insanity-is-your-flame': 192,
+    'davidkbd.cosmic-clash': 239,
     'davidkbd.sin-their-pity-their-agony': 235,
 }
 

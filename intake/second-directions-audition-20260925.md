@@ -27,7 +27,7 @@ Source-page cover artwork is outside this intake.
 | Galactic Battle | `DavidKBD - Interstellar vol2 04 - Galactic Battle.ogg` | Interstellar vol. 2, 13507638 | 4:13 |
 | Orbital Assault | `DavidKBD - Interstellar vol2 09 - Orbital Assault.ogg` | Interstellar vol. 2, 13507646 | 3:23 |
 | They want death | `DavidKBD - Purgatory Pack vol2 - 02 - They want death.ogg` | [Purgatory vol. 2](https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack), 12451195 | 4:11 |
-| Insanity is your flame | `DavidKBD - Purgatory Pack vol2 - 04 - Insanity is your flame.ogg` | Purgatory vol. 2, 12451193 | 3:12 |
+| Cosmic Clash | `DavidKBD - Interstellar vol2 05 - Cosmic Clash.ogg` | Interstellar vol. 2, 13507640 | 3:59 |
 | Sin, their pity, their agony | `DavidKBD - Purgatory Pack vol2 - 05 - Sin, their pity, their agony.ogg` | Purgatory vol. 2, 12451194 | 3:55 |
 
 David KBD's official album pages document the listed composition durations:
@@ -61,6 +61,16 @@ parser refusal because its quoted filename contains a comma; the parser now
 accepts commas only inside a well-formed quoted filename while continuing to
 reject duplicate and combined header values. Keep My Rhythm remains held until
 its exact native duration is separately proven.
+
+The repaired revision at
+`f02ca7f9f39094423f25964f13053d2ed36c5d45` prepared eleven recordings in
+[hosted run 36070307080](https://github.com/mekhovov/revealline-soundtracks-01/actions/runs/36070307080).
+Only the exact free **Insanity is your flame** file remained below the 180-second
+floor. Its partial artifact is `10837693691`, 133,614,879 bytes, SHA-256
+`a4b38a42d2263e16bbbd9969a7a5805f74c09411436cb870f6d3d9191626bccf`.
+That run and its eleven successes remain evidence; this revision changes only
+the failed identity, replacing it with the separately documented 3:59
+**Cosmic Clash** free upload.
 
 ## Fail-closed preparation and deduplication
 

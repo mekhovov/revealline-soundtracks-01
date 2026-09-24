@@ -69,7 +69,7 @@ class SecondDirectionsTests(unittest.TestCase):
             'davidkbd.galactic-battle': (2445174, 13507638),
             'davidkbd.orbital-assault': (2445174, 13507646),
             'davidkbd.they-want-death': (2246806, 12451195),
-            'davidkbd.insanity-is-your-flame': (2246806, 12451193),
+            'davidkbd.cosmic-clash': (2445174, 13507640),
             'davidkbd.sin-their-pity-their-agony': (2246806, 12451194),
         }
         self.assertEqual(set(observed), set(pins.UPLOAD_PINS))
@@ -158,7 +158,8 @@ class SecondDirectionsTests(unittest.TestCase):
                 'davidkbd.the-great-machine', 'davidkbd.disaster',
                 'davidkbd.keep-my-rhythm-if-you-can', 'davidkbd.dangerous-and-bored',
                 'davidkbd.speedy-and-hostile', 'davidkbd.purgatory',
-                'davidkbd.on-fire', 'davidkbd.hades')
+                'davidkbd.on-fire', 'davidkbd.hades',
+                'davidkbd.insanity-is-your-flame')
         for key in held:
             client = Mock()
             with self.assertRaises(ValueError):
