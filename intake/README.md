@@ -86,8 +86,11 @@ a matching PR then runs tests and acquires the five-track active core manifest
 into `candidate-output/`, preserving `core-soundtrack-candidates` as its
 30-day artifact. It does not merely validate source.
 
-This batch does not change the shared acquisition code or the Ukrainian manifest.
-The already-published Shchedryk bytes and approval evidence remain unchanged.
+This batch adds one narrow shared-acquisition rule: an explicit `boss-cue` may be
+30 seconds to 12 minutes, while every menu/gameplay candidate retains the normal
+1–12-minute envelope. The Ukrainian manifest and already-published Shchedryk
+bytes and approval evidence remain unchanged; its hosted workflow may rerun
+because it shares the reviewed preparation code.
 
 The earlier manual-only workflow proposal could not be installed with the
 available GitHub authorization. Its exact, uninstalled files and verification
