@@ -14,9 +14,13 @@ from urllib.parse import urlparse
 from urllib.request import Request, build_opener
 from itch_source import (MetadataClient, NoRedirects, SOURCE_PINS, UPLOAD_PINS,
                          LICENSE_URL, SourceChanged, checked_cdn, require, resolve)
+from approved_directions_pins import (SOURCE_PINS as NEW_SOURCES,
+                                      UPLOAD_PINS as NEW_UPLOADS, DESCRIPTION_HASHES,
+                                      details as audition_details)
 
 SOURCE_LIMIT = 64 * 1024 ** 2
 ARTISTS = {'dos88': 'DOS-88', 'escp': 'escp', 'davidkbd': 'David KBD'}
+ARTISTS.update({source: 'David KBD' for source in NEW_SOURCES})
 FORMATS = {
     '.mp3': ({'audio/mpeg', 'audio/mp3'}, {'mp3'}, {'mp3'}),
     '.ogg': ({'audio/ogg', 'application/ogg'}, {'ogg'}, {'vorbis', 'opus'}),
@@ -29,7 +33,7 @@ def identity(track_id):
     require(track_id in UPLOAD_PINS, 'Unregistered itch recording')
     creator, upload_id, upload_name, title = UPLOAD_PINS[track_id]
     source, game_id, _ = SOURCE_PINS[creator]
-    return {
+    result = {
         'id': track_id, 'title': title, 'artist': ARTISTS[creator],
         'artistURL': source.split('/')[0] + '//' + urlparse(source).netloc,
         'source': source, 'acquisition': 'itch-public-free-download',
@@ -39,6 +43,9 @@ def identity(track_id):
         'contentId': 'unknown', 'recordingModeEligible': False,
         'status': 'rights-reviewed-listening-pending', 'instrumentalReview': 'pending',
     }
+    if track_id in NEW_UPLOADS:
+        result.update(audition_details(track_id))
+    return result
 
 
 def validate_row(row):
@@ -74,6 +81,11 @@ class EvidenceClient:
                 'snapshotKind': 'Verified public licence facts; raw session-bearing HTML is not retained',
                 'listeningApproval': False, 'admitted': False,
             }
+            if creator in DESCRIPTION_HASHES:
+                self.observation.update({
+                    'reviewedDescriptionSha256': DESCRIPTION_HASHES[creator],
+                    'observedDirectLicenseLink': LICENSE_URL,
+                })
         return body
 
 
