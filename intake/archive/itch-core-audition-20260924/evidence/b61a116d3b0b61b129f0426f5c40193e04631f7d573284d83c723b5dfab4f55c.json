@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "dos88.crash-landing",
+  "source": "https://dos88.itch.io/dos-88-music-library",
+  "gameId": 66639,
+  "uploadId": 206068,
+  "uploadName": "Crash Landing.mp3",
+  "title": "Crash Landing",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/66639/206068",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "Crash Landing.mp3",
+    "suffix": ".mp3",
+    "contentType": "audio/mp3",
+    "bytes": 8670955,
+    "sha256": "ec43c763a896a229b14337ded3b4f7e910df4dc46be38e23e029540ff7ff565d"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://dos88.itch.io/dos-88-music-library",
+    "creator": "DOS-88",
+    "pageSha256": "02682742a30a647fa0f08672868a44937caeb767129471158c7caeb31a94fbba",
+    "observedLicenseLink": "https://itch.io/soundtracks/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

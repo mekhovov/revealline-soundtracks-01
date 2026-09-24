@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.suffocation",
+  "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+  "gameId": 976471,
+  "uploadId": 6033135,
+  "uploadName": "DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg",
+  "title": "Suffocation",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/976471/6033135",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 2836820,
+    "sha256": "2041effbf317cc38af02e6c44db7a112eb14301dc04d9599f3f49c9afca2bf00"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "7567095d2602708653606cdfdee997a1bba1e0914cdcf85861da57fc337c083b",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

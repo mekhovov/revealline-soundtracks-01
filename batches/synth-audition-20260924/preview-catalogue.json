@@ -1,0 +1,350 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": "not-reviewed",
+  "archive": {
+    "id": "synth-audition-20260924",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/synth-audition-20260924/",
+    "inventorySha256": "cc00c5685af3dd4668f255a7473245d507fa37948abff113de2094afb0c3d8e6"
+  },
+  "source": {
+    "run": 35953731494,
+    "artifactSha256": "dc25de7d967f87d38a058c8755db1b253ae0ad38588826fd4a12445580f0b45b",
+    "deliveryVolumeNumber": 2,
+    "sourceManifestURL": "https://github.com/mekhovov/revealline-soundtracks-01/blob/ada6a708222de9e399a36751e9aecef4238c746a/intake/core-20260924.json",
+    "retainedArchivePath": "intake/archive/itch-core-audition-20260924/"
+  },
+  "tracks": [
+    {
+      "id": "dos88.crash-landing",
+      "title": "Crash Landing",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Crash Landing by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 216.772125,
+      "original": {
+        "path": "originals/ec43c763a896a229b14337ded3b4f7e910df4dc46be38e23e029540ff7ff565d.mp3",
+        "sha256": "ec43c763a896a229b14337ded3b4f7e910df4dc46be38e23e029540ff7ff565d",
+        "bytes": 8670955,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206068,
+        "fileName": "Crash Landing.mp3",
+        "contentType": "audio/mp3"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-2.94",
+        "input_lra": "2.40",
+        "input_thresh": "-26.06",
+        "output_i": "-15.61",
+        "output_tp": "-1.50",
+        "output_lra": "2.00",
+        "output_thresh": "-25.66",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.39"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/b61a116d3b0b61b129f0426f5c40193e04631f7d573284d83c723b5dfab4f55c.json",
+        "sha256": "b61a116d3b0b61b129f0426f5c40193e04631f7d573284d83c723b5dfab4f55c",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c.mp3",
+      "sha256": "d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c",
+      "bytes": 6938166,
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "Crash Landing.mp3",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "dos88.race-to-mars",
+      "title": "Race to Mars",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Race to Mars by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 246.055375,
+      "original": {
+        "path": "originals/d2b29e881ac10030613cad6272eaace6bdcad23f39e07d66fc5690382bf15c08.mp3",
+        "sha256": "d2b29e881ac10030613cad6272eaace6bdcad23f39e07d66fc5690382bf15c08",
+        "bytes": 9846413,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206071,
+        "fileName": "Race to Mars.mp3",
+        "contentType": "audio/mp3"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-3.95",
+        "input_lra": "2.10",
+        "input_thresh": "-26.24",
+        "output_i": "-16.03",
+        "output_tp": "-3.38",
+        "output_lra": "2.20",
+        "output_thresh": "-26.19",
+        "normalization_type": "dynamic",
+        "target_offset": "0.03"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/9aea69a34054cf39bba3a25b60863a63e51670581afc5c05f223cdc8f754a232.json",
+        "sha256": "9aea69a34054cf39bba3a25b60863a63e51670581afc5c05f223cdc8f754a232",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644.mp3",
+      "sha256": "978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644",
+      "bytes": 7875231,
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "Race to Mars.mp3",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "dos88.automata-v2",
+      "title": "Automata v2",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Automata v2 by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 245.9951,
+      "original": {
+        "path": "originals/3ec07cb7a862d0f58a56eaeb10bb50172bb645850424489ca4687b2a02fef07d.mp3",
+        "sha256": "3ec07cb7a862d0f58a56eaeb10bb50172bb645850424489ca4687b2a02fef07d",
+        "bytes": 9843987,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206072,
+        "fileName": "DOS-88 - Automatav2.mp3",
+        "contentType": "audio/mp3"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.55",
+        "input_lra": "0.60",
+        "input_thresh": "-26.00",
+        "output_i": "-15.57",
+        "output_tp": "-3.30",
+        "output_lra": "1.30",
+        "output_thresh": "-25.57",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.43"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/42851d853f8fc3bc20e3081254af0ae7ef1f7673fd255e41db24e5cf40016ccc.json",
+        "sha256": "42851d853f8fc3bc20e3081254af0ae7ef1f7673fd255e41db24e5cf40016ccc",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684.mp3",
+      "sha256": "40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684",
+      "bytes": 7873559,
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "DOS-88 - Automatav2.mp3",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "dos88.city-stomper",
+      "title": "City Stomper",
+      "artist": "DOS-88",
+      "artistURL": "https://dos88.itch.io",
+      "source": "https://dos88.itch.io/dos-88-music-library",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: City Stomper by DOS-88 (https://dos88.itch.io/dos-88-music-library). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 193.541225,
+      "original": {
+        "path": "originals/64bedb96b8ff1c2101c86dfacb1c5f37c1825df9f68a7d575613b0da9b722cbf.mp3",
+        "sha256": "64bedb96b8ff1c2101c86dfacb1c5f37c1825df9f68a7d575613b0da9b722cbf",
+        "bytes": 7745832,
+        "source": "https://dos88.itch.io/dos-88-music-library",
+        "uploadId": 206074,
+        "fileName": "DOS-88 - City Stomper.mp3",
+        "contentType": "audio/mp3"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-7.46",
+        "input_lra": "2.40",
+        "input_thresh": "-26.09",
+        "output_i": "-16.18",
+        "output_tp": "-7.69",
+        "output_lra": "2.30",
+        "output_thresh": "-26.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.18"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/76dc6f842bf558de323e54d073b64153150082e1e30ab71c2c981cd20043e251.json",
+        "sha256": "76dc6f842bf558de323e54d073b64153150082e1e30ab71c2c981cd20043e251",
+        "url": "https://dos88.itch.io/dos-88-music-library",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6.mp3",
+      "sha256": "d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6",
+      "bytes": 6195035,
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "DOS-88 - City Stomper.mp3",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "escp.twilight-city",
+      "title": "Twilight City",
+      "artist": "escp",
+      "artistURL": "https://escpmusic.itch.io",
+      "source": "https://escpmusic.itch.io/synthasia",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Twilight City by escp (https://escpmusic.itch.io/synthasia). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 340.897959,
+      "original": {
+        "path": "originals/517651d5aec14ef8d16d739e5bc21c5b70e4ede85594d0dd47d718e5049ecf7f.mp3",
+        "sha256": "517651d5aec14ef8d16d739e5bc21c5b70e4ede85594d0dd47d718e5049ecf7f",
+        "bytes": 13731199,
+        "source": "https://escpmusic.itch.io/synthasia",
+        "uploadId": 17878087,
+        "fileName": "e s c p - - Synthasia - 06 Twilight City.mp3",
+        "contentType": "audio/mpeg"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-3.39",
+        "input_lra": "8.50",
+        "input_thresh": "-26.46",
+        "output_i": "-15.29",
+        "output_tp": "-1.50",
+        "output_lra": "8.10",
+        "output_thresh": "-25.60",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.71"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/808c7cc2025647cec25b2b0c47a7638da3d43bb3ce4b8dc0c93d4930858df6cc.json",
+        "sha256": "808c7cc2025647cec25b2b0c47a7638da3d43bb3ce4b8dc0c93d4930858df6cc",
+        "url": "https://escpmusic.itch.io/synthasia",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752.mp3",
+      "sha256": "3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752",
+      "bytes": 10909614,
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "e s c p - - Synthasia - 06 Twilight City.mp3",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "escp.synthasia",
+      "title": "Synthasia",
+      "artist": "escp",
+      "artistURL": "https://escpmusic.itch.io",
+      "source": "https://escpmusic.itch.io/synthasia",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Synthasia by escp (https://escpmusic.itch.io/synthasia). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 348.447347,
+      "original": {
+        "path": "originals/f500bfd462dc65c7b7174d9b45b6fa446df6beca3cea14c2199c6b7d15345181.mp3",
+        "sha256": "f500bfd462dc65c7b7174d9b45b6fa446df6beca3cea14c2199c6b7d15345181",
+        "bytes": 14026956,
+        "source": "https://escpmusic.itch.io/synthasia",
+        "uploadId": 17878086,
+        "fileName": "e s c p - - Synthasia - 08 Synthasia.mp3",
+        "contentType": "audio/mpeg"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.01",
+        "input_tp": "-3.33",
+        "input_lra": "8.70",
+        "input_thresh": "-26.29",
+        "output_i": "-15.68",
+        "output_tp": "-1.50",
+        "output_lra": "8.70",
+        "output_thresh": "-25.83",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.32"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/18fb7f34ae1a57f1182937aad9b473a5daec50aa4a55260805fe545fc75f036c.json",
+        "sha256": "18fb7f34ae1a57f1182937aad9b473a5daec50aa4a55260805fe545fc75f036c",
+        "url": "https://escpmusic.itch.io/synthasia",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847.mp3",
+      "sha256": "28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847",
+      "bytes": 11151195,
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "e s c p - - Synthasia - 08 Synthasia.mp3",
+      "reviewStatus": "pending"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+2026-09-24T04:00:40.2642426Z ##[endgroup]
+2026-09-24T04:00:40.5062690Z .................................................
+2026-09-24T04:00:40.5063350Z ----------------------------------------------------------------------
+2026-09-24T04:00:40.5063868Z Ran 49 tests in 0.106s
+2026-09-24T04:00:40.5064058Z 
+2026-09-24T04:00:40.5064189Z OK
+2026-09-24T04:00:40.5253576Z ##[group]Run python3 intake/prepare.py --manifest intake/core-20260924.json --output candidate-output --game-root .runtime
+2026-09-24T04:00:40.5254473Z [36;1mpython3 intake/prepare.py --manifest intake/core-20260924.json --output candidate-output --game-root .runtime[0m

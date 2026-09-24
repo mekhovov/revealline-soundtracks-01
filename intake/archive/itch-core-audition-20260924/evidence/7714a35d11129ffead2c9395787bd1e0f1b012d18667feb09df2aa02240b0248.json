@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.desolation",
+  "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+  "gameId": 976471,
+  "uploadId": 6033123,
+  "uploadName": "DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg",
+  "title": "The Desolation of a Civilization",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/976471/6033123",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 3350129,
+    "sha256": "e24890d8f8b3db4df74fd37f8b17b21eb47ba43233479263151c6b283481f9f8"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "355e980bbd64728b4e4cc4b4782e37a49a8092888aa152d4455a78dd83575ca2",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

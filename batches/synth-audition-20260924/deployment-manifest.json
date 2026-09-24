@@ -1,0 +1,87 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "synth-audition-20260924",
+  "expected": {
+    "trackCount": 6,
+    "audioBytes": 50942800
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 3377,
+      "sha256": "def8f6dbac9b796b07acd55a5a2207773b951716c070e4c4d58f870f4eafc210"
+    },
+    {
+      "path": "README.md",
+      "bytes": 808,
+      "sha256": "332bdc864b56ac69f87cd458f1c4271c618b4b6cafd7891fb3014cc7e075f8a3"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11509,
+      "sha256": "a6429f9ca02f615eab593e950246f4fd78fe6f2c09b2f0e3acd59151783cf334"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 1389,
+      "sha256": "cc00c5685af3dd4668f255a7473245d507fa37948abff113de2094afb0c3d8e6"
+    },
+    {
+      "path": "objects/28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847.mp3",
+      "bytes": 11151195,
+      "sha256": "28f97a7eab3fc4ddd28989828d7e6612cc11b0760e0fc9a4ed6e478b9d9c6847"
+    },
+    {
+      "path": "objects/3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752.mp3",
+      "bytes": 10909614,
+      "sha256": "3cd6b2e14826716a5701b37679bfbb36c2993a62f8086d770d0bf35910d72752"
+    },
+    {
+      "path": "objects/40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684.mp3",
+      "bytes": 7873559,
+      "sha256": "40aca87d461f18204afeee6c20311383f57fa78bc25c407e2761a57d86155684"
+    },
+    {
+      "path": "objects/978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644.mp3",
+      "bytes": 7875231,
+      "sha256": "978e19df47b9884d643befaa79a53d4845b3270732096fd0a325b94d8dec3644"
+    },
+    {
+      "path": "objects/d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c.mp3",
+      "bytes": 6938166,
+      "sha256": "d3b1d35da9b177da9b830f860e4b70277e7a6df90e2a00082e1c0d990ac4c49c"
+    },
+    {
+      "path": "objects/d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6.mp3",
+      "bytes": 6195035,
+      "sha256": "d6e8be76ca034618be0194ceeea5408ef1c3879ec5b772ccc34cafaea7b17fe6"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 15065,
+      "sha256": "6618bb5a3ea6990711efa7149b1666a98081cbbf70f6181f817cbefebf8900ad"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "run": 35953731494,
+    "artifactId": 10789299056,
+    "artifactSha256": "dc25de7d967f87d38a058c8755db1b253ae0ad38588826fd4a12445580f0b45b",
+    "deliveryVolumeNumber": 2,
+    "listeningApproval": false
+  }
+}

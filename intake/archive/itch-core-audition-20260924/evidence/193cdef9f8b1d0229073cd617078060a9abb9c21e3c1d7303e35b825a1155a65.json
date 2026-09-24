@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.agony-space-deep",
+  "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+  "gameId": 976471,
+  "uploadId": 6033127,
+  "uploadName": "DavidKBD - Eternity Pack - 02 - Agony Space-deep - oneshoot.ogg",
+  "title": "Agony Space-deep",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/976471/6033127",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Eternity Pack - 02 - Agony Space-deep - oneshoot.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 3808905,
+    "sha256": "c53b5e3218089b51c6aac6dc92d1e98a6b7837b32ece2be69352d7ee3755561c"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "17237e95bbabbc3b084c3e9a07b6315b00bdaca19a0b855d55e4b2a9d8eabee7",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

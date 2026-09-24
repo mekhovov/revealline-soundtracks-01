@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "dos88.race-to-mars",
+  "source": "https://dos88.itch.io/dos-88-music-library",
+  "gameId": 66639,
+  "uploadId": 206071,
+  "uploadName": "Race to Mars.mp3",
+  "title": "Race to Mars",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/66639/206071",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "Race to Mars.mp3",
+    "suffix": ".mp3",
+    "contentType": "audio/mp3",
+    "bytes": 9846413,
+    "sha256": "d2b29e881ac10030613cad6272eaace6bdcad23f39e07d66fc5690382bf15c08"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://dos88.itch.io/dos-88-music-library",
+    "creator": "DOS-88",
+    "pageSha256": "9ddfd4d22e83ef55fa05ceed24865ca60c9f03ae6b5f184053f321001ef13465",
+    "observedLicenseLink": "https://itch.io/soundtracks/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.god-of-darkness",
+  "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+  "gameId": 976471,
+  "uploadId": 6033130,
+  "uploadName": "DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg",
+  "title": "God of Darkness",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/976471/6033130",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg",
+    "suffix": ".ogg",
+    "contentType": "audio/ogg",
+    "bytes": 2588663,
+    "sha256": "05e41ee8a099b3bfc9df7f55ebbb0ce484bf95f5d252b6e6c84ff18f6167408e"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "841a138020d2c89d664315f53e6a84b98e9da214aa5963789cd0ab540dc5cbfd",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

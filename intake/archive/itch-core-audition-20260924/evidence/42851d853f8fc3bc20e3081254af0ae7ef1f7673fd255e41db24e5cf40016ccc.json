@@ -1,0 +1,36 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "dos88.automata-v2",
+  "source": "https://dos88.itch.io/dos-88-music-library",
+  "gameId": 66639,
+  "uploadId": 206072,
+  "uploadName": "DOS-88 - Automatav2.mp3",
+  "title": "Automata v2",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/66639/206072",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DOS-88 - Automatav2.mp3",
+    "suffix": ".mp3",
+    "contentType": "audio/mp3",
+    "bytes": 9843987,
+    "sha256": "3ec07cb7a862d0f58a56eaeb10bb50172bb645850424489ca4687b2a02fef07d"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://dos88.itch.io/dos-88-music-library",
+    "creator": "DOS-88",
+    "pageSha256": "73d8a6e49503db8dc5425f172ec4aa58647a7376a8581eb63ca42c86d09e6764",
+    "observedLicenseLink": "https://itch.io/soundtracks/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false
+  }
+}

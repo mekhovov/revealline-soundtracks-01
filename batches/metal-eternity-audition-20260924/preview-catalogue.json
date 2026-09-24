@@ -1,0 +1,240 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": "not-reviewed",
+  "archive": {
+    "id": "metal-eternity-audition-20260924",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/metal-eternity-audition-20260924/",
+    "inventorySha256": "3149e0df489d92b020c13d83d8630cd83af8b32964e2463d1a316bea02453337"
+  },
+  "source": {
+    "run": 35953731494,
+    "artifactSha256": "dc25de7d967f87d38a058c8755db1b253ae0ad38588826fd4a12445580f0b45b",
+    "deliveryVolumeNumber": 1,
+    "sourceManifestURL": "https://github.com/mekhovov/revealline-soundtracks-01/blob/ada6a708222de9e399a36751e9aecef4238c746a/intake/core-20260924.json",
+    "retainedArchivePath": "intake/archive/itch-core-audition-20260924/"
+  },
+  "tracks": [
+    {
+      "id": "davidkbd.desolation",
+      "title": "The Desolation of a Civilization",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: The Desolation of a Civilization by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 252.0,
+      "original": {
+        "path": "originals/e24890d8f8b3db4df74fd37f8b17b21eb47ba43233479263151c6b283481f9f8.ogg",
+        "sha256": "e24890d8f8b3db4df74fd37f8b17b21eb47ba43233479263151c6b283481f9f8",
+        "bytes": 3350129,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033123,
+        "fileName": "DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-4.92",
+        "input_lra": "8.10",
+        "input_thresh": "-26.43",
+        "output_i": "-15.00",
+        "output_tp": "-1.50",
+        "output_lra": "7.60",
+        "output_thresh": "-25.22",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.00"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/7714a35d11129ffead2c9395787bd1e0f1b012d18667feb09df2aa02240b0248.json",
+        "sha256": "7714a35d11129ffead2c9395787bd1e0f1b012d18667feb09df2aa02240b0248",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30.mp3",
+      "sha256": "2d1d013cfee0d36c0672bc4da5fc2f1207cbc0d03efd4e188e73ab21cef64b30",
+      "bytes": 8065820,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "davidkbd.agony-space-deep",
+      "title": "Agony Space-deep",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Agony Space-deep by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 282.705873,
+      "original": {
+        "path": "originals/c53b5e3218089b51c6aac6dc92d1e98a6b7837b32ece2be69352d7ee3755561c.ogg",
+        "sha256": "c53b5e3218089b51c6aac6dc92d1e98a6b7837b32ece2be69352d7ee3755561c",
+        "bytes": 3808905,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033127,
+        "fileName": "DavidKBD - Eternity Pack - 02 - Agony Space-deep - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.06",
+        "input_lra": "6.80",
+        "input_thresh": "-26.40",
+        "output_i": "-15.47",
+        "output_tp": "-1.50",
+        "output_lra": "7.60",
+        "output_thresh": "-25.71",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.53"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/193cdef9f8b1d0229073cd617078060a9abb9c21e3c1d7303e35b825a1155a65.json",
+        "sha256": "193cdef9f8b1d0229073cd617078060a9abb9c21e3c1d7303e35b825a1155a65",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d.mp3",
+      "sha256": "991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d",
+      "bytes": 9048860,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "DavidKBD - Eternity Pack - 02 - Agony Space-deep - oneshoot.ogg",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "davidkbd.god-of-darkness",
+      "title": "God of Darkness",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: God of Darkness by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 196.235283,
+      "original": {
+        "path": "originals/05e41ee8a099b3bfc9df7f55ebbb0ce484bf95f5d252b6e6c84ff18f6167408e.ogg",
+        "sha256": "05e41ee8a099b3bfc9df7f55ebbb0ce484bf95f5d252b6e6c84ff18f6167408e",
+        "bytes": 2588663,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033130,
+        "fileName": "DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.92",
+        "input_lra": "1.10",
+        "input_thresh": "-26.15",
+        "output_i": "-15.37",
+        "output_tp": "-1.50",
+        "output_lra": "1.70",
+        "output_thresh": "-25.47",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.63"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/623d0fefe8a56cdf0e0e35270788b37e62412ecc4d371ce8544eeda3aa21515a.json",
+        "sha256": "623d0fefe8a56cdf0e0e35270788b37e62412ecc4d371ce8544eeda3aa21515a",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0.mp3",
+      "sha256": "ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0",
+      "bytes": 6281970,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg",
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "davidkbd.suffocation",
+      "title": "Suffocation",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Suffocation by David KBD (https://davidkbd.itch.io/eternity-metal-scfi-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "instrumentalReview": "pending",
+      "durationSeconds": 214.941179,
+      "original": {
+        "path": "originals/2041effbf317cc38af02e6c44db7a112eb14301dc04d9599f3f49c9afca2bf00.ogg",
+        "sha256": "2041effbf317cc38af02e6c44db7a112eb14301dc04d9599f3f49c9afca2bf00",
+        "bytes": 2836820,
+        "source": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "uploadId": 6033135,
+        "fileName": "DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg",
+        "contentType": "audio/ogg"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.28",
+        "input_lra": "3.40",
+        "input_thresh": "-26.27",
+        "output_i": "-16.33",
+        "output_tp": "-1.58",
+        "output_lra": "3.10",
+        "output_thresh": "-26.50",
+        "normalization_type": "dynamic",
+        "target_offset": "0.33"
+      },
+      "sourceSnapshot": {
+        "path": "evidence/40fcc60803fe067e3b23222887a95176842a6baed669d7c71513bd81643ba555.json",
+        "sha256": "40fcc60803fe067e3b23222887a95176842a6baed669d7c71513bd81643ba555",
+        "url": "https://davidkbd.itch.io/eternity-metal-scfi-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "path": "objects/c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae.mp3",
+      "sha256": "c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae",
+      "bytes": 6880488,
+      "genres": [
+        "metal"
+      ],
+      "tags": [
+        "metal",
+        "listening preview"
+      ],
+      "substyleReview": "pending",
+      "originalFilename": "DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg",
+      "reviewStatus": "pending"
+    }
+  ]
+}
