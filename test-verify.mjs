@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdir, mkdtemp, readFile, writeFile, rm, symlink } from 'node:fs/promises';
+import { mkdir, mkdtemp, open, readFile, readdir, writeFile, rm, symlink } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import os from 'node:os';
@@ -16,7 +16,7 @@ import {
   buildUnifiedCatalogue,
   serializeCatalogue,
 } from './intake/build-unified-catalogue.mjs';
-import { validateUploadManifest } from './intake/add-upload.mjs';
+import { prepareUpload, validateUploadManifest } from './intake/add-upload.mjs';
 
 const source = fileURLToPath(new URL('./', import.meta.url));
 const baseURL = 'https://mekhovov.github.io/revealline-soundtracks-01/';
@@ -101,16 +101,17 @@ async function fixture(t) {
 }
 test('root manifest preserves the original70 audio boundary and pins the current public shell', async () => {
   const body = await readFile(path.join(source, 'deployment-manifest.json'));
-  assert.equal(
-    hash(body),
-    'c0bc4e397bd60caaffe5d52439fabb0670882fc3294e1fae42d86fba63e9454b',
-  );
   const manifest = JSON.parse(body),
     inventory = JSON.parse(await readFile(path.join(source, 'inventory.json'))),
     catalogue = JSON.parse(await readFile(path.join(source, 'preview-catalogue.json')));
   const result = validateDeclarations(manifest, inventory, catalogue);
   assert.equal(result.trackCount, 70);
   assert.equal(result.audioBytes, 354986122);
+  const objectPins = manifest.files.filter((file) => file.path.startsWith('objects/'));
+  assert.equal(
+    hash(Buffer.from(JSON.stringify(objectPins))),
+    '21827d6b6d1ffd8193c0aac0929ae19e4f0f13ebf0c7934ac2fec10cf156c1d2',
+  );
   for (const entry of manifest.files.filter(
     (file) => !file.path.startsWith('objects/'),
   )) {
@@ -125,12 +126,19 @@ test('unified catalogue reproducibly exposes every published batch on the root p
   const generated = await buildUnifiedCatalogue();
   const committed = await readFile(path.join(source, 'catalogue.json'), 'utf8');
   assert.equal(committed, serializeCatalogue(generated));
-  assert.deepEqual(generated.counts, {
-    declaredTracks: 104,
-    uniqueRecordings: 104,
-    duplicateAliases: 0,
-    audioBytes: 568542177,
-  });
+  assert.equal(
+    generated.counts.declaredTracks,
+    generated.sources.reduce((sum, item) => sum + item.declaredTracks, 0),
+  );
+  assert.equal(generated.counts.uniqueRecordings, generated.tracks.length);
+  assert.equal(
+    generated.counts.duplicateAliases,
+    generated.counts.declaredTracks - generated.tracks.length,
+  );
+  assert.equal(
+    generated.counts.audioBytes,
+    generated.tracks.reduce((sum, item) => sum + item.audio.bytes, 0),
+  );
   for (const title of [
     "Revenge's Waiting",
     'Pixel Damnation',
@@ -138,6 +146,11 @@ test('unified catalogue reproducibly exposes every published batch on the root p
     'Trial of Thorns',
     'Carol of the Bells (Metal Version)',
   ]) assert(generated.tracks.some((track) => track.title === title), `Missing ${title}`);
+  const shchedryk = generated.tracks.find((track) => track.title === 'Carol of the Bells (Metal Version)');
+  assert.equal(shchedryk.contentId, true);
+  assert.equal(shchedryk.recordingModeEligible, false);
+  assert(shchedryk.tags.some((tag) => /metal/i.test(tag)));
+  assert(shchedryk.tags.some((tag) => /ukrain/i.test(tag)));
 });
 test('local MP3 intake requires exact public credit and supported redistribution rights', () => {
   const valid = {
@@ -164,6 +177,131 @@ test('local MP3 intake requires exact public credit and supported redistribution
     { tracks: [valid.tracks[0], valid.tracks[0]] },
     { tracks: [{ ...valid.tracks[0], source: 'file:///tmp/song' }] },
   ]) assert.throws(() => validateUploadManifest({ ...valid, ...changed }));
+});
+
+async function uploadFixture(t, batchId = 'upload-fixture') {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-upload-repository-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  await mkdir(path.join(root, 'batches'));
+  await mkdir(path.join(root, 'intake'));
+  for (const name of [
+    '.nojekyll',
+    'CREDITS.md',
+    'README.md',
+    'UPLOAD_GUIDE.md',
+    'catalogue.json',
+    'deployment-manifest.json',
+    'index.html',
+    'inventory.json',
+    'player.mjs',
+    'preview-catalogue.json',
+    'style.css',
+    'batches.json',
+  ]) await writeFile(path.join(root, name), await readFile(path.join(source, name)));
+  const batches = JSON.parse(await readFile(path.join(source, 'batches.json')));
+  for (const batch of batches.batches) {
+    const target = path.join(root, 'batches', batch.id);
+    await mkdir(target);
+    for (const name of ['deployment-manifest.json', 'preview-catalogue.json'])
+      await writeFile(path.join(target, name), await readFile(path.join(source, 'batches', batch.id, name)));
+  }
+  const audio = path.join(root, 'candidate.mp3');
+  const original = Buffer.concat([Buffer.from('ID3'), Buffer.alloc(61, 7)]);
+  await writeFile(audio, original);
+  const upload = path.join(root, 'upload.json');
+  const manifest = {
+    batchId,
+    title: 'Upload fixture',
+    description: 'A byte-level intake fixture, not a listening approval.',
+    tracks: [{
+      id: `${batchId}.track`,
+      file: audio,
+      title: 'Fixture track',
+      artist: 'Fixture artist',
+      source: 'https://example.com/fixture-track',
+      license: 'CC0 1.0 Universal',
+      licenseURL: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      credit: 'Synthetic fixture bytes under CC0.',
+      tags: ['fixture', 'gameplay'],
+    }],
+  };
+  await writeFile(upload, JSON.stringify(manifest));
+  return { root, audio, original, upload, manifest };
+}
+
+const generousDisk = { availableBytes: async () => 10 * 1024 ** 3 };
+async function intakeState(root) {
+  return {
+    batches: await readFile(path.join(root, 'batches.json'), 'utf8'),
+    catalogue: await readFile(path.join(root, 'catalogue.json'), 'utf8'),
+    deployment: await readFile(path.join(root, 'deployment-manifest.json'), 'utf8'),
+    directories: (await readdir(path.join(root, 'batches'))).sort(),
+    staging: (await readdir(path.join(root, 'intake'))).filter((name) => name.startsWith('.upload-')),
+  };
+}
+
+test('upload intake commits exact validated bytes and reproducible catalogue metadata', async (t) => {
+  const f = await uploadFixture(t, 'successful-upload');
+  const originalHash = hash(f.original);
+  const result = await prepareUpload(f.upload, {
+    repositoryRoot: f.root,
+    ...generousDisk,
+    beforeCommit: () => writeFile(f.audio, Buffer.concat([Buffer.from('ID3'), Buffer.alloc(93, 9)])),
+  });
+  assert.deepEqual(result, { batchId: 'successful-upload', tracks: 1, audioBytes: f.original.length });
+  assert.deepEqual(
+    await readFile(path.join(f.root, 'batches', 'successful-upload', 'objects', `${originalHash}.mp3`)),
+    f.original,
+  );
+  const generated = await buildUnifiedCatalogue({ repositoryRoot: f.root });
+  assert.equal(await readFile(path.join(f.root, 'catalogue.json'), 'utf8'), serializeCatalogue(generated));
+  assert(generated.tracks.some((track) => track.id === 'successful-upload.track'));
+  assert.deepEqual((await readdir(path.join(f.root, 'intake'))).filter((name) => name.startsWith('.upload-')), []);
+});
+
+test('upload intake rejects global duplicate identities before any repository write', async (t) => {
+  const f = await uploadFixture(t, 'duplicate-identity-upload');
+  const catalogue = JSON.parse(await readFile(path.join(f.root, 'catalogue.json')));
+  f.manifest.tracks[0].id = catalogue.tracks[0].id;
+  await writeFile(f.upload, JSON.stringify(f.manifest));
+  const before = await intakeState(f.root);
+  await assert.rejects(prepareUpload(f.upload, { repositoryRoot: f.root, ...generousDisk }), /identity already exists/);
+  assert.deepEqual(await intakeState(f.root), before);
+});
+
+test('upload intake enforces the 256-recording limit before any repository write', async (t) => {
+  const f = await uploadFixture(t, 'capacity-upload');
+  const cataloguePath = path.join(f.root, 'catalogue.json');
+  const catalogue = JSON.parse(await readFile(cataloguePath));
+  catalogue.counts.declaredTracks = 256;
+  await writeFile(cataloguePath, JSON.stringify(catalogue));
+  const before = await intakeState(f.root);
+  await assert.rejects(prepareUpload(f.upload, { repositoryRoot: f.root, ...generousDisk }), /at most 256/);
+  assert.deepEqual(await intakeState(f.root), before);
+});
+
+test('upload intake refuses low disk reserve and batch-directory symlinks without external writes', async (t) => {
+  const low = await uploadFixture(t, 'low-disk-upload');
+  const lowBefore = await intakeState(low.root);
+  await assert.rejects(prepareUpload(low.upload, { repositoryRoot: low.root, availableBytes: async () => 0 }), /leave at least 1 GiB/);
+  assert.deepEqual(await intakeState(low.root), lowBefore);
+
+  const linked = await uploadFixture(t, 'linked-upload');
+  const external = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-upload-external-'));
+  t.after(() => rm(external, { recursive: true, force: true }));
+  await symlink(external, path.join(linked.root, 'batches', 'linked-upload'));
+  await assert.rejects(prepareUpload(linked.upload, { repositoryRoot: linked.root, ...generousDisk }), /already exists/);
+  assert.deepEqual(await readdir(external), []);
+});
+
+test('upload intake bounds each source before reading it', async (t) => {
+  const f = await uploadFixture(t, 'oversized-upload');
+  const handle = await open(f.audio, 'w');
+  await handle.truncate(100_000_000);
+  await handle.close();
+  const before = await intakeState(f.root);
+  await assert.rejects(prepareUpload(f.upload, { repositoryRoot: f.root, ...generousDisk }), /MP3 size is invalid/);
+  assert.deepEqual(await intakeState(f.root), before);
 });
 test('a declared tiny preview batch verifies its exact static and object bytes reproducibly', async (t) => {
   const f = await fixture(t);

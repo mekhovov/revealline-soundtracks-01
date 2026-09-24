@@ -36,15 +36,16 @@ const formatDuration = (seconds) => {
   return `${Math.floor(rounded / 60)}:${String(rounded % 60).padStart(2, '0')}`;
 };
 const formatBytes = (bytes) => `${(bytes / 1024 / 1024).toFixed(2)} MiB`;
-const styleOf = (track) => {
+const stylesOf = (track) => {
   const value = track.tags.join(' ').toLowerCase();
-  if (value.includes('ukrain')) return 'ukrainian';
-  if (value.includes('metal')) return 'metal';
-  if (/synth|electro|tracker|fm|dance|techno/.test(value)) return 'synth';
-  if (/chiptune|8-bit|fakebit/.test(value)) return 'chiptune';
-  if (/rock|punk/.test(value)) return 'rock';
-  if (/ambient|atmospher/.test(value)) return 'ambient';
-  return 'other';
+  const styles = [];
+  if (value.includes('ukrain')) styles.push('ukrainian');
+  if (value.includes('metal')) styles.push('metal');
+  if (/synth|electro|tracker|fm|dance|techno/.test(value)) styles.push('synth');
+  if (/chiptune|8-bit|fakebit/.test(value)) styles.push('chiptune');
+  if (/rock|punk/.test(value)) styles.push('rock');
+  if (/ambient|atmospher/.test(value)) styles.push('ambient');
+  return styles.length ? [...new Set(styles)] : ['other'];
 };
 const searchable = (track) =>
   [track.title, track.artist, track.collection, track.license, ...track.tags]
@@ -58,7 +59,7 @@ function refresh() {
   for (const row of rows) {
     row.hidden =
       !row.dataset.search.includes(term) ||
-      (genre.value && row.dataset.genre !== genre.value) ||
+      (genre.value && !row.trackStyles.includes(genre.value)) ||
       (collection.value && row.dataset.collection !== collection.value);
   }
   const found = visible().length;
@@ -131,7 +132,8 @@ function renderTrack(track, index) {
   row.id = `track-${index}`;
   row.track = track;
   row.dataset.search = searchable(track);
-  row.dataset.genre = styleOf(track);
+  row.trackStyles = stylesOf(track);
+  row.dataset.genres = row.trackStyles.join(' ');
   row.dataset.collection = track.archiveId;
 
   const playButton = element('button', 'play-track', '▶');

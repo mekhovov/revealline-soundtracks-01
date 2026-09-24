@@ -47,12 +47,12 @@ A YouTube upload, a public-domain melody, or possession of an MP3 does not estab
 node intake/add-upload.mjs --manifest /absolute/path/to/upload.json
 ```
 
-4. The command verifies bounded MP3 files, rejects an existing ID/hash, copies each exact MP3 to `batches/<batch-id>/objects/<sha256>.mp3`, creates the batch page and metadata, appends its pinned declaration to `batches.json`, and rebuilds `catalogue.json`.
+4. The command checks file and archive limits before reading audio, preserves at least 1 GiB of free disk, rejects existing IDs/hashes and writes the validated MP3 bytes to `batches/<batch-id>/objects/<sha256>.mp3`. It verifies the complete staged batch before transactionally publishing the batch, index, catalogue and root pins. A failed admission leaves the published archive unchanged.
 5. Run the same checks as CI:
 
 ```sh
 node intake/build-unified-catalogue.mjs --check
-node --test test-verify.mjs intake/test-upload-intake.mjs
+node --test test-verify.mjs
 node verify.mjs
 ```
 

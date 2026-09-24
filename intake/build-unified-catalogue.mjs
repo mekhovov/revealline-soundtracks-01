@@ -4,10 +4,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
-const output = path.join(root, 'catalogue.json');
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
-const readJSON = async (file) => {
-  const bytes = await readFile(path.join(root, file));
+const readJSON = async (repositoryRoot, overrides, file) => {
+  const bytes = overrides?.get(file) ?? (await readFile(path.join(repositoryRoot, file)));
   return { bytes, value: JSON.parse(bytes) };
 };
 
@@ -66,6 +65,8 @@ function publicTrack(track, { batchId, basePath, status, listeningApproval, admi
     status,
     listeningApproval,
     gameCatalogueAdmission: admitted === true,
+    contentId: track.contentId ?? 'unknown',
+    recordingModeEligible: track.recordingModeEligible === true,
     audio: {
       path: `${basePath}${track.path}`,
       bytes: track.bytes,
@@ -75,13 +76,15 @@ function publicTrack(track, { batchId, basePath, status, listeningApproval, admi
   };
 }
 
-export async function buildUnifiedCatalogue() {
-  const rootCatalogue = await readJSON('preview-catalogue.json');
-  const batchIndex = await readJSON('batches.json');
+export async function buildUnifiedCatalogue({ repositoryRoot = root, overrides = new Map() } = {}) {
+  const rootCatalogue = await readJSON(repositoryRoot, overrides, 'preview-catalogue.json');
+  const batchIndex = await readJSON(repositoryRoot, overrides, 'batches.json');
   demand(
     rootCatalogue.value.format === 'revealline-licensed-preview-catalogue.v1',
     'Unexpected root catalogue format.',
   );
+  demand(batchIndex.value.batches.length <= 32, 'Too many published batches.');
+  const batchIds = new Set();
   demand(
     batchIndex.value.format === 'revealline-soundtrack-preview-batches.v1',
     'Unexpected batch index format.',
@@ -97,8 +100,15 @@ export async function buildUnifiedCatalogue() {
     },
   ];
   for (const declaration of batchIndex.value.batches) {
+    demand(
+      typeof declaration.id === 'string' &&
+        /^[a-z0-9][a-z0-9-]{0,63}$/.test(declaration.id) &&
+        !batchIds.has(declaration.id),
+      'Invalid or duplicate batch identity.',
+    );
+    batchIds.add(declaration.id);
     const file = `batches/${declaration.id}/preview-catalogue.json`;
-    const loaded = await readJSON(file);
+    const loaded = await readJSON(repositoryRoot, overrides, file);
     demand(
       loaded.value.archive?.id === declaration.id,
       `Batch catalogue identity differs: ${declaration.id}.`,
@@ -143,6 +153,7 @@ export async function buildUnifiedCatalogue() {
   }
 
   const tracks = [...byHash.values()];
+  demand(tracks.length <= 256, 'Unified catalogue exceeds 256 recordings.');
   const audioBytes = tracks.reduce((sum, track) => sum + track.audio.bytes, 0);
   return {
     format: 'revealline-public-soundtrack-catalogue.v1',
@@ -176,6 +187,7 @@ export function serializeCatalogue(catalogue) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const catalogue = await buildUnifiedCatalogue();
   const serialized = serializeCatalogue(catalogue);
+  const output = path.join(root, 'catalogue.json');
   if (process.argv.includes('--write')) {
     await writeFile(output, serialized);
     console.log(

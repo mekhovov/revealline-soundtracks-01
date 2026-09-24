@@ -10,9 +10,13 @@ const PUBLIC_METADATA = [
 ];
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 
-export async function updateRootMetadataPins() {
-  const manifestPath = path.join(repository, 'deployment-manifest.json');
-  const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+export async function buildUpdatedRootManifest({
+  repositoryRoot = repository,
+  overrides = new Map(),
+} = {}) {
+  const load = async (file) =>
+    overrides.get(file) ?? (await readFile(path.join(repositoryRoot, file)));
+  const manifest = JSON.parse(await load('deployment-manifest.json'));
   if (
     manifest.format !== 'revealline-soundtrack-preview-deployment.v1' ||
     manifest.expected?.trackCount !== 70 ||
@@ -22,12 +26,21 @@ export async function updateRootMetadataPins() {
   if (objects.length !== 70) throw new Error('Root audio pins changed or are incomplete.');
   const metadata = [];
   for (const file of PUBLIC_METADATA) {
-    const bytes = await readFile(path.join(repository, file));
+    const bytes = await load(file);
     metadata.push({ path: file, bytes: bytes.length, sha256: digest(bytes) });
   }
   manifest.files = [...metadata, ...objects];
-  await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
-  return manifest;
+  return {
+    manifest,
+    bytes: Buffer.from(`${JSON.stringify(manifest, null, 2)}\n`),
+  };
+}
+
+export async function updateRootMetadataPins(options = {}) {
+  const repositoryRoot = options.repositoryRoot ?? repository;
+  const result = await buildUpdatedRootManifest(options);
+  await writeFile(path.join(repositoryRoot, 'deployment-manifest.json'), result.bytes);
+  return result.manifest;
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

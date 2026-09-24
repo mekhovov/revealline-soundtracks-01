@@ -23,13 +23,13 @@
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 3841,
-      "sha256": "901209081ae33b5aa50752e148eac58863af336a5a5c0c700c4e6f1b63e26bb5"
+      "bytes": 3943,
+      "sha256": "aa12a1791c3463f59ed7e7b08385ddfa69e1eabd1eaa466e60197ede0b45977a"
     },
     {
       "path": "catalogue.json",
-      "bytes": 113635,
-      "sha256": "a2756e8fe7aca2a43a109fac53c4630b7663c52368df8abc77db4fc361a36274"
+      "bytes": 120672,
+      "sha256": "cdbdb11fb4f20cea938869a5f68b343cc1d5816bcbb904102550e17f8c754746"
     },
     {
       "path": "index.html",
@@ -43,8 +43,8 @@
     },
     {
       "path": "player.mjs",
-      "bytes": 9589,
-      "sha256": "88f60822328436e1e22d98152e8a2eb6242de4f81ae01744a630977ed990d082"
+      "bytes": 9742,
+      "sha256": "99688f19c391f888269ac00ae16bb26c93d08bd37358ddbb70a79e56e63230ae"
     },
     {
       "path": "preview-catalogue.json",
