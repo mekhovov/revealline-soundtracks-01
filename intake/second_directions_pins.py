@@ -1,94 +1,92 @@
-"""Exact anonymous source/upload observations for the second September 25 audition.
+"""Exact free uploads for the repaired second September 25 audition.
 
-These pins authorize bounded hosted acquisition only. They confer no listening,
-publication, Recording-mode or game-admission approval.
+The first hosted attempt proved that album-length references do not establish
+the duration of itch's separately downloadable loop assets. This revision
+selects explicit ``-full`` synth files and complete album uploads from packs
+whose free files correspond to documented 3+ minute tracks. These pins
+authorize hosted technical preparation only; they grant no listening,
+publication, Recording-mode, default or game-admission approval.
 """
 
 CC_BY_BADGE = 'https://itch.io/game-assets/assets-cc4-by'
 SOURCE_PINS = {
-    'davidkbd-pink-bloom': (
-        'https://davidkbd.itch.io/pink-bloom-synthwave-music-pack',
-        1635239, CC_BY_BADGE),
-    'davidkbd-hexapuppies': (
-        'https://davidkbd.itch.io/hexapuppies-synthwave-music-pack',
-        1020992, CC_BY_BADGE),
-    'davidkbd-reckless': (
-        'https://davidkbd.itch.io/reckless-punk-metal-music-pack',
-        974022, CC_BY_BADGE),
-    'davidkbd-purgatory': (
-        'https://davidkbd.itch.io/purgatory-extreme-metal-music-pack',
-        1498789, CC_BY_BADGE),
+    'davidkbd-electric-pulse': (
+        'https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack',
+        2187961, CC_BY_BADGE),
+    'davidkbd-interstellar2': (
+        'https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack',
+        2445174, CC_BY_BADGE),
+    'davidkbd-purgatory2': (
+        'https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack',
+        2246806, CC_BY_BADGE),
 }
 
 UPLOAD_PINS = {
-    'davidkbd.pink-bloom': ('davidkbd-pink-bloom', 6233745,
-        'DavidKBD - Pink Bloom Pack - 01 - Pink Bloom.ogg', 'Pink Bloom'),
-    'davidkbd.to-the-unknown': ('davidkbd-pink-bloom', 6233747,
-        'DavidKBD - Pink Bloom Pack - 03 - To the Unknown.ogg', 'To the Unknown'),
-    'davidkbd.lightyear-city': ('davidkbd-pink-bloom', 6233753,
-        'DavidKBD - Pink Bloom Pack - 09 - Lightyear City.ogg', 'Lightyear City'),
-    'davidkbd.hexapuppies': ('davidkbd-hexapuppies', 3749483,
-        'DavidKBD - HexaPuppies Pack - 01 - HexaPuppies.ogg', 'HexaPuppies'),
-    'davidkbd.the-great-machine': ('davidkbd-hexapuppies', 3749499,
-        'DavidKBD - HexaPuppies Pack - 07 - The Great Machine - variation1.ogg',
-        'The Great Machine'),
-    'davidkbd.disaster': ('davidkbd-hexapuppies', 3749505,
-        'DavidKBD - HexaPuppies Pack - 09 - Disaster - variation1.ogg', 'Disaster'),
-    'davidkbd.keep-my-rhythm-if-you-can': ('davidkbd-reckless', 12030737,
-        'DavidKBD - Reckless Punk-Metal Pack - 03 - Keep My Rhythm, If You Can.ogg',
-        'Keep My Rhythm, If You Can'),
-    'davidkbd.dangerous-and-bored': ('davidkbd-reckless', 12030736,
-        'DavidKBD - Reckless Punk-Metal Pack - 05 - Dangerous and Bored.ogg',
-        'Dangerous and Bored'),
-    'davidkbd.speedy-and-hostile': ('davidkbd-reckless', 12030742,
-        'DavidKBD - Reckless Punk-Metal Pack - 10 - Speedy and Hostile.ogg',
-        'Speedy and Hostile'),
-    'davidkbd.purgatory': ('davidkbd-purgatory', 11733688,
-        '01 - DavidKBD - Purgatory Pack - Purgatory.ogg', 'Purgatory'),
-    'davidkbd.on-fire': ('davidkbd-purgatory', 11733968,
-        '06 - DavidKBD - Purgatory Pack - On Fire.ogg', 'On Fire'),
-    'davidkbd.hades': ('davidkbd-purgatory', 11733694,
-        '07 - DavidKBD - Purgatory Pack - Hades.ogg', 'Hades'),
+    'davidkbd.cyber-lights': ('davidkbd-electric-pulse', 8382058,
+        'DavidKBD - Electric Pulse - 03 - Cyber Lights-full.ogg', 'Cyber Lights'),
+    'davidkbd.neon-arcadia-awakening': ('davidkbd-electric-pulse', 8382061,
+        'DavidKBD - Electric Pulse - 05 - Neon Arcadia Awakening-full.ogg',
+        'Neon Arcadia Awakening'),
+    'davidkbd.time-warp': ('davidkbd-electric-pulse', 8382063,
+        'DavidKBD - Electric Pulse - 06 - Time Warp-full.ogg', 'Time Warp'),
+    'davidkbd.quantum-ripples-of-sound': ('davidkbd-electric-pulse', 8382067,
+        'DavidKBD - Electric Pulse - 08 - Quantum Ripples of Sound-full.ogg',
+        'Quantum Ripples of Sound'),
+    'davidkbd.synthetic-power-surge': ('davidkbd-electric-pulse', 8382551,
+        'DavidKBD - Electric Pulse - 10 - Synthetic Power Surge-full.ogg',
+        'Synthetic Power Surge'),
+    'davidkbd.solar-storm': ('davidkbd-interstellar2', 13507642,
+        'DavidKBD - Interstellar vol2 02 - Solar Storm.ogg', 'Solar Storm'),
+    'davidkbd.galactic-battle': ('davidkbd-interstellar2', 13507638,
+        'DavidKBD - Interstellar vol2 04 - Galactic Battle.ogg', 'Galactic Battle'),
+    'davidkbd.orbital-assault': ('davidkbd-interstellar2', 13507646,
+        'DavidKBD - Interstellar vol2 09 - Orbital Assault.ogg', 'Orbital Assault'),
+    'davidkbd.they-want-death': ('davidkbd-purgatory2', 12451195,
+        'DavidKBD - Purgatory Pack vol2 - 02 - They want death.ogg', 'They want death'),
+    'davidkbd.insanity-is-your-flame': ('davidkbd-purgatory2', 12451193,
+        'DavidKBD - Purgatory Pack vol2 - 04 - Insanity is your flame.ogg',
+        'Insanity is your flame'),
+    'davidkbd.sin-their-pity-their-agony': ('davidkbd-purgatory2', 12451194,
+        'DavidKBD - Purgatory Pack vol2 - 05 - Sin, their pity, their agony.ogg',
+        'Sin, their pity, their agony'),
 }
 
-# SHA-256 of SourceDescription's normalized visible text and ordered link targets.
-# A change requires source review; never replace a pin automatically on failure.
+# These source pages are also used by the independently reviewed first slate.
+# Duplicate keys retain the same normalized description hashes; any source-text
+# or licence change stops both hosted entry points.
 DESCRIPTION_HASHES = {
-    'davidkbd-pink-bloom': '20bce3bda55f556e6259fb64779ef25548945aafddd5bdeee78efb5b8cb6349e',
-    'davidkbd-hexapuppies': '95ea537a06ef1fbc155011bf581f602a3ffdc090ba3a25890efbc89b9c4c5fe4',
-    'davidkbd-reckless': 'a60256ff1f623e6e9e9d652bb0db1034a46fa8272cf9c6dfa31d7e27731da91a',
-    'davidkbd-purgatory': '939bfc4dcf017b27a6ab6d17548bf1f472babb0161fe54f385fc4d5524b4f9f3',
+    'davidkbd-electric-pulse': 'e5f046ff6701a9642cc1d53467b89e15acf1c4ba62e5efad16bba6f3c87e2d4f',
+    'davidkbd-interstellar2': '480e1b406343130318da6b0b2e961d84494b685c1b9126206349a2a824d976fb',
+    'davidkbd-purgatory2': '511fd39f74a9f243b56fc1c6e0d62a2178e55febbfec2964b4c0986d97572b70',
 }
 
 REFERENCE_DURATIONS = {
-    'davidkbd.pink-bloom': 286,
-    'davidkbd.to-the-unknown': 329,
-    'davidkbd.lightyear-city': 291,
-    'davidkbd.hexapuppies': 270,
-    'davidkbd.the-great-machine': 258,
-    'davidkbd.disaster': 282,
-    'davidkbd.keep-my-rhythm-if-you-can': 241,
-    'davidkbd.dangerous-and-bored': 323,
-    'davidkbd.speedy-and-hostile': 227,
-    'davidkbd.purgatory': 189,
-    'davidkbd.on-fire': 185,
-    'davidkbd.hades': 207,
+    'davidkbd.cyber-lights': 251,
+    'davidkbd.neon-arcadia-awakening': 232,
+    'davidkbd.time-warp': 236,
+    'davidkbd.quantum-ripples-of-sound': 302,
+    'davidkbd.synthetic-power-surge': 251,
+    'davidkbd.solar-storm': 243,
+    'davidkbd.galactic-battle': 253,
+    'davidkbd.orbital-assault': 203,
+    'davidkbd.they-want-death': 251,
+    'davidkbd.insanity-is-your-flame': 192,
+    'davidkbd.sin-their-pity-their-agony': 235,
 }
 
 REFERENCE_DURATION_SOURCES = {
-    'davidkbd-pink-bloom':
-        'https://davidkbd.bandcamp.com/album/pink-bloom-synthwave-music-pack-original-game-soundtrack',
-    'davidkbd-hexapuppies': 'https://music.amazon.com/albums/B08VW2FWP4',
-    'davidkbd-reckless':
-        'https://davidkbd.bandcamp.com/album/reckless-punk-metal-pack-original-game-soundtrack',
-    'davidkbd-purgatory':
-        'https://davidkbd.bandcamp.com/album/purgatory-extreme-metal-music-pack-original-game-soundtrack',
+    'davidkbd-electric-pulse':
+        'https://davidkbd.bandcamp.com/album/electric-pulse-synthwave-retro-futuristic-music-pack-original-game-soundtrack',
+    'davidkbd-interstellar2':
+        'https://davidkbd.bandcamp.com/album/interstellar-vol-2-edm-metal-music-pack-original-game-soundtrack',
+    'davidkbd-purgatory2':
+        'https://davidkbd.bandcamp.com/album/purgatory-vol-2-extreme-metal-music-pack-original-game-soundtrack',
 }
 
 
 def details(track_id):
     creator = UPLOAD_PINS[track_id][0]
-    synth = creator in {'davidkbd-pink-bloom', 'davidkbd-hexapuppies'}
+    synth = creator == 'davidkbd-electric-pulse'
     return {
         'family': 'synth90s' if synth else 'metal',
         'role': 'gameplay',
@@ -96,7 +94,7 @@ def details(track_id):
         'metadataReview': 'source-described-listening-pending',
         'fullTrackListening': False,
         'gameplayReview': 'pending',
-        'vocalContent': 'unverified',
+        'vocalContent': 'creator-described-vocals' if creator == 'davidkbd-purgatory2' else 'unverified',
         'explicitContentReview': 'pending',
         'referenceDurationSeconds': REFERENCE_DURATIONS[track_id],
         'referenceDurationSource': REFERENCE_DURATION_SOURCES[creator],

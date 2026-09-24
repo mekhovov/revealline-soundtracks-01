@@ -38,7 +38,8 @@ class SecondDirectionsTests(unittest.TestCase):
 
     def test_exact_twelve_pending_six_six_slate(self):
         self.assertEqual(len(self.rows), 12)
-        self.assertEqual({row['id'] for row in self.rows}, set(pins.UPLOAD_PINS))
+        self.assertEqual({row['id'] for row in self.rows},
+                         set(pins.UPLOAD_PINS) | {'bogart-vgm.neon-action-full'})
         self.assertEqual([row['family'] for row in self.rows].count('synth90s'), 6)
         self.assertEqual([row['family'] for row in self.rows].count('metal'), 6)
         for flag in ('publicationApproval', 'gameCatalogueAdmission', 'listeningApproval'):
@@ -53,41 +54,41 @@ class SecondDirectionsTests(unittest.TestCase):
             self.assertEqual(row['explicitContentReview'], 'pending')
             self.assertEqual(row['exactNativeDurationReview'], 'pending-hosted-decode')
             self.assertEqual(row['minimumDurationSeconds'], 180)
-            self.assertGreaterEqual(row['referenceDurationSeconds'], 180)
-            self.assertLessEqual(row['referenceDurationSeconds'], 360)
+            if 'referenceDurationSeconds' in row:
+                self.assertGreaterEqual(row['referenceDurationSeconds'], 180)
+                self.assertLessEqual(row['referenceDurationSeconds'], 360)
 
     def test_exact_source_and_upload_observations(self):
         observed = {
-            'davidkbd.pink-bloom': (1635239, 6233745),
-            'davidkbd.to-the-unknown': (1635239, 6233747),
-            'davidkbd.lightyear-city': (1635239, 6233753),
-            'davidkbd.hexapuppies': (1020992, 3749483),
-            'davidkbd.the-great-machine': (1020992, 3749499),
-            'davidkbd.disaster': (1020992, 3749505),
-            'davidkbd.keep-my-rhythm-if-you-can': (974022, 12030737),
-            'davidkbd.dangerous-and-bored': (974022, 12030736),
-            'davidkbd.speedy-and-hostile': (974022, 12030742),
-            'davidkbd.purgatory': (1498789, 11733688),
-            'davidkbd.on-fire': (1498789, 11733968),
-            'davidkbd.hades': (1498789, 11733694),
+            'davidkbd.cyber-lights': (2187961, 8382058),
+            'davidkbd.neon-arcadia-awakening': (2187961, 8382061),
+            'davidkbd.time-warp': (2187961, 8382063),
+            'davidkbd.quantum-ripples-of-sound': (2187961, 8382067),
+            'davidkbd.synthetic-power-surge': (2187961, 8382551),
+            'davidkbd.solar-storm': (2445174, 13507642),
+            'davidkbd.galactic-battle': (2445174, 13507638),
+            'davidkbd.orbital-assault': (2445174, 13507646),
+            'davidkbd.they-want-death': (2246806, 12451195),
+            'davidkbd.insanity-is-your-flame': (2246806, 12451193),
+            'davidkbd.sin-their-pity-their-agony': (2246806, 12451194),
         }
         self.assertEqual(set(observed), set(pins.UPLOAD_PINS))
         self.assertEqual(set(pins.DESCRIPTION_HASHES), set(pins.SOURCE_PINS))
-        self.assertEqual(len(set(pins.DESCRIPTION_HASHES.values())), 4)
-        for row in self.rows:
+        self.assertEqual(len(set(pins.DESCRIPTION_HASHES.values())), 3)
+        for row in (row for row in self.rows if row.get('acquisition') ==
+                    'itch-public-free-download'):
             self.assertEqual((row['gameId'], row['uploadId']), observed[row['id']])
             itch_audio.validate_row(row)
 
     def test_distinct_compositions_exclude_alternates_and_short_cues(self):
-        names = [row['uploadName'] for row in self.rows]
+        names = [row.get('uploadName', row.get('download')) for row in self.rows]
         self.assertEqual(len(names), len(set(names)))
         self.assertFalse(any(token in name.lower() for name in names
                              for token in ('short', 'miniloop', 'cinematic', 'you win', 'you loss')))
-        variants = [name for name in names if 'variation' in name.lower()]
-        self.assertEqual(variants, [
-            'DavidKBD - HexaPuppies Pack - 07 - The Great Machine - variation1.ogg',
-            'DavidKBD - HexaPuppies Pack - 09 - Disaster - variation1.ogg',
-        ])
+        self.assertFalse(any('variation' in name.lower() for name in names))
+        synth_uploads = [name for name in names if 'Electric Pulse -' in name]
+        self.assertEqual(len(synth_uploads), 5)
+        self.assertTrue(all(name.endswith('-full.ogg') for name in synth_uploads))
 
     def test_all_exact_uploads_resolve_metadata_without_media_requests(self):
         with patch.dict(itch_source.DESCRIPTION_HASHES,
@@ -102,9 +103,9 @@ class SecondDirectionsTests(unittest.TestCase):
                 self.assertFalse(result.receipt()['admitted'])
 
     def test_description_or_license_change_stops_before_free_download(self):
-        key = 'davidkbd.pink-bloom'
+        key = 'davidkbd.cyber-lights'
         with patch.dict(itch_source.DESCRIPTION_HASHES,
-                        {'davidkbd-pink-bloom': DESCRIPTION_SHA}):
+                        {'davidkbd-electric-pulse': DESCRIPTION_SHA}):
             for changed in (
                     DESCRIPTION.replace('Reviewed fixture.', 'Standalone redistribution prohibited.'),
                     DESCRIPTION.replace('by/4.0/', 'by-nc/4.0/'),
@@ -118,8 +119,10 @@ class SecondDirectionsTests(unittest.TestCase):
                 self.assertEqual(len(client.requests), 1)
 
     def test_identity_and_license_cross_pairing_rejected(self):
-        for row in self.rows:
-            other = next(candidate for candidate in self.rows if candidate['id'] != row['id'])
+        rows = [row for row in self.rows if row.get('acquisition') ==
+                'itch-public-free-download']
+        for row in rows:
+            other = next(candidate for candidate in rows if candidate['id'] != row['id'])
             with self.assertRaises(ValueError):
                 itch_audio.validate_row(dict(row, uploadId=other['uploadId'],
                                              uploadName=other['uploadName']))
@@ -135,9 +138,11 @@ class SecondDirectionsTests(unittest.TestCase):
     def test_cross_pack_response_rejected(self):
         with patch.dict(itch_source.DESCRIPTION_HASHES,
                         {source: DESCRIPTION_SHA for source in pins.SOURCE_PINS}):
-            for row in self.rows:
+            rows = [row for row in self.rows if row.get('acquisition') ==
+                    'itch-public-free-download']
+            for row in rows:
                 client = fixture(row['id'])
-                other = next(candidate for candidate in self.rows
+                other = next(candidate for candidate in rows
                              if candidate['gameId'] != row['gameId'])
                 client.result = {'url': signed(other['gameId'], other['uploadId']),
                                  'external': False}
@@ -147,7 +152,13 @@ class SecondDirectionsTests(unittest.TestCase):
     def test_holds_are_not_registered_or_requested(self):
         held = ('davidkbd.see-you-in-hell', 'davidkbd.the-eternal-fight',
                 'davidkbd.mach-overdrive', 'davidkbd.turbo-power-metal',
-                'davidkbd.turbo-electro-metal', 'davidkbd.turbo-black-metal-instrumental')
+                'davidkbd.turbo-electro-metal', 'davidkbd.turbo-black-metal-instrumental',
+                'davidkbd.pink-bloom', 'davidkbd.to-the-unknown',
+                'davidkbd.lightyear-city', 'davidkbd.hexapuppies',
+                'davidkbd.the-great-machine', 'davidkbd.disaster',
+                'davidkbd.keep-my-rhythm-if-you-can', 'davidkbd.dangerous-and-bored',
+                'davidkbd.speedy-and-hostile', 'davidkbd.purgatory',
+                'davidkbd.on-fire', 'davidkbd.hades')
         for key in held:
             client = Mock()
             with self.assertRaises(ValueError):

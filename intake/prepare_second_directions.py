@@ -8,7 +8,7 @@ import re
 from prepare import prepare, validate_manifest
 
 MANIFEST = Path(__file__).with_name('second-directions-audition-20260925.json')
-MANIFEST_SHA256 = '1891c73330f2e784faffc8035ab8dcf9efb6daac069231c3f25d2a60e16a57e5'
+MANIFEST_SHA256 = '5978977b1a3a65021a342bb0d3039f24caac53a9703e9aa57c22d9215f1e8a10'
 WORKFLOW = '.github/workflows/second-directions-intake.yml'
 
 

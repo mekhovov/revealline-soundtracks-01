@@ -1,47 +1,99 @@
 # Second synth/electro and rhythmic-metal audition intake
 
-This source-only intake prepares twelve additional recordings after the first approved-direction slate. It does not publish audio, approve listening, admit a recording into the game, alter defaults, or make a track Recording-mode eligible. No audio was downloaded locally while preparing it.
+This source-only intake prepares twelve additional recordings after the first
+approved-direction slate. It publishes no audio, grants no listening approval,
+admits no recording into the game, changes no default, and leaves every track
+ineligible for Recording mode. No audio was downloaded locally while preparing
+this revision.
 
-All four exact itch source pages currently state **CC BY 4.0 International** and expose the selected OGG uploads through a zero-price public acquisition route. CC BY 4.0 permits copying and redistribution, including commercially, when attribution, the licence link, and modification notice are preserved. Cover artwork is outside this intake and must not be reused from the source pages without separate permission.
+All selected source pages publish CC BY 4.0. The five explicit `-full.ogg`
+synth files and six complete metal album files are available through their
+respective zero-price itch acquisition routes. The OGA recording is an
+individually linked MP3 named **Neon Action Full**. CC BY 4.0 permits public
+redistribution with attribution, a licence link, and an indication of changes.
+Source-page cover artwork is outside this intake.
 
-## Exact slate
+## Repaired exact slate
 
-| Recording | Exact free upload | Game / upload ID | Published album duration |
+| Recording | Exact free file | Source / upload ID | Published duration evidence |
 | --- | --- | --- | --- |
-| Pink Bloom | `DavidKBD - Pink Bloom Pack - 01 - Pink Bloom.ogg` | 1635239 / 6233745 | 4:46 |
-| To the Unknown | `DavidKBD - Pink Bloom Pack - 03 - To the Unknown.ogg` | 1635239 / 6233747 | 5:29 |
-| Lightyear City | `DavidKBD - Pink Bloom Pack - 09 - Lightyear City.ogg` | 1635239 / 6233753 | 4:51 |
-| HexaPuppies | `DavidKBD - HexaPuppies Pack - 01 - HexaPuppies.ogg` | 1020992 / 3749483 | 4:30 |
-| The Great Machine | `DavidKBD - HexaPuppies Pack - 07 - The Great Machine - variation1.ogg` | 1020992 / 3749499 | 4:18 |
-| Disaster | `DavidKBD - HexaPuppies Pack - 09 - Disaster - variation1.ogg` | 1020992 / 3749505 | 4:42 |
-| Keep My Rhythm, If You Can | `DavidKBD - Reckless Punk-Metal Pack - 03 - Keep My Rhythm, If You Can.ogg` | 974022 / 12030737 | 4:01 |
-| Dangerous and Bored | `DavidKBD - Reckless Punk-Metal Pack - 05 - Dangerous and Bored.ogg` | 974022 / 12030736 | 5:23 |
-| Speedy and Hostile | `DavidKBD - Reckless Punk-Metal Pack - 10 - Speedy and Hostile.ogg` | 974022 / 12030742 | 3:47 |
-| Purgatory | `01 - DavidKBD - Purgatory Pack - Purgatory.ogg` | 1498789 / 11733688 | 3:09 |
-| On Fire | `06 - DavidKBD - Purgatory Pack - On Fire.ogg` | 1498789 / 11733968 | 3:05 |
-| Hades | `07 - DavidKBD - Purgatory Pack - Hades.ogg` | 1498789 / 11733694 | 3:27 |
+| Cyber Lights | `DavidKBD - Electric Pulse - 03 - Cyber Lights-full.ogg` | [Electric Pulse](https://davidkbd.itch.io/electric-pulse-synthwave-retro-futuristic-music-pack), 8382058 | 4:11 |
+| Neon Arcadia Awakening | `DavidKBD - Electric Pulse - 05 - Neon Arcadia Awakening-full.ogg` | Electric Pulse, 8382061 | 3:52 |
+| Time Warp | `DavidKBD - Electric Pulse - 06 - Time Warp-full.ogg` | Electric Pulse, 8382063 | 3:56 |
+| Quantum Ripples of Sound | `DavidKBD - Electric Pulse - 08 - Quantum Ripples of Sound-full.ogg` | Electric Pulse, 8382067 | 5:02 |
+| Synthetic Power Surge | `DavidKBD - Electric Pulse - 10 - Synthetic Power Surge-full.ogg` | Electric Pulse, 8382551 | 4:11 |
+| Neon Action Full | `Neon Action Full.mp3` | [Bogart VGM / OGA](https://opengameart.org/content/neon-action) | Exact MP3 duration pending hosted decode; only the explicitly named Full file is selected |
+| Solar Storm | `DavidKBD - Interstellar vol2 02 - Solar Storm.ogg` | [Interstellar vol. 2](https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack), 13507642 | 4:03 |
+| Galactic Battle | `DavidKBD - Interstellar vol2 04 - Galactic Battle.ogg` | Interstellar vol. 2, 13507638 | 4:13 |
+| Orbital Assault | `DavidKBD - Interstellar vol2 09 - Orbital Assault.ogg` | Interstellar vol. 2, 13507646 | 3:23 |
+| They want death | `DavidKBD - Purgatory Pack vol2 - 02 - They want death.ogg` | [Purgatory vol. 2](https://davidkbd.itch.io/purgatory-vol-2-extreme-metal-music-pack), 12451195 | 4:11 |
+| Insanity is your flame | `DavidKBD - Purgatory Pack vol2 - 04 - Insanity is your flame.ogg` | Purgatory vol. 2, 12451193 | 3:12 |
+| Sin, their pity, their agony | `DavidKBD - Purgatory Pack vol2 - 05 - Sin, their pity, their agony.ogg` | Purgatory vol. 2, 12451194 | 3:55 |
 
-The duration values come from David KBD's official album distributions and describe the named compositions. The hosted workflow must measure each exact free OGG; no duration is inferred from its filename or byte size, and this batch rejects an exact recording shorter than three minutes. Only variation 1 of The Great Machine and Disaster is registered, so alternate arrangements do not inflate the composition count.
+David KBD's official album pages document the listed composition durations:
+[Electric Pulse](https://davidkbd.bandcamp.com/album/electric-pulse-synthwave-retro-futuristic-music-pack-original-game-soundtrack),
+[Interstellar vol. 2](https://davidkbd.bandcamp.com/album/interstellar-vol-2-edm-metal-music-pack-original-game-soundtrack),
+and [Purgatory vol. 2](https://davidkbd.bandcamp.com/album/purgatory-vol-2-extreme-metal-music-pack-original-game-soundtrack).
+The exact freely downloadable files still have to pass hosted decoding and the
+unchanged 180–720 second envelope. Album duration evidence never overrides an
+exact-file failure.
 
-Sources: [Pink Bloom](https://davidkbd.itch.io/pink-bloom-synthwave-music-pack), [HexaPuppies](https://davidkbd.itch.io/hexapuppies-synthwave-music-pack), [Reckless](https://davidkbd.itch.io/reckless-punk-metal-music-pack), and [Purgatory](https://davidkbd.itch.io/purgatory-extreme-metal-music-pack).
+The synth half targets complete outrun/synthwave arrangements. The metal half
+targets rhythmic EDM-metal and extreme metal in the direction the user asked
+to continue. Purgatory vol. 2 is creator-described as containing vocals;
+lyrics, explicit content, Content ID, transitions, warning audibility and game
+suitability remain unreviewed. Every approval flag is false.
 
-The synth half is a listening hypothesis for fuller synthwave, moving bass, layered leads and electronic drums. The metal half emphasizes the user's approved punk-metal and extreme-metal direction. Exact vocal content, explicit content, Content ID, game balance, full-track structure and musical fit remain pending. Every recording therefore keeps `contentId: "unknown"`, `recordingModeEligible: false`, and all approval flags false.
+## Preserved failed hosted evidence
 
-## Fail-closed hosted preparation
+The first source revision at commit
+`ad0374b6cd6087d85d1814ae5d0c83da421113a6` failed all twelve candidates in
+[hosted run 36069462468](https://github.com/mekhovov/revealline-soundtracks-01/actions/runs/36069462468).
+Its partial artifact is `10837930834`, 18,660,997 bytes, SHA-256
+`9db0681e34eae57e327baf89cb5297692e190ec6c5af082921f4a77beeb0c6f3`.
+That evidence is retained and is not relabelled as a successful audition.
 
-- The complete manifest is SHA-256 bound before network access and local acquisition is refused.
-- Each source is bound to the exact origin, slug, game ID, normalized creator-description digest, CC BY badge, direct licence link, upload ID and visible filename.
-- The anonymous route must remain free. A purchase requirement, account handoff, external media URL, changed description, changed terms, alternate upload, cross-paired response or redirect stops intake.
-- Cookies, CSRF values, download-page keys and signed CDN URLs remain ephemeral. Safe evidence retains semantic licence facts, exact source/upload identity, native hash, decoder facts, measured duration and processing results.
-- Native acquisition and FFmpeg validation run only in the `Prepare second-direction audition candidates` workflow. Its artifact is `second-directions-audition-candidates`; it is review material rather than a public collection.
-- Existing public inventory verification runs first. The shared production, scratch, free-space and per-volume limits remain unchanged.
+The exact free Pink Bloom, HexaPuppies, Reckless and original Purgatory files
+were short loop assets below three minutes, even where a longer album edition
+exists. The Great Machine and Disaster also returned native filenames that did
+not equal their visible upload titles. Keep My Rhythm reached an inherited
+parser refusal because its quoted filename contains a comma; the parser now
+accepts commas only inside a well-formed quoted filename while continuing to
+reject duplicate and combined header values. Keep My Rhythm remains held until
+its exact native duration is separately proven.
 
-## Reserves and exclusions
+## Fail-closed preparation and deduplication
 
-- **Turbo Batido — Ingame PowerMetal, ElectroMetal and BlackMetal Instrumental** remain short-loop reserves. The page is CC BY 4.0 and publicly free, but it documents them as loops and publishes no exact duration. None is registered in this full-track slate.
-- **See You in Hell FREE** is held. Its current page says commercial projects require PRO and also says its free tracks may be used commercially, while its earlier creator devlog describes the free version as non-commercial. The exact README must resolve that conflict before acquisition. The $6 PRO pack separately states CC BY 4.0, but it is not a free intake source.
-- **Mach Overdrive** is excluded from the public standalone archive because its current description expressly prohibits redistribution or resale of standalone audio despite displaying a CC BY badge.
-- Mini-loops, cinematics, victory/failure stings, paid WAV archives, alternate encodings and other variants are not registered.
+- The complete manifest hash is checked before network access; local audio
+  acquisition remains refused.
+- Itch sources are bound to origin, slug, game ID, normalized description hash,
+  CC BY badge, direct licence link, upload ID and visible filename. The free
+  route must remain available.
+- The OGA page must still link the exact full MP3 and licence. Redirects,
+  alternate files, external hosts and changed terms stop intake.
+- Cookies, CSRF values, private download keys and signed URLs remain ephemeral.
+  Receipts contain only source facts, exact hashes and technical results.
+- The hosted preparation keeps native bytes, performs complete decode and
+  loudness checks, and records all failures without manufacturing success.
+- Duplicate checks now cover delivery hashes in the unified 104-recording
+  public catalogue plus native and derivative hashes retained by every public
+  preview catalogue. A re-encoding cannot bypass byte-level source dedupe.
+- Production, scratch, free-space and volume limits are unchanged.
+
+## Holds and exclusions
+
+- The twelve files from the failed revision remain explicit short/mismatched
+  holds. They are neither silently replaced under old IDs nor registered by
+  this revision.
+- **Turbo Batido PowerMetal, ElectroMetal and BlackMetal Instrumental** remain
+  short-loop reserves below the full-arrangement floor.
+- **See You in Hell FREE** remains held because its current page says both that
+  commercial projects require PRO and that free tracks may be used
+  commercially; an older creator devlog calls the free version non-commercial.
+- **Mach Overdrive** remains excluded because its source description prohibits
+  standalone redistribution despite the displayed CC BY badge.
+- Mini-loops, cinematics, stings, paid archives, alternate encodings and
+  alternate arrangements are excluded from this distinct-composition slate.
 
 ## Source-only verification
 
@@ -51,4 +103,6 @@ PYTHONDONTWRITEBYTECODE=1 python3 intake/prepare_second_directions.py --check
 node verify.mjs
 ```
 
-These checks fetch no audio. Hosted technical success still cannot establish listening approval or suitability for RevealLine.
+These commands fetch no audio. A fresh hosted result is required before any
+candidate artifact exists, and technical success still cannot establish
+musical approval.

@@ -101,9 +101,24 @@ class EvidenceClient:
 def native_filename(headers, upload_name):
     values = headers.get_all('Content-Disposition', [])
     require(len(values) == 1 and len(values[0]) <= 2048
-            and ',' not in values[0]
             and not any(ord(c) < 32 or ord(c) == 127 for c in values[0]),
             'Missing or ambiguous native Content-Disposition')
+    # A comma is valid inside a quoted filename (for example
+    # ``filename="Keep My Rhythm, If You Can.ogg"``), but an unquoted comma
+    # can join multiple field values into one string.  Message.get_params()
+    # otherwise accepts that combined form, so reject it before parsing while
+    # retaining quoted-string escaping semantics.
+    quoted = escaped = False
+    for character in values[0]:
+        if escaped:
+            escaped = False
+        elif quoted and character == '\\':
+            escaped = True
+        elif character == '"':
+            quoted = not quoted
+        elif character == ',' and not quoted:
+            require(False, 'Missing or ambiguous native Content-Disposition')
+    require(not quoted and not escaped, 'Missing or ambiguous native Content-Disposition')
     message = Message()
     message['Content-Disposition'] = values[0]
     params = message.get_params(header='content-disposition', unquote=True)
