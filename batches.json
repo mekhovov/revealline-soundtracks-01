@@ -16,6 +16,14 @@
         "bytes": 1768,
         "sha256": "540347c20980e758dc0a4471f86c63e8e9d930f8fcae483d4395719a1dc6d2aa"
       }
+    },
+    {
+      "id": "metal-nakarada-audition-20260924",
+      "manifest": {
+        "path": "batches/metal-nakarada-audition-20260924/deployment-manifest.json",
+        "bytes": 1987,
+        "sha256": "5c5004bc364fdb3bf18e993b329045c6ffbe35b57178113194eb1834c99d27d2"
+      }
     }
   ]
 }

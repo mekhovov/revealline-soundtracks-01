@@ -1,0 +1,56 @@
+{
+  "format": "revealline-artifact-member-hashes.v1",
+  "artifactSha256": "93b67abe458886868f1ccfdbe16f279e4ecbb8778722a535d6c532b84c6fe9f7",
+  "files": [
+    {
+      "path": "evidence/7ab4749f1a201be85c6b29ec721e6caa882932f72b526e46c2d2f246eec5d529.html",
+      "bytes": 52201,
+      "sha256": "7ab4749f1a201be85c6b29ec721e6caa882932f72b526e46c2d2f246eec5d529"
+    },
+    {
+      "path": "evidence/98ee737fa29d8776843035178cae789b5139202d404f183f91e19f540344741f.html",
+      "bytes": 77302,
+      "sha256": "98ee737fa29d8776843035178cae789b5139202d404f183f91e19f540344741f"
+    },
+    {
+      "path": "evidence/aa83913c94ada6394d6c3472a0cc590c5c756ffdca571183f98b6f6f6dd2633e.html",
+      "bytes": 77741,
+      "sha256": "aa83913c94ada6394d6c3472a0cc590c5c756ffdca571183f98b6f6f6dd2633e"
+    },
+    {
+      "path": "evidence/d3ca2aa84bd7922176bb644e49e0dbe5d25f15d70c720afeb865e2936680d600.html",
+      "bytes": 56326,
+      "sha256": "d3ca2aa84bd7922176bb644e49e0dbe5d25f15d70c720afeb865e2936680d600"
+    },
+    {
+      "path": "objects/30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95.mp3",
+      "bytes": 9618120,
+      "sha256": "30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95"
+    },
+    {
+      "path": "objects/f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf.mp3",
+      "bytes": 7685477,
+      "sha256": "f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf"
+    },
+    {
+      "path": "originals/a7553e8aff4bf229b3a3eefea186c021279233902e4a565a6e6fbcc6a8072ad7.mp3",
+      "bytes": 9603840,
+      "sha256": "a7553e8aff4bf229b3a3eefea186c021279233902e4a565a6e6fbcc6a8072ad7"
+    },
+    {
+      "path": "originals/be65d0bdb3c2834f666efa04ec0a248ed9c19fa956ee1fa907edea72fe14ea39.mp3",
+      "bytes": 12127426,
+      "sha256": "be65d0bdb3c2834f666efa04ec0a248ed9c19fa956ee1fa907edea72fe14ea39"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 8640,
+      "sha256": "b235e2cadeb061c7c8fa2bad41c14e1d80e813691f734769c9b9a8492880041d"
+    },
+    {
+      "path": "review.json",
+      "bytes": 521,
+      "sha256": "f46cd8f80bfe78ca79d5514e5ac80b3db309d0e6b9c449cd159edcb817f1b2b9"
+    }
+  ]
+}

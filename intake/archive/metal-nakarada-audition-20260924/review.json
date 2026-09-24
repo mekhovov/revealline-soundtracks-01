@@ -1,0 +1,19 @@
+{
+  "status": "pending",
+  "tracks": [
+    {
+      "id": "alexander-nakarada.the-dobermann",
+      "sha256": "f499d9362214fe08bb7ea6cebd70d5c1b7c83159e80a67d29a34762446d6a5cf",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "alexander-nakarada.folklore",
+      "sha256": "30bd3973e4388c504c612f062a701aada233b5c83dd784e1fa2984689bb7ac95",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}
