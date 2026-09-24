@@ -89,6 +89,7 @@ function publicTrack(
     status,
     listeningApproval,
     gameCatalogueAdmission: admitted === true,
+    ...(track.default === false ? { default: false } : {}),
     contentId: track.contentId ?? "unknown",
     recordingModeEligible: track.recordingModeEligible === true,
     audio: {
