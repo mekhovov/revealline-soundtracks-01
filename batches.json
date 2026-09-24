@@ -40,6 +40,14 @@
         "bytes": 2870,
         "sha256": "bcb591795b8eea0e2cbe931f9eb793cc41a5b04f9b1f6dec3fa8ba7549c9cd61"
       }
+    },
+    {
+      "id": "metal-groove-audition-20260924",
+      "manifest": {
+        "path": "batches/metal-groove-audition-20260924/deployment-manifest.json",
+        "bytes": 2415,
+        "sha256": "fb0a0ac6362d565eaab3dfd2b3967a92397877f9e35fa52ec4a9ec26ad36fd42"
+      }
     }
   ]
 }

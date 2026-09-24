@@ -1,0 +1,13 @@
+{
+  "run": 35961304793,
+  "head": "31dded3fdc94bb0609d65e62883452084c8a8dff",
+  "runnerRevision": "c2fb2afba4b5e438ef40e059e35daed407c6ba74",
+  "mergedSource": "d3c675c7183f651089461d0e42c364b850a03ebf",
+  "sourceTree": "5a6391e7da080dd0c666507c288eeb43222c5c44",
+  "artifactId": 10792671587,
+  "artifactSha256": "a21be6365eba8d9da10156428d2fa7a7a5684d4621270915e10c95aacd7c6030",
+  "artifactBytes": 67887127,
+  "sourceManifestSha256": "3a1e1e6fadc598c62f6bd98a1b7e5093a7e19f8101e880a8b2af9efcb6d3b3c7",
+  "originalArtifactReview": "https://github.com/mekhovov/revealline-soundtracks-01/pull/9#issuecomment-5808496559",
+  "listeningApproval": false
+}

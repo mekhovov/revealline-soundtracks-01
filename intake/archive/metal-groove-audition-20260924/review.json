@@ -1,0 +1,33 @@
+{
+  "status": "pending",
+  "tracks": [
+    {
+      "id": "alexander-nakarada.anemo",
+      "sha256": "362081bf6dc541c933bd21028511f6019e9572fe2b6458d6f0d169e9af762711",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "alexander-nakarada.trial-of-thorns",
+      "sha256": "b31e0318a1ef5c92e97d31c36e6bed9abf706dfd692a073b9b92078c6edfe8cd",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "alexander-nakarada.riffs-two",
+      "sha256": "ede7c1320609b0ccde15e21ad63bb3bf1706fedec61f8413196bc5cebb73e82a",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "alexander-nakarada.apocalypse",
+      "sha256": "e43e420cf5cbb9715b25de075380111867609a34e7a5cb3462b2c14793786b54",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}
