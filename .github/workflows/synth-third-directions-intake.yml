@@ -16,7 +16,25 @@ permissions:
   contents: read
 
 jobs:
+  source:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - name: Verify source and historical archive boundaries
+        run: |
+          python3 -m unittest discover -s intake -p 'test_*.py'
+          python3 intake/prepare_synth_third_directions.py --check
+          node --test test-verify.mjs
+          node verify.mjs
+
   prepare:
+    needs: source
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:

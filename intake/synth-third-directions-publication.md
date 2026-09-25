@@ -44,3 +44,9 @@ its deployment manifest is 2,563 bytes with SHA-256
 `63848e4351c83b507824345d124b498f98bc8ae982fc5eaebe60f0c1a84c85cd`.
 The small assembly evidence artifact `10850495971` is 2,928 bytes with SHA-256
 `a1fce8993ee5bc8fedfbf8c8ea0a7af837676d379a16b554de364b790f1d1dc0`.
+
+Post-assembly pull-request run `36103455462` is also preserved. Its source and
+archive checks passed, then its acquisition job correctly rejected the four
+now-public exact identities as duplicates. The intake workflow now follows the
+existing second-slate lifecycle: pull requests verify source and history only;
+an explicit dispatch is required to reacquire the fixed audition artifact.
