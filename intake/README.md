@@ -41,6 +41,21 @@ before a later versioned archive admission. Unknown Content ID status remains
 unknown. The source filenames and hashes remain in the receipt; generated MP3
 filenames use exact SHA-256 identities.
 
+## ShareAlike rights contract
+
+Future CC BY-SA 3.0 or 4.0 auditions must use the rights-aware local intake.
+Every row binds the exact licence identity and version, its rights-evidence URL,
+the public attribution, an MP3 derivative/change notice and the compatible
+ShareAlike delivery licence. The delivery licence currently remains the same
+reviewed CC BY-SA version; intake does not infer cross-version compatibility.
+CC BY-SA rows without this structure fail validation, as do rows mislabeled as
+CC BY or marked Recording-mode-safe. Historical CC0 and CC BY catalogues remain
+valid without rewriting their immutable metadata only for the twelve explicitly
+listed, deployment-pinned archive identities that predate this contract. Their
+licence label must still exactly match the licence URL. All newly generated
+local intakes emit the explicit structure, and an unknown archive identity
+cannot use the legacy exception.
+
 ## Separate Ukrainian candidate
 
 `ukrainian-shchedryk-20260924.json` prepares Alexander Nakarada's **Carol of the

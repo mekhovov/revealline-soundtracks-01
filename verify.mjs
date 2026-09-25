@@ -13,6 +13,11 @@ import {
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  LICENSES_BY_URL,
+  allowsLegacyRightsArchive,
+  validateRecordingRights,
+} from './rights-policy.mjs';
 
 const EXPECTED_TRACKS = 70;
 const EXPECTED_AUDIO_BYTES = 354986122;
@@ -56,12 +61,8 @@ const PRIVATE = new Set([
   'verify.mjs',
   'test-verify.mjs',
   'render.mjs',
+  'rights-policy.mjs',
   'intake',
-]);
-const LICENSES = new Set([
-  'https://creativecommons.org/publicdomain/zero/1.0/',
-  'https://creativecommons.org/licenses/by/3.0/',
-  'https://creativecommons.org/licenses/by/4.0/',
 ]);
 const validHash = (value) => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
 const objectPath = (value) =>
@@ -220,13 +221,16 @@ function validatePayloadDeclarations(manifest, inventory, catalogue, expected) {
       'Missing or duplicate preview recording identity.',
     );
     demand(
-      LICENSES.has(track.licenseURL) &&
+      LICENSES_BY_URL.has(track.licenseURL) &&
         safeURL(track.source) &&
         typeof track.credit === 'string' &&
         track.credit.trim().length > 0 &&
         track.credit.length <= 2048,
       'Recording lacks supported redistribution license, source or attribution.',
     );
+    validateRecordingRights(track, {
+      allowLegacy: allowsLegacyRightsArchive(catalogue.archive.id),
+    });
     demand(
       typeof track.title === 'string' &&
         track.title.trim().length > 0 &&
