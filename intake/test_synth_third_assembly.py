@@ -1,4 +1,6 @@
 import copy
+import json
+from pathlib import Path
 import unittest
 from unittest.mock import patch
 
@@ -80,6 +82,32 @@ class SynthThirdAssemblyConfigurationTests(unittest.TestCase):
         self.assertIn(b'CC BY 3.0 Unported', page)
         self.assertIn(b'Content ID disabled', page)
         self.assertNotIn(b'>CC BY 4.0<', page)
+
+    def test_published_rows_bind_exact_non_sharealike_rights(self):
+        catalogue = json.loads(Path(
+            'batches/synth-third-directions-audition-20260925/preview-catalogue.json'
+        ).read_bytes())
+        expected = {
+            'bogart-vgm.90s-racer-techno': ('CC-BY', '4.0'),
+            'arold-valda.neon-pulse': ('CC-BY', '4.0'),
+            'tcarisland.prismatic-light': ('CC-BY', '4.0'),
+            'zodik.future-travel': ('CC-BY', '3.0'),
+        }
+        self.assertEqual({row['id'] for row in catalogue['tracks']}, set(expected))
+        for row in catalogue['tracks']:
+            rights = row['rights']
+            self.assertEqual((rights['licenseId'], rights['licenseVersion']),
+                             expected[row['id']])
+            self.assertEqual(rights['licenseURL'], row['licenseURL'])
+            self.assertEqual(rights['rightsEvidenceURL'], row['source'])
+            self.assertEqual(rights['attribution'], row['credit'])
+            self.assertEqual(rights['derivativeChangeNotice'], row['changes'])
+            self.assertEqual(rights['shareAlike'], {
+                'required': False,
+                'deliveryLicenseId': None,
+                'deliveryLicenseVersion': None,
+                'deliveryLicenseURL': None,
+            })
 
     def test_main_applies_configuration_before_guarded_assembly(self):
         saved = {name: getattr(assembler, name) for name in subject.CONFIG}

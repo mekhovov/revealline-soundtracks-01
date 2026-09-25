@@ -50,3 +50,28 @@ archive checks passed, then its acquisition job correctly rejected the four
 now-public exact identities as duplicates. The intake workflow now follows the
 existing second-slate lifecycle: pull requests verify source and history only;
 an explicit dispatch is required to reacquire the fixed audition artifact.
+
+## Structured-rights reconciliation
+
+After fail-closed structured rights landed on archive main in PR #24, PR #25
+was rebased onto exact main `9eb606ce78d82a24b7771d596aa3488611730117`.
+The first rebased checks are preserved as failed runs `36123334728`,
+`36123334649`, `36123334654`, `36123334693` and `36123334726`: all stopped
+because the new `synth-third-directions-audition-20260925` archive identity was
+correctly ineligible for the historical legacy-metadata exception.
+
+Each of the four preview rows now binds the exact CC BY identity and version,
+the recording's OpenGameArt evidence page, attribution byte-for-byte equal to
+its public credit, and its existing truthful MP3 conversion/normalization
+notice. All four licences are non-ShareAlike, so `required` is false and the
+three ShareAlike delivery fields are explicitly null. The four audio paths,
+sizes and SHA-256 identities are unchanged. Metadata regeneration produced:
+
+- batch catalogue: 18,866 bytes, SHA-256
+  `083b6dd5305a81abf845f1d5b93112fdb22936fa5e3a07277781932af913e2da`;
+- batch deployment manifest: 2,563 bytes, SHA-256
+  `ebaa3ec8f4638fdaad61f6f90fe37682ee77e49b3c359fb2a48e270aa9d552c7`;
+- unified catalogue: 165,191 bytes, SHA-256
+  `b2854eaa03dad7a55f31d9a7a80bd3a8da5c8183a0e8a04056089e8a103d9dfe`;
+- root deployment manifest: 18,544 bytes, SHA-256
+  `6ba225c52cd35fb3352f7d7d1883869de8593d59f6d9bab6f3224318839556e6`.

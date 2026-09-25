@@ -101,7 +101,21 @@
       "reviewStatus": "pending",
       "default": false,
       "gameCatalogueAdmission": false,
-      "originalFilename": "90s Racer Techno.mp3"
+      "originalFilename": "90s Racer Techno.mp3",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/90s-racer-techno",
+        "attribution": "Music: 90s Racer Techno by Bogart VGM (https://www.facebook.com/BogartVGM/). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/90s-racer-techno",
+        "derivativeChangeNotice": "Native 320 kbps MP3 retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      }
     },
     {
       "id": "arold-valda.neon-pulse",
@@ -189,7 +203,21 @@
       "reviewStatus": "pending",
       "default": false,
       "gameCatalogueAdmission": false,
-      "originalFilename": "Neon Pulse.mp3"
+      "originalFilename": "Neon Pulse.mp3",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/neon-pulse",
+        "attribution": "Music: Neon Pulse by Arold Valda. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/neon-pulse",
+        "derivativeChangeNotice": "Converted from the exact native 16-bit FLAC to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native FLAC retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      }
     },
     {
       "id": "tcarisland.prismatic-light",
@@ -278,7 +306,21 @@
       "reviewStatus": "pending",
       "default": false,
       "gameCatalogueAdmission": false,
-      "originalFilename": "Prismatic Light.mp3"
+      "originalFilename": "Prismatic Light.mp3",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/prismatic-light",
+        "attribution": "Music: Prismatic Light by tcarisland (https://www.tcarisland.no). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/prismatic-light",
+        "derivativeChangeNotice": "Native 192 kbps MP3 retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      }
     },
     {
       "id": "zodik.future-travel",
@@ -365,7 +407,21 @@
       "reviewStatus": "pending",
       "default": false,
       "gameCatalogueAdmission": false,
-      "originalFilename": "Future Travel.mp3"
+      "originalFilename": "Future Travel.mp3",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/zodik-future-travel",
+        "attribution": "Music: Future Travel by Zodik. Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/. Source: https://opengameart.org/content/zodik-future-travel",
+        "derivativeChangeNotice": "Converted from the exact native OGG Vorbis recording to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native OGG retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      }
     }
   ]
 }

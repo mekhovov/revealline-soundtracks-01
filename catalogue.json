@@ -116,7 +116,7 @@
     {
       "id": "synth-third-directions-audition-20260925",
       "path": "batches/synth-third-directions-audition-20260925/preview-catalogue.json",
-      "sha256": "8902bfd36fcd3ab6a781a9a10a2b4a32081a9a89622097ad0d6b55bd3edafa21",
+      "sha256": "083b6dd5305a81abf845f1d5b93112fdb22936fa5e3a07277781932af913e2da",
       "status": "licensed-preview",
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
@@ -3922,6 +3922,20 @@
       "license": "CC BY 4.0 International",
       "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
       "credit": "Music: 90s Racer Techno by Bogart VGM (https://www.facebook.com/BogartVGM/). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/90s-racer-techno",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/90s-racer-techno",
+        "attribution": "Music: 90s Racer Techno by Bogart VGM (https://www.facebook.com/BogartVGM/). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/90s-racer-techno",
+        "derivativeChangeNotice": "Native 320 kbps MP3 retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
       "fileName": "90s Racer Techno.mp3",
       "archiveId": "synth-third-directions-audition-20260925",
       "collection": "synth-third-directions-audition-20260925",
@@ -3953,6 +3967,20 @@
       "license": "CC BY 4.0 International",
       "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
       "credit": "Music: Neon Pulse by Arold Valda. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/neon-pulse",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/neon-pulse",
+        "attribution": "Music: Neon Pulse by Arold Valda. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/neon-pulse",
+        "derivativeChangeNotice": "Converted from the exact native 16-bit FLAC to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native FLAC retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
       "fileName": "Neon Pulse.mp3",
       "archiveId": "synth-third-directions-audition-20260925",
       "collection": "synth-third-directions-audition-20260925",
@@ -3984,6 +4012,20 @@
       "license": "CC BY 4.0 International",
       "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
       "credit": "Music: Prismatic Light by tcarisland (https://www.tcarisland.no). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/prismatic-light",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/prismatic-light",
+        "attribution": "Music: Prismatic Light by tcarisland (https://www.tcarisland.no). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/prismatic-light",
+        "derivativeChangeNotice": "Native 192 kbps MP3 retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
       "fileName": "Prismatic Light.mp3",
       "archiveId": "synth-third-directions-audition-20260925",
       "collection": "synth-third-directions-audition-20260925",
@@ -4015,6 +4057,20 @@
       "license": "CC BY 3.0 Unported",
       "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
       "credit": "Music: Future Travel by Zodik. Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/. Source: https://opengameart.org/content/zodik-future-travel",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/zodik-future-travel",
+        "attribution": "Music: Future Travel by Zodik. Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/. Source: https://opengameart.org/content/zodik-future-travel",
+        "derivativeChangeNotice": "Converted from the exact native OGG Vorbis recording to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native OGG retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
       "fileName": "Future Travel.mp3",
       "archiveId": "synth-third-directions-audition-20260925",
       "collection": "synth-third-directions-audition-20260925",

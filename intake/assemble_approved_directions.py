@@ -55,6 +55,18 @@ RELATED_BATCH = None
 MAX_PRODUCTION = 650 * 1024 ** 2
 MAX_SCRATCH = 256 * 1024 ** 2
 MAX_VOLUME = 64 * 1024 ** 2
+RIGHTS_LICENSES = {
+    'https://creativecommons.org/publicdomain/zero/1.0/':
+        ('CC0', '1.0', 'CC0 1.0 Universal', False),
+    'https://creativecommons.org/licenses/by/3.0/':
+        ('CC-BY', '3.0', 'CC BY 3.0 Unported', False),
+    'https://creativecommons.org/licenses/by/4.0/':
+        ('CC-BY', '4.0', 'CC BY 4.0 International', False),
+    'https://creativecommons.org/licenses/by-sa/3.0/':
+        ('CC-BY-SA', '3.0', 'CC BY-SA 3.0 Unported', True),
+    'https://creativecommons.org/licenses/by-sa/4.0/':
+        ('CC-BY-SA', '4.0', 'CC BY-SA 4.0 International', True),
+}
 INSPECTOR_PINS = {
     'game/mp3.mjs': 'd4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a',
     'game/data-json.mjs': 'bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823',
@@ -80,6 +92,35 @@ def encoded(value):
 
 def pin(name, data):
     return {'path': name, 'bytes': len(data), 'sha256': digest(data)}
+
+
+def structured_rights(row):
+    definition = RIGHTS_LICENSES.get(row.get('licenseURL'))
+    demand(definition and row.get('license') == definition[2],
+           'Recording licence identity changed')
+    evidence = row.get('sourceSnapshot', {}).get('url')
+    demand(evidence == row.get('source') and evidence.startswith('https://'),
+           'Recording rights evidence differs from its exact source snapshot')
+    attribution = row.get('credit')
+    changes = row.get('changes')
+    demand(isinstance(attribution, str) and attribution.strip()
+           and isinstance(changes, str) and changes.strip(),
+           'Recording attribution or derivative notice is missing')
+    license_id, version, _, share_alike = definition
+    return {
+        'licenseId': license_id,
+        'licenseVersion': version,
+        'licenseURL': row['licenseURL'],
+        'rightsEvidenceURL': evidence,
+        'attribution': attribution,
+        'derivativeChangeNotice': changes,
+        'shareAlike': {
+            'required': share_alike,
+            'deliveryLicenseId': license_id if share_alike else None,
+            'deliveryLicenseVersion': version if share_alike else None,
+            'deliveryLicenseURL': row['licenseURL'] if share_alike else None,
+        },
+    }
 
 
 def api(endpoint):
@@ -256,6 +297,7 @@ def build_batch(family, rows, files, templates):
     for row in rows:
         t = {k: v for k, v in row.items() if k not in ('delivery', 'asset')}
         t.update(row['delivery'])
+        t['rights'] = structured_rights(row)
         t.update({'genres': [family], 'tags': [family, 'audition', 'listening pending'],
                   'reviewStatus': 'pending', 'default': False, 'gameCatalogueAdmission': False,
                   'originalFilename': row['original'].get('fileName', row['title'] + '.mp3')})
