@@ -1,0 +1,30 @@
+intake/test_reckless2.py
+  s_f8296d264eaab0::t_188b162c5382e2 12,109-113,117-120
+intake/test_reckless2_assembly.py
+  s_f8296d264eaab0::t_fb0a907f4d1481 131-136,157-159
+  s_f8296d264eaab0::t_65fc98c21a48ce 137
+  s_f8296d264eaab0::t_188b162c5382e2 116,119,121-130,138-156,160-165
+intake/reckless2-publication.md
+  s_f8296d264eaab0::t_188b162c5382e2 24-27
+.github/workflows/reckless2-publication.yml
+  s_f8296d264eaab0::t_188b162c5382e2 10,32-33
+intake/assemble_reckless2.py
+  s_f8296d264eaab0::t_188b162c5382e2 23-32,98-104,120-146,148-153,158-177
+  s_f8296d264eaab0::t_65fc98c21a48ce 21-22,111-116,147,154-157
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6f33577222f848fbd1f56d659bc2ae5a9ae601ed",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
