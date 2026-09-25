@@ -83,8 +83,7 @@ class SynthThirdDirectionsTests(unittest.TestCase):
             normalized = ''.join(char for char in row['title'].lower() if char.isalnum())
             native_present = row['expectedSourceSha256'] in known_hashes
             title_present = normalized in known_titles
-            if native_present:
-                self.assertTrue(title_present)
+            self.assertEqual(native_present, title_present)
             native_published.append(native_present)
             title_published.append(title_present)
         self.assertIn(native_published, ([False] * 4, [True] * 4))
