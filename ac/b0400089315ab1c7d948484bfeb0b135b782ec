@@ -1,0 +1,35 @@
+intake/test_reckless2.py
+  s_f8296d264eaab0::t_f8d88a921864b8 1-160
+intake/reckless2-audition-20260925.md
+  s_f8296d264eaab0::t_6c4d80c485dec6 1-20
+intake/itch_source.py
+  s_f8296d264eaab0::t_512bc300e140aa 21-23,61-67
+intake/itch_audio.py
+  s_f8296d264eaab0::t_512bc300e140aa 25-28,34-39,66-67
+intake/prepare_reckless2.py
+  s_f8296d264eaab0::t_6c4d80c485dec6 1-82
+.github/workflows/metal-reckless2-intake.yml
+  s_f8296d264eaab0::t_6c4d80c485dec6 1-80
+intake/reckless2_pins.py
+  s_f8296d264eaab0::t_512bc300e140aa 1-63
+intake/test_approved_directions.py
+  s_f8296d264eaab0::t_c338bd0d3cb21b 87
+intake/reckless2-audition-20260925.json
+  s_f8296d264eaab0::t_5b50076cce26f7 1-133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "acb0400089315ab1c7d948484bfeb0b135b782ec",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
