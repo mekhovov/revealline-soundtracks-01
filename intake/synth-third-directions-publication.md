@@ -25,3 +25,22 @@ Publication adds listening previews only. Listening approval, game catalogue
 admission, default selection and Recording-mode admission remain false. The
 source statement that Neon Pulse has Content ID disabled remains a source claim;
 it does not enable Recording mode. All other Content ID status remains unknown.
+
+## Hosted assembly evidence
+
+Failed run `36102828802` is preserved. It assembled and verified the exact
+artifact, then stopped before commit or push because the source test still
+required all four candidates to be absent after assembly. The corrected test
+accepts only two complete states: all four exact source identities absent, or
+all four exact identities and titles present. Partial publication and identity
+mismatch remain failures.
+
+Corrected run `36103067295` passed at source head
+`cdaede794bc4c1084f6208f99d9e99d6f6034b48` and generated review commit
+`6181c6fad391d7359525e40ce55094ec25923482`. It verified 132 unique
+recordings across 13 collections, 761,327,907 public audio bytes and
+762,215,203 total public bytes. The new immutable batch is 25,138,336 bytes;
+its deployment manifest is 2,563 bytes with SHA-256
+`63848e4351c83b507824345d124b498f98bc8ae982fc5eaebe60f0c1a84c85cd`.
+The small assembly evidence artifact `10850495971` is 2,928 bytes with SHA-256
+`a1fce8993ee5bc8fedfbf8c8ea0a7af837676d379a16b554de364b790f1d1dc0`.
