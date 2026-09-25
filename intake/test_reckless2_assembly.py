@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 import assemble_approved_directions as assembler
 import assemble_reckless2 as subject
-from prepare_reckless2 import MANIFEST
+from prepare_reckless2 import MANIFEST, SOURCE_FILES
 
 
 class Reckless2AssemblyConfigurationTests(unittest.TestCase):
@@ -45,6 +45,7 @@ class Reckless2AssemblyConfigurationTests(unittest.TestCase):
         self.assertEqual(subject.CONFIG['BATCH_IDS'], {
             'metal': 'metal-reckless2-audition-20260925'
         })
+        self.assertEqual(subject.CONFIG['SOURCE_FILES'], SOURCE_FILES)
 
     def test_original_runner_merge_proves_the_exact_source_tree(self):
         saved = {name: getattr(assembler, name) for name in subject.CONFIG}
