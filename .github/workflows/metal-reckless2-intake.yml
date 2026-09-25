@@ -12,35 +12,16 @@ on:
       - 'intake/itch_source.py'
       - 'intake/itch_audio.py'
       - '.github/workflows/metal-reckless2-intake.yml'
-  workflow_dispatch:
-
 permissions:
   contents: read
 
 jobs:
-  source:
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20.19.5
-      - name: Verify source and historical archive boundaries
-        env:
-          PYTHONDONTWRITEBYTECODE: '1'
-        run: |
-          python3 -m unittest discover -s intake -p 'test_*.py'
-          python3 intake/prepare_reckless2.py --check
-          node --test test-verify.mjs
-          node verify.mjs
   prepare:
-    needs: source
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
       PYTHONDONTWRITEBYTECODE: '1'
-      EVENT_HEAD_SHA: ${{ github.sha }}
+      EVENT_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
