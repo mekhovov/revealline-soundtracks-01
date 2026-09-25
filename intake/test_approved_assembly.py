@@ -198,6 +198,14 @@ class ApprovedAssemblyTests(unittest.TestCase):
                 self.assertFalse(row['default'])
                 self.assertFalse(row['gameCatalogueAdmission'])
                 self.assertFalse(row['recordingModeEligible'])
+                self.assertEqual(row['rights']['attribution'], row['credit'])
+                self.assertEqual(row['rights']['rightsEvidenceURL'], row['source'])
+                self.assertEqual(row['rights']['derivativeChangeNotice'], row['changes'])
+                self.assertFalse(row['rights']['shareAlike']['required'])
+                self.assertEqual(
+                    {row['rights']['shareAlike'][key] for key in
+                     ('deliveryLicenseId', 'deliveryLicenseVersion', 'deliveryLicenseURL')},
+                    {None})
             self.assertEqual(first['player.mjs'], templates['player.mjs'])
             self.assertIn(b'id="search"', first['index.html'])
             self.assertIn(b'id="next"', first['index.html'])

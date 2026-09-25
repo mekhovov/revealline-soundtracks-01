@@ -1,0 +1,26 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "synth-third-directions-audition-20260925",
+  "files": [
+    {
+      "path": "objects/19164dcc6d8e919ea015e96b4ebcd53d65c537b1a614b0b881b9ea9bfcb7671b.mp3",
+      "bytes": 5535495,
+      "sha256": "19164dcc6d8e919ea015e96b4ebcd53d65c537b1a614b0b881b9ea9bfcb7671b"
+    },
+    {
+      "path": "objects/8e3f6104f6b43e98952734b170a5ecb4fa1370131bb7fef277b5080ede47911c.mp3",
+      "bytes": 6200050,
+      "sha256": "8e3f6104f6b43e98952734b170a5ecb4fa1370131bb7fef277b5080ede47911c"
+    },
+    {
+      "path": "objects/a560f672ebf74397b11d76bf26b894fb6bee9978df8f1e6b929d89cef96bc8bc.mp3",
+      "bytes": 7350274,
+      "sha256": "a560f672ebf74397b11d76bf26b894fb6bee9978df8f1e6b929d89cef96bc8bc"
+    },
+    {
+      "path": "objects/3953be70c7758c91072cd42e398c0c5273b78ea279d389a7b96846e631e4dcae.mp3",
+      "bytes": 6013640,
+      "sha256": "3953be70c7758c91072cd42e398c0c5273b78ea279d389a7b96846e631e4dcae"
+    }
+  ]
+}

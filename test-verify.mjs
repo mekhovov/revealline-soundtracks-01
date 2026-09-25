@@ -529,9 +529,19 @@ test("upload intake commits exact validated bytes and reproducible catalogue met
     await readFile(path.join(f.root, "catalogue.json"), "utf8"),
     serializeCatalogue(generated),
   );
-  assert(
-    generated.tracks.some((track) => track.id === "successful-upload.track"),
+  const uploaded = generated.tracks.find(
+    (track) => track.id === "successful-upload.track",
   );
+  assert(uploaded);
+  assert.equal(uploaded.rights.licenseId, "CC0");
+  assert.equal(uploaded.rights.licenseVersion, "1.0");
+  assert.equal(uploaded.rights.attribution, "Synthetic fixture bytes under CC0.");
+  assert.deepEqual(uploaded.rights.shareAlike, {
+    required: false,
+    deliveryLicenseId: null,
+    deliveryLicenseVersion: null,
+    deliveryLicenseURL: null,
+  });
   assert.deepEqual(
     (await readdir(path.join(f.root, "intake"))).filter((name) =>
       name.startsWith(".upload-"),

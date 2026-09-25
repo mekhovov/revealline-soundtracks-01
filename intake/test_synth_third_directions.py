@@ -75,12 +75,19 @@ class SynthThirdDirectionsTests(unittest.TestCase):
         self.assertIs(neon['recordingModeEligible'], False)
         self.assertEqual(self.rows[2]['publishedBpm'], 140)
 
-    def test_exact_native_hashes_are_not_in_public_catalogue(self):
+    def test_exact_native_hashes_are_absent_or_published_as_one_complete_batch(self):
         known_hashes, known_titles = prepare.public_recording_fingerprints()
+        native_published = []
+        title_published = []
         for row in self.rows:
-            self.assertNotIn(row['expectedSourceSha256'], known_hashes)
             normalized = ''.join(char for char in row['title'].lower() if char.isalnum())
-            self.assertNotIn(normalized, known_titles)
+            native_present = row['expectedSourceSha256'] in known_hashes
+            title_present = normalized in known_titles
+            self.assertEqual(native_present, title_present)
+            native_published.append(native_present)
+            title_published.append(title_present)
+        self.assertIn(native_published, ([False] * 4, [True] * 4))
+        self.assertIn(title_published, ([False] * 4, [True] * 4))
 
     def test_source_page_binds_download_and_licence(self):
         for row in self.rows:

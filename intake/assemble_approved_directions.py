@@ -24,6 +24,7 @@ ZIP_BYTES = 128698822
 ZIP_SHA = 'b632cb216cbb64db5bb08287a0e63eaebfdbf347d173f1cfe5c796c79670885c'
 SOURCE_HEAD = 'ce8ec098b9d400f8a4b2fdba77f8dc548e09375e'
 RUNNER = '4c58001367033ede0f2566a572e4813426d61267'
+TREE_PROOF = RUNNER
 SOURCE_TREE = 'c19d3cb93ddfd3d0a947a2cb94adb86ef1f91d4f'
 SOURCE_BASE = 'ea40d9fc5583a643e8bb2d6cdc69d885960f354f'
 MERGED_SOURCE = '0df64cecbe82c6d000780562e3ca0718981e64d0'
@@ -49,9 +50,23 @@ SOURCE_FILES = (
 )
 BASE_RECORDINGS = 104
 PUBLIC_RECORDINGS = 116
+EXPECTED_FAMILY_COUNTS = {'synth90s': 6, 'metal': 6}
+RELATED_BATCH = None
 MAX_PRODUCTION = 650 * 1024 ** 2
 MAX_SCRATCH = 256 * 1024 ** 2
 MAX_VOLUME = 64 * 1024 ** 2
+RIGHTS_LICENSES = {
+    'https://creativecommons.org/publicdomain/zero/1.0/':
+        ('CC0', '1.0', 'CC0 1.0 Universal', False),
+    'https://creativecommons.org/licenses/by/3.0/':
+        ('CC-BY', '3.0', 'CC BY 3.0 Unported', False),
+    'https://creativecommons.org/licenses/by/4.0/':
+        ('CC-BY', '4.0', 'CC BY 4.0 International', False),
+    'https://creativecommons.org/licenses/by-sa/3.0/':
+        ('CC-BY-SA', '3.0', 'CC BY-SA 3.0 Unported', True),
+    'https://creativecommons.org/licenses/by-sa/4.0/':
+        ('CC-BY-SA', '4.0', 'CC BY-SA 4.0 International', True),
+}
 INSPECTOR_PINS = {
     'game/mp3.mjs': 'd4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a',
     'game/data-json.mjs': 'bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823',
@@ -79,6 +94,35 @@ def pin(name, data):
     return {'path': name, 'bytes': len(data), 'sha256': digest(data)}
 
 
+def structured_rights(row):
+    definition = RIGHTS_LICENSES.get(row.get('licenseURL'))
+    demand(definition and row.get('license') == definition[2],
+           'Recording licence identity changed')
+    evidence = row.get('sourceSnapshot', {}).get('url')
+    demand(evidence == row.get('source') and evidence.startswith('https://'),
+           'Recording rights evidence differs from its exact source snapshot')
+    attribution = row.get('credit')
+    changes = row.get('changes')
+    demand(isinstance(attribution, str) and attribution.strip()
+           and isinstance(changes, str) and changes.strip(),
+           'Recording attribution or derivative notice is missing')
+    license_id, version, _, share_alike = definition
+    return {
+        'licenseId': license_id,
+        'licenseVersion': version,
+        'licenseURL': row['licenseURL'],
+        'rightsEvidenceURL': evidence,
+        'attribution': attribution,
+        'derivativeChangeNotice': changes,
+        'shareAlike': {
+            'required': share_alike,
+            'deliveryLicenseId': license_id if share_alike else None,
+            'deliveryLicenseVersion': version if share_alike else None,
+            'deliveryLicenseURL': row['licenseURL'] if share_alike else None,
+        },
+    }
+
+
 def api(endpoint):
     # Metadata only. Audio bytes use the separate fixed-size stream below.
     result = subprocess.run(['gh', 'api', endpoint], capture_output=True, check=True)
@@ -86,7 +130,7 @@ def api(endpoint):
     return json.loads(result.stdout)
 
 
-def validate_remote(metadata, run, source, runner):
+def validate_remote(metadata, run, source, tree_proof):
     demand(metadata.get('id') == ARTIFACT and metadata.get('size_in_bytes') == ZIP_BYTES
            and metadata.get('digest') == 'sha256:' + ZIP_SHA and metadata.get('expired') is False
            and metadata.get('name') == ARTIFACT_NAME
@@ -96,10 +140,10 @@ def validate_remote(metadata, run, source, runner):
            and run.get('conclusion') == 'success' and run.get('event') == 'pull_request'
            and run.get('path') == WORKFLOW_PATH,
            'Original workflow identity or result changed')
-    demand(source.get('sha') == SOURCE_HEAD and runner.get('sha') == RUNNER
+    demand(source.get('sha') == SOURCE_HEAD and tree_proof.get('sha') == TREE_PROOF
            and source.get('tree', {}).get('sha') == SOURCE_TREE
-           and runner.get('tree', {}).get('sha') == SOURCE_TREE
-           and [p['sha'] for p in runner.get('parents', [])] == [SOURCE_BASE, SOURCE_HEAD],
+           and tree_proof.get('tree', {}).get('sha') == SOURCE_TREE
+           and [p['sha'] for p in tree_proof.get('parents', [])] == [SOURCE_BASE, SOURCE_HEAD],
            'Original source and runner tree binding differs')
 
 
@@ -134,7 +178,7 @@ def checked_members(data):
             name = info.filename
             allowed = (name == TESTS_FILE
                        or re.fullmatch(r'candidate-output/(?:receipt|review|intake-binding|source-manifest)\.json', name)
-                       or re.fullmatch(r'candidate-output/(?:objects|originals|evidence)/[0-9a-f]{64}\.(?:mp3|ogg|json|html)', name))
+                       or re.fullmatch(r'candidate-output/(?:objects|originals|evidence)/[0-9a-f]{64}\.(?:flac|mp3|ogg|json|html)', name))
             demand(allowed and name not in names and not info.is_dir()
                    and not stat.S_ISLNK(info.external_attr >> 16)
                    and not (info.flag_bits & 1) and 0 < info.file_size <= 64 * 1024 ** 2,
@@ -233,12 +277,16 @@ def page(title, tracks, other):
     for t in tracks:
         duration = f'{int(t["durationSeconds"]) // 60}:{int(t["durationSeconds"]) % 60:02}'
         vocal = 'Creator-described vocals; lyrics and explicit-content suitability remain pending.' if t['vocalContent'] == 'creator-described-vocals' else 'Vocal and instrumental review remain pending.'
-        cards.append(f'<article class="track" data-genres="{t["family"]}" data-search="{esc((t["title"] + " " + t["artist"]).lower(), quote=True)}"><button class="play-track" type="button" aria-label="Play {esc(t["title"], quote=True)}">▶</button><div class="track-main"><h2>{esc(t["title"])}</h2><p class="artist"><a href="{esc(t["artistURL"])}" rel="noopener noreferrer">{esc(t["artist"])}</a></p><p class="tags">{duration} · Audition · Listening pending</p><details><summary>Credits and recording details</summary><p>{esc(t["credit"])}</p><p>{esc(t["changes"])}</p><p>{vocal}</p><p>Content ID is unknown; Recording mode eligibility remains off. No game admission or default selection.</p><p>Source filename: <span class="filename">{esc(t["originalFilename"])}</span></p><p>SHA-256: <code>{t["sha256"]}</code></p></details></div><div class="links"><a href="{t["path"]}" download="{esc(t["title"], quote=True)}.mp3">MP3 ↓</a><a href="{esc(t["source"])}" rel="noopener noreferrer">Creator source ↗</a><a href="{t["licenseURL"]}" rel="license">CC BY 4.0</a></div></article>')
+        content_id = ('The source reports Content ID disabled; Recording mode remains off pending review.'
+                      if t['contentId'] is False else
+                      'Content ID is unknown; Recording mode eligibility remains off.')
+        cards.append(f'<article class="track" data-genres="{t["family"]}" data-search="{esc((t["title"] + " " + t["artist"]).lower(), quote=True)}"><button class="play-track" type="button" aria-label="Play {esc(t["title"], quote=True)}">▶</button><div class="track-main"><h2>{esc(t["title"])}</h2><p class="artist"><a href="{esc(t["artistURL"])}" rel="noopener noreferrer">{esc(t["artist"])}</a></p><p class="tags">{duration} · Audition · Listening pending</p><details><summary>Credits and recording details</summary><p>{esc(t["credit"])}</p><p>{esc(t["changes"])}</p><p>{vocal}</p><p>{content_id} No game admission or default selection.</p><p>Source filename: <span class="filename">{esc(t["originalFilename"])}</span></p><p>SHA-256: <code>{t["sha256"]}</code></p></details></div><div class="links"><a href="{t["path"]}" download="{esc(t["title"], quote=True)}.mp3">MP3 ↓</a><a href="{esc(t["source"])}" rel="noopener noreferrer">Creator source ↗</a><a href="{t["licenseURL"]}" rel="license">{esc(t["license"])}</a></div></article>')
+    count = len(tracks)
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>RevealLine · {esc(title)}</title><link rel="stylesheet" href="style.css"><script type="module" src="player.mjs"></script></head>
-<body><a class="skip" href="#recordings">Skip to recordings</a><main><header><p class="eyebrow">REVEALLINE / LISTENING AUDITIONS</p><h1>{esc(title)}</h1><p class="intro">Six complete recordings following the requested music direction. Musical fit and full listening remain pending.</p><p class="notice">These are licensed auditions, with no game admission or default selection. Content ID is unknown and gameplay-video eligibility is unverified.</p><nav><a href="../../">All soundtracks</a><a href="../{other}/">Other new auditions</a><a href="preview-catalogue.json">Credits and licence</a><a href="inventory.json">Exact MP3 inventory</a></nav></header>
+<body><a class="skip" href="#recordings">Skip to recordings</a><main><header><p class="eyebrow">REVEALLINE / LISTENING AUDITIONS</p><h1>{esc(title)}</h1><p class="intro">{count} complete licensed recordings following the requested music direction. Musical fit and full listening remain pending.</p><p class="notice">These are licensed auditions, with no game admission, default selection or Recording-mode admission.</p><nav><a href="../../">All soundtracks</a><a href="../{other}/">Other auditions</a><a href="preview-catalogue.json">Credits and licence</a><a href="inventory.json">Exact MP3 inventory</a></nav></header>
 <section class="player" aria-labelledby="player-heading"><div><p class="eyebrow" id="player-heading">NOW PLAYING</p><p id="now-playing" aria-live="polite">Choose a recording below.</p></div><audio id="audio" controls preload="none"></audio><div class="transport"><button id="pause" type="button" disabled>Pause music</button><button id="next" type="button">Next →</button><label><input id="shuffle" type="checkbox" checked> Shuffle</label><span>Repeat all</span></div><p id="playback-status" role="status"></p></section>
-<section class="filters"><label>Search <input id="search" type="search" placeholder="Song or artist"></label><label>Style <select id="genre"><option value="">All styles</option><option value="synth90s">Synth/electro</option><option value="metal">Metal/fusion</option></select></label><p id="count">6 recordings</p></section><section id="recordings">{''.join(cards)}<p id="empty" hidden>No matching recordings.</p></section><footer><p>Native sources, licence evidence and technical receipts are retained unchanged in the repository. Complete listening, transitions, warning audibility, offline and device checks remain pending.</p></footer></main></body></html>
+<section class="filters"><label>Search <input id="search" type="search" placeholder="Song or artist"></label><label>Style <select id="genre"><option value="">All styles</option><option value="synth90s">Synth/electro</option><option value="metal">Metal/fusion</option></select></label><p id="count">{count} recordings</p></section><section id="recordings">{''.join(cards)}<p id="empty" hidden>No matching recordings.</p></section><footer><p>Native sources, licence evidence and technical receipts are retained unchanged in the repository. Complete listening, transitions, warning audibility, offline and device checks remain pending.</p></footer></main></body></html>
 '''.encode()
 
 
@@ -249,6 +297,7 @@ def build_batch(family, rows, files, templates):
     for row in rows:
         t = {k: v for k, v in row.items() if k not in ('delivery', 'asset')}
         t.update(row['delivery'])
+        t['rights'] = structured_rights(row)
         t.update({'genres': [family], 'tags': [family, 'audition', 'listening pending'],
                   'reviewStatus': 'pending', 'default': False, 'gameCatalogueAdmission': False,
                   'originalFilename': row['original'].get('fileName', row['title'] + '.mp3')})
@@ -264,17 +313,18 @@ def build_batch(family, rows, files, templates):
                  'source': {'run': RUN, 'artifactId': ARTIFACT, 'artifactSha256': ZIP_SHA,
                             'retainedArchivePath': ARCHIVE + '/'}, 'tracks': tracks}
     payload['preview-catalogue.json'] = encoded(catalogue)
-    other = next(value for key, value in BATCH_IDS.items() if key != family)
+    other = next((value for key, value in BATCH_IDS.items() if key != family), RELATED_BATCH)
+    demand(other, 'A related audition batch is required for navigation')
     payload['index.html'] = page(TITLES[family], tracks, other)
     payload.update(templates)
     payload['.nojekyll'] = b''
-    payload['README.md'] = (f'# {TITLES[family]}\n\nSix distinct licensed auditions. Full listening and game admission remain pending. '
+    payload['README.md'] = (f'# {TITLES[family]}\n\n{len(tracks)} distinct licensed auditions. Full listening and game admission remain pending. '
                            f'No default changes. Search, play/pause, next, shuffle and repeat-all are available here and in the unified archive.\n\n'
                            f'Original hosted intake: https://github.com/{REPOSITORY}/actions/runs/{RUN}\n'
                            f'Exact native sources and technical evidence: `{ARCHIVE}/`.\n').encode()
     payload['CREDITS.md'] = ('# Credits\n\n' + '\n\n'.join(
         f'## {t["title"]}\n\n{t["credit"]}\n\n{t["changes"]}\n\nSource: {t["source"]}\n\nSHA-256: `{t["sha256"]}`. '
-        'Content ID unknown; Recording mode disabled; listening and explicit-content review pending.' for t in tracks) + '\n').encode()
+        f'Content ID {"reported disabled by source" if t["contentId"] is False else "unknown"}; Recording mode disabled; listening and explicit-content review pending.' for t in tracks) + '\n').encode()
     manifest = {'format': 'revealline-soundtrack-preview-deployment.v1', 'id': batch_id,
                 'expected': {'trackCount': len(tracks), 'audioBytes': sum(t['bytes'] for t in tracks)},
                 'files': [pin(name, body) for name, body in sorted(payload.items())],
@@ -295,8 +345,8 @@ def main():
     metadata = api(api_root + f'actions/artifacts/{ARTIFACT}')
     run = api(api_root + f'actions/runs/{RUN}')
     source = api(api_root + 'git/commits/' + SOURCE_HEAD)
-    runner = api(api_root + 'git/commits/' + RUNNER)
-    validate_remote(metadata, run, source, runner)
+    tree_proof = api(api_root + 'git/commits/' + TREE_PROOF)
+    validate_remote(metadata, run, source, tree_proof)
     demand(shutil.disk_usage('.').free >= 1024 ** 3 + MAX_PRODUCTION, 'Assembly must preserve 1 GiB free')
     data = download_original()
     files = checked_members(data)
@@ -319,7 +369,9 @@ def main():
     templates = {name: Path(TEMPLATE, name).read_bytes() for name in ('player.mjs', 'style.css')}
     batches = {family: build_batch(family, [r for r in receipt['tracks'] if r['family'] == family], files, templates)
                for family in BATCH_IDS}
-    demand(all(len([r for r in receipt['tracks'] if r['family'] == f]) == 6 for f in BATCH_IDS), 'Expected six/six split changed')
+    demand({family: len([r for r in receipt['tracks'] if r['family'] == family])
+            for family in BATCH_IDS} == EXPECTED_FAMILY_COUNTS,
+           'Expected family split changed')
     production_bytes = sum(map(len, files.values())) + sum(sum(map(len, p.values())) for p in batches.values())
     demand(production_bytes < MAX_PRODUCTION, 'Assembly exceeds the production budget')
     destinations = [Path(ARCHIVE), *(Path('batches', batch) for batch in BATCH_IDS.values())]
@@ -332,7 +384,8 @@ def main():
         target.write_bytes(body)
     binding = {'format': 'revealline-audition-assembly.v1', 'artifactId': ARTIFACT, 'artifactBytes': ZIP_BYTES,
                'artifactSha256': ZIP_SHA, 'sourceRun': RUN, 'sourceHead': SOURCE_HEAD, 'runnerRevision': RUNNER,
-               'sourceTree': SOURCE_TREE, 'mergedSource': MERGED_SOURCE, 'sourceManifestSha256': MANIFEST_SHA256,
+               'sourceTree': SOURCE_TREE, 'treeProofRevision': TREE_PROOF, 'mergedSource': MERGED_SOURCE,
+               'sourceManifestSha256': MANIFEST_SHA256,
                'assemblyRevision': os.environ['GITHUB_SHA'], 'assemblyRun': os.environ['GITHUB_RUN_ID'],
                'originalArtifactInspection': 'Verified by this hosted assembler; independent publication review pending',
                'gameCatalogueAdmission': False, 'listeningApproval': False, 'default': False}
@@ -357,20 +410,22 @@ def main():
     demand(new_catalogue['counts']['uniqueRecordings'] == PUBLIC_RECORDINGS
            and new_catalogue['tracks'][:BASE_RECORDINGS] == old_catalogue['tracks'],
            'Existing public entries changed')
+    expected_content_id = {r['id']: r['contentId'] for r in receipt['tracks']}
     demand(all(r.get('default') is False and r['gameCatalogueAdmission'] is False
-               and r['recordingModeEligible'] is False and r['contentId'] == 'unknown'
+               and r['recordingModeEligible'] is False
+               and r['contentId'] == expected_content_id.get(r['id'])
                for r in new_catalogue['tracks'][BASE_RECORDINGS:]), 'New catalogue escalated policy')
     subprocess.run(['node', 'intake/update-root-metadata.mjs'], check=True)
     Path(ARCHIVE, 'assembly-review.json').write_bytes(encoded({**binding,
         'status': 'hosted-byte-verification-complete-independent-review-pending',
-        'recordings': 12, 'publicRecordings': PUBLIC_RECORDINGS,
+        'recordings': len(receipt['tracks']), 'publicRecordings': PUBLIC_RECORDINGS,
         'preservedExistingEntries': BASE_RECORDINGS,
         'memberCount': len(files), 'productionBytes': production_bytes, 'volumes': volumes,
         'remaining': ['Independent original-artifact and publication PR review', 'Public byte and playback verification',
                       'Full listening, musical fit, transitions and warning audibility', 'Game admission and defaults',
                       'Offline and physical-device qualification']}))
     subprocess.run(['node', 'verify.mjs'], check=True)
-    print(json.dumps({'assembled': True, 'recordings': 12, 'volumes': volumes, 'binding': binding}, indent=2))
+    print(json.dumps({'assembled': True, 'recordings': len(receipt['tracks']), 'volumes': volumes, 'binding': binding}, indent=2))
 
 
 if __name__ == '__main__':
