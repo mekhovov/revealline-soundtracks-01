@@ -9,7 +9,7 @@ from email.utils import collapse_rfc2231_value
 import hashlib
 import re
 import unicodedata
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 from urllib.parse import urlparse
 from urllib.request import Request, build_opener
 from itch_source import (MetadataClient, NoRedirects, SOURCE_PINS, UPLOAD_PINS,
@@ -26,23 +26,51 @@ from purgatory3_pins import (SOURCE_PINS as PURGATORY3_SOURCES,
                              UPLOAD_PINS as PURGATORY3_UPLOADS,
                              DESCRIPTION_HASHES as PURGATORY3_DESCRIPTION_HASHES,
                              details as purgatory3_audition_details)
+from reckless2_pins import (SOURCE_PINS as RECKLESS2_SOURCES,
+                            UPLOAD_PINS as RECKLESS2_UPLOADS,
+                            DESCRIPTION_HASHES as RECKLESS2_DESCRIPTION_HASHES,
+                            details as reckless2_audition_details)
 
 SOURCE_LIMIT = 64 * 1024 ** 2
 ARTISTS = {'dos88': 'DOS-88', 'escp': 'escp', 'davidkbd': 'David KBD'}
 ARTISTS.update({source: 'David KBD' for source in NEW_SOURCES})
 ARTISTS.update({source: 'David KBD' for source in SECOND_SOURCES})
 ARTISTS.update({source: 'David KBD' for source in PURGATORY3_SOURCES})
+ARTISTS.update({source: 'David KBD' for source in RECKLESS2_SOURCES})
 DESCRIPTION_HASHES = {
     **NEW_DESCRIPTION_HASHES,
     **SECOND_DESCRIPTION_HASHES,
     **PURGATORY3_DESCRIPTION_HASHES,
+    **RECKLESS2_DESCRIPTION_HASHES,
 }
+PIN_FILES = (
+    'intake/approved_directions_pins.py',
+    'intake/second_directions_pins.py',
+    'intake/purgatory3_pins.py',
+    'intake/reckless2_pins.py',
+)
+SHARED_ACQUISITION_FILES = (
+    *PIN_FILES,
+    'intake/itch_source.py',
+    'intake/itch_audio.py',
+    'intake/prepare.py',
+)
 FORMATS = {
     '.mp3': ({'audio/mpeg', 'audio/mp3'}, {'mp3'}, {'mp3'}),
     '.ogg': ({'audio/ogg', 'application/ogg'}, {'ogg'}, {'vorbis', 'opus'}),
     '.wav': ({'audio/wav', 'audio/x-wav', 'audio/wave'}, {'wav'}, None),
     '.flac': ({'audio/flac', 'audio/x-flac'}, {'flac'}, {'flac'}),
 }
+
+
+def acquisition_source_files(entry_point, workflow, *batch_files):
+    """Return a complete, deterministic source binding for one hosted entry point."""
+    files = (*SHARED_ACQUISITION_FILES, *batch_files, entry_point, workflow)
+    if len(files) != len(set(files)):
+        raise ValueError('Acquisition source binding contains duplicate paths')
+    if any(not isinstance(name, str) or not name or not Path(name).is_file() for name in files):
+        raise ValueError('Acquisition source binding contains a missing path')
+    return files
 
 
 def identity(track_id):
@@ -65,6 +93,8 @@ def identity(track_id):
         result.update(second_audition_details(track_id))
     elif track_id in PURGATORY3_UPLOADS:
         result.update(purgatory3_audition_details(track_id))
+    elif track_id in RECKLESS2_UPLOADS:
+        result.update(reckless2_audition_details(track_id))
     return result
 
 

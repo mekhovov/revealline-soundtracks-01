@@ -8,12 +8,20 @@ from pathlib import Path
 import re
 from urllib.parse import unquote
 
+from itch_audio import acquisition_source_files
 from prepare import SOURCE_LIMIT, prepare, validate_manifest
 
 
 MANIFEST = Path(__file__).with_name('synth-third-directions-audition-20260925.json')
 MANIFEST_SHA256 = '07ac02efefcaece89ffef39d0e6afb3b22bfde476a6b8cf651c318e429c074aa'
 WORKFLOW = '.github/workflows/synth-third-directions-intake.yml'
+SOURCE_FILES = acquisition_source_files(
+    'intake/prepare_synth_third_directions.py',
+    WORKFLOW,
+    'intake/synth-third-directions-audition-20260925.json',
+    'intake/synth-third-directions-audition-20260925.md',
+    'intake/test_synth_third_directions.py',
+)
 
 
 def validate_third_manifest(value):
@@ -125,10 +133,6 @@ def run(output, game_root):
     finally:
         if output.is_dir():
             (output / 'source-manifest.json').write_bytes(source)
-            files = ('intake/prepare.py', 'intake/prepare_synth_third_directions.py',
-                     'intake/synth-third-directions-audition-20260925.json',
-                     'intake/synth-third-directions-audition-20260925.md',
-                     'intake/test_synth_third_directions.py', WORKFLOW)
             binding = {
                 'format': 'revealline-synth-third-directions-intake-binding.v1',
                 'sourceManifestSha256': MANIFEST_SHA256,
@@ -138,7 +142,7 @@ def run(output, game_root):
                 'workflowRef': os.environ['GITHUB_WORKFLOW_REF'],
                 'sourceFiles': {
                     name: hashlib.sha256(Path(name).read_bytes()).hexdigest()
-                    for name in files
+                    for name in SOURCE_FILES
                 },
                 'publicationApproval': False,
                 'gameCatalogueAdmission': False,
