@@ -113,7 +113,7 @@ class Purgatory3Tests(unittest.TestCase):
                     itch_source.resolve(key, client)
                 self.assertEqual(len(client.requests), 1)
 
-    def test_current_public_catalogue_has_no_title_or_native_hash_duplicates(self):
+    def test_exact_native_hashes_are_absent_or_published_as_one_complete_batch(self):
         hashes, titles = prepare.public_recording_fingerprints(Path('.'))
         observations = {
             "Mutilation's Melody": '8975fcfc5594e83186eeb96efee5f02b5e915da72d3415e8f5832428fda0de59',
@@ -121,9 +121,16 @@ class Purgatory3Tests(unittest.TestCase):
             'The Slicing Strain': '73cf3fc0151101f513af31f8528bc0aa4fa86e54319645646806b60e45ab042b',
             'Visceral Vengeance': 'e0fc2f888b2fe3b189140b46a59d25348f22a43fcbb673fc0a98d8db50c92c20',
         }
+        native_published = []
+        title_published = []
         for title, native_hash in observations.items():
-            self.assertNotIn(native_hash, hashes)
-            self.assertNotIn(re.sub(r'[^a-z0-9]', '', title.lower()), titles)
+            native_present = native_hash in hashes
+            title_present = re.sub(r'[^a-z0-9]', '', title.lower()) in titles
+            self.assertEqual(native_present, title_present)
+            native_published.append(native_present)
+            title_published.append(title_present)
+        self.assertIn(native_published, ([False] * 4, [True] * 4))
+        self.assertIn(title_published, ([False] * 4, [True] * 4))
 
     def test_manifest_is_immutable_and_local_acquisition_is_refused(self):
         changed = copy.deepcopy(self.manifest)

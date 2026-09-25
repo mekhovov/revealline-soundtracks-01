@@ -12,24 +12,41 @@ on:
       - 'intake/itch_audio.py'
       - 'intake/prepare.py'
       - '.github/workflows/metal-purgatory3-intake.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  prepare:
+  source:
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
     env:
       PYTHONDONTWRITEBYTECODE: '1'
-      EVENT_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20.19.5
-      - name: Verify unchanged published inventory
-        run: node verify.mjs
+      - name: Verify source and historical archive boundaries
+        run: |
+          python3 -m unittest discover -s intake -p 'test_*.py'
+          python3 intake/prepare_purgatory3.py --check
+          node --test test-verify.mjs
+          node verify.mjs
+
+  prepare:
+    needs: source
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      EVENT_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
       - uses: actions/checkout@v4
         with:
           repository: mekhovov/revealline
@@ -45,7 +62,6 @@ jobs:
           set -o pipefail
           python3 -m unittest discover -s intake -p 'test_*.py' 2>&1 | tee purgatory3-tests.txt
           python3 intake/prepare_purgatory3.py --check
-          node --test test-verify.mjs
       - name: Install hosted audio validation tools
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Acquire, decode and measure candidates without approving publication
