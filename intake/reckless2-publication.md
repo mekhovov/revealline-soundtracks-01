@@ -49,3 +49,11 @@ batch/archive trees and the three required root metadata files. It stages those
 paths explicitly, requires no remaining worktree changes, validates the cached
 path set, commits, requires a clean checkout, and reruns the production verifier
 against the committed HEAD before pushing.
+
+The original intake workflow classifies the working catalogue through the same
+exact base/generated validator. It reacquires and re-encodes the source audio
+only from the exact 136-row base. After the publication bot adds the reviewed
+140-row output, the workflow still runs the complete source, catalogue and
+production verification but skips runtime checkout, tool installation,
+acquisition and artifact upload instead of mistaking the intended four rows for
+preexisting source duplicates.

@@ -31,7 +31,22 @@ jobs:
           node-version: 20.19.5
       - name: Verify unchanged published inventory
         run: node verify.mjs
+      - name: Classify exact catalogue state
+        id: catalogue
+        run: |
+          state=$(python3 - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, 'intake')
+          from assemble_reckless2 import validate_catalogue_context
+          print(validate_catalogue_context(Path('catalogue.json').read_bytes()))
+          PY
+          )
+          test "$state" = 'base' || test "$state" = 'generated'
+          echo "state=$state" >> "$GITHUB_OUTPUT"
+          echo "Verified exact catalogue state: $state"
       - uses: actions/checkout@v4
+        if: steps.catalogue.outputs.state == 'base'
         with:
           repository: mekhovov/revealline
           ref: 71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3
@@ -47,11 +62,13 @@ jobs:
           python3 -m unittest discover -s intake -p 'test_*.py' 2>&1 | tee reckless2-tests.txt
           python3 intake/prepare_reckless2.py --check
       - name: Install hosted audio validation tools
+        if: steps.catalogue.outputs.state == 'base'
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Acquire and measure candidates without approving publication
+        if: steps.catalogue.outputs.state == 'base'
         run: python3 intake/prepare_reckless2.py --output candidate-output --game-root .runtime
       - name: Preserve exact source audio and partial evidence
-        if: always()
+        if: ${{ always() && steps.catalogue.outputs.state == 'base' }}
         uses: actions/upload-artifact@v4
         with:
           name: reckless2-audition-candidates

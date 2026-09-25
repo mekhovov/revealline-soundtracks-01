@@ -164,6 +164,22 @@ class Reckless2AssemblyConfigurationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'already exists'):
             subject.validate_no_preexisting_candidates(baseline)
 
+    def test_intake_reacquires_only_from_exact_base_state(self):
+        workflow = Path('.github/workflows/metal-reckless2-intake.yml').read_text()
+        self.assertIn('id: catalogue', workflow)
+        self.assertIn(
+            "print(validate_catalogue_context(Path('catalogue.json').read_bytes()))",
+            workflow,
+        )
+        self.assertEqual(
+            workflow.count("if: steps.catalogue.outputs.state == 'base'"),
+            3,
+        )
+        self.assertIn(
+            "if: ${{ always() && steps.catalogue.outputs.state == 'base' }}",
+            workflow,
+        )
+
     def test_exact_manifest_rows_project_to_non_sharealike_rights(self):
         rows = json.loads(MANIFEST.read_bytes())['tracks']
         self.assertEqual(len(rows), 4)
