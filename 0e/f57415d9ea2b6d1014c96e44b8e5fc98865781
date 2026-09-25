@@ -1,0 +1,19 @@
+.github/workflows/metal-reckless2-intake.yml
+  s_f8296d264eaab0::t_21ecd7a4955102 27-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0ef57415d9ea2b6d1014c96e44b8e5fc98865781",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
