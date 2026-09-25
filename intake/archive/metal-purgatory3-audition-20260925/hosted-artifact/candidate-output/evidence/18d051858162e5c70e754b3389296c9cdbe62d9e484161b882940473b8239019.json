@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.the-slicing-strain",
+  "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+  "gameId": 3755088,
+  "uploadId": 14549177,
+  "uploadName": "DavidKBD-06 - The Slicing Strain.ogg",
+  "title": "The Slicing Strain",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3755088/14549177",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-06 - The Slicing Strain.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 2637582,
+    "sha256": "73cf3fc0151101f513af31f8528bc0aa4fa86e54319645646806b60e45ab042b"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "4e85241cdda0f151404cde8b0a30797a6dc72de9967350e2c48dffd0b574c8cc",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "fcab6f9052b1cc95f341fa5ccfdf1ea7c0275ce0bcf885559989ecd21137bd73",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

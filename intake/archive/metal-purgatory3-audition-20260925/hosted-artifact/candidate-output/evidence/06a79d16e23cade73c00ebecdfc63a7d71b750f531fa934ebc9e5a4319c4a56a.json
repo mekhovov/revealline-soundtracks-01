@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.bone-grinders-ballad",
+  "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+  "gameId": 3755088,
+  "uploadId": 14549173,
+  "uploadName": "DavidKBD-05 - Bone Grinder's Ballad.ogg",
+  "title": "Bone Grinder's Ballad",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3755088/14549173",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-05 - Bone Grinder's Ballad.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 2514002,
+    "sha256": "e991b3c11b02843fce19677099d68a3eb692928d3287c91c3dbd16015a749cf2"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "9d6cf3f0d5112ecdab8f267f793afad066e6afb073c5a3b52fba7e7cd373bf60",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "fcab6f9052b1cc95f341fa5ccfdf1ea7c0275ce0bcf885559989ecd21137bd73",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

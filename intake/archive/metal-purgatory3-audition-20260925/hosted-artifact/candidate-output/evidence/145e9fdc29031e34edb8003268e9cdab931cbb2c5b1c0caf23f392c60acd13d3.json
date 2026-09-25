@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.mutilations-melody",
+  "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+  "gameId": 3755088,
+  "uploadId": 14549174,
+  "uploadName": "DavidKBD-03 - Mutilation's Melody.ogg",
+  "title": "Mutilation's Melody",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3755088/14549174",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-03 - Mutilation's Melody.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 2682173,
+    "sha256": "8975fcfc5594e83186eeb96efee5f02b5e915da72d3415e8f5832428fda0de59"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "5e3bbcfa1a933307a77c5b5ce8040828d85098b6ac52b536681aba048432f4a0",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "fcab6f9052b1cc95f341fa5ccfdf1ea7c0275ce0bcf885559989ecd21137bd73",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}
