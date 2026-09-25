@@ -1,0 +1,14 @@
+.github/workflows/reckless2-publication.yml
+  h_65920f048c94cd 1-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b21bed02aa14e6133a99d5496e0ec7a563e8bb20",
+  "prompts": {},
+  "humans": {
+    "h_65920f048c94cd": {
+      "author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
