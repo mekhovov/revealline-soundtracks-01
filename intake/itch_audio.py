@@ -9,7 +9,7 @@ from email.utils import collapse_rfc2231_value
 import hashlib
 import re
 import unicodedata
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 from urllib.parse import urlparse
 from urllib.request import Request, build_opener
 from itch_source import (MetadataClient, NoRedirects, SOURCE_PINS, UPLOAD_PINS,
@@ -43,12 +43,34 @@ DESCRIPTION_HASHES = {
     **PURGATORY3_DESCRIPTION_HASHES,
     **RECKLESS2_DESCRIPTION_HASHES,
 }
+PIN_FILES = (
+    'intake/approved_directions_pins.py',
+    'intake/second_directions_pins.py',
+    'intake/purgatory3_pins.py',
+    'intake/reckless2_pins.py',
+)
+SHARED_ACQUISITION_FILES = (
+    *PIN_FILES,
+    'intake/itch_source.py',
+    'intake/itch_audio.py',
+    'intake/prepare.py',
+)
 FORMATS = {
     '.mp3': ({'audio/mpeg', 'audio/mp3'}, {'mp3'}, {'mp3'}),
     '.ogg': ({'audio/ogg', 'application/ogg'}, {'ogg'}, {'vorbis', 'opus'}),
     '.wav': ({'audio/wav', 'audio/x-wav', 'audio/wave'}, {'wav'}, None),
     '.flac': ({'audio/flac', 'audio/x-flac'}, {'flac'}, {'flac'}),
 }
+
+
+def acquisition_source_files(entry_point, workflow, *batch_files):
+    """Return a complete, deterministic source binding for one hosted entry point."""
+    files = (*SHARED_ACQUISITION_FILES, *batch_files, entry_point, workflow)
+    if len(files) != len(set(files)):
+        raise ValueError('Acquisition source binding contains duplicate paths')
+    if any(not isinstance(name, str) or not name or not Path(name).is_file() for name in files):
+        raise ValueError('Acquisition source binding contains a missing path')
+    return files
 
 
 def identity(track_id):

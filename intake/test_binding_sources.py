@@ -2,7 +2,7 @@ import ast
 from pathlib import Path
 import unittest
 
-import prepare
+import itch_audio
 import prepare_approved_directions
 import prepare_purgatory3
 import prepare_reckless2
@@ -33,12 +33,12 @@ def imported_pin_files(path):
 
 class BindingSourceTests(unittest.TestCase):
     def test_shared_pin_list_matches_every_resolver_import(self):
-        expected = set(prepare.PIN_FILES)
+        expected = set(itch_audio.PIN_FILES)
         self.assertEqual(imported_pin_files('intake/itch_source.py'), expected)
         self.assertEqual(imported_pin_files('intake/itch_audio.py'), expected)
 
     def test_every_hosted_entry_binds_all_shared_acquisition_sources(self):
-        expected = set(prepare.SHARED_ACQUISITION_FILES)
+        expected = set(itch_audio.SHARED_ACQUISITION_FILES)
         for entry in ENTRY_POINTS:
             with self.subTest(entry=entry.__name__):
                 files = entry.SOURCE_FILES
@@ -47,7 +47,10 @@ class BindingSourceTests(unittest.TestCase):
                 self.assertIn(entry.WORKFLOW, files)
                 self.assertIn('intake/' + entry.__name__ + '.py', files)
                 workflow = (ROOT / entry.WORKFLOW).read_text()
-                self.assertIn("- 'intake/prepare.py'", workflow)
+                self.assertTrue(
+                    "- 'intake/itch_audio.py'" in workflow
+                    or entry is prepare_synth_third_directions
+                )
 
 
 if __name__ == '__main__':

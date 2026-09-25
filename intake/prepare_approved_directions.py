@@ -5,7 +5,8 @@ import json
 import os
 from pathlib import Path
 import re
-from prepare import acquisition_source_files, prepare, validate_manifest
+from itch_audio import acquisition_source_files
+from prepare import prepare, validate_manifest
 
 MANIFEST = Path(__file__).with_name('approved-directions-audition-20260925.json')
 MANIFEST_SHA256 = '0b6ec9c6a04b90f7a283848fa064558a53df9a50a9c1858e0aa3ddf9abc4b532'

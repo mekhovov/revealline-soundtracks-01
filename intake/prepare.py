@@ -25,18 +25,6 @@ VOLUME_LIMIT = 64 * 1024 ** 2
 VOLUME_METADATA_RESERVATION = 512 * 1024
 ROW_RESERVATION = 96 * 1024 ** 2  # bounded source, 12-minute MP3, page and receipts
 INSPECTOR_REVISION = '71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3'
-PIN_FILES = (
-    'intake/approved_directions_pins.py',
-    'intake/second_directions_pins.py',
-    'intake/purgatory3_pins.py',
-    'intake/reckless2_pins.py',
-)
-SHARED_ACQUISITION_FILES = (
-    *PIN_FILES,
-    'intake/itch_source.py',
-    'intake/itch_audio.py',
-    'intake/prepare.py',
-)
 LICENSES = {'CC0 1.0 Universal': 'https://creativecommons.org/publicdomain/zero/1.0/',
             'CC BY 3.0 Unported': 'https://creativecommons.org/licenses/by/3.0/',
             'CC BY 4.0 International': 'https://creativecommons.org/licenses/by/4.0/'}
@@ -93,16 +81,6 @@ CREATOR_URLS = frozenset((CREATOR_LICENSING, CREATOR_FAQ,
     *(r['download'] for r in CREATOR_IDENTITIES.values())))
 CREATOR_SOURCE_LIMITS = {source: CREATOR_SOURCE_LIMIT if source == CREATOR_SOURCE else 16 * 1024 ** 2
                          for source in CREATOR_IDENTITIES}
-
-
-def acquisition_source_files(entry_point, workflow, *batch_files):
-    """Return a complete, deterministic source binding for one hosted entry point."""
-    files = (*SHARED_ACQUISITION_FILES, *batch_files, entry_point, workflow)
-    if len(files) != len(set(files)):
-        raise ValueError('Acquisition source binding contains duplicate paths')
-    if any(not isinstance(name, str) or not name or not Path(name).is_file() for name in files):
-        raise ValueError('Acquisition source binding contains a missing path')
-    return files
 
 # These new pages expose their authoritative recording in one mainTrack element.
 # Related recommendations must not establish a page/recording identity binding.

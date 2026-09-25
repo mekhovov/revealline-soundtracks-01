@@ -8,7 +8,8 @@ from pathlib import Path
 import re
 from urllib.parse import unquote
 
-from prepare import SOURCE_LIMIT, acquisition_source_files, prepare, validate_manifest
+from itch_audio import acquisition_source_files
+from prepare import SOURCE_LIMIT, prepare, validate_manifest
 
 
 MANIFEST = Path(__file__).with_name('synth-third-directions-audition-20260925.json')
