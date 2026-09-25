@@ -21,7 +21,10 @@ source head, base, tree, workflow and run. The remote publication gate verifies
 those objects and the artifact metadata before downloading any hosted bytes.
 It also verifies the exact merged source commit, tree and ordered parents; that
 merge must be an ancestor of the publication checkout. The accepted 136-row
-catalogue is pinned by exact file digest before any generation begins.
+catalogue is loaded from that exact merged Git object and pinned by exact file
+digest before any generation begins. Source tests accept that exact base and,
+after hosted assembly, only its unchanged 136-row prefix followed by the four
+exact Reckless delivery hashes with every admission flag still disabled.
 The embedded 146-test result must pass exactly, every artifact member is bounded
 and hashed, and the four native and delivery identities must remain unique.
 

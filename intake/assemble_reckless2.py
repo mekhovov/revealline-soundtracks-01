@@ -18,6 +18,18 @@ MERGED_SOURCE_PARENTS = (
 BASE_CATALOGUE_SHA256 = (
     '946180064d4f3570f6d365e1e005e5e846ea2cc3142d7e4b65bde4b4a3c88199'
 )
+BASE_AUDIO_BYTES = 777523163
+PUBLIC_AUDIO_BYTES = 790408183
+DELIVERY_SHA256 = {
+    'davidkbd.city-limits-crash':
+        '7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442',
+    'davidkbd.edge-of-the-city':
+        'c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0',
+    'davidkbd.defiant-descent':
+        '24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899',
+    'davidkbd.airborne-anarchy':
+        '4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d',
+}
 
 
 CONFIG = {
@@ -83,17 +95,85 @@ def validate_publication_ancestry():
     )
 
 
-def validate_baseline(data=None):
-    body = Path('catalogue.json').read_bytes() if data is None else data
+def merged_catalogue_bytes():
+    return subprocess.check_output([
+        'git', 'show', f"{CONFIG['MERGED_SOURCE']}:catalogue.json"
+    ])
+
+
+def checked_baseline(body):
     assembler.demand(
         hashlib.sha256(body).hexdigest() == BASE_CATALOGUE_SHA256,
         'Accepted 136-recording catalogue bytes changed',
     )
     catalogue = json.loads(body)
     assembler.demand(
-        catalogue.get('counts', {}).get('uniqueRecordings') == CONFIG['BASE_RECORDINGS']
+        catalogue.get('counts') == {
+            'declaredTracks': CONFIG['BASE_RECORDINGS'],
+            'uniqueRecordings': CONFIG['BASE_RECORDINGS'],
+            'duplicateAliases': 0,
+            'audioBytes': BASE_AUDIO_BYTES,
+        }
         and len(catalogue.get('tracks', ())) == CONFIG['BASE_RECORDINGS'],
         'Accepted catalogue count changed',
+    )
+    return catalogue
+
+
+def normalize_title(title):
+    return ''.join(character for character in title.lower()
+                   if character.isascii() and character.isalnum())
+
+
+def validate_no_preexisting_candidates(baseline):
+    existing = {normalize_title(row.get('title', '')) for row in baseline['tracks']}
+    candidates = {normalize_title(values[3]) for values in UPLOAD_PINS.values()}
+    assembler.demand(not existing.intersection(candidates),
+                     'Reckless title already exists in accepted baseline')
+
+
+def validate_catalogue_context(body, baseline_body=None):
+    baseline_body = merged_catalogue_bytes() if baseline_body is None else baseline_body
+    baseline = checked_baseline(baseline_body)
+    validate_no_preexisting_candidates(baseline)
+    if body == baseline_body:
+        return 'base'
+    current = json.loads(body)
+    counts = current.get('counts', {})
+    assembler.demand(
+        counts.get('declaredTracks') == CONFIG['PUBLIC_RECORDINGS']
+        and counts.get('uniqueRecordings') == CONFIG['PUBLIC_RECORDINGS']
+        and counts.get('duplicateAliases') == 0
+        and counts.get('audioBytes') == PUBLIC_AUDIO_BYTES
+        and len(current.get('tracks', ())) == CONFIG['PUBLIC_RECORDINGS']
+        and current['tracks'][:CONFIG['BASE_RECORDINGS']] == baseline['tracks'],
+        'Generated catalogue does not preserve the exact accepted baseline',
+    )
+    added = current['tracks'][CONFIG['BASE_RECORDINGS']:]
+    assembler.demand(
+        [(row.get('id'), row.get('title'), row.get('audio', {}).get('sha256'))
+         for row in added]
+        == [(track_id, UPLOAD_PINS[track_id][3], sha256)
+            for track_id, sha256 in DELIVERY_SHA256.items()]
+        and all(
+            row.get('listeningApproval') == 'not-reviewed'
+            and row.get('gameCatalogueAdmission') is False
+            and row.get('default') is False
+            and row.get('recordingModeEligible') is False
+            and row.get('contentId') == 'unknown'
+            for row in added
+        ),
+        'Generated catalogue contains another recording or escalated policy',
+    )
+    return 'generated'
+
+
+def validate_baseline():
+    baseline_body = merged_catalogue_bytes()
+    checked_baseline(baseline_body)
+    assembler.demand(
+        Path('catalogue.json').read_bytes() == baseline_body,
+        'Publication checkout does not start from the exact accepted catalogue',
     )
 
 

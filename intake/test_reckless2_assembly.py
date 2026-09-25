@@ -113,12 +113,56 @@ class Reckless2AssemblyConfigurationTests(unittest.TestCase):
                 subject.validate_publication_ancestry()
 
     def test_exact_baseline_catalogue_bytes_are_pinned(self):
-        body = Path('catalogue.json').read_bytes()
+        body = subject.merged_catalogue_bytes()
         self.assertEqual(subject.BASE_CATALOGUE_SHA256,
                          '946180064d4f3570f6d365e1e005e5e846ea2cc3142d7e4b65bde4b4a3c88199')
-        subject.validate_baseline(body)
+        subject.checked_baseline(body)
         with self.assertRaisesRegex(ValueError, 'catalogue bytes changed'):
-            subject.validate_baseline(body + b' ')
+            subject.checked_baseline(body + b' ')
+
+    def test_base_and_exact_generated_catalogue_contexts(self):
+        baseline_body = subject.merged_catalogue_bytes()
+        baseline = json.loads(baseline_body)
+        self.assertEqual(
+            subject.validate_catalogue_context(baseline_body, baseline_body),
+            'base',
+        )
+        generated = copy.deepcopy(baseline)
+        generated['counts']['declaredTracks'] = subject.CONFIG[
+            'PUBLIC_RECORDINGS'
+        ]
+        generated['counts']['uniqueRecordings'] = subject.CONFIG[
+            'PUBLIC_RECORDINGS'
+        ]
+        generated['counts']['audioBytes'] = subject.PUBLIC_AUDIO_BYTES
+        for track_id, sha256 in subject.DELIVERY_SHA256.items():
+            generated['tracks'].append({
+                'id': track_id,
+                'title': subject.UPLOAD_PINS[track_id][3],
+                'audio': {'sha256': sha256},
+                'listeningApproval': 'not-reviewed',
+                'gameCatalogueAdmission': False,
+                'default': False,
+                'recordingModeEligible': False,
+                'contentId': 'unknown',
+            })
+        generated_body = json.dumps(generated).encode()
+        self.assertEqual(
+            subject.validate_catalogue_context(generated_body, baseline_body),
+            'generated',
+        )
+        changed = copy.deepcopy(generated)
+        changed['tracks'][-1]['audio']['sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'another recording'):
+            subject.validate_catalogue_context(
+                json.dumps(changed).encode(), baseline_body
+            )
+
+    def test_preexisting_reckless_title_in_baseline_is_rejected(self):
+        baseline = json.loads(subject.merged_catalogue_bytes())
+        baseline['tracks'][0]['title'] = 'City Limits Crash'
+        with self.assertRaisesRegex(ValueError, 'already exists'):
+            subject.validate_no_preexisting_candidates(baseline)
 
     def test_exact_manifest_rows_project_to_non_sharealike_rights(self):
         rows = json.loads(MANIFEST.read_bytes())['tracks']

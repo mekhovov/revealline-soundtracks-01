@@ -7,6 +7,7 @@ on:
       - 'intake/assemble_reckless2.py'
       - 'intake/check_reckless2_publication_paths.py'
       - 'intake/test_approved_assembly.py'
+      - 'intake/test_reckless2.py'
       - 'intake/test_reckless2_assembly.py'
       - 'intake/reckless2-publication.md'
       - 'intake/build-unified-catalogue.mjs'
@@ -28,6 +29,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 20.19.5
