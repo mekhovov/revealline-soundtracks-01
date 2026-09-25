@@ -104,6 +104,14 @@
         "bytes": 2557,
         "sha256": "37b966ac4e385ddbd177c6a46fe6b73f70fd5685c9e138dff61dcb2c671e7e6e"
       }
+    },
+    {
+      "id": "metal-reckless2-audition-20260925",
+      "manifest": {
+        "path": "batches/metal-reckless2-audition-20260925/deployment-manifest.json",
+        "bytes": 2556,
+        "sha256": "88e8628bdb90e0ab985ce10a92f6313ff86b443a6e64b1ca8fbc8cf4f2b3c290"
+      }
     }
   ]
 }

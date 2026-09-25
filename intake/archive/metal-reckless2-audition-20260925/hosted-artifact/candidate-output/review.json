@@ -1,0 +1,33 @@
+{
+  "status": "pending",
+  "tracks": [
+    {
+      "id": "davidkbd.city-limits-crash",
+      "sha256": "7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "davidkbd.edge-of-the-city",
+      "sha256": "c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "davidkbd.defiant-descent",
+      "sha256": "24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "davidkbd.airborne-anarchy",
+      "sha256": "4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}

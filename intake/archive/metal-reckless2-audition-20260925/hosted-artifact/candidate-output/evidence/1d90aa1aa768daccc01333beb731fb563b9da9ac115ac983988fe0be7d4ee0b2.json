@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.defiant-descent",
+  "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+  "gameId": 3681796,
+  "uploadId": 14147898,
+  "uploadName": "DavidKBD-03 - Defiant Descent.ogg",
+  "title": "Defiant Descent",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3681796/14147898",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-03 - Defiant Descent.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 2161665,
+    "sha256": "5ad3a57e26251f60138203b8bc6d181145c69c911e7bf489f8bc30708893c819"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "da84886734d4cd4e9a38f1208468a6aa394c9c66de6091b8fa4554b3634244c4",
+    "observedLicenseLink": "https://creativecommons.org/licenses/by/4.0/",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "29f7786b366726e296cb8b36841897e8bdbc3be9b4561cf95c514cbc9facba0b",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

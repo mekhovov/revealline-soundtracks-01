@@ -1,0 +1,22 @@
+{
+  "format": "revealline-reckless2-intake-binding.v1",
+  "sourceManifestSha256": "a623e15a53474c13a5220f8ee7b8ec909c0f8c99c312c4200ba3fa8de49d75b4",
+  "runnerRevision": "2d2bbda086833d2b142dddbfa5668639683ddc1f",
+  "eventHeadRevision": "fec06dd45eacea56d00acbd470a43999b2f22710",
+  "runnerRun": "36193952191",
+  "workflowRef": "mekhovov/revealline-soundtracks-01/.github/workflows/metal-reckless2-intake.yml@refs/pull/22/merge",
+  "sourceFiles": {
+    "intake/approved_directions_pins.py": "66d16626bd881975c17341568e35f8259a6f0b44ca07c43a5ffabc0c2d6b60a8",
+    "intake/second_directions_pins.py": "739c02e904c06e79225f8fe32745d3ddcfa59739dc06db89dc958094d1457522",
+    "intake/purgatory3_pins.py": "9a77d15dcd0bf719bf6ba8c3f96ebf5217fc393ebaa09c6a4ccc38f2c585fd80",
+    "intake/reckless2_pins.py": "cbb4358287c3aaba8a63eac7821a3289f046b7bdbb4c3d9e1f71f0d878051ef2",
+    "intake/itch_source.py": "23aba53139fcede75049e07dc9d3e1284b70c747e1f78856d8a5ba6f36ff8b30",
+    "intake/itch_audio.py": "dc8c282d68e92d991124f837f2948445186df7db8467f4072d8ec871d7b16e6e",
+    "intake/prepare.py": "a55df729528bd3d061771daf9311119ec99b56e59ff1e9c3c8ce936cfcd5dac5",
+    "intake/prepare_reckless2.py": "90acdc12ef010a8dbf7899d15d368ecd313e973d7c817f98eeeec74ec14ae1d8",
+    ".github/workflows/metal-reckless2-intake.yml": "d9e589500227f08cc0d0170a05d1602a05510fa1ace870ea06b1df324ec41e73"
+  },
+  "publicationApproval": false,
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false
+}

@@ -1,0 +1,26 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-reckless2-audition-20260925",
+  "files": [
+    {
+      "path": "objects/7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442.mp3",
+      "bytes": 3330342,
+      "sha256": "7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442"
+    },
+    {
+      "path": "objects/c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0.mp3",
+      "bytes": 3255110,
+      "sha256": "c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0"
+    },
+    {
+      "path": "objects/24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899.mp3",
+      "bytes": 3530127,
+      "sha256": "24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899"
+    },
+    {
+      "path": "objects/4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d.mp3",
+      "bytes": 2769441,
+      "sha256": "4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d"
+    }
+  ]
+}

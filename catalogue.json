@@ -130,13 +130,22 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 4
+    },
+    {
+      "id": "metal-reckless2-audition-20260925",
+      "path": "batches/metal-reckless2-audition-20260925/preview-catalogue.json",
+      "sha256": "be3677422e02cb6c98aaed5562e8e1688cda5b661e0498c0b64b392602230ee2",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 4
     }
   ],
   "counts": {
-    "declaredTracks": 136,
-    "uniqueRecordings": 136,
+    "declaredTracks": 140,
+    "uniqueRecordings": 140,
     "duplicateAliases": 0,
-    "audioBytes": 777523163
+    "audioBytes": 790408183
   },
   "tracks": [
     {
@@ -4273,6 +4282,186 @@
         "path": "batches/metal-purgatory3-audition-20260925/objects/aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884.mp3",
         "bytes": 3673069,
         "sha256": "aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.city-limits-crash",
+      "title": "City Limits Crash",
+      "artist": "David KBD",
+      "durationSeconds": 104,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: City Limits Crash by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+        "attribution": "Music: City Limits Crash by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+        "derivativeChangeNotice": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "City Limits Crash.mp3",
+      "archiveId": "metal-reckless2-audition-20260925",
+      "collection": "metal-reckless2-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-reckless2-audition-20260925/objects/7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442.mp3",
+        "bytes": 3330342,
+        "sha256": "7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.edge-of-the-city",
+      "title": "Edge of the City",
+      "artist": "David KBD",
+      "durationSeconds": 101.647052,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Edge of the City by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+        "attribution": "Music: Edge of the City by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+        "derivativeChangeNotice": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "Edge of the City.mp3",
+      "archiveId": "metal-reckless2-audition-20260925",
+      "collection": "metal-reckless2-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-reckless2-audition-20260925/objects/c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0.mp3",
+        "bytes": 3255110,
+        "sha256": "c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.defiant-descent",
+      "title": "Defiant Descent",
+      "artist": "David KBD",
+      "durationSeconds": 110.240975,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Defiant Descent by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+        "attribution": "Music: Defiant Descent by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+        "derivativeChangeNotice": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "Defiant Descent.mp3",
+      "archiveId": "metal-reckless2-audition-20260925",
+      "collection": "metal-reckless2-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-reckless2-audition-20260925/objects/24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899.mp3",
+        "bytes": 3530127,
+        "sha256": "24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899"
+      },
+      "aliases": []
+    },
+    {
+      "id": "davidkbd.airborne-anarchy",
+      "title": "Airborne Anarchy",
+      "artist": "David KBD",
+      "durationSeconds": 86.47059,
+      "tags": [
+        "metal",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Airborne Anarchy by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+        "attribution": "Music: Airborne Anarchy by David KBD (https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+        "derivativeChangeNotice": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "Airborne Anarchy.mp3",
+      "archiveId": "metal-reckless2-audition-20260925",
+      "collection": "metal-reckless2-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "default": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/metal-reckless2-audition-20260925/objects/4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d.mp3",
+        "bytes": 2769441,
+        "sha256": "4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d"
       },
       "aliases": []
     }
