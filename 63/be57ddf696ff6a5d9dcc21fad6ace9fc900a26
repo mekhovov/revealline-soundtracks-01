@@ -1,0 +1,60 @@
+intake/test_reckless2.py
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 110,114-122
+  s_b682a4cc40df18::t_d9578f6647d783 123
+intake/prepare_approved_directions.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 8,14-15,51
+intake/binding_sources.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 1-28
+intake/prepare_purgatory3.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 9,16-17,54-55
+intake/reckless2-audition-20260925.json
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 33-34,64-65,95-96,126-127
+.github/workflows/approved-directions-intake.yml
+  s_f8296d264eaab0::t_714e80adef3fc4 9-12
+.github/workflows/synth-third-directions-intake.yml
+  s_f8296d264eaab0::t_714e80adef3fc4 9-16
+intake/reckless2_pins.py
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 32,59-63
+intake/prepare_reckless2.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 9,16-17,54-55
+  s_f8296d264eaab0::t_21a419283ea6c3 14
+intake/test_binding_sources.py
+  s_f8296d264eaab0::t_714e80adef3fc4 1-48,52-55
+  s_f8296d264eaab0::t_7c95b6ba1f7aa4 49-51
+intake/prepare_synth_third_directions.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 11,18-24,145
+.github/workflows/metal-reckless2-intake.yml
+  s_f8296d264eaab0::t_714e80adef3fc4 9-13
+intake/reckless2-audition-20260925.md
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 10-12
+.github/workflows/metal-purgatory3-intake.yml
+  s_f8296d264eaab0::t_714e80adef3fc4 9-13
+.github/workflows/second-directions-intake.yml
+  s_f8296d264eaab0::t_714e80adef3fc4 10-13
+intake/prepare_second_directions.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 8,14-15,49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "63be57ddf696ff6a5d9dcc21fad6ace9fc900a26",
+  "prompts": {},
+  "sessions": {
+    "s_b682a4cc40df18": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d9c6-b5ad-7342-8171-dd0ab5f97d7f",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    },
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
