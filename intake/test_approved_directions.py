@@ -84,7 +84,7 @@ class ApprovedDirectionsTests(unittest.TestCase):
         self.assertEqual(vocal['vocalContent'], 'creator-described-vocals')
         self.assertEqual(vocal['instrumentalReview'], 'pending')
         self.assertNotIn('instrumental', vocal['uploadName'])
-        for key in ('davidkbd.city-limits-crash', 'wekont.runner2088', 'davidkbd.street-beat'):
+        for key in ('davidkbd.broken-pavement-beat', 'wekont.runner2088', 'davidkbd.street-beat'):
             client = Mock()
             with self.assertRaises(ValueError):
                 itch_source.resolve(key, client)
