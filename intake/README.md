@@ -97,6 +97,23 @@ repository permissions and cannot publish the candidates or add them to the
 game catalogue. The change notice records extraction from WebM, MP3 conversion,
 loudness normalization and omission of video.
 
+## Third synth-direction audition
+
+`synth-third-directions-audition-20260925.json` keeps four separate OpenGameArt
+recordings in an audition-only batch: Bogart VGM's **90s Racer Techno**, Arold
+Valda's **Neon Pulse**, tcarisland's **Prismatic Light** and Zodik's **Future
+Travel**. The manifest pins each exact native MP3, FLAC or OGG byte count,
+SHA-256 and source-page attribution evidence. It preserves Bogart VGM's required
+Facebook credit, the source statement that Neon Pulse has Content ID disabled,
+Prismatic Light's published 140 BPM and Zodik's requested credit.
+
+All four remain outside publication, game admission, default playlists and
+Recording mode. The distinct hosted workflow fully decodes and measures the
+native sources, retains them unchanged, and prepares 256 kbps MP3 audition
+derivatives using the established loudness and peak checks. A source-page term,
+redirect, byte count, hash or native suffix change stops intake before decoding.
+The result is a 30-day evidence artifact, not a public archive update.
+
 Run the non-network tests with:
 
 ```sh
