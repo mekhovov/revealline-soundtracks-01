@@ -22,12 +22,21 @@ from second_directions_pins import (SOURCE_PINS as SECOND_SOURCES,
                                     UPLOAD_PINS as SECOND_UPLOADS,
                                     DESCRIPTION_HASHES as SECOND_DESCRIPTION_HASHES,
                                     details as second_audition_details)
+from purgatory3_pins import (SOURCE_PINS as PURGATORY3_SOURCES,
+                             UPLOAD_PINS as PURGATORY3_UPLOADS,
+                             DESCRIPTION_HASHES as PURGATORY3_DESCRIPTION_HASHES,
+                             details as purgatory3_audition_details)
 
 SOURCE_LIMIT = 64 * 1024 ** 2
 ARTISTS = {'dos88': 'DOS-88', 'escp': 'escp', 'davidkbd': 'David KBD'}
 ARTISTS.update({source: 'David KBD' for source in NEW_SOURCES})
 ARTISTS.update({source: 'David KBD' for source in SECOND_SOURCES})
-DESCRIPTION_HASHES = {**NEW_DESCRIPTION_HASHES, **SECOND_DESCRIPTION_HASHES}
+ARTISTS.update({source: 'David KBD' for source in PURGATORY3_SOURCES})
+DESCRIPTION_HASHES = {
+    **NEW_DESCRIPTION_HASHES,
+    **SECOND_DESCRIPTION_HASHES,
+    **PURGATORY3_DESCRIPTION_HASHES,
+}
 FORMATS = {
     '.mp3': ({'audio/mpeg', 'audio/mp3'}, {'mp3'}, {'mp3'}),
     '.ogg': ({'audio/ogg', 'application/ogg'}, {'ogg'}, {'vorbis', 'opus'}),
@@ -54,6 +63,8 @@ def identity(track_id):
         result.update(audition_details(track_id))
     elif track_id in SECOND_UPLOADS:
         result.update(second_audition_details(track_id))
+    elif track_id in PURGATORY3_UPLOADS:
+        result.update(purgatory3_audition_details(track_id))
     return result
 
 

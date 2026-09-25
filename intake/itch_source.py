@@ -18,6 +18,9 @@ from approved_directions_pins import (SOURCE_PINS as NEW_SOURCES,
 from second_directions_pins import (SOURCE_PINS as SECOND_SOURCES,
                                     UPLOAD_PINS as SECOND_UPLOADS,
                                     DESCRIPTION_HASHES as SECOND_DESCRIPTION_HASHES)
+from purgatory3_pins import (SOURCE_PINS as PURGATORY3_SOURCES,
+                             UPLOAD_PINS as PURGATORY3_UPLOADS,
+                             DESCRIPTION_HASHES as PURGATORY3_DESCRIPTION_HASHES)
 
 PAGE_LIMIT = 2 * 1024 ** 2
 CDN_HOST = 'itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com'
@@ -55,7 +58,13 @@ SOURCE_PINS.update(NEW_SOURCES)
 UPLOAD_PINS.update(NEW_UPLOADS)
 SOURCE_PINS.update(SECOND_SOURCES)
 UPLOAD_PINS.update(SECOND_UPLOADS)
-DESCRIPTION_HASHES = {**NEW_DESCRIPTION_HASHES, **SECOND_DESCRIPTION_HASHES}
+SOURCE_PINS.update(PURGATORY3_SOURCES)
+UPLOAD_PINS.update(PURGATORY3_UPLOADS)
+DESCRIPTION_HASHES = {
+    **NEW_DESCRIPTION_HASHES,
+    **SECOND_DESCRIPTION_HASHES,
+    **PURGATORY3_DESCRIPTION_HASHES,
+}
 
 
 class SourceChanged(ValueError):
