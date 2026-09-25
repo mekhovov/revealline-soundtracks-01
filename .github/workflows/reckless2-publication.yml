@@ -1,0 +1,86 @@
+name: Publish exact Reckless 2 audition artifact
+
+on:
+  pull_request:
+    paths:
+      - 'intake/assemble_approved_directions.py'
+      - 'intake/assemble_reckless2.py'
+      - 'intake/test_approved_assembly.py'
+      - 'intake/test_reckless2_assembly.py'
+      - 'intake/reckless2-publication.md'
+      - 'intake/build-unified-catalogue.mjs'
+      - '.github/workflows/reckless2-publication.yml'
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Assemble the fixed reviewed Reckless 2 artifact
+        type: choice
+        options: [assemble]
+        default: assemble
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - name: Verify source and historical archive boundaries
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 -m unittest discover -s intake -p 'test_*.py'
+          python3 intake/prepare_reckless2.py --check
+          node --test test-verify.mjs
+          node verify.mjs
+
+  assemble:
+    needs: source
+    if: github.event_name == 'workflow_dispatch' && inputs.operation == 'assemble' && github.ref == 'refs/heads/codex/reckless2-publication-20260926'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - name: Verify original artifact and assemble audition-only publication
+        run: python3 intake/assemble_reckless2.py
+      - name: Verify assembled payload and unchanged historical entries
+        run: |
+          python3 -m unittest discover -s intake -p 'test_*.py'
+          node --test test-verify.mjs
+          node verify.mjs
+          git diff --check
+      - name: Commit only the generated audition publication to this review branch
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = 'codex/reckless2-publication-20260926'
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git add batches/metal-reckless2-audition-20260925 intake/archive/metal-reckless2-audition-20260925 batches.json catalogue.json deployment-manifest.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Assemble exact Reckless 2 audition artifact'
+          git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"
+      - name: Preserve small assembly verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reckless2-assembly-evidence
+          path: |
+            intake/archive/metal-reckless2-audition-20260925/artifact-binding.json
+            intake/archive/metal-reckless2-audition-20260925/artifact-member-hashes.json
+            intake/archive/metal-reckless2-audition-20260925/assembly-review.json
+          if-no-files-found: warn
+          retention-days: 30
