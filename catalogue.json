@@ -112,13 +112,22 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 6
+    },
+    {
+      "id": "synth-runner2088-audition-20260925",
+      "path": "batches/synth-runner2088-audition-20260925/preview-catalogue.json",
+      "sha256": "d75c5e1f339b46f8cd6518bc8b965faa7ddfcce7aef7cdd28b629c5d96ac94d3",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
     }
   ],
   "counts": {
-    "declaredTracks": 128,
-    "uniqueRecordings": 128,
+    "declaredTracks": 129,
+    "uniqueRecordings": 129,
     "duplicateAliases": 0,
-    "audioBytes": 736228448
+    "audioBytes": 740113447
   },
   "tracks": [
     {
@@ -3895,6 +3904,38 @@
         "path": "batches/metal-second-directions-audition-20260925/objects/f7377e3b3f80ea14cf5e56a5d5e53248d1821be1787908d7d9e4a98066203d95.mp3",
         "bytes": 7374515,
         "sha256": "f7377e3b3f80ea14cf5e56a5d5e53248d1821be1787908d7d9e4a98066203d95"
+      },
+      "aliases": []
+    },
+    {
+      "id": "wekont.runner2088",
+      "title": "runner2088",
+      "artist": "wekont",
+      "durationSeconds": null,
+      "tags": [
+        "synth90s",
+        "retrowave",
+        "outrun",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "source": "https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "runner2088 by wekont. CC BY 4.0 International. Source: https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+      "fileName": "runner2088.mp3",
+      "archiveId": "synth-runner2088-audition-20260925",
+      "collection": "synth-runner2088-audition-20260925",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synth-runner2088-audition-20260925/objects/9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9.mp3",
+        "bytes": 3884999,
+        "sha256": "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9"
       },
       "aliases": []
     }

@@ -1,0 +1,36 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "listeningApproval": "not-reviewed",
+  "gameCatalogueAdmission": false,
+  "archive": {
+    "id": "synth-runner2088-audition-20260925",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/synth-runner2088-audition-20260925/",
+    "inventorySha256": "3bce96e76a5e4637a3e90028425765840427d84f294df85a9f5291813c5b464f"
+  },
+  "tracks": [
+    {
+      "id": "wekont.runner2088",
+      "title": "runner2088",
+      "artist": "wekont",
+      "source": "https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "runner2088 by wekont. CC BY 4.0 International. Source: https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+      "tags": [
+        "synth90s",
+        "retrowave",
+        "outrun",
+        "audition",
+        "listening pending",
+        "gameplay"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "runner2088.mp3",
+      "path": "objects/9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9.mp3",
+      "bytes": 3884999,
+      "sha256": "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9"
+    }
+  ]
+}

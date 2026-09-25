@@ -88,6 +88,14 @@
         "bytes": 2994,
         "sha256": "94253251b96ca20a2ebd97b5379e22cdc6689dee4a16d1e216035885a6b26d05"
       }
+    },
+    {
+      "id": "synth-runner2088-audition-20260925",
+      "manifest": {
+        "path": "batches/synth-runner2088-audition-20260925/deployment-manifest.json",
+        "bytes": 1650,
+        "sha256": "0bfe7d07a4c509adcbd22e0824e26f3a608aff090382bf396c07e09e33373754"
+      }
     }
   ]
 }
