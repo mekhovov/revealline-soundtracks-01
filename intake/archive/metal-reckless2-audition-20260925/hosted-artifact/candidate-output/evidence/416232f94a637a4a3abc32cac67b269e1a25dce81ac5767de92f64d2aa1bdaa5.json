@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.edge-of-the-city",
+  "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+  "gameId": 3681796,
+  "uploadId": 14147899,
+  "uploadName": "DavidKBD-02 - Edge of the City.ogg",
+  "title": "Edge of the City",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3681796/14147899",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-02 - Edge of the City.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 1995767,
+    "sha256": "af2408195ac7b446a1cf987028222e5eeae41d54b52290aa4336c36ae0a4deea"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "9398c4bb484f01ca48e22182fd6d2404a4a8f961bf39be9d223e45de6b77177d",
+    "observedLicenseLink": "https://creativecommons.org/licenses/by/4.0/",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "29f7786b366726e296cb8b36841897e8bdbc3be9b4561cf95c514cbc9facba0b",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

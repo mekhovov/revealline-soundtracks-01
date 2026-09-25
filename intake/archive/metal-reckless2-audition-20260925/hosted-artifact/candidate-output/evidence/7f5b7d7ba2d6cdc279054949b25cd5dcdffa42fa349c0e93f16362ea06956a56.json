@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.airborne-anarchy",
+  "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+  "gameId": 3681796,
+  "uploadId": 14147903,
+  "uploadName": "DavidKBD-05 - Airborne Anarchy.ogg",
+  "title": "Airborne Anarchy",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3681796/14147903",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-05 - Airborne Anarchy.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 1671147,
+    "sha256": "d1ef89fe5ac9ba10c965d93f307462c7dd9898dad11de3c13a2874ab1bd8a999"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "9e32f1fa5742bceb5a73f38d2a51d7998dfcc26acd71ae848b47ab69580f8bd4",
+    "observedLicenseLink": "https://creativecommons.org/licenses/by/4.0/",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "29f7786b366726e296cb8b36841897e8bdbc3be9b4561cf95c514cbc9facba0b",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

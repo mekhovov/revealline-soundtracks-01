@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 import itch_audio
 import itch_source
-import prepare
+import assemble_reckless2 as publication
 import prepare_reckless2 as entry
 import reckless2_pins as pins
 from test_itch_source import FixtureClient
@@ -106,10 +106,18 @@ class Reckless2Tests(unittest.TestCase):
                 self.assertEqual(len(client.requests), 1)
 
     def test_current_public_catalogue_has_no_title_duplicates(self):
-        _hashes, titles = prepare.public_recording_fingerprints(Path('.'))
+        baseline = json.loads(publication.merged_catalogue_bytes())
+        titles = {
+            re.sub(r'[^a-z0-9]', '', row['title'].lower())
+            for row in baseline['tracks']
+        }
         for title in pins.REFERENCE_LOOP_END_SECONDS:
             expected = pins.UPLOAD_PINS[title][3]
             self.assertNotIn(re.sub(r'[^a-z0-9]', '', expected.lower()), titles)
+        state = publication.validate_catalogue_context(
+            Path('catalogue.json').read_bytes()
+        )
+        self.assertIn(state, ('base', 'generated'))
 
     def test_reference_loop_end_is_not_claimed_as_exact_duration(self):
         for row in self.rows:

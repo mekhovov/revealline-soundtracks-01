@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.city-limits-crash",
+  "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+  "gameId": 3681796,
+  "uploadId": 14147896,
+  "uploadName": "DavidKBD-01 - City Limits Crash.ogg",
+  "title": "City Limits Crash",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3681796/14147896",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-01 - City Limits Crash.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 2031069,
+    "sha256": "a37008501dfde209ff0b6e8c93516cd038214fdf0a804bf55ff210956dc8e622"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "3b5dd88bfda2c28a92fcdd06618d39b3fe260b6a4121c387bf35ae975b4e50d0",
+    "observedLicenseLink": "https://creativecommons.org/licenses/by/4.0/",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "29f7786b366726e296cb8b36841897e8bdbc3be9b4561cf95c514cbc9facba0b",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

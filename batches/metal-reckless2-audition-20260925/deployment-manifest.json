@@ -1,0 +1,78 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "metal-reckless2-audition-20260925",
+  "expected": {
+    "trackCount": 4,
+    "audioBytes": 12885020
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 2422,
+      "sha256": "2dcdebc9f500f1c893e02029fa07401122c5b33f40c2cc1ef5eb9491c0fdbca5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 439,
+      "sha256": "9b62e5c264c432f182af2541433fed38928e040fc75992f5648cb34a2a54c7a5"
+    },
+    {
+      "path": "index.html",
+      "bytes": 8248,
+      "sha256": "b818382c8d577f4e35ef2d46c9207a139bc4101b5fd06e19a69b5a6eb08b80a9"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 969,
+      "sha256": "a977bcf2f434514157b663e285b47f12ee37e84b7966712f46368c75a0879919"
+    },
+    {
+      "path": "objects/24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899.mp3",
+      "bytes": 3530127,
+      "sha256": "24ce6e0fb25aa6aabede7a2277fa8eb0add1e46c9c74c725b0192e5f63d01899"
+    },
+    {
+      "path": "objects/4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d.mp3",
+      "bytes": 2769441,
+      "sha256": "4674a3f4b27f7222cd4a0f0bd9aea13c83d5c90fa2b0a168d6ef71bc874a471d"
+    },
+    {
+      "path": "objects/7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442.mp3",
+      "bytes": 3330342,
+      "sha256": "7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442"
+    },
+    {
+      "path": "objects/c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0.mp3",
+      "bytes": 3255110,
+      "sha256": "c676190104dae2fc8467957652f2ffe905100ee25451217258e04752e82e9be0"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 18934,
+      "sha256": "be3677422e02cb6c98aaed5562e8e1688cda5b661e0498c0b64b392602230ee2"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "sourceRun": 36193952191,
+    "artifactId": 10889860079,
+    "artifactSha256": "00211751f1701748948ca922c589120ad15db47b512b7bab15ca691a082bbc72",
+    "sourceManifestSha256": "a623e15a53474c13a5220f8ee7b8ec909c0f8c99c312c4200ba3fa8de49d75b4",
+    "gameCatalogueAdmission": false,
+    "listeningApproval": false
+  }
+}
