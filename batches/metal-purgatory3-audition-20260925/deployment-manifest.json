@@ -1,0 +1,78 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "metal-purgatory3-audition-20260925",
+  "expected": {
+    "trackCount": 4,
+    "audioBytes": 16195256
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 2478,
+      "sha256": "dca4205213a793bb8990671849386820365650f3033e6a3ba05d33e03d1e76c7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 444,
+      "sha256": "565b0027a8351ddb719c1c5769d0b2847c553b73e6407e75a40c29756bacfa2d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 8427,
+      "sha256": "eb5cff2f4203cbd6c641a0ac8b0b5880835497066b0c69acd9407e6ebb25ca3f"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 970,
+      "sha256": "0f3d0c80b5c866a896afe1ec8b4f3d68091989541ef8c50bcb56edcfe6b9859c"
+    },
+    {
+      "path": "objects/00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c.mp3",
+      "bytes": 4264899,
+      "sha256": "00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c"
+    },
+    {
+      "path": "objects/768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c.mp3",
+      "bytes": 4241493,
+      "sha256": "768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c"
+    },
+    {
+      "path": "objects/aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884.mp3",
+      "bytes": 3673069,
+      "sha256": "aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884"
+    },
+    {
+      "path": "objects/e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04.mp3",
+      "bytes": 4015795,
+      "sha256": "e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 19061,
+      "sha256": "6fd5aca48dbd65e1fd086e3d421e75903b04d8be7f6165060652ba0a77510cf7"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "sourceRun": 36083745177,
+    "artifactId": 10842748733,
+    "artifactSha256": "a77ea696226ebdf7a873c4ca58e77dc00d9eb4802847d4d57bc14d431ded8207",
+    "sourceManifestSha256": "35dd9fb823d926d6ac4489037e99fcc0ebb4de1802d9fdf8096c929d5289ef5e",
+    "gameCatalogueAdmission": false,
+    "listeningApproval": false
+  }
+}

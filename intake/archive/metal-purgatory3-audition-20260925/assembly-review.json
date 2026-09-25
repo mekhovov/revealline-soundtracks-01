@@ -1,0 +1,43 @@
+{
+  "format": "revealline-audition-assembly.v1",
+  "artifactId": 10842748733,
+  "artifactBytes": 26388690,
+  "artifactSha256": "a77ea696226ebdf7a873c4ca58e77dc00d9eb4802847d4d57bc14d431ded8207",
+  "sourceRun": 36083745177,
+  "sourceHead": "60f1a1d07d8aab6d6ebd4e152174f5326b7b9c37",
+  "runnerRevision": "eb3115cc62d0d7c883fb01ebd1c9e141ee294ab3",
+  "sourceTree": "de8c812ffbc2152a98cd00c49fbd3329ad9ec689",
+  "treeProofRevision": "eb3115cc62d0d7c883fb01ebd1c9e141ee294ab3",
+  "mergedSource": "41ea4448cf9602960ada28cd2c7c9a4cd5cb6b38",
+  "sourceManifestSha256": "35dd9fb823d926d6ac4489037e99fcc0ebb4de1802d9fdf8096c929d5289ef5e",
+  "assemblyRevision": "5b13a74c77ec6de2d5caea567ef0320799bccd9b",
+  "assemblyRun": "36148569071",
+  "originalArtifactInspection": "Verified by this hosted assembler; independent publication review pending",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false,
+  "default": false,
+  "status": "hosted-byte-verification-complete-independent-review-pending",
+  "recordings": 4,
+  "publicRecordings": 136,
+  "preservedExistingEntries": 132,
+  "memberCount": 17,
+  "productionBytes": 42622357,
+  "volumes": [
+    {
+      "id": "metal-purgatory3-audition-20260925",
+      "totalBytes": 16237817,
+      "manifest": {
+        "path": "batches/metal-purgatory3-audition-20260925/deployment-manifest.json",
+        "bytes": 2557,
+        "sha256": "37b966ac4e385ddbd177c6a46fe6b73f70fd5685c9e138dff61dcb2c671e7e6e"
+      }
+    }
+  ],
+  "remaining": [
+    "Independent original-artifact and publication PR review",
+    "Public byte and playback verification",
+    "Full listening, musical fit, transitions and warning audibility",
+    "Game admission and defaults",
+    "Offline and physical-device qualification"
+  ]
+}

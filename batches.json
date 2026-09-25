@@ -96,6 +96,14 @@
         "bytes": 2563,
         "sha256": "ebaa3ec8f4638fdaad61f6f90fe37682ee77e49b3c359fb2a48e270aa9d552c7"
       }
+    },
+    {
+      "id": "metal-purgatory3-audition-20260925",
+      "manifest": {
+        "path": "batches/metal-purgatory3-audition-20260925/deployment-manifest.json",
+        "bytes": 2557,
+        "sha256": "37b966ac4e385ddbd177c6a46fe6b73f70fd5685c9e138dff61dcb2c671e7e6e"
+      }
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-purgatory3-audition-20260925",
+  "files": [
+    {
+      "path": "objects/00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c.mp3",
+      "bytes": 4264899,
+      "sha256": "00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c"
+    },
+    {
+      "path": "objects/e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04.mp3",
+      "bytes": 4015795,
+      "sha256": "e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04"
+    },
+    {
+      "path": "objects/768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c.mp3",
+      "bytes": 4241493,
+      "sha256": "768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c"
+    },
+    {
+      "path": "objects/aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884.mp3",
+      "bytes": 3673069,
+      "sha256": "aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884"
+    }
+  ]
+}

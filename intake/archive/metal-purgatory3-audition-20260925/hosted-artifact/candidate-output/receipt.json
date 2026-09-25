@@ -1,0 +1,409 @@
+{
+  "format": "revealline-core-intake-receipt.v1",
+  "sourceManifestSha256": "35dd9fb823d926d6ac4489037e99fcc0ebb4de1802d9fdf8096c929d5289ef5e",
+  "checkedAt": "2026-09-25T01:51:45Z",
+  "runnerRevision": "eb3115cc62d0d7c883fb01ebd1c9e141ee294ab3",
+  "runnerRun": "36083745177",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "gameInspector": {
+    "revision": "71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "files": [
+      {
+        "path": "game/mp3.mjs",
+        "sha256": "d4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a"
+      },
+      {
+        "path": "game/data-json.mjs",
+        "sha256": "bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823"
+      },
+      {
+        "path": "game/soundtrack.mjs",
+        "sha256": "ec03303d295b4f7997f4b8c3c3573cf2bdddcd81f92700d98710d38933f89843"
+      },
+      {
+        "path": "game/soundtrack-rights.mjs",
+        "sha256": "8c1c10927cf5c1f7360374ca1a4d64a7dec3c312b197ace89201c37d75793f04"
+      },
+      {
+        "path": "game/ui/music.mjs",
+        "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+      },
+      {
+        "path": "game/content/soundtrack-catalogue.mjs",
+        "sha256": "0618993ff8ff9508d1ab4295920c07d0b5a8f6f34df683538029754b438dc44f"
+      }
+    ]
+  },
+  "listeningApproval": false,
+  "tracks": [
+    {
+      "id": "davidkbd.mutilations-melody",
+      "title": "Mutilation's Melody",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 3755088,
+      "uploadId": 14549174,
+      "uploadName": "DavidKBD-03 - Mutilation's Melody.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "referenceDurationSeconds": 133,
+      "referenceDurationSource": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 100,
+      "credit": "Music: Mutilation's Melody by David KBD (https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/145e9fdc29031e34edb8003268e9cdab931cbb2c5b1c0caf23f392c60acd13d3.json",
+        "sha256": "145e9fdc29031e34edb8003268e9cdab931cbb2c5b1c0caf23f392c60acd13d3",
+        "url": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/8975fcfc5594e83186eeb96efee5f02b5e915da72d3415e8f5832428fda0de59.ogg",
+        "sha256": "8975fcfc5594e83186eeb96efee5f02b5e915da72d3415e8f5832428fda0de59",
+        "bytes": 2682173,
+        "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "uploadId": 14549174,
+        "fileName": "DavidKBD-03 - Mutilation's Melody.ogg",
+        "contentType": "application/octet-stream"
+      },
+      "delivery": {
+        "path": "objects/00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c.mp3",
+        "sha256": "00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c",
+        "bytes": 4264899
+      },
+      "asset": {
+        "sha256": "00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c",
+        "bytes": 4264899,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 5102,
+        "durationSeconds": 133.27673469387756
+      },
+      "durationSeconds": 133.2,
+      "sourceLoudness": {
+        "input_i": "-8.56",
+        "input_tp": "1.00",
+        "input_lra": "0.80",
+        "input_thresh": "-18.57",
+        "output_i": "-15.96",
+        "output_tp": "-5.49",
+        "output_lra": "0.80",
+        "output_thresh": "-25.96",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.04"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-6.40",
+        "input_lra": "0.80",
+        "input_thresh": "-26.00",
+        "output_i": "-15.96",
+        "output_tp": "-5.50",
+        "output_lra": "0.80",
+        "output_thresh": "-25.96",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.04"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "davidkbd.bone-grinders-ballad",
+      "title": "Bone Grinder's Ballad",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 3755088,
+      "uploadId": 14549173,
+      "uploadName": "DavidKBD-05 - Bone Grinder's Ballad.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "referenceDurationSeconds": 125,
+      "referenceDurationSource": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 100,
+      "credit": "Music: Bone Grinder's Ballad by David KBD (https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/06a79d16e23cade73c00ebecdfc63a7d71b750f531fa934ebc9e5a4319c4a56a.json",
+        "sha256": "06a79d16e23cade73c00ebecdfc63a7d71b750f531fa934ebc9e5a4319c4a56a",
+        "url": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/e991b3c11b02843fce19677099d68a3eb692928d3287c91c3dbd16015a749cf2.ogg",
+        "sha256": "e991b3c11b02843fce19677099d68a3eb692928d3287c91c3dbd16015a749cf2",
+        "bytes": 2514002,
+        "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "uploadId": 14549173,
+        "fileName": "DavidKBD-05 - Bone Grinder's Ballad.ogg",
+        "contentType": "application/octet-stream"
+      },
+      "delivery": {
+        "path": "objects/e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04.mp3",
+        "sha256": "e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04",
+        "bytes": 4015795
+      },
+      "asset": {
+        "sha256": "e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04",
+        "bytes": 4015795,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4804,
+        "durationSeconds": 125.49224489795918
+      },
+      "durationSeconds": 125.425533,
+      "sourceLoudness": {
+        "input_i": "-8.35",
+        "input_tp": "0.79",
+        "input_lra": "1.60",
+        "input_thresh": "-18.35",
+        "output_i": "-15.99",
+        "output_tp": "-6.07",
+        "output_lra": "1.70",
+        "output_thresh": "-25.99",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.01"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-6.59",
+        "input_lra": "1.60",
+        "input_thresh": "-25.99",
+        "output_i": "-15.99",
+        "output_tp": "-6.07",
+        "output_lra": "1.70",
+        "output_thresh": "-25.99",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.01"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "davidkbd.the-slicing-strain",
+      "title": "The Slicing Strain",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 3755088,
+      "uploadId": 14549177,
+      "uploadName": "DavidKBD-06 - The Slicing Strain.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "referenceDurationSeconds": 132,
+      "referenceDurationSource": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 100,
+      "credit": "Music: The Slicing Strain by David KBD (https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/18d051858162e5c70e754b3389296c9cdbe62d9e484161b882940473b8239019.json",
+        "sha256": "18d051858162e5c70e754b3389296c9cdbe62d9e484161b882940473b8239019",
+        "url": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/73cf3fc0151101f513af31f8528bc0aa4fa86e54319645646806b60e45ab042b.ogg",
+        "sha256": "73cf3fc0151101f513af31f8528bc0aa4fa86e54319645646806b60e45ab042b",
+        "bytes": 2637582,
+        "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "uploadId": 14549177,
+        "fileName": "DavidKBD-06 - The Slicing Strain.ogg",
+        "contentType": "application/octet-stream"
+      },
+      "delivery": {
+        "path": "objects/768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c.mp3",
+        "sha256": "768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c",
+        "bytes": 4241493
+      },
+      "asset": {
+        "sha256": "768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c",
+        "bytes": 4241493,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 5074,
+        "durationSeconds": 132.54530612244898
+      },
+      "durationSeconds": 132.471905,
+      "sourceLoudness": {
+        "input_i": "-8.57",
+        "input_tp": "0.92",
+        "input_lra": "1.30",
+        "input_thresh": "-18.57",
+        "output_i": "-15.77",
+        "output_tp": "-4.80",
+        "output_lra": "1.10",
+        "output_thresh": "-25.77",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.23"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-6.55",
+        "input_lra": "1.20",
+        "input_thresh": "-25.99",
+        "output_i": "-15.77",
+        "output_tp": "-4.86",
+        "output_lra": "1.10",
+        "output_thresh": "-25.77",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.23"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    },
+    {
+      "id": "davidkbd.visceral-vengeance",
+      "title": "Visceral Vengeance",
+      "artist": "David KBD",
+      "artistURL": "https://davidkbd.itch.io",
+      "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "acquisition": "itch-public-free-download",
+      "gameId": 3755088,
+      "uploadId": 14549172,
+      "uploadName": "DavidKBD-07 - Visceral Vengeance.ogg",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "status": "rights-reviewed-listening-pending",
+      "instrumentalReview": "pending",
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "referenceDurationSeconds": 115,
+      "referenceDurationSource": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 100,
+      "credit": "Music: Visceral Vengeance by David KBD (https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/",
+      "sourceSnapshot": {
+        "path": "evidence/e500ff209109ae3aa42449bce27fa65a581269bbc8fdaf689ab370288ee46147.json",
+        "sha256": "e500ff209109ae3aa42449bce27fa65a581269bbc8fdaf689ab370288ee46147",
+        "url": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "snapshotKind": "itch-public-license-and-native-acquisition"
+      },
+      "original": {
+        "path": "originals/e0fc2f888b2fe3b189140b46a59d25348f22a43fcbb673fc0a98d8db50c92c20.ogg",
+        "sha256": "e0fc2f888b2fe3b189140b46a59d25348f22a43fcbb673fc0a98d8db50c92c20",
+        "bytes": 2322967,
+        "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+        "uploadId": 14549172,
+        "fileName": "DavidKBD-07 - Visceral Vengeance.ogg",
+        "contentType": "application/octet-stream"
+      },
+      "delivery": {
+        "path": "objects/aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884.mp3",
+        "sha256": "aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884",
+        "bytes": 3673069
+      },
+      "asset": {
+        "sha256": "aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884",
+        "bytes": 3673069,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4394,
+        "durationSeconds": 114.78204081632653
+      },
+      "durationSeconds": 114.705873,
+      "sourceLoudness": {
+        "input_i": "-8.66",
+        "input_tp": "1.05",
+        "input_lra": "0.90",
+        "input_thresh": "-18.66",
+        "output_i": "-15.94",
+        "output_tp": "-6.01",
+        "output_lra": "1.00",
+        "output_thresh": "-25.94",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.06"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-6.14",
+        "input_lra": "1.00",
+        "input_thresh": "-26.00",
+        "output_i": "-15.94",
+        "output_tp": "-5.96",
+        "output_lra": "1.00",
+        "output_thresh": "-25.94",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.06"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "changes": "Converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native source retained unchanged."
+    }
+  ],
+  "failures": [],
+  "deliveryVolumes": [
+    {
+      "family": "metal",
+      "number": 1,
+      "audioBytes": 16195256,
+      "metadataReservationBytes": 524288,
+      "maximumBytes": 67108864,
+      "tracks": [
+        "davidkbd.mutilations-melody",
+        "davidkbd.bone-grinders-ballad",
+        "davidkbd.the-slicing-strain",
+        "davidkbd.visceral-vengeance"
+      ],
+      "status": "size-checked-plan-listening-pending"
+    }
+  ]
+}
