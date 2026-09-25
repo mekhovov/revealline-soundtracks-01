@@ -6,12 +6,14 @@ import os
 from pathlib import Path
 import re
 
-from prepare import prepare, validate_manifest
+from prepare import acquisition_source_files, prepare, validate_manifest
 
 
 MANIFEST = Path(__file__).with_name('purgatory3-audition-20260925.json')
 MANIFEST_SHA256 = '35dd9fb823d926d6ac4489037e99fcc0ebb4de1802d9fdf8096c929d5289ef5e'
 WORKFLOW = '.github/workflows/metal-purgatory3-intake.yml'
+SOURCE_FILES = acquisition_source_files(
+    'intake/prepare_purgatory3.py', WORKFLOW)
 
 
 def checked_manifest(data):
@@ -40,16 +42,6 @@ def run(output, game_root):
     finally:
         if output.is_dir():
             (output / 'source-manifest.json').write_bytes(source)
-            files = (
-                'intake/purgatory3_pins.py',
-                'intake/approved_directions_pins.py',
-                'intake/second_directions_pins.py',
-                'intake/itch_source.py',
-                'intake/itch_audio.py',
-                'intake/prepare.py',
-                'intake/prepare_purgatory3.py',
-                WORKFLOW,
-            )
             binding = {
                 'format': 'revealline-purgatory3-intake-binding.v1',
                 'sourceManifestSha256': MANIFEST_SHA256,
@@ -58,7 +50,8 @@ def run(output, game_root):
                 'runnerRun': os.environ.get('GITHUB_RUN_ID'),
                 'workflowRef': os.environ['GITHUB_WORKFLOW_REF'],
                 'sourceFiles': {
-                    name: hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in files
+                    name: hashlib.sha256(Path(name).read_bytes()).hexdigest()
+                    for name in SOURCE_FILES
                 },
                 'publicationApproval': False,
                 'gameCatalogueAdmission': False,

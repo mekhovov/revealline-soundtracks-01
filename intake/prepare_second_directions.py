@@ -5,11 +5,13 @@ import json
 import os
 from pathlib import Path
 import re
-from prepare import prepare, validate_manifest
+from prepare import acquisition_source_files, prepare, validate_manifest
 
 MANIFEST = Path(__file__).with_name('second-directions-audition-20260925.json')
 MANIFEST_SHA256 = '54270c19d600c402004535283aa3044209fbc4e70e1d9926b04ec06a74067481'
 WORKFLOW = '.github/workflows/second-directions-intake.yml'
+SOURCE_FILES = acquisition_source_files(
+    'intake/prepare_second_directions.py', WORKFLOW)
 
 
 def checked_manifest(data):
@@ -35,10 +37,6 @@ def run(output, game_root):
     finally:
         if output.is_dir():
             (output / 'source-manifest.json').write_bytes(source)
-            files = ('intake/second_directions_pins.py',
-                     'intake/approved_directions_pins.py', 'intake/itch_source.py',
-                     'intake/itch_audio.py', 'intake/prepare.py',
-                     'intake/prepare_second_directions.py', WORKFLOW)
             binding = {
                 'format': 'revealline-second-directions-intake-binding.v1',
                 'sourceManifestSha256': MANIFEST_SHA256,
@@ -47,7 +45,7 @@ def run(output, game_root):
                 'runnerRun': os.environ.get('GITHUB_RUN_ID'),
                 'workflowRef': os.environ['GITHUB_WORKFLOW_REF'],
                 'sourceFiles': {name: hashlib.sha256(Path(name).read_bytes()).hexdigest()
-                                for name in files},
+                                for name in SOURCE_FILES},
                 'publicationApproval': False,
                 'gameCatalogueAdmission': False,
                 'listeningApproval': False,

@@ -107,9 +107,19 @@ class Reckless2Tests(unittest.TestCase):
 
     def test_current_public_catalogue_has_no_title_duplicates(self):
         _hashes, titles = prepare.public_recording_fingerprints(Path('.'))
-        for title in pins.REFERENCE_DURATIONS:
+        for title in pins.REFERENCE_LOOP_END_SECONDS:
             expected = pins.UPLOAD_PINS[title][3]
             self.assertNotIn(re.sub(r'[^a-z0-9]', '', expected.lower()), titles)
+
+    def test_reference_loop_end_is_not_claimed_as_exact_duration(self):
+        for row in self.rows:
+            self.assertEqual(
+                row['referenceLoopEndSeconds'],
+                pins.REFERENCE_LOOP_END_SECONDS[row['id']],
+            )
+            self.assertEqual(row['referenceLoopSource'], pins.SOURCE)
+            self.assertNotIn('referenceDurationSeconds', row)
+            self.assertEqual(row['exactNativeDurationReview'], 'pending-hosted-decode')
 
     def test_manifest_is_immutable_and_local_acquisition_is_refused(self):
         changed = copy.deepcopy(self.manifest)

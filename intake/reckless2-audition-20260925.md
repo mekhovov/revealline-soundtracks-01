@@ -7,6 +7,9 @@ The batch contains **City Limits Crash**, **Edge of the City**, **Defiant
 Descent**, and **Airborne Anarchy**. It excludes the six other full tracks,
 paid WAV/archive options and editor metadata archives. The selected recordings
 cover 166–180 BPM source-described punk-metal directions for musical comparison.
+The manifest's `referenceLoopEndSeconds` values are approximate loop-end
+positions derived from the creator's published sample markers. They are not
+complete-file durations; exact native duration comes only from hosted decoding.
 
 This is technical preparation only. Exact source acquisition and decoding do
 not establish musical fit, full-track listening approval, vocal/explicit-content

@@ -29,7 +29,7 @@ DESCRIPTION_HASHES = {
     SOURCE_KEY: '29f7786b366726e296cb8b36841897e8bdbc3be9b4561cf95c514cbc9facba0b',
 }
 
-REFERENCE_DURATIONS = {
+REFERENCE_LOOP_END_SECONDS = {
     'davidkbd.city-limits-crash': 101,
     'davidkbd.edge-of-the-city': 97,
     'davidkbd.defiant-descent': 106,
@@ -56,8 +56,11 @@ def details(track_id):
         'gameplayReview': 'pending',
         'vocalContent': 'unverified',
         'explicitContentReview': 'pending',
-        'referenceDurationSeconds': REFERENCE_DURATIONS[track_id],
-        'referenceDurationSource': SOURCE,
+        # These are the source table's loop-end sample positions converted to
+        # seconds, not complete-file durations. Hosted decoding records the
+        # authoritative duration separately in the candidate receipt.
+        'referenceLoopEndSeconds': REFERENCE_LOOP_END_SECONDS[track_id],
+        'referenceLoopSource': SOURCE,
         'exactNativeDurationReview': 'pending-hosted-decode',
         'minimumDurationSeconds': 75,
     }

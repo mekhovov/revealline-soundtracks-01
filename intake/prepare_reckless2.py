@@ -6,12 +6,14 @@ import os
 from pathlib import Path
 import re
 
-from prepare import prepare, validate_manifest
+from prepare import acquisition_source_files, prepare, validate_manifest
 
 
 MANIFEST = Path(__file__).with_name('reckless2-audition-20260925.json')
-MANIFEST_SHA256 = '7ba31e156a130c9f6d2a24dc8d201ad6e9eac48011a0418f22fce0f206fb054f'
+MANIFEST_SHA256 = 'a623e15a53474c13a5220f8ee7b8ec909c0f8c99c312c4200ba3fa8de49d75b4'
 WORKFLOW = '.github/workflows/metal-reckless2-intake.yml'
+SOURCE_FILES = acquisition_source_files(
+    'intake/prepare_reckless2.py', WORKFLOW)
 
 
 def checked_manifest(data):
@@ -40,16 +42,6 @@ def run(output, game_root):
     finally:
         if output.is_dir():
             (output / 'source-manifest.json').write_bytes(source)
-            files = (
-                'intake/reckless2_pins.py',
-                'intake/approved_directions_pins.py',
-                'intake/second_directions_pins.py',
-                'intake/itch_source.py',
-                'intake/itch_audio.py',
-                'intake/prepare.py',
-                'intake/prepare_reckless2.py',
-                WORKFLOW,
-            )
             binding = {
                 'format': 'revealline-reckless2-intake-binding.v1',
                 'sourceManifestSha256': MANIFEST_SHA256,
@@ -58,7 +50,8 @@ def run(output, game_root):
                 'runnerRun': os.environ.get('GITHUB_RUN_ID'),
                 'workflowRef': os.environ['GITHUB_WORKFLOW_REF'],
                 'sourceFiles': {
-                    name: hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in files
+                    name: hashlib.sha256(Path(name).read_bytes()).hexdigest()
+                    for name in SOURCE_FILES
                 },
                 'publicationApproval': False,
                 'gameCatalogueAdmission': False,
