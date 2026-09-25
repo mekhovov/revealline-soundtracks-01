@@ -1,0 +1,58 @@
+intake/prepare_purgatory3.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 15-16,53-54
+  s_f8296d264eaab0::t_15092e64959567 9
+intake/prepare_reckless2.py
+  s_f8296d264eaab0::t_15092e64959567 9
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 15-16,53-54
+  s_f8296d264eaab0::t_21a419283ea6c3 13
+intake/test_reckless2.py
+  s_b682a4cc40df18::t_d9578f6647d783 123
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 110,114-122
+intake/test_binding_sources.py
+  s_f8296d264eaab0::t_7c95b6ba1f7aa4 49
+  s_f8296d264eaab0::t_382500ba21fbb5 5
+  s_f8296d264eaab0::t_714e80adef3fc4 1-4,6-35,37-40,42-48,51-54
+  s_f8296d264eaab0::t_15092e64959567 36,41,50
+intake/reckless2-audition-20260925.md
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 10-12
+intake/reckless2-audition-20260925.json
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 33-34,64-65,95-96,126-127
+intake/prepare_approved_directions.py
+  s_f8296d264eaab0::t_15092e64959567 8
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 13-14,50
+intake/prepare_second_directions.py
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 13-14,48
+  s_f8296d264eaab0::t_15092e64959567 8
+intake/prepare_synth_third_directions.py
+  s_f8296d264eaab0::t_15092e64959567 11
+  s_f8296d264eaab0::t_2c3b75ac4bf43d 17-23,144
+intake/reckless2_pins.py
+  s_f8296d264eaab0::t_2f50ca4b7afa1b 32,59-63
+intake/prepare.py
+  s_f8296d264eaab0::t_15092e64959567 28-39,97-105
+  s_f8296d264eaab0::t_854066a34eab02 106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c7c73b01e25e27559781afb6065fb52eb4511765",
+  "prompts": {},
+  "sessions": {
+    "s_b682a4cc40df18": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d9c6-b5ad-7342-8171-dd0ab5f97d7f",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    },
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": null
+    }
+  }
+}
