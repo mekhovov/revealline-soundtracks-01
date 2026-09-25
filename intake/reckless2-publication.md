@@ -19,6 +19,9 @@ listening-only batch on the accepted 136-recording archive baseline.
 The artifact receipt and immutable Actions log bind the runner revision to the
 source head, base, tree, workflow and run. The remote publication gate verifies
 those objects and the artifact metadata before downloading any hosted bytes.
+It also verifies the exact merged source commit, tree and ordered parents; that
+merge must be an ancestor of the publication checkout. The accepted 136-row
+catalogue is pinned by exact file digest before any generation begins.
 The embedded 146-test result must pass exactly, every artifact member is bounded
 and hashed, and the four native and delivery identities must remain unique.
 
@@ -38,7 +41,8 @@ verifier, and push only generated archive metadata and audio to this draft
 publication branch. Independent review and public byte/playback verification
 remain required before merge.
 
-The workflow is intentionally supplied as a separate reviewed change because
-the source-only publication token cannot modify GitHub Actions workflows. No
-hosted assembly or public audio publication can occur until that exact workflow
-is added and reviewed.
+The hosted workflow rejects every generated path outside the exact Reckless
+batch/archive trees and the three required root metadata files. It stages those
+paths explicitly, requires no remaining worktree changes, validates the cached
+path set, commits, requires a clean checkout, and reruns the production verifier
+against the committed HEAD before pushing.

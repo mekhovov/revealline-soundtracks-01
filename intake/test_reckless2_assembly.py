@@ -1,10 +1,13 @@
 import copy
 import json
+from pathlib import Path
+import subprocess
 import unittest
 from unittest.mock import patch
 
 import assemble_approved_directions as assembler
 import assemble_reckless2 as subject
+import check_reckless2_publication_paths as paths
 from prepare_reckless2 import MANIFEST, SOURCE_FILES
 
 
@@ -83,6 +86,40 @@ class Reckless2AssemblyConfigurationTests(unittest.TestCase):
             for name, value in saved.items():
                 setattr(assembler, name, value)
 
+    def test_merged_source_identity_and_ancestry_fail_closed(self):
+        commit = {
+            'sha': subject.CONFIG['MERGED_SOURCE'],
+            'tree': {'sha': subject.MERGED_SOURCE_TREE},
+            'parents': [{'sha': sha} for sha in subject.MERGED_SOURCE_PARENTS],
+        }
+        subject.validate_merged_identity(commit)
+        for mutation in ('sha', 'tree', 'parents'):
+            changed = copy.deepcopy(commit)
+            if mutation == 'sha':
+                changed['sha'] = '0' * 40
+            elif mutation == 'tree':
+                changed['tree']['sha'] = '0' * 40
+            else:
+                changed['parents'].reverse()
+            with self.assertRaisesRegex(ValueError, 'Merged source'):
+                subject.validate_merged_identity(changed)
+
+        with patch.object(subject.assembler, 'api', return_value=commit), patch.object(
+            subject.subprocess,
+            'run',
+            return_value=subprocess.CompletedProcess([], 1),
+        ):
+            with self.assertRaisesRegex(ValueError, 'not an ancestor'):
+                subject.validate_publication_ancestry()
+
+    def test_exact_baseline_catalogue_bytes_are_pinned(self):
+        body = Path('catalogue.json').read_bytes()
+        self.assertEqual(subject.BASE_CATALOGUE_SHA256,
+                         '946180064d4f3570f6d365e1e005e5e846ea2cc3142d7e4b65bde4b4a3c88199')
+        subject.validate_baseline(body)
+        with self.assertRaisesRegex(ValueError, 'catalogue bytes changed'):
+            subject.validate_baseline(body + b' ')
+
     def test_exact_manifest_rows_project_to_non_sharealike_rights(self):
         rows = json.loads(MANIFEST.read_bytes())['tracks']
         self.assertEqual(len(rows), 4)
@@ -118,14 +155,43 @@ class Reckless2AssemblyConfigurationTests(unittest.TestCase):
             'DESCRIPTION_HASHES': assembler.DESCRIPTION_HASHES,
         })
         try:
-            with patch.object(assembler, 'main') as run:
+            with patch.object(subject, 'validate_publication_ancestry') as ancestry, patch.object(
+                subject, 'validate_baseline'
+            ) as baseline, patch.object(assembler, 'main') as run:
                 subject.main()
+                ancestry.assert_called_once_with()
+                baseline.assert_called_once_with()
                 run.assert_called_once_with()
                 for name, value in subject.CONFIG.items():
                     self.assertEqual(getattr(assembler, name), value)
         finally:
             for name, value in saved.items():
                 setattr(assembler, name, value)
+
+
+class Reckless2PublicationPathTests(unittest.TestCase):
+    def test_exact_generated_path_set_is_accepted(self):
+        observed = {
+            *paths.EXACT_PATHS,
+            'batches/metal-reckless2-audition-20260925/index.html',
+            'intake/archive/metal-reckless2-audition-20260925/artifact-binding.json',
+        }
+        self.assertEqual(paths.validate_paths(observed), observed)
+
+    def test_unexpected_or_incomplete_paths_fail_closed(self):
+        complete = {
+            *paths.EXACT_PATHS,
+            'batches/metal-reckless2-audition-20260925/index.html',
+            'intake/archive/metal-reckless2-audition-20260925/artifact-binding.json',
+        }
+        for changed in (
+            complete | {'index.html'},
+            complete - {'catalogue.json'},
+            complete - {'batches/metal-reckless2-audition-20260925/index.html'},
+            complete | {'../catalogue.json'},
+        ):
+            with self.assertRaises(ValueError):
+                paths.validate_paths(changed)
 
 
 if __name__ == '__main__':
