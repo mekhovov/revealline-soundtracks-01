@@ -88,6 +88,22 @@
         "bytes": 2994,
         "sha256": "94253251b96ca20a2ebd97b5379e22cdc6689dee4a16d1e216035885a6b26d05"
       }
+    },
+    {
+      "id": "synth-third-directions-audition-20260925",
+      "manifest": {
+        "path": "batches/synth-third-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2563,
+        "sha256": "ebaa3ec8f4638fdaad61f6f90fe37682ee77e49b3c359fb2a48e270aa9d552c7"
+      }
+    },
+    {
+      "id": "metal-purgatory3-audition-20260925",
+      "manifest": {
+        "path": "batches/metal-purgatory3-audition-20260925/deployment-manifest.json",
+        "bytes": 2557,
+        "sha256": "37b966ac4e385ddbd177c6a46fe6b73f70fd5685c9e138dff61dcb2c671e7e6e"
+      }
     }
   ]
 }

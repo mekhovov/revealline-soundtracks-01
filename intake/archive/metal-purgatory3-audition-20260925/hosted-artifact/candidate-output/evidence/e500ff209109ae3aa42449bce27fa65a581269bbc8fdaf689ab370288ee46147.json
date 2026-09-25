@@ -1,0 +1,38 @@
+{
+  "format": "revealline-itch-source-resolution.v1",
+  "id": "davidkbd.visceral-vengeance",
+  "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+  "gameId": 3755088,
+  "uploadId": 14549172,
+  "uploadName": "DavidKBD-07 - Visceral Vengeance.ogg",
+  "title": "Visceral Vengeance",
+  "license": "CC BY 4.0 International",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "mediaHost": "itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com",
+  "mediaPath": "/upload2/game/3755088/14549172",
+  "acquisition": "public-free-download",
+  "audioAcquired": true,
+  "listeningApproval": false,
+  "admitted": false,
+  "native": {
+    "fileName": "DavidKBD-07 - Visceral Vengeance.ogg",
+    "suffix": ".ogg",
+    "contentType": "application/octet-stream",
+    "bytes": 2322967,
+    "sha256": "e0fc2f888b2fe3b189140b46a59d25348f22a43fcbb673fc0a98d8db50c92c20"
+  },
+  "licenseObservation": {
+    "format": "revealline-itch-public-license-observation.v1",
+    "source": "https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack",
+    "creator": "David KBD",
+    "pageSha256": "68e9afaf0e1d93255b535f906e8741854fc1c61768f73798dced288ebb6edb89",
+    "observedLicenseLink": "https://itch.io/game-assets/assets-cc4-by",
+    "license": "CC BY 4.0 International",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "snapshotKind": "Verified public licence facts; raw session-bearing HTML is not retained",
+    "listeningApproval": false,
+    "admitted": false,
+    "reviewedDescriptionSha256": "fcab6f9052b1cc95f341fa5ccfdf1ea7c0275ce0bcf885559989ecd21137bd73",
+    "observedDirectLicenseLink": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}

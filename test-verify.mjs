@@ -38,6 +38,11 @@ import {
   stylesOf,
 } from './playback-policy.mjs';
 import { createUploadManifest, readID3 } from './intake/add-music.mjs';
+import {
+  allowsLegacyRightsArchive,
+  createRightsMetadata,
+  validateRecordingRights,
+} from './rights-policy.mjs';
 
 const source = fileURLToPath(new URL("./", import.meta.url));
 const baseURL = "https://mekhovov.github.io/revealline-soundtracks-01/";
@@ -79,8 +84,16 @@ async function fixture(t) {
         title: "Synthetic fixture",
         artist: "Fixture only",
         source: "https://example.com/fixture",
+        license: "CC0 1.0 Universal",
         licenseURL: "https://creativecommons.org/publicdomain/zero/1.0/",
         credit: "Synthetic test data, not a licensed recording.",
+        rights: createRightsMetadata({
+          licenseURL: "https://creativecommons.org/publicdomain/zero/1.0/",
+          rightsEvidenceURL: "https://example.com/fixture#rights",
+          attribution: "Synthetic test data, not a licensed recording.",
+          derivativeChangeNotice: "Synthetic fixture bytes; no real recording.",
+        }),
+        recordingModeEligible: false,
       },
     ],
   };
@@ -239,7 +252,11 @@ test("local MP3 intake requires exact public credit and supported redistribution
       },
     ],
   };
-  assert.deepEqual(validateUploadManifest(valid), valid);
+  const normalized = validateUploadManifest(valid);
+  assert.equal(normalized.tracks[0].rights.licenseId, 'CC-BY');
+  assert.equal(normalized.tracks[0].rights.licenseVersion, '4.0');
+  assert.equal(normalized.tracks[0].rights.shareAlike.required, false);
+  assert.equal(normalized.tracks[0].recordingModeEligible, false);
   for (const changed of [
     {
       tracks: [
@@ -250,6 +267,92 @@ test("local MP3 intake requires exact public credit and supported redistribution
     { tracks: [{ ...valid.tracks[0], source: "file:///tmp/song" }] },
   ])
     assert.throws(() => validateUploadManifest({ ...valid, ...changed }));
+});
+test('CC BY-SA intake binds exact rights, changes and compatible delivery terms', () => {
+  const credit = 'ShareAlike Song by Creator. CC BY-SA 4.0 International.';
+  const rights = createRightsMetadata({
+    licenseURL: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    rightsEvidenceURL: 'https://creator.example/sharealike-song#license',
+    attribution: credit,
+    derivativeChangeNotice: 'Converted from WAV to 256 kbps MP3; audio content unchanged.',
+  });
+  const track = {
+    license: 'CC BY-SA 4.0 International',
+    licenseURL: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    credit,
+    rights,
+    recordingModeEligible: false,
+  };
+  assert.equal(validateRecordingRights(track), rights);
+  assert.deepEqual(rights.shareAlike, {
+    required: true,
+    deliveryLicenseId: 'CC-BY-SA',
+    deliveryLicenseVersion: '4.0',
+    deliveryLicenseURL: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  });
+  for (const changed of [
+    { ...track, license: 'CC BY 4.0 International' },
+    { ...track, recordingModeEligible: true },
+    { ...track, rights: { ...rights, licenseId: 'CC-BY' } },
+    {
+      ...track,
+      rights: {
+        ...rights,
+        shareAlike: { ...rights.shareAlike, deliveryLicenseURL: null },
+      },
+    },
+    { ...track, rights: undefined },
+  ])
+    assert.throws(() => validateRecordingRights(changed, { allowLegacy: true }));
+});
+test('legacy rights compatibility still validates exact licence labels and trusted archives', () => {
+  const legacy = {
+    license: 'CC BY 4.0 International',
+    licenseURL: 'https://creativecommons.org/licenses/by/4.0/',
+    credit: 'Legacy credit.',
+    recordingModeEligible: false,
+  };
+  assert.equal(validateRecordingRights(legacy, { allowLegacy: true }), null);
+  assert.throws(() =>
+    validateRecordingRights({ ...legacy, license: undefined }, { allowLegacy: true }),
+  );
+  assert.throws(() =>
+    validateRecordingRights(
+      { ...legacy, license: 'CC0 1.0 Universal' },
+      { allowLegacy: true },
+    ),
+  );
+  assert.equal(allowsLegacyRightsArchive('licensed-preview-01'), true);
+  assert.equal(allowsLegacyRightsArchive('core-fixture'), false);
+});
+test('folder automation refuses implicit ShareAlike terms and records an MP3 notice', async (t) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-sharealike-intake-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const file = path.join(root, 'Dance.mp3');
+  await writeFile(file, Buffer.from('fixture'));
+  const options = {
+    artist: 'Test Creator',
+    source: 'https://creator.example/dance',
+    license: 'cc-by-sa-4.0',
+    tags: ['ukrainian', 'gameplay'],
+    confirmRights: true,
+    date: '20260925',
+  };
+  await assert.rejects(createUploadManifest(file, options), /rights-evidence/);
+  await assert.rejects(
+    createUploadManifest(file, {
+      ...options,
+      rightsEvidence: 'https://creator.example/dance#license',
+    }),
+    /derivative-notice/,
+  );
+  const manifest = await createUploadManifest(file, {
+    ...options,
+    rightsEvidence: 'https://creator.example/dance#license',
+    derivativeNotice: 'Converted from source OGG to MP3; normalized to archive target.',
+  });
+  assert.equal(manifest.tracks[0].rights.shareAlike.required, true);
+  assert.match(manifest.tracks[0].rights.derivativeChangeNotice, /OGG to MP3/);
 });
 test('one-file and folder automation derive metadata while keeping rights explicit', async (t) => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-folder-intake-'));
@@ -426,9 +529,19 @@ test("upload intake commits exact validated bytes and reproducible catalogue met
     await readFile(path.join(f.root, "catalogue.json"), "utf8"),
     serializeCatalogue(generated),
   );
-  assert(
-    generated.tracks.some((track) => track.id === "successful-upload.track"),
+  const uploaded = generated.tracks.find(
+    (track) => track.id === "successful-upload.track",
   );
+  assert(uploaded);
+  assert.equal(uploaded.rights.licenseId, "CC0");
+  assert.equal(uploaded.rights.licenseVersion, "1.0");
+  assert.equal(uploaded.rights.attribution, "Synthetic fixture bytes under CC0.");
+  assert.deepEqual(uploaded.rights.shareAlike, {
+    required: false,
+    deliveryLicenseId: null,
+    deliveryLicenseVersion: null,
+    deliveryLicenseURL: null,
+  });
   assert.deepEqual(
     (await readdir(path.join(f.root, "intake"))).filter((name) =>
       name.startsWith(".upload-"),
@@ -741,6 +854,51 @@ for (const [name, mutate] of [
     "unsupported licence",
     (f) => {
       f.catalogue.tracks[0].licenseURL = "https://example.com/noncommercial";
+    },
+  ],
+  [
+    "ShareAlike licence without explicit delivery terms",
+    (f) => {
+      Object.assign(f.catalogue.tracks[0], {
+        license: "CC BY-SA 4.0 International",
+        licenseURL: "https://creativecommons.org/licenses/by-sa/4.0/",
+        recordingModeEligible: false,
+      });
+    },
+  ],
+  [
+    "structured rights removed from a new batch",
+    (f) => {
+      delete f.catalogue.tracks[0].rights;
+    },
+  ],
+  [
+    "missing legacy licence label",
+    (f) => {
+      delete f.catalogue.tracks[0].license;
+    },
+  ],
+  [
+    "mismatched legacy licence label",
+    (f) => {
+      f.catalogue.tracks[0].license = "CC BY 4.0 International";
+    },
+  ],
+  [
+    "ShareAlike recording marked Recording-mode-safe",
+    (f) => {
+      const track = f.catalogue.tracks[0];
+      Object.assign(track, {
+        license: "CC BY-SA 4.0 International",
+        licenseURL: "https://creativecommons.org/licenses/by-sa/4.0/",
+        recordingModeEligible: true,
+        rights: createRightsMetadata({
+          licenseURL: "https://creativecommons.org/licenses/by-sa/4.0/",
+          rightsEvidenceURL: "https://example.com/fixture#license",
+          attribution: track.credit,
+          derivativeChangeNotice: "Converted from WAV to MP3 for this fixture.",
+        }),
+      });
     },
   ],
   [

@@ -18,18 +18,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 4559,
-      "sha256": "3f66574fbaef4179a6a65f32f2c6d7d28581a90b650866c31bc9770b67ca8b19"
+      "bytes": 4597,
+      "sha256": "e3e4b57ab45615fea8fa120533ef6b64cd88ee65d4cafdecf4655d9fdc188ab1"
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 6065,
-      "sha256": "dd037774a9fde46cf14ca636f976673ec9a91527fa5e3f76bee8b50a538da80c"
+      "bytes": 7920,
+      "sha256": "dd8fe6c1d025007093a328002cbbad2e307e5ff00d3c0fc3c414dcc81b88b683"
     },
     {
       "path": "catalogue.json",
-      "bytes": 155896,
-      "sha256": "9bdb54f4cd76a82c102a5130c17672965894f7d393a2368ba860bba332ec43ef"
+      "bytes": 174470,
+      "sha256": "946180064d4f3570f6d365e1e005e5e846ea2cc3142d7e4b65bde4b4a3c88199"
     },
     {
       "path": "index.html",

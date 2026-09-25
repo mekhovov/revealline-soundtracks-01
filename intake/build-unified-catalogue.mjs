@@ -2,6 +2,10 @@ import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  allowsLegacyRightsArchive,
+  validateRecordingRights,
+} from "../rights-policy.mjs";
 
 const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const digest = (bytes) => createHash("sha256").update(bytes).digest("hex");
@@ -43,8 +47,11 @@ function normalizedTags(track) {
 
 function publicTrack(
   track,
-  { batchId, basePath, status, listeningApproval, admitted },
+  { batchId, rightsArchiveId, basePath, status, listeningApproval, admitted },
 ) {
+  const rights = validateRecordingRights(track, {
+    allowLegacy: allowsLegacyRightsArchive(rightsArchiveId),
+  });
   demand(
     typeof track.id === "string" && track.id,
     "Track identity is required.",
@@ -83,6 +90,7 @@ function publicTrack(
     license: track.license ?? null,
     licenseURL: track.licenseURL,
     credit: track.credit,
+    ...(rights ? { rights } : {}),
     fileName: track.fileName ?? `${track.title}.mp3`,
     archiveId: batchId,
     collection: batchId === "foundation-70" ? "Foundation collection" : batchId,
@@ -91,7 +99,10 @@ function publicTrack(
     gameCatalogueAdmission: admitted === true,
     ...(track.default === false ? { default: false } : {}),
     contentId: track.contentId ?? "unknown",
-    recordingModeEligible: track.recordingModeEligible === true,
+    recordingModeEligible:
+      rights?.shareAlike.required === true
+        ? false
+        : track.recordingModeEligible === true,
     audio: {
       path: `${basePath}${track.path}`,
       bytes: track.bytes,
@@ -175,6 +186,7 @@ export async function buildUnifiedCatalogue({
         track.sha256,
         publicTrack(track, {
           batchId: source.id,
+          rightsArchiveId: source.catalogue.archive.id,
           basePath: source.basePath,
           status: source.catalogue.status,
           listeningApproval: source.catalogue.listeningApproval,

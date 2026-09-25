@@ -1,0 +1,22 @@
+{
+  "format": "revealline-synth-third-directions-intake-binding.v1",
+  "sourceManifestSha256": "07ac02efefcaece89ffef39d0e6afb3b22bfde476a6b8cf651c318e429c074aa",
+  "runnerRevision": "e774748eace8567fbeda3d8c8e31245a29dfbb9b",
+  "eventHeadRevision": "400367c644cafeae6e8ce94011cbb790561455f6",
+  "runnerRun": "36082136561",
+  "workflowRef": "mekhovov/revealline-soundtracks-01/.github/workflows/synth-third-directions-intake.yml@refs/pull/20/merge",
+  "sourceFiles": {
+    "intake/prepare.py": "a55df729528bd3d061771daf9311119ec99b56e59ff1e9c3c8ce936cfcd5dac5",
+    "intake/prepare_synth_third_directions.py": "83b18e5936351677843f312fab82940f0ad558239e3949088215d099841beebf",
+    "intake/synth-third-directions-audition-20260925.json": "07ac02efefcaece89ffef39d0e6afb3b22bfde476a6b8cf651c318e429c074aa",
+    "intake/synth-third-directions-audition-20260925.md": "8cf2dda4655315dcef8ba008b433d9fdb713d62913da753860b04b40df863fe6",
+    "intake/test_synth_third_directions.py": "8d0837fb523baaa65e9034a1e345451cab74a7d1a92351114a2379247d09560f",
+    ".github/workflows/synth-third-directions-intake.yml": "b257606ce0999ee3c6085465a97c8b72906135530a13c34c3798f5c8dd54dbb7"
+  },
+  "publicationApproval": false,
+  "gameCatalogueAdmission": false,
+  "defaultPlaylistAdmission": false,
+  "recordingModeAdmission": false,
+  "listeningApproval": false,
+  "exactSourcesVerified": true
+}

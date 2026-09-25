@@ -1,0 +1,33 @@
+{
+  "status": "pending",
+  "tracks": [
+    {
+      "id": "davidkbd.mutilations-melody",
+      "sha256": "00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "davidkbd.bone-grinders-ballad",
+      "sha256": "e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "davidkbd.the-slicing-strain",
+      "sha256": "768238859f5bbe059713213e87a06ee24c43ec9473288e7bb4dca04b55f5ea9c",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "davidkbd.visceral-vengeance",
+      "sha256": "aadfc3625e96fcc18d4b465e7f8889cb31a35fe6014f96b4f1d89c40cdaad884",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "format": "revealline-core-intake-receipt.v1",
+  "sourceManifestSha256": "07ac02efefcaece89ffef39d0e6afb3b22bfde476a6b8cf651c318e429c074aa",
+  "checkedAt": "2026-09-25T01:29:39Z",
+  "runnerRevision": "e774748eace8567fbeda3d8c8e31245a29dfbb9b",
+  "runnerRun": "36082136561",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "gameInspector": {
+    "revision": "71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "files": [
+      {
+        "path": "game/mp3.mjs",
+        "sha256": "d4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a"
+      },
+      {
+        "path": "game/data-json.mjs",
+        "sha256": "bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823"
+      },
+      {
+        "path": "game/soundtrack.mjs",
+        "sha256": "ec03303d295b4f7997f4b8c3c3573cf2bdddcd81f92700d98710d38933f89843"
+      },
+      {
+        "path": "game/soundtrack-rights.mjs",
+        "sha256": "8c1c10927cf5c1f7360374ca1a4d64a7dec3c312b197ace89201c37d75793f04"
+      },
+      {
+        "path": "game/ui/music.mjs",
+        "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+      },
+      {
+        "path": "game/content/soundtrack-catalogue.mjs",
+        "sha256": "0618993ff8ff9508d1ab4295920c07d0b5a8f6f34df683538029754b438dc44f"
+      }
+    ]
+  },
+  "listeningApproval": false,
+  "tracks": [
+    {
+      "id": "bogart-vgm.90s-racer-techno",
+      "title": "90s Racer Techno",
+      "artist": "Bogart VGM",
+      "artistURL": "https://www.facebook.com/BogartVGM/",
+      "source": "https://opengameart.org/content/90s-racer-techno",
+      "download": "https://opengameart.org/sites/default/files/90s_racer_techno_0.mp3",
+      "expectedSourceSha256": "da4d941c6abfc4aa4f44191fa27cb06afb80681e0af8c7eb5c1a32ff5c85605b",
+      "expectedSourceBytes": 6919579,
+      "expectedSourceSuffix": ".mp3",
+      "requiredSourceTerms": [
+        "https://www.facebook.com/BogartVGM/",
+        "give Credits and include a Link to my Facebookpage"
+      ],
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "family": "synth90s",
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "credit": "Music: 90s Racer Techno by Bogart VGM (https://www.facebook.com/BogartVGM/). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/90s-racer-techno",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "changes": "Native 320 kbps MP3 retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/cd3ff3c50217af9e576557ab6ab0b2605da4e498ea7cd6818f4bff90cb98d46e.html",
+        "sha256": "cd3ff3c50217af9e576557ab6ab0b2605da4e498ea7cd6818f4bff90cb98d46e",
+        "url": "https://opengameart.org/content/90s-racer-techno"
+      },
+      "original": {
+        "path": "originals/da4d941c6abfc4aa4f44191fa27cb06afb80681e0af8c7eb5c1a32ff5c85605b.mp3",
+        "sha256": "da4d941c6abfc4aa4f44191fa27cb06afb80681e0af8c7eb5c1a32ff5c85605b",
+        "bytes": 6919579,
+        "url": "https://opengameart.org/sites/default/files/90s_racer_techno_0.mp3"
+      },
+      "delivery": {
+        "path": "objects/19164dcc6d8e919ea015e96b4ebcd53d65c537b1a614b0b881b9ea9bfcb7671b.mp3",
+        "sha256": "19164dcc6d8e919ea015e96b4ebcd53d65c537b1a614b0b881b9ea9bfcb7671b",
+        "bytes": 5535495
+      },
+      "asset": {
+        "sha256": "19164dcc6d8e919ea015e96b4ebcd53d65c537b1a614b0b881b9ea9bfcb7671b",
+        "bytes": 5535495,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 6622,
+        "durationSeconds": 172.98285714285714
+      },
+      "durationSeconds": 172.956735,
+      "sourceLoudness": {
+        "input_i": "-10.68",
+        "input_tp": "0.02",
+        "input_lra": "9.10",
+        "input_thresh": "-21.00",
+        "output_i": "-14.96",
+        "output_tp": "-1.50",
+        "output_lra": "6.90",
+        "output_thresh": "-25.19",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.04"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.99",
+        "input_tp": "-5.06",
+        "input_lra": "9.10",
+        "input_thresh": "-26.32",
+        "output_i": "-14.96",
+        "output_tp": "-1.50",
+        "output_lra": "6.90",
+        "output_thresh": "-25.18",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.04"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "arold-valda.neon-pulse",
+      "title": "Neon Pulse",
+      "artist": "Arold Valda",
+      "artistURL": "https://opengameart.org/users/aroldv",
+      "source": "https://opengameart.org/content/neon-pulse",
+      "download": "https://opengameart.org/sites/default/files/neon_pulse.flac",
+      "expectedSourceSha256": "533aceb7e3f81f4f2a8a23527526334697d6d7c074d5711a447accf41b01fed7",
+      "expectedSourceBytes": 22513720,
+      "expectedSourceSuffix": ".flac",
+      "requiredSourceTerms": [
+        "Content ID disabled for CC BY 4.0 release.",
+        "Music: \"Neon Pulse\" by Arold Valda. Licensed under CC BY 4.0."
+      ],
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": false,
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "family": "synth90s",
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "credit": "Music: Neon Pulse by Arold Valda. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/neon-pulse",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "changes": "Converted from the exact native 16-bit FLAC to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native FLAC retained unchanged.",
+      "sourceSnapshot": {
+        "path": "evidence/86eaf5be05d0cb5a1a1eb0f5d3d81f0a53924f87eb2fc0144292447f606be42d.html",
+        "sha256": "86eaf5be05d0cb5a1a1eb0f5d3d81f0a53924f87eb2fc0144292447f606be42d",
+        "url": "https://opengameart.org/content/neon-pulse"
+      },
+      "original": {
+        "path": "originals/533aceb7e3f81f4f2a8a23527526334697d6d7c074d5711a447accf41b01fed7.flac",
+        "sha256": "533aceb7e3f81f4f2a8a23527526334697d6d7c074d5711a447accf41b01fed7",
+        "bytes": 22513720,
+        "url": "https://opengameart.org/sites/default/files/neon_pulse.flac"
+      },
+      "delivery": {
+        "path": "objects/8e3f6104f6b43e98952734b170a5ecb4fa1370131bb7fef277b5080ede47911c.mp3",
+        "sha256": "8e3f6104f6b43e98952734b170a5ecb4fa1370131bb7fef277b5080ede47911c",
+        "bytes": 6200050
+      },
+      "asset": {
+        "sha256": "8e3f6104f6b43e98952734b170a5ecb4fa1370131bb7fef277b5080ede47911c",
+        "bytes": 6200050,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 7417,
+        "durationSeconds": 193.75020408163266
+      },
+      "durationSeconds": 193.695011,
+      "sourceLoudness": {
+        "input_i": "-14.26",
+        "input_tp": "-0.99",
+        "input_lra": "2.60",
+        "input_thresh": "-24.32",
+        "output_i": "-15.57",
+        "output_tp": "-1.74",
+        "output_lra": "2.40",
+        "output_thresh": "-25.63",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.43"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-2.61",
+        "input_lra": "2.60",
+        "input_thresh": "-26.06",
+        "output_i": "-15.57",
+        "output_tp": "-1.59",
+        "output_lra": "2.40",
+        "output_thresh": "-25.63",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.43"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "tcarisland.prismatic-light",
+      "title": "Prismatic Light",
+      "artist": "tcarisland",
+      "artistURL": "https://www.tcarisland.no",
+      "source": "https://opengameart.org/content/prismatic-light",
+      "download": "https://opengameart.org/sites/default/files/prismaticlight_0.mp3",
+      "expectedSourceSha256": "2e0a45a3423ade454c50ba61fe82e8c7e912a22ab390887607e02458cec8b239",
+      "expectedSourceBytes": 5511488,
+      "expectedSourceSuffix": ".mp3",
+      "requiredSourceTerms": [
+        "140bpm",
+        "You don't need to contact me before using it"
+      ],
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "family": "synth90s",
+      "role": "gameplay",
+      "energy": "medium-high",
+      "publishedBpm": 140,
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "credit": "Music: Prismatic Light by tcarisland (https://www.tcarisland.no). Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/. Source: https://opengameart.org/content/prismatic-light",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "changes": "Native 192 kbps MP3 retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/d84bb53aabfd76c3c8898587088fbd0a8ef325d37484833e530026449164b0ce.html",
+        "sha256": "d84bb53aabfd76c3c8898587088fbd0a8ef325d37484833e530026449164b0ce",
+        "url": "https://opengameart.org/content/prismatic-light"
+      },
+      "original": {
+        "path": "originals/2e0a45a3423ade454c50ba61fe82e8c7e912a22ab390887607e02458cec8b239.mp3",
+        "sha256": "2e0a45a3423ade454c50ba61fe82e8c7e912a22ab390887607e02458cec8b239",
+        "bytes": 5511488,
+        "url": "https://opengameart.org/sites/default/files/prismaticlight_0.mp3"
+      },
+      "delivery": {
+        "path": "objects/a560f672ebf74397b11d76bf26b894fb6bee9978df8f1e6b929d89cef96bc8bc.mp3",
+        "sha256": "a560f672ebf74397b11d76bf26b894fb6bee9978df8f1e6b929d89cef96bc8bc",
+        "bytes": 7350274
+      },
+      "asset": {
+        "sha256": "a560f672ebf74397b11d76bf26b894fb6bee9978df8f1e6b929d89cef96bc8bc",
+        "bytes": 7350274,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 8793,
+        "durationSeconds": 229.69469387755103
+      },
+      "durationSeconds": 229.642417,
+      "sourceLoudness": {
+        "input_i": "-12.32",
+        "input_tp": "0.90",
+        "input_lra": "4.20",
+        "input_thresh": "-22.45",
+        "output_i": "-15.33",
+        "output_tp": "-1.71",
+        "output_lra": "4.10",
+        "output_thresh": "-25.44",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.67"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-2.67",
+        "input_lra": "4.20",
+        "input_thresh": "-26.11",
+        "output_i": "-15.33",
+        "output_tp": "-1.63",
+        "output_lra": "4.10",
+        "output_thresh": "-25.44",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.67"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "zodik.future-travel",
+      "title": "Future Travel",
+      "artist": "Zodik",
+      "artistURL": "https://opengameart.org/users/zodik",
+      "source": "https://opengameart.org/content/zodik-future-travel",
+      "download": "https://opengameart.org/sites/default/files/Zodik%20-%20Future%20Travel_0.ogg",
+      "expectedSourceSha256": "10d7b71e7e48ce05f31fbfd820e6d669e6b7690b89fde9b199c25bbf07c2de92",
+      "expectedSourceBytes": 2045714,
+      "expectedSourceSuffix": ".ogg",
+      "requiredSourceTerms": [
+        "Credits: Zodik"
+      ],
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "family": "synth90s",
+      "role": "gameplay",
+      "energy": "medium-high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "credit": "Music: Future Travel by Zodik. Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0): https://creativecommons.org/licenses/by/3.0/. Source: https://opengameart.org/content/zodik-future-travel",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "changes": "Converted from the exact native OGG Vorbis recording to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; native OGG retained unchanged.",
+      "sourceSnapshot": {
+        "path": "evidence/594f6ac86a6bd88a87646c2cc07199e96f1b6552560ea356b649ab167a90eded.html",
+        "sha256": "594f6ac86a6bd88a87646c2cc07199e96f1b6552560ea356b649ab167a90eded",
+        "url": "https://opengameart.org/content/zodik-future-travel"
+      },
+      "original": {
+        "path": "originals/10d7b71e7e48ce05f31fbfd820e6d669e6b7690b89fde9b199c25bbf07c2de92.ogg",
+        "sha256": "10d7b71e7e48ce05f31fbfd820e6d669e6b7690b89fde9b199c25bbf07c2de92",
+        "bytes": 2045714,
+        "url": "https://opengameart.org/sites/default/files/Zodik%20-%20Future%20Travel_0.ogg"
+      },
+      "delivery": {
+        "path": "objects/3953be70c7758c91072cd42e398c0c5273b78ea279d389a7b96846e631e4dcae.mp3",
+        "sha256": "3953be70c7758c91072cd42e398c0c5273b78ea279d389a7b96846e631e4dcae",
+        "bytes": 6013640
+      },
+      "asset": {
+        "sha256": "3953be70c7758c91072cd42e398c0c5273b78ea279d389a7b96846e631e4dcae",
+        "bytes": 6013640,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 7194,
+        "durationSeconds": 187.92489795918368
+      },
+      "durationSeconds": 187.860952,
+      "sourceLoudness": {
+        "input_i": "-11.18",
+        "input_tp": "0.55",
+        "input_lra": "4.00",
+        "input_thresh": "-21.26",
+        "output_i": "-16.34",
+        "output_tp": "-4.60",
+        "output_lra": "3.90",
+        "output_thresh": "-26.38",
+        "normalization_type": "dynamic",
+        "target_offset": "0.34"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-4.28",
+        "input_lra": "4.00",
+        "input_thresh": "-26.07",
+        "output_i": "-16.34",
+        "output_tp": "-4.61",
+        "output_lra": "3.90",
+        "output_thresh": "-26.38",
+        "normalization_type": "dynamic",
+        "target_offset": "0.34"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    }
+  ],
+  "failures": [],
+  "deliveryVolumes": [
+    {
+      "family": "synth90s",
+      "number": 1,
+      "audioBytes": 25099459,
+      "metadataReservationBytes": 524288,
+      "maximumBytes": 67108864,
+      "tracks": [
+        "bogart-vgm.90s-racer-techno",
+        "arold-valda.neon-pulse",
+        "tcarisland.prismatic-light",
+        "zodik.future-travel"
+      ],
+      "status": "size-checked-plan-listening-pending"
+    }
+  ]
+}

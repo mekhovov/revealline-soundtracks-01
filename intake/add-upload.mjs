@@ -18,6 +18,11 @@ import {
 } from "./build-unified-catalogue.mjs";
 import { buildUpdatedRootManifest } from "./update-root-metadata.mjs";
 import { validateBatchIndex, verifyPreviewBatch } from "../verify.mjs";
+import {
+  LICENSES_BY_URL,
+  createRightsMetadata,
+  validateRecordingRights,
+} from "../rights-policy.mjs";
 
 const repository = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const BATCH_ID = /^[a-z0-9][a-z0-9-]{0,63}$/;
@@ -26,11 +31,6 @@ const MAX_TRACK_BYTES = 100_000_000;
 const MAX_BATCH_BYTES = 64 * 1024 * 1024;
 const MAX_PUBLIC_BYTES = 800_000_000;
 const MINIMUM_FREE_BYTES = 1024 ** 3;
-const LICENSES = new Map([
-  ["https://creativecommons.org/publicdomain/zero/1.0/", "CC0 1.0 Universal"],
-  ["https://creativecommons.org/licenses/by/3.0/", "CC BY 3.0 Unported"],
-  ["https://creativecommons.org/licenses/by/4.0/", "CC BY 4.0 International"],
-]);
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const pin = (file, bytes) => ({
   path: file,
@@ -91,11 +91,11 @@ export function validateUploadManifest(value) {
       `A secure creator source is required for ${track.id}.`,
     );
     demand(
-      LICENSES.has(track.licenseURL),
+      LICENSES_BY_URL.has(track.licenseURL),
       `Unsupported licence for ${track.id}.`,
     );
     demand(
-      track.license === LICENSES.get(track.licenseURL),
+      track.license === LICENSES_BY_URL.get(track.licenseURL).label,
       `Licence label and URL differ for ${track.id}.`,
     );
     demand(
@@ -104,7 +104,22 @@ export function validateUploadManifest(value) {
         track.tags.length <= 16,
       `Tags are required for ${track.id}.`,
     );
-    return {
+    const credit = cleanText(track.credit, `Credit for ${track.id}`);
+    const definition = LICENSES_BY_URL.get(track.licenseURL);
+    const rights =
+      track.rights ??
+      createRightsMetadata({
+        licenseURL: track.licenseURL,
+        rightsEvidenceURL: track.source,
+        attribution: credit,
+        derivativeChangeNotice:
+          "Exact submitted MP3 bytes retained; no archive changes declared.",
+      });
+    demand(
+      track.rights || !definition.shareAlike,
+      `CC BY-SA rights metadata is required for ${track.id}.`,
+    );
+    const normalized = {
       id: track.id,
       file: cleanText(track.file, `File for ${track.id}`, 4096),
       title: cleanText(track.title, `Title for ${track.id}`, 200),
@@ -112,13 +127,17 @@ export function validateUploadManifest(value) {
       source: track.source,
       license: track.license,
       licenseURL: track.licenseURL,
-      credit: cleanText(track.credit, `Credit for ${track.id}`),
+      credit,
+      rights,
+      recordingModeEligible: false,
       tags: [
         ...new Set(
           track.tags.map((tag) => cleanText(tag, `Tag for ${track.id}`, 80)),
         ),
       ],
     };
+    validateRecordingRights(normalized);
+    return normalized;
   });
   return { batchId: value.batchId, title, description, tracks };
 }
@@ -235,6 +254,7 @@ function batchFiles(manifest, prepared) {
       license: track.license,
       licenseURL: track.licenseURL,
       credit: track.credit,
+      rights: track.rights,
       tags: track.tags,
       contentId: "unknown",
       recordingModeEligible: false,
@@ -273,7 +293,7 @@ function batchFiles(manifest, prepared) {
     [
       "CREDITS.md",
       Buffer.from(
-        `# Credits\n\n${catalogue.tracks.map((track) => `- **${track.title}** — ${track.artist}. ${track.credit} [Source](${track.source}) · [${track.license}](${track.licenseURL}) · SHA-256 \`${track.sha256}\`.`).join("\n")}\n`,
+        `# Credits\n\n${catalogue.tracks.map((track) => `- **${track.title}** — ${track.artist}. ${track.credit} [Source](${track.source}) · [Rights evidence](${track.rights.rightsEvidenceURL}) · [${track.license}](${track.licenseURL}) · ${track.rights.derivativeChangeNotice}${track.rights.shareAlike.required ? ` · ShareAlike delivery: [${track.rights.shareAlike.deliveryLicenseId} ${track.rights.shareAlike.deliveryLicenseVersion}](${track.rights.shareAlike.deliveryLicenseURL})` : ""} · SHA-256 \`${track.sha256}\`.`).join("\n")}\n`,
       ),
     ],
     [
