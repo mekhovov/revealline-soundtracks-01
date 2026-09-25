@@ -12,22 +12,12 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { prepareUpload } from './add-upload.mjs';
+import {
+  LICENSES_BY_KEY,
+  createRightsMetadata,
+} from '../rights-policy.mjs';
 
 const repository = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
-const LICENSES = Object.freeze({
-  cc0: {
-    label: 'CC0 1.0 Universal',
-    url: 'https://creativecommons.org/publicdomain/zero/1.0/',
-  },
-  'cc-by-3.0': {
-    label: 'CC BY 3.0 Unported',
-    url: 'https://creativecommons.org/licenses/by/3.0/',
-  },
-  'cc-by-4.0': {
-    label: 'CC BY 4.0 International',
-    url: 'https://creativecommons.org/licenses/by/4.0/',
-  },
-});
 
 function demand(value, message) {
   if (!value) throw new Error(message);
@@ -135,8 +125,21 @@ async function mp3Files(input) {
 export async function createUploadManifest(input, options) {
   demand(options?.confirmRights === true, 'Pass --confirm-rights after verifying public MP3 redistribution and web-game playback rights.');
   demand(/^https:\/\//.test(options.source ?? ''), 'A secure exact creator/source URL is required.');
-  const license = LICENSES[options.license];
-  demand(license, 'Use --license cc0, cc-by-3.0 or cc-by-4.0.');
+  const license = LICENSES_BY_KEY.get(options.license);
+  demand(
+    license,
+    'Use --license cc0, cc-by-3.0, cc-by-4.0, cc-by-sa-3.0 or cc-by-sa-4.0.',
+  );
+  if (license.shareAlike) {
+    demand(
+      /^https:\/\//.test(options.rightsEvidence ?? ''),
+      'CC BY-SA intake requires --rights-evidence with the exact licence evidence URL.',
+    );
+    demand(
+      options.derivativeNotice?.trim(),
+      'CC BY-SA intake requires --derivative-notice describing MP3 conversion or confirming unchanged bytes.',
+    );
+  }
   const files = await mp3Files(input),
     commonArtist = options.artist?.trim(),
     tags = [...new Set((options.tags ?? []).map((tag) => tag.trim()).filter(Boolean))];
@@ -155,6 +158,7 @@ export async function createUploadManifest(input, options) {
       occurrence = (ids.get(base) ?? 0) + 1;
     ids.set(base, occurrence);
     const id = occurrence === 1 ? base : `${base}.${occurrence}`;
+    const credit = `${title} by ${artist}. ${license.label}. Source: ${options.source}`;
     tracks.push({
       id,
       file,
@@ -163,7 +167,15 @@ export async function createUploadManifest(input, options) {
       source: options.source,
       license: license.label,
       licenseURL: license.url,
-      credit: `${title} by ${artist}. ${license.label}. Source: ${options.source}`,
+      credit,
+      rights: createRightsMetadata({
+        licenseURL: license.url,
+        rightsEvidenceURL: options.rightsEvidence ?? options.source,
+        attribution: credit,
+        derivativeChangeNotice:
+          options.derivativeNotice ??
+          'Exact submitted MP3 bytes retained; no archive changes declared.',
+      }),
       tags,
     });
   }
@@ -190,7 +202,8 @@ function parseArguments(argv) {
       const key = {
         '--source': 'source', '--license': 'license', '--artist': 'artist',
         '--styles': 'tags', '--batch-id': 'batchId', '--batch-title': 'batchTitle',
-        '--description': 'description',
+        '--description': 'description', '--rights-evidence': 'rightsEvidence',
+        '--derivative-notice': 'derivativeNotice',
       }[value];
       demand(key, `Unknown option: ${value}`);
       options[key] = key === 'tags' ? next.split(',') : next;
