@@ -88,6 +88,14 @@
         "bytes": 2994,
         "sha256": "94253251b96ca20a2ebd97b5379e22cdc6689dee4a16d1e216035885a6b26d05"
       }
+    },
+    {
+      "id": "synth-third-directions-audition-20260925",
+      "manifest": {
+        "path": "batches/synth-third-directions-audition-20260925/deployment-manifest.json",
+        "bytes": 2563,
+        "sha256": "63848e4351c83b507824345d124b498f98bc8ae982fc5eaebe60f0c1a84c85cd"
+      }
     }
   ]
 }
