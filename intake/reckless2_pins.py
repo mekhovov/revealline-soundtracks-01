@@ -6,10 +6,10 @@ listening, publication, Recording-mode, default or game-admission approval.
 
 SOURCE = 'https://davidkbd.itch.io/reckless-vol-2-punk-metal-music-pack'
 SOURCE_KEY = 'davidkbd-reckless2'
-CC_BY_BADGE = 'https://itch.io/game-assets/assets-cc4-by'
+CC_BY_LINK = 'https://creativecommons.org/licenses/by/4.0/'
 
 SOURCE_PINS = {
-    SOURCE_KEY: (SOURCE, 3681796, CC_BY_BADGE),
+    SOURCE_KEY: (SOURCE, 3681796, CC_BY_LINK),
 }
 
 UPLOAD_PINS = {
