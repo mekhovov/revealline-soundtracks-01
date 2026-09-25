@@ -264,19 +264,6 @@ def validate_manifest(value):
               or urlparse(row['download']).hostname != 'opengameart.org'
               or not urlparse(row['download']).path.startswith('/sites/default/files/')):
             raise ValueError('Not an author-provided source/download pair')
-        source_pins = (row.get('expectedSourceSha256'), row.get('expectedSourceBytes'),
-                       row.get('expectedSourceSuffix'))
-        if any(value is not None for value in source_pins):
-            if (not re.fullmatch(r'[0-9a-f]{64}', row.get('expectedSourceSha256', ''))
-                    or type(row.get('expectedSourceBytes')) is not int
-                    or not 0 < row['expectedSourceBytes'] <= SOURCE_LIMIT
-                    or row.get('expectedSourceSuffix') not in ('.flac', '.mp3', '.ogg')):
-                raise ValueError('Exact source identity pins are incomplete or invalid')
-        terms = row.get('requiredSourceTerms', [])
-        if (not isinstance(terms, list) or len(terms) > 8
-                or any(not isinstance(term, str) or not 1 <= len(term) <= 240
-                       for term in terms)):
-            raise ValueError('Required source evidence terms are invalid')
         if row.get('status') != 'rights-reviewed-listening-pending':
             raise ValueError('Intake cannot grant listening approval')
     if any(row.get('acquisition') == COMMONS_ACQUISITION for row in value['tracks']):
@@ -340,18 +327,6 @@ def validate_source_page(row, body):
     normalized = unquote(html.unescape(source))
     if row['licenseURL'].removeprefix('https://') not in normalized:
         raise ValueError('Expected licence link is absent from creator snapshot')
-    if any(term not in normalized for term in row.get('requiredSourceTerms', [])):
-        raise ValueError('Required attribution or rights evidence changed on creator page')
-
-
-def validate_source_identity(row, body, final, suffix):
-    """Bind optional source pins before decoding or creating a derivative."""
-    if row.get('expectedSourceSha256') is None:
-        return
-    if (final != row['download'] or len(body) != row['expectedSourceBytes']
-            or digest(body) != row['expectedSourceSha256']
-            or suffix.lower() != row['expectedSourceSuffix']):
-        raise ValueError('Downloaded recording differs from the reviewed exact source identity')
 
 
 def snapshot(url, output, pages):
@@ -629,7 +604,6 @@ def prepare(manifest, output, game_root):
                 evidence = collect_evidence(row, output, pages, partial)
                 body, final = fetch(row['download'], CREATOR_SOURCE_LIMITS.get(row['source'], SOURCE_LIMIT))
                 suffix = Path(urlparse(final).path).suffix
-                validate_source_identity(row, body, final, suffix)
                 source_details = {'url': final}
             source_sha = digest(body)
             if source_sha in known_hashes or source_sha in source_hashes or re.sub(r'[^a-z0-9]', '', row['title'].lower()) in known_titles:

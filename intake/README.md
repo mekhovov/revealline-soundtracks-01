@@ -111,8 +111,9 @@ All four remain outside publication, game admission, default playlists and
 Recording mode. The distinct hosted workflow fully decodes and measures the
 native sources, retains them unchanged, and prepares 256 kbps MP3 audition
 derivatives using the established loudness and peak checks. A source-page term,
-redirect, byte count, hash or native suffix change stops intake before decoding.
-The result is a 30-day evidence artifact, not a public archive update.
+redirect, byte count, hash or native suffix change stops successful intake and
+retains the failure evidence. The result is a 30-day evidence artifact, not a
+public archive update.
 
 Run the non-network tests with:
 

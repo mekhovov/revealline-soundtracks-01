@@ -82,34 +82,66 @@ class SynthThirdDirectionsTests(unittest.TestCase):
             normalized = ''.join(char for char in row['title'].lower() if char.isalnum())
             self.assertNotIn(normalized, known_titles)
 
-    def test_source_page_binds_download_licence_and_required_terms(self):
+    def test_source_page_binds_download_and_licence(self):
         for row in self.rows:
             body = ('<html><a href="' + row['download'] + '">recording</a>'
                     '<a href="' + row['licenseURL'] + '">licence</a>'
                     + ''.join(html.escape(term) for term in row['requiredSourceTerms'])
                     + '</html>').encode()
             prepare.validate_source_page(row, body)
-            with self.assertRaisesRegex(ValueError, 'rights evidence'):
-                prepare.validate_source_page(row, body.replace(
-                    html.escape(row['requiredSourceTerms'][0]).encode(), b'changed', 1))
 
-    def test_source_bytes_are_bound_before_decode(self):
-        for row in self.rows:
-            body = b'x' * row['expectedSourceBytes']
-            changed = dict(row, expectedSourceSha256=hashlib.sha256(body).hexdigest())
-            prepare.validate_source_identity(
-                changed, body, row['download'], row['expectedSourceSuffix'])
-            for mutation in (
-                    ('body', body + b'x'),
-                    ('url', row['download'] + '?changed=1'),
-                    ('suffix', '.mp3' if row['expectedSourceSuffix'] != '.mp3' else '.ogg')):
-                with self.subTest(id=row['id'], mutation=mutation[0]), \
-                        self.assertRaisesRegex(ValueError, 'exact source identity'):
-                    prepare.validate_source_identity(
-                        changed,
-                        mutation[1] if mutation[0] == 'body' else body,
-                        mutation[1] if mutation[0] == 'url' else row['download'],
-                        mutation[1] if mutation[0] == 'suffix' else row['expectedSourceSuffix'])
+    def test_prepared_bytes_and_rights_evidence_are_bound_to_manifest(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            for name in ('originals', 'objects', 'evidence'):
+                (output / name).mkdir()
+            manifest = copy.deepcopy(self.manifest)
+            tracks = []
+            for index, row in enumerate(manifest['tracks']):
+                original_bytes = f'native-{index}'.encode()
+                row['expectedSourceBytes'] = len(original_bytes)
+                row['expectedSourceSha256'] = hashlib.sha256(original_bytes).hexdigest()
+                original_path = ('originals/' + row['expectedSourceSha256']
+                                 + row['expectedSourceSuffix'])
+                (output / original_path).write_bytes(original_bytes)
+
+                evidence = ('<a href="' + row['licenseURL'] + '">licence</a>'
+                            + ''.join(html.escape(term)
+                                      for term in row['requiredSourceTerms'])).encode()
+                evidence_sha = hashlib.sha256(evidence).hexdigest()
+                evidence_path = 'evidence/' + evidence_sha + '.html'
+                (output / evidence_path).write_bytes(evidence)
+
+                derivative = f'derivative-{index}'.encode()
+                derivative_sha = hashlib.sha256(derivative).hexdigest()
+                derivative_path = 'objects/' + derivative_sha + '.mp3'
+                (output / derivative_path).write_bytes(derivative)
+                tracks.append({
+                    'id': row['id'],
+                    'completeDecode': True,
+                    'original': {'path': original_path,
+                                 'sha256': row['expectedSourceSha256'],
+                                 'bytes': len(original_bytes), 'url': row['download']},
+                    'sourceSnapshot': {'path': evidence_path, 'sha256': evidence_sha,
+                                       'url': row['source']},
+                    'delivery': {'path': derivative_path, 'sha256': derivative_sha,
+                                 'bytes': len(derivative)},
+                })
+            receipt = {'tracks': tracks, 'failures': []}
+            (output / 'receipt.json').write_text(json.dumps(receipt))
+            entry.validate_prepared_intake(manifest, output)
+
+            first = tracks[0]
+            original = output / first['original']['path']
+            original.write_bytes(b'changed')
+            with self.assertRaisesRegex(ValueError, 'native source bytes'):
+                entry.validate_prepared_intake(manifest, output)
+            original.write_bytes(b'native-0')
+
+            evidence = output / first['sourceSnapshot']['path']
+            evidence.write_bytes(b'changed')
+            with self.assertRaisesRegex(ValueError, 'snapshot bytes'):
+                entry.validate_prepared_intake(manifest, output)
 
     def test_invalid_source_pins_and_rights_terms_are_rejected(self):
         for key, value in (
@@ -120,11 +152,12 @@ class SynthThirdDirectionsTests(unittest.TestCase):
                 ('requiredSourceTerms', ['x' * 241])):
             changed = copy.deepcopy(self.manifest)
             changed['tracks'][0][key] = value
-            if key == 'requiredSourceTerms' and value == []:
-                # Empty is valid for historical rows; malformed type is not.
-                changed['tracks'][0][key] = 'not-a-list'
             with self.subTest(field=key, value=value), self.assertRaises(ValueError):
-                prepare.validate_manifest(changed)
+                entry.validate_third_manifest(changed)
+        changed = copy.deepcopy(self.manifest)
+        changed['recordingModeAdmission'] = True
+        with self.assertRaisesRegex(ValueError, 'admission or approval'):
+            entry.validate_third_manifest(changed)
 
     def test_manifest_is_immutable_and_local_acquisition_is_refused(self):
         changed = copy.deepcopy(self.manifest)
