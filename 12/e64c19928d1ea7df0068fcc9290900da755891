@@ -1,0 +1,37 @@
+.github/workflows/synth-third-directions-publication.yml
+  s_f8296d264eaab0::t_98f2a4ff1ed919 30-31
+intake/assemble_approved_directions.py
+  s_f8296d264eaab0::t_b4c81f0250d468 280-282,285-286,303,331
+.github/workflows/metal-energy-publication.yml
+  s_f8296d264eaab0::t_b4c81f0250d468 1-29,32-58,61-92
+  s_f8296d264eaab0::t_98f2a4ff1ed919 30-31,59-60
+.github/workflows/second-directions-publication.yml
+  s_f8296d264eaab0::t_98f2a4ff1ed919 30-31
+intake/test_metal_energy_assembly.py
+  s_f8296d264eaab0::t_5b3fad6183108f 39-44
+  s_f8296d264eaab0::t_b4c81f0250d468 1-38,45-120
+.github/workflows/approved-directions-intake.yml
+  s_f8296d264eaab0::t_98f2a4ff1ed919 36-37
+intake/metal-energy-publication.md
+  s_f8296d264eaab0::t_b4c81f0250d468 1-30
+.github/workflows/purgatory3-publication.yml
+  s_f8296d264eaab0::t_98f2a4ff1ed919 30-31
+intake/assemble_metal_energy.py
+  s_f8296d264eaab0::t_b4c81f0250d468 1-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "12e64c19928d1ea7df0068fcc9290900da755891",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": null
+    }
+  }
+}
