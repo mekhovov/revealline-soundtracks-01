@@ -1,0 +1,59 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "maximum-overdrive-audition-20260926",
+  "expected": {
+    "trackCount": 1,
+    "audioBytes": 8421948
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 293,
+      "sha256": "0c49a421cc3ece6e795efad6fa9edee7332ba429ceb2170aa9f8e14005b9dc02"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 559,
+      "sha256": "7b53cb60168b7de78922d20212727229cf49d236209f5d3dfcffb038310a41d4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1219,
+      "sha256": "60fd6562fe16e99133507357b53af4ba6316f8eea99ab970c2cf0e6adc65535d"
+    },
+    {
+      "path": "style.css",
+      "bytes": 264,
+      "sha256": "de0dd57417d30949a5afe855d52aef0fbb203042909799f37b2f096665f2209b"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 84,
+      "sha256": "4386d6094858886b8ef75b2046735aacf703661d7670dedd8f66981bb7ef29ea"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 329,
+      "sha256": "bc5e33a5c6c4eb8a0db40b67f5308b95c2ac4ddf036445f33b0180c7423dd14f"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 2080,
+      "sha256": "dbba8c86ebc4424fa8b4d4f49889006951a2c0826d1f78fec816c2445180b81a"
+    },
+    {
+      "path": "objects/e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d.mp3",
+      "bytes": 8421948,
+      "sha256": "e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d"
+    }
+  ],
+  "provenance": {
+    "localUpload": true,
+    "listeningApproval": false
+  }
+}

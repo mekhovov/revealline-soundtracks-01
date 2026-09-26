@@ -1,0 +1,47 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "listeningApproval": "not-reviewed",
+  "gameCatalogueAdmission": false,
+  "archive": {
+    "id": "heavy-dungeon-audition-20260926",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/heavy-dungeon-audition-20260926/",
+    "inventorySha256": "f0414e4e4d5943a93981fa1fa7f0a2871191a80f2025378f212236951f54e63a"
+  },
+  "tracks": [
+    {
+      "id": "mintodog.heavy-dungeon",
+      "title": "Heavy Dungeon",
+      "artist": "MintoDog",
+      "source": "https://opengameart.org/content/heavy-dungeon",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Heavy Dungeon by MintoDog. CC0 1.0 Universal. Source: https://opengameart.org/content/heavy-dungeon",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/heavy-dungeon",
+        "attribution": "Heavy Dungeon by MintoDog. CC0 1.0 Universal. Source: https://opengameart.org/content/heavy-dungeon",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "metal",
+        "gameplay",
+        "energy 4"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "heavy_dungeon_bpm160.mp3",
+      "path": "objects/fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22.mp3",
+      "bytes": 3842209,
+      "sha256": "fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22"
+    }
+  ]
+}

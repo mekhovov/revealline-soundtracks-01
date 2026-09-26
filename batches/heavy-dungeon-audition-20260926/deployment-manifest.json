@@ -1,0 +1,59 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "heavy-dungeon-audition-20260926",
+  "expected": {
+    "trackCount": 1,
+    "audioBytes": 3842209
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 268,
+      "sha256": "53cc0977da928e84450ac1e2a0c7c3e017d2d3bab190591419bcc8cae5acc2ee"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 491,
+      "sha256": "aa7c5ce8856dc521af23478214da070156048f16584af9724ff2a3427fd7d3e4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1184,
+      "sha256": "aa465b4cb620211b34e659f972170e4fde68dfb597a9775db1641c0797e3d467"
+    },
+    {
+      "path": "style.css",
+      "bytes": 264,
+      "sha256": "de0dd57417d30949a5afe855d52aef0fbb203042909799f37b2f096665f2209b"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 84,
+      "sha256": "4386d6094858886b8ef75b2046735aacf703661d7670dedd8f66981bb7ef29ea"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 325,
+      "sha256": "f0414e4e4d5943a93981fa1fa7f0a2871191a80f2025378f212236951f54e63a"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 1902,
+      "sha256": "783a7005de7084284bc591d776a725135c4da0d9b2fa8ac1fb5bf220d09408fd"
+    },
+    {
+      "path": "objects/fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22.mp3",
+      "bytes": 3842209,
+      "sha256": "fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22"
+    }
+  ],
+  "provenance": {
+    "localUpload": true,
+    "listeningApproval": false
+  }
+}

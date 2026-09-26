@@ -175,13 +175,40 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 3
+    },
+    {
+      "id": "heavy-dungeon-audition-20260926",
+      "path": "batches/heavy-dungeon-audition-20260926/preview-catalogue.json",
+      "sha256": "783a7005de7084284bc591d776a725135c4da0d9b2fa8ac1fb5bf220d09408fd",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "synthwave-type-audition-20260926",
+      "path": "batches/synthwave-type-audition-20260926/preview-catalogue.json",
+      "sha256": "33a50b2ab7604617569f708b4479e24ff9298fa3e8be4f077a7006730983cb3d",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "maximum-overdrive-audition-20260926",
+      "path": "batches/maximum-overdrive-audition-20260926/preview-catalogue.json",
+      "sha256": "dbba8c86ebc4424fa8b4d4f49889006951a2c0826d1f78fec816c2445180b81a",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
     }
   ],
   "counts": {
-    "declaredTracks": 155,
-    "uniqueRecordings": 155,
+    "declaredTracks": 158,
+    "uniqueRecordings": 158,
     "duplicateAliases": 0,
-    "audioBytes": 854323150
+    "audioBytes": 868850614
   },
   "tracks": [
     {
@@ -5213,6 +5240,138 @@
         "path": "batches/ukrainian-commons-audition-20260925/objects/834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f.mp3",
         "bytes": 4091028,
         "sha256": "834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "mintodog.heavy-dungeon",
+      "title": "Heavy Dungeon",
+      "artist": "MintoDog",
+      "durationSeconds": null,
+      "tags": [
+        "metal",
+        "gameplay",
+        "energy 4"
+      ],
+      "source": "https://opengameart.org/content/heavy-dungeon",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Heavy Dungeon by MintoDog. CC0 1.0 Universal. Source: https://opengameart.org/content/heavy-dungeon",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/heavy-dungeon",
+        "attribution": "Heavy Dungeon by MintoDog. CC0 1.0 Universal. Source: https://opengameart.org/content/heavy-dungeon",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "heavy_dungeon_bpm160.mp3",
+      "archiveId": "heavy-dungeon-audition-20260926",
+      "collection": "heavy-dungeon-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/heavy-dungeon-audition-20260926/objects/fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22.mp3",
+        "bytes": 3842209,
+        "sha256": "fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22"
+      },
+      "aliases": []
+    },
+    {
+      "id": "g-p.synth-type",
+      "title": "synth type",
+      "artist": "G_P",
+      "durationSeconds": null,
+      "tags": [
+        "synthwave",
+        "electronic",
+        "gameplay",
+        "energy 4"
+      ],
+      "source": "https://opengameart.org/content/synthwavetype",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "synth type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/synthwavetype",
+        "attribution": "synth type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "synth_type.mp3",
+      "archiveId": "synthwave-type-audition-20260926",
+      "collection": "synthwave-type-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synthwave-type-audition-20260926/objects/df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389.mp3",
+        "bytes": 2263307,
+        "sha256": "df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389"
+      },
+      "aliases": []
+    },
+    {
+      "id": "bogart-vgm.maximum-overdrive",
+      "title": "maximum overdrive",
+      "artist": "Bogart VGM",
+      "durationSeconds": null,
+      "tags": [
+        "synthwave",
+        "electronic",
+        "racing",
+        "gameplay",
+        "energy 3"
+      ],
+      "source": "https://opengameart.org/content/maximum-overdrive",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Maximum Overdrive by Bogart VGM. CC BY 3.0. Credit: Bogart VGM; https://www.facebook.com/BogartVGM/. Source: https://opengameart.org/content/maximum-overdrive",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/maximum-overdrive",
+        "attribution": "Maximum Overdrive by Bogart VGM. CC BY 3.0. Credit: Bogart VGM; https://www.facebook.com/BogartVGM/. Source: https://opengameart.org/content/maximum-overdrive",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "maximum_overdrive.mp3",
+      "archiveId": "maximum-overdrive-audition-20260926",
+      "collection": "maximum-overdrive-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/maximum-overdrive-audition-20260926/objects/e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d.mp3",
+        "bytes": 8421948,
+        "sha256": "e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d"
       },
       "aliases": []
     }

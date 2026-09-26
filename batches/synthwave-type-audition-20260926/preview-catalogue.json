@@ -1,0 +1,48 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "listeningApproval": "not-reviewed",
+  "gameCatalogueAdmission": false,
+  "archive": {
+    "id": "synthwave-type-audition-20260926",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/synthwave-type-audition-20260926/",
+    "inventorySha256": "9f46b44307af52cca31efa3b6186c1d59c451b49359915ffef0572c0945404e7"
+  },
+  "tracks": [
+    {
+      "id": "g-p.synth-type",
+      "title": "synth type",
+      "artist": "G_P",
+      "source": "https://opengameart.org/content/synthwavetype",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "synth type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/synthwavetype",
+        "attribution": "synth type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "synthwave",
+        "electronic",
+        "gameplay",
+        "energy 4"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "synth_type.mp3",
+      "path": "objects/df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389.mp3",
+      "bytes": 2263307,
+      "sha256": "df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389"
+    }
+  ]
+}
