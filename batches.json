@@ -152,6 +152,14 @@
         "bytes": 1647,
         "sha256": "6b273989213266e3c9f8d8053b863d68cec1f11535e713383c81c9f1e65fda20"
       }
+    },
+    {
+      "id": "synthwave-type-audition-20260926",
+      "manifest": {
+        "path": "batches/synthwave-type-audition-20260926/deployment-manifest.json",
+        "bytes": 1648,
+        "sha256": "93cd822bc21c5206e39138b17effed609e2bb6d784ae8c2a98c5798c0f134a14"
+      }
     }
   ]
 }

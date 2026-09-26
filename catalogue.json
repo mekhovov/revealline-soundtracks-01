@@ -184,13 +184,22 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 1
+    },
+    {
+      "id": "synthwave-type-audition-20260926",
+      "path": "batches/synthwave-type-audition-20260926/preview-catalogue.json",
+      "sha256": "33a50b2ab7604617569f708b4479e24ff9298fa3e8be4f077a7006730983cb3d",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
     }
   ],
   "counts": {
-    "declaredTracks": 156,
-    "uniqueRecordings": 156,
+    "declaredTracks": 157,
+    "uniqueRecordings": 157,
     "duplicateAliases": 0,
-    "audioBytes": 858165359
+    "audioBytes": 860428666
   },
   "tracks": [
     {
@@ -5265,6 +5274,50 @@
         "path": "batches/heavy-dungeon-audition-20260926/objects/fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22.mp3",
         "bytes": 3842209,
         "sha256": "fc8bbd2c257189aea1e3e54161deba3715e4c35e5df426ac6057f0e10f0c1a22"
+      },
+      "aliases": []
+    },
+    {
+      "id": "g-p.synth-type",
+      "title": "synth type",
+      "artist": "G_P",
+      "durationSeconds": null,
+      "tags": [
+        "synthwave",
+        "electronic",
+        "gameplay",
+        "energy 4"
+      ],
+      "source": "https://opengameart.org/content/synthwavetype",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "synth type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/synthwavetype",
+        "attribution": "synth type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "synth_type.mp3",
+      "archiveId": "synthwave-type-audition-20260926",
+      "collection": "synthwave-type-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/synthwave-type-audition-20260926/objects/df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389.mp3",
+        "bytes": 2263307,
+        "sha256": "df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389"
       },
       "aliases": []
     }
