@@ -9,6 +9,20 @@ from prepare_metal_energy import MANIFEST
 
 
 class MetalEnergyAssemblyTests(unittest.TestCase):
+    def test_artifact_allowlist_accepts_native_wav_without_weakening_other_roles(self):
+        digest = 'a' * 64
+        self.assertTrue(assembler.allowed_artifact_member(
+            f'candidate-output/originals/{digest}.wav'))
+        self.assertTrue(assembler.allowed_artifact_member(
+            f'candidate-output/objects/{digest}.mp3'))
+        self.assertTrue(assembler.allowed_artifact_member(
+            f'candidate-output/evidence/{digest}.html'))
+        self.assertFalse(assembler.allowed_artifact_member(
+            f'candidate-output/objects/{digest}.wav'))
+        self.assertFalse(assembler.allowed_artifact_member(
+            f'candidate-output/originals/{digest}.exe'))
+        self.assertFalse(assembler.allowed_artifact_member('../receipt.json'))
+
     def test_exact_artifact_source_runner_and_tree_proof(self):
         self.assertEqual(subject.CONFIG['RUN'], 36216590495)
         self.assertEqual(subject.CONFIG['ARTIFACT'], 10898061610)
