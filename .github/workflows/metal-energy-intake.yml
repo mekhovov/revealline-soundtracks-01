@@ -1,0 +1,67 @@
+name: Prepare high-energy metal candidates
+
+on:
+  pull_request:
+    paths:
+      - 'intake/metal-energy-20260926.json'
+      - 'intake/metal-energy-20260926.md'
+      - 'intake/prepare.py'
+      - 'intake/test_prepare.py'
+      - '.github/workflows/metal-energy-intake.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: intake
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify unchanged published inventory
+        run: node verify.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - uses: actions/checkout@v4
+        with:
+          repository: mekhovov/revealline
+          ref: 71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3
+          path: .runtime
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /game/*.mjs
+            /game/ui/*.mjs
+            /game/content/*.mjs
+      - name: Install audio validation tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Test intake boundaries
+        run: |
+          python3 -m unittest discover -s intake -p 'test_prepare.py'
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from prepare import validate_manifest
+
+          path = Path('intake/metal-energy-20260926.json')
+          validate_manifest(json.loads(path.read_text()))
+          PY
+      - name: Acquire and measure candidates without approving publication
+        run: >-
+          python3 intake/prepare.py
+          --manifest intake/metal-energy-20260926.json
+          --output candidate-output
+          --game-root .runtime
+      - name: Preserve source audio and all partial evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: metal-energy-candidates-20260926
+          path: candidate-output/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
