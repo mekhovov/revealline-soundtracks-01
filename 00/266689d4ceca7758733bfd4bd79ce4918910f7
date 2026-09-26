@@ -1,0 +1,32 @@
+.github/workflows/metal-energy-intake.yml
+  s_f8296d264eaab0::t_ce8a0e5d16e71d 12-15
+  s_f8296d264eaab0::t_ec2904bd2b5c00 10-11,16-17,25-41,43,45,49,67,69-71,73,79-81
+intake/prepare_metal_energy.py
+  s_f8296d264eaab0::t_ec2904bd2b5c00 1-83
+intake/metal-energy-20260926.md
+  s_f8296d264eaab0::t_2f3479e2f8fac9 18
+intake/test_metal_energy.py
+  s_f8296d264eaab0::t_ec2904bd2b5c00 1-114
+intake/metal-energy-20260926.json
+  s_f8296d264eaab0::t_433e51b7933e50 215,217-232
+  s_f8296d264eaab0::t_3caf0dee047925 3-8,18,20-36,54-65,82,87-94,104,115,117-122,132,135-137,147,150-151,161,163-169,188,190-201
+  s_f8296d264eaab0::t_9cfe31ff046b19 49,66-72,95-103,105,123-131,152-160,162,179,181-187,189,211,213-214,216
+  s_f8296d264eaab0::t_d190dddbea9967 37-39,133-134,233
+  s_f8296d264eaab0::t_5091c90ee26c8b 243,245-265
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "00266689d4ceca7758733bfd4bd79ce4918910f7",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": null
+    }
+  }
+}
