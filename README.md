@@ -4,7 +4,7 @@
 
 The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 163 unique recordings across 24 collections and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
 
-[archive-directory.json](archive-directory.json) is the bounded discovery contract for scale-out. It keeps this archive first and required while allowing reviewed, project-owned successor shards to be added without moving existing recording URLs or identities. The game must validate every listed catalogue independently; a directory entry cannot grant listening approval, default-playlist admission or recording rights.
+[archive-directory.json](archive-directory.json) is the bounded discovery contract for scale-out. It keeps this archive first and required and lists Archive 02 as an optional successor shard without moving existing recording URLs or identities. The game must validate every listed catalogue independently; a directory entry cannot grant listening approval, default-playlist admission or recording rights. Archive 01 remains usable when the optional shard is unavailable.
 
 The original collection preserves 354,986,122 exact MP3 bytes. Every `objects/<sha256>.mp3` file is committed for reuse. Files are free to use under their individually listed CC0, CC BY 3.0 or CC BY 4.0 licenses; retain the required attribution and change notices in [CREDITS.md](CREDITS.md) and each batch. The creators do not endorse this game.
 

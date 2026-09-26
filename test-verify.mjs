@@ -313,22 +313,13 @@ test('archive directory is bounded, exact and keeps the primary catalogue first'
   const directory = JSON.parse(
     await readFile(path.join(source, 'archive-directory.json'), 'utf8'),
   );
-  assert.equal(validateArchiveDirectory(directory).length, 1);
-  assert.equal(
-    validateArchiveDirectory({
-      ...directory,
-      catalogues: [
-        ...directory.catalogues,
-        {
-          id: 'revealline-soundtracks-02',
-          url: 'https://mekhovov.github.io/revealline-soundtracks-02/catalogue.json',
-          baseURL: 'https://mekhovov.github.io/revealline-soundtracks-02/',
-          required: false,
-        },
-      ],
-    }).length,
-    2,
-  );
+  assert.equal(validateArchiveDirectory(directory).length, 2);
+  assert.deepEqual(directory.catalogues[1], {
+    id: 'revealline-soundtracks-02',
+    url: 'https://mekhovov.github.io/revealline-soundtracks-02/catalogue.json',
+    baseURL: 'https://mekhovov.github.io/revealline-soundtracks-02/',
+    required: false,
+  });
   assert.throws(
     () =>
       validateArchiveDirectory({

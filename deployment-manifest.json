@@ -18,8 +18,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5397,
-      "sha256": "69b95775cf08027a78752402d5c75ad70fc4bc7cf358d844bda2391b1a491531"
+      "bytes": 5447,
+      "sha256": "fdba4c023a41acde647d061416ea78f350cd58376f9e884619885a42bddf0c17"
     },
     {
       "path": "UPLOAD_GUIDE.md",
@@ -33,8 +33,8 @@
     },
     {
       "path": "archive-directory.json",
-      "bytes": 317,
-      "sha256": "c4569a02d4ee72ec69b35a2b4fda68eb459d458e05cedc4ec9022599ae5cf429"
+      "bytes": 553,
+      "sha256": "fd37ac6d1d05d2f62a5f6de5b07caabb2eb010a16d1b193ddb2367dde58337fd"
     },
     {
       "path": "index.html",
