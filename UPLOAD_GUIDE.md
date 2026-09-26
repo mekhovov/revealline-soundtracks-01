@@ -31,7 +31,21 @@ node intake/add-music.mjs "/path/to/song-or-folder" \
   --confirm-rights
 ```
 
-If MP3s do not contain an artist tag, add `--artist "Creator name"`. Optional `--batch-id`, `--batch-title` and `--description` values override the generated album details.
+If MP3s do not contain an artist tag, add `--artist "Creator name"`. For one MP3,
+`--title "Exact song title"` overrides an absent or machine-oriented ID3/filename
+title. The tool rejects `--title` for folders because one value cannot accurately
+name several recordings. Optional `--batch-id`, `--batch-title` and `--description`
+values override the generated album details.
+
+```sh
+node intake/add-music.mjs "/path/to/maximum_overdrive.mp3" \
+  --title "Maximum Overdrive" \
+  --artist "Bogart VGM" \
+  --source "https://opengameart.org/content/maximum-overdrive" \
+  --license cc-by-3.0 \
+  --styles "synthwave,racing,gameplay" \
+  --confirm-rights
+```
 
 Add `--open-pr` to complete the Git workflow too. The command requires a clean checkout, creates a `codex/` branch when run from `main`, validates the generated archive, commits only the generated batch/catalogue files, pushes the branch and opens the pull request:
 

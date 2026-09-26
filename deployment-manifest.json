@@ -19,12 +19,12 @@
     {
       "path": "README.md",
       "bytes": 5397,
-      "sha256": "597a49e9bad9b32936d0caacf16d75515962662f003ce376b89477f7478fc454"
+      "sha256": "40465c6bf96349955f513528e552337057e1e7e4cf60e1656dfe7aa7b05645c3"
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 8159,
-      "sha256": "9c4dcf87cabec3c1b318335f7e9f8b67f1d7529e24c1f60d77d0a020a326483e"
+      "bytes": 8640,
+      "sha256": "769b1420885b6de42f268c4eb3406ef71e830d90da7c8f906111c9a455b4bc8f"
     },
     {
       "path": "catalogue.json",
