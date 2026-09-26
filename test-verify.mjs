@@ -538,6 +538,25 @@ test('one-file and folder automation derive metadata while keeping rights explic
     /confirm-rights/,
   );
 });
+test('folder automation preserves an explicit creator attribution requirement', async (t) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-attribution-intake-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const file = path.join(root, 'Maximum Overdrive.mp3');
+  await writeFile(file, Buffer.from('fixture'));
+  const attribution =
+    'Maximum Overdrive by Bogart VGM. CC BY 3.0. Credit: Bogart VGM; https://www.facebook.com/BogartVGM/.';
+  const manifest = await createUploadManifest(file, {
+    artist: 'Bogart VGM',
+    source: 'https://opengameart.org/content/maximum-overdrive',
+    license: 'cc-by-3.0',
+    tags: ['synthwave', 'racing'],
+    attribution,
+    confirmRights: true,
+    date: '20260926',
+  });
+  assert.equal(manifest.tracks[0].credit, attribution);
+  assert.equal(manifest.tracks[0].rights.attribution, attribution);
+});
 test('folder automation reads common ID3v2.3 title and artist text frames', async (t) => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'soundtrack-id3-intake-'));
   t.after(() => rm(root, { recursive: true, force: true }));

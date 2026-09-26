@@ -158,7 +158,9 @@ export async function createUploadManifest(input, options) {
       occurrence = (ids.get(base) ?? 0) + 1;
     ids.set(base, occurrence);
     const id = occurrence === 1 ? base : `${base}.${occurrence}`;
-    const credit = `${title} by ${artist}. ${license.label}. Source: ${options.source}`;
+    const credit =
+      options.attribution?.trim() ||
+      `${title} by ${artist}. ${license.label}. Source: ${options.source}`;
     tracks.push({
       id,
       file,
@@ -203,6 +205,7 @@ function parseArguments(argv) {
         '--source': 'source', '--license': 'license', '--artist': 'artist',
         '--styles': 'tags', '--batch-id': 'batchId', '--batch-title': 'batchTitle',
         '--description': 'description', '--rights-evidence': 'rightsEvidence',
+        '--attribution': 'attribution',
         '--derivative-notice': 'derivativeNotice',
       }[value];
       demand(key, `Unknown option: ${value}`);
