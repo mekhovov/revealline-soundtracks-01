@@ -1,0 +1,28 @@
+intake/metal-energy-20260926.json
+  s_f8296d264eaab0::t_d190dddbea9967 1-24,67-68,106-108
+  s_f8296d264eaab0::t_9cfe31ff046b19 25-66,69-99,101-105
+  s_f8296d264eaab0::t_105d82725d17bb 100
+intake/metal-energy-20260926.md
+  s_f8296d264eaab0::t_38f0572227476e 1-20
+.github/workflows/metal-energy-intake.yml
+  s_f8296d264eaab0::t_679f902bd367fe 20-21,43-52
+  s_f8296d264eaab0::t_68b25b83ba73a3 22
+  s_f8296d264eaab0::t_d190dddbea9967 1-6,8-19,23-42,53-67
+  s_f8296d264eaab0::t_38f0572227476e 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "745e9bd34b3ea8fe90992fe52fa15f16c9dbb219",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": null
+    }
+  }
+}
