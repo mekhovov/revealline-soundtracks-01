@@ -144,6 +144,14 @@
         "bytes": 2081,
         "sha256": "4fd9d5ec2b38af6280aa7cd119df7b0eec6d1672f0fa63a9595ec61fee4b9762"
       }
+    },
+    {
+      "id": "heavy-dungeon-audition-20260926",
+      "manifest": {
+        "path": "batches/heavy-dungeon-audition-20260926/deployment-manifest.json",
+        "bytes": 1647,
+        "sha256": "6b273989213266e3c9f8d8053b863d68cec1f11535e713383c81c9f1e65fda20"
+      }
     }
   ]
 }
