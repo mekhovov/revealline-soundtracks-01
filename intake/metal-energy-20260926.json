@@ -1,5 +1,11 @@
 {
   "format": "revealline-core-intake.v1",
+  "batch": "metal-energy-audition-20260926",
+  "publicationApproval": false,
+  "gameCatalogueAdmission": false,
+  "defaultPlaylistAdmission": false,
+  "recordingModeAdmission": false,
+  "listeningApproval": false,
   "tracks": [
     {
       "id": "esiltir.calamity",
@@ -9,9 +15,28 @@
       "download": "https://opengameart.org/sites/default/files/Esiltir%20-%20Calamity_0.mp3",
       "license": "CC BY 4.0 International",
       "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
-      "credit": "Esiltir — Calamity",
+      "credit": "Music: Calamity by Esiltir. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/calamity-epic-orchestral-metal",
       "family": "metal",
-      "status": "rights-reviewed-listening-pending"
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "orchestral-metal",
+        "action-metal"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     },
     {
       "id": "beetlemuse.nox-venator",
@@ -21,12 +46,30 @@
       "download": "https://opengameart.org/sites/default/files/19_nox_venator.wav",
       "license": "CC BY 4.0 International",
       "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
-      "credit": "Music by Beetlemuse; made with ROLAND SC-55 — Nox Venator",
+      "credit": "Music: Nox Venator by Beetlemuse. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/nox-venator",
       "family": "metal",
       "status": "rights-reviewed-listening-pending",
       "artistURL": "https://beetlemuse.bandcamp.com/album/arx",
       "contentId": true,
-      "recordingModeEligible": false
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "industrial-metal",
+        "retro-fps-metal",
+        "roland-sc-55"
+      ],
+      "changes": "Native WAV retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     },
     {
       "id": "beetlemuse.rabidus",
@@ -36,12 +79,30 @@
       "download": "https://opengameart.org/sites/default/files/06_rabidus.wav",
       "license": "CC BY 4.0 International",
       "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
-      "credit": "Music by Beetlemuse; made with ROLAND SC-55 — Rabidus",
+      "credit": "Music: Rabidus by Beetlemuse. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/rabidus",
       "family": "metal",
       "status": "rights-reviewed-listening-pending",
       "artistURL": "https://beetlemuse.bandcamp.com/album/arx",
       "contentId": true,
-      "recordingModeEligible": false
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "industrial-metal",
+        "retro-fps-metal",
+        "roland-sc-55"
+      ],
+      "changes": "Native WAV retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     },
     {
       "id": "nene.fight-for-better-future",
@@ -51,9 +112,29 @@
       "download": "https://opengameart.org/sites/default/files/fight_for_better_future.wav",
       "license": "CC0 1.0 Universal",
       "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "credit": "nene — Fight for Better Future",
+      "credit": "Music: Fight for Better Future by nene. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/fight-for-better-future-rockmetal",
       "family": "metal",
-      "status": "rights-reviewed-listening-pending"
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "boss-cue",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "battle-metal",
+        "hard-rock",
+        "synth-metal"
+      ],
+      "changes": "Native WAV retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     },
     {
       "id": "gundatsch.the-destoroya",
@@ -63,10 +144,29 @@
       "download": "https://opengameart.org/sites/default/files/destoroya.ogg",
       "license": "CC BY 3.0 Unported",
       "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
-      "credit": "Gundatsch — The Destoroya",
+      "credit": "Music: The Destoroya by Gundatsch. Licensed under CC BY 3.0 Unported: https://creativecommons.org/licenses/by/3.0/ Source: https://opengameart.org/content/the-destoroya",
       "family": "metal",
       "status": "rights-reviewed-listening-pending",
-      "artistURL": "https://soundcloud.com/gundatsch"
+      "artistURL": "https://soundcloud.com/gundatsch",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "action-metal",
+        "heavy-metal"
+      ],
+      "changes": "Native Ogg Vorbis source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     },
     {
       "id": "petterthesturgeon.action-synth-track",
@@ -76,9 +176,29 @@
       "download": "https://opengameart.org/sites/default/files/Notathing2.mp3",
       "license": "CC BY 4.0 International",
       "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
-      "credit": "PetterTheSturgeon — Action Synth Track",
+      "credit": "Music: Action Synth Track by PetterTheSturgeon. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/action-synth-track",
       "family": "synth90s",
-      "status": "rights-reviewed-listening-pending"
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "action-synth",
+        "electro",
+        "synthwave"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     },
     {
       "id": "mintodog.darkness-road-climax-remake",
@@ -88,9 +208,29 @@
       "download": "https://opengameart.org/sites/default/files/darkness_road_climax_remake_bpm180.mp3",
       "license": "CC0 1.0 Universal",
       "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "credit": "MintoDog — Darkness Road Climax (Remake)",
+      "credit": "Music: Darkness Road Climax (Remake) by MintoDog. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/darkness-roadremeke",
       "family": "synth90s",
-      "status": "rights-reviewed-listening-pending"
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "racing-techno",
+        "electro",
+        "synthwave"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     },
     {
       "id": "centurion-of-war.technological-messup",
@@ -100,9 +240,29 @@
       "download": "https://opengameart.org/sites/default/files/tecnological_messup_v2_0.ogg",
       "license": "CC0 1.0 Universal",
       "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "credit": "Centurion_of_war — Technological Messup",
+      "credit": "Music: Technological Messup by Centurion_of_war. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/technological-messup",
       "family": "synth90s",
-      "status": "rights-reviewed-listening-pending"
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "medium-high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "retro-synth",
+        "electro",
+        "combat-loop"
+      ],
+      "changes": "Native Ogg Vorbis source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization."
     }
   ]
 }

@@ -15,6 +15,6 @@ The metal side targets the characteristics requested for RevealLine: driven riff
 | Darkness Road Climax (Remake) — MintoDog | 180 BPM racing/action techno | https://opengameart.org/content/darkness-roadremeke | CC0 |
 | Technological Messup — Centurion_of_war | Retro-synth combat loop | https://opengameart.org/content/technological-messup | CC0 |
 
-The hosted workflow snapshots each exact source page, verifies that it links the exact recording, preserves the native file and hash, fully decodes it, measures it, and creates a review-only 256 kbps MP3 derivative. Publication remains a separate reviewed operation.
+The hosted workflow snapshots each exact source page, verifies that it links the exact recording, preserves the native file and hash, fully decodes it, measures it, and creates a review-only 256 kbps MP3 derivative. Its artifact also binds the exact pull-request head, source manifest, workflow, source files and hosted test transcript. Publication remains a separate reviewed operation.
 
 `Last Stand Lets Go` and `Untitled Metal Track` were found during this research but are already present in the 140-recording public catalogue, so this intake does not duplicate them. The 2026 `Unreleased Zombie soundtrack` is held for later: its intro/loop pairs need arrangement review because the creator warns that some loops begin mid-section, and RevealLine needs complete listening tracks rather than disconnected loop components.
