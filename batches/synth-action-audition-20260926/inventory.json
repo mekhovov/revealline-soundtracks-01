@@ -1,0 +1,21 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "synth-action-audition-20260926",
+  "files": [
+    {
+      "path": "objects/6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d.mp3",
+      "bytes": 5268837,
+      "sha256": "6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d"
+    },
+    {
+      "path": "objects/602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f.mp3",
+      "bytes": 3841924,
+      "sha256": "602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f"
+    },
+    {
+      "path": "objects/9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2.mp3",
+      "bytes": 3415606,
+      "sha256": "9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2"
+    }
+  ]
+}

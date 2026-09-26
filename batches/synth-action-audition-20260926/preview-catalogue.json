@@ -1,0 +1,319 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": "not-reviewed",
+  "archive": {
+    "id": "synth-action-audition-20260926",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/synth-action-audition-20260926/",
+    "inventorySha256": "7dd26b416385e7583886b14fc534bb55d04f17569f3d3a4bb8c65dccbbf5064a"
+  },
+  "source": {
+    "run": 36216590495,
+    "artifactId": 10898061610,
+    "artifactSha256": "6a30ea883646a016354cc7a5bb532ebab15260a1c34fc32fa72e64e224ef8d61",
+    "retainedArchivePath": "intake/archive/metal-energy-audition-20260926/"
+  },
+  "tracks": [
+    {
+      "id": "petterthesturgeon.action-synth-track",
+      "title": "Action Synth Track",
+      "artist": "PetterTheSturgeon",
+      "source": "https://opengameart.org/content/action-synth-track",
+      "download": "https://opengameart.org/sites/default/files/Notathing2.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Action Synth Track by PetterTheSturgeon. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/action-synth-track",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "action-synth",
+        "electro",
+        "synthwave"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/a88f98845e9fde769c189f75624e8fa79a1e4d8ab0ac9b60578c0fd73b24d2fa.html",
+        "sha256": "a88f98845e9fde769c189f75624e8fa79a1e4d8ab0ac9b60578c0fd73b24d2fa",
+        "url": "https://opengameart.org/content/action-synth-track"
+      },
+      "original": {
+        "path": "originals/cd563fdd5e964b0e01a68729d192e43bebb7d7d9cc9842cc33acdf868dbe9beb.mp3",
+        "sha256": "cd563fdd5e964b0e01a68729d192e43bebb7d7d9cc9842cc33acdf868dbe9beb",
+        "bytes": 6586070,
+        "url": "https://opengameart.org/sites/default/files/Notathing2.mp3"
+      },
+      "durationSeconds": 164.623673,
+      "sourceLoudness": {
+        "input_i": "-9.74",
+        "input_tp": "0.55",
+        "input_lra": "3.20",
+        "input_thresh": "-20.30",
+        "output_i": "-15.36",
+        "output_tp": "-1.50",
+        "output_lra": "5.30",
+        "output_thresh": "-25.60",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.64"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.33",
+        "input_lra": "3.20",
+        "input_thresh": "-26.56",
+        "output_i": "-15.36",
+        "output_tp": "-1.50",
+        "output_lra": "5.30",
+        "output_thresh": "-25.60",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.64"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "path": "objects/6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d.mp3",
+      "sha256": "6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d",
+      "bytes": 5268837,
+      "artistURL": "https://opengameart.org/content/action-synth-track",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/action-synth-track",
+        "attribution": "Music: Action Synth Track by PetterTheSturgeon. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/action-synth-track",
+        "derivativeChangeNotice": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending"
+      ],
+      "reviewStatus": "pending",
+      "default": false,
+      "gameCatalogueAdmission": false,
+      "originalFilename": "Action Synth Track.mp3"
+    },
+    {
+      "id": "mintodog.darkness-road-climax-remake",
+      "title": "Darkness Road Climax (Remake)",
+      "artist": "MintoDog",
+      "source": "https://opengameart.org/content/darkness-roadremeke",
+      "download": "https://opengameart.org/sites/default/files/darkness_road_climax_remake_bpm180.mp3",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Darkness Road Climax (Remake) by MintoDog. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/darkness-roadremeke",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "racing-techno",
+        "electro",
+        "synthwave"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/998bbcfa5536f25b9929d8eed771da9aef20775d0401b2dc1d1c79f8b98725a1.html",
+        "sha256": "998bbcfa5536f25b9929d8eed771da9aef20775d0401b2dc1d1c79f8b98725a1",
+        "url": "https://opengameart.org/content/darkness-roadremeke"
+      },
+      "original": {
+        "path": "originals/ddf49bdeb59b94f6df26eaee4f125b9b713bf217871e8a3766eaa5235c9cc862.mp3",
+        "sha256": "ddf49bdeb59b94f6df26eaee4f125b9b713bf217871e8a3766eaa5235c9cc862",
+        "bytes": 4802489,
+        "url": "https://opengameart.org/sites/default/files/darkness_road_climax_remake_bpm180.mp3"
+      },
+      "durationSeconds": 120.032653,
+      "sourceLoudness": {
+        "input_i": "-10.65",
+        "input_tp": "-0.95",
+        "input_lra": "1.40",
+        "input_thresh": "-20.65",
+        "output_i": "-15.51",
+        "output_tp": "-4.59",
+        "output_lra": "1.10",
+        "output_thresh": "-25.51",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.49"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-6.20",
+        "input_lra": "1.30",
+        "input_thresh": "-26.00",
+        "output_i": "-15.51",
+        "output_tp": "-4.58",
+        "output_lra": "1.10",
+        "output_thresh": "-25.51",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.49"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "path": "objects/602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f.mp3",
+      "sha256": "602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f",
+      "bytes": 3841924,
+      "artistURL": "https://opengameart.org/content/darkness-roadremeke",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/darkness-roadremeke",
+        "attribution": "Music: Darkness Road Climax (Remake) by MintoDog. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/darkness-roadremeke",
+        "derivativeChangeNotice": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending"
+      ],
+      "reviewStatus": "pending",
+      "default": false,
+      "gameCatalogueAdmission": false,
+      "originalFilename": "Darkness Road Climax (Remake).mp3"
+    },
+    {
+      "id": "centurion-of-war.technological-messup",
+      "title": "Technological Messup",
+      "artist": "Centurion_of_war",
+      "source": "https://opengameart.org/content/technological-messup",
+      "download": "https://opengameart.org/sites/default/files/tecnological_messup_v2_0.ogg",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Technological Messup by Centurion_of_war. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/technological-messup",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "medium-high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "retro-synth",
+        "electro",
+        "combat-loop"
+      ],
+      "changes": "Native Ogg Vorbis source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/0c553fa4b5e489bd043b267aff5a84af70b60810d64efd0c5a32c707136102f8.html",
+        "sha256": "0c553fa4b5e489bd043b267aff5a84af70b60810d64efd0c5a32c707136102f8",
+        "url": "https://opengameart.org/content/technological-messup"
+      },
+      "original": {
+        "path": "originals/d782c36a82cfdb02772001fb5830a8d4e0e82392dd157fe4410d07d11f01e45e.ogg",
+        "sha256": "d782c36a82cfdb02772001fb5830a8d4e0e82392dd157fe4410d07d11f01e45e",
+        "bytes": 3456787,
+        "url": "https://opengameart.org/sites/default/files/tecnological_messup_v2_0.ogg"
+      },
+      "durationSeconds": 106.666667,
+      "sourceLoudness": {
+        "input_i": "-15.48",
+        "input_tp": "-0.72",
+        "input_lra": "5.60",
+        "input_thresh": "-25.50",
+        "output_i": "-15.11",
+        "output_tp": "-1.50",
+        "output_lra": "4.10",
+        "output_thresh": "-25.12",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.89"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.03",
+        "input_tp": "-1.42",
+        "input_lra": "4.10",
+        "input_thresh": "-26.05",
+        "output_i": "-15.92",
+        "output_tp": "-1.50",
+        "output_lra": "4.20",
+        "output_thresh": "-25.93",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.08"
+      },
+      "completeDecode": true,
+      "listeningApproval": false,
+      "path": "objects/9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2.mp3",
+      "sha256": "9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2",
+      "bytes": 3415606,
+      "artistURL": "https://opengameart.org/content/technological-messup",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/technological-messup",
+        "attribution": "Music: Technological Messup by Centurion_of_war. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/technological-messup",
+        "derivativeChangeNotice": "Native Ogg Vorbis source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "genres": [
+        "synth90s"
+      ],
+      "tags": [
+        "synth90s",
+        "audition",
+        "listening pending"
+      ],
+      "reviewStatus": "pending",
+      "default": false,
+      "gameCatalogueAdmission": false,
+      "originalFilename": "Technological Messup.mp3"
+    }
+  ]
+}

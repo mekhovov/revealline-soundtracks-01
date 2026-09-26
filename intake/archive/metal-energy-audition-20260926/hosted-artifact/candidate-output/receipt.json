@@ -1,0 +1,752 @@
+{
+  "format": "revealline-core-intake-receipt.v1",
+  "sourceManifestSha256": "f326621bafffa17f24a5f331749539da0331d1937b709c5cb5109793d619021e",
+  "checkedAt": "2026-09-26T04:03:43Z",
+  "runnerRevision": "58ca17ed65a78247c72cd26cdf08388cf477d549",
+  "runnerRun": "36216590495",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "gameInspector": {
+    "revision": "71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3",
+    "files": [
+      {
+        "path": "game/mp3.mjs",
+        "sha256": "d4f36f5f7760fc8d6482c716f944ff2e4df931a74e8c3f6f1684b90b7410d92a"
+      },
+      {
+        "path": "game/data-json.mjs",
+        "sha256": "bcf8c3cb859473a39973cc93cee347085d3146164b0b92a02e81df57f6ffc823"
+      },
+      {
+        "path": "game/soundtrack.mjs",
+        "sha256": "ec03303d295b4f7997f4b8c3c3573cf2bdddcd81f92700d98710d38933f89843"
+      },
+      {
+        "path": "game/soundtrack-rights.mjs",
+        "sha256": "8c1c10927cf5c1f7360374ca1a4d64a7dec3c312b197ace89201c37d75793f04"
+      },
+      {
+        "path": "game/ui/music.mjs",
+        "sha256": "a1ecafd319417d075ec584d8b2f54008a8b877e49848e364bd91603896c44fda"
+      },
+      {
+        "path": "game/content/soundtrack-catalogue.mjs",
+        "sha256": "0618993ff8ff9508d1ab4295920c07d0b5a8f6f34df683538029754b438dc44f"
+      }
+    ]
+  },
+  "listeningApproval": false,
+  "tracks": [
+    {
+      "id": "esiltir.calamity",
+      "title": "Calamity",
+      "artist": "Esiltir",
+      "source": "https://opengameart.org/content/calamity-epic-orchestral-metal",
+      "download": "https://opengameart.org/sites/default/files/Esiltir%20-%20Calamity_0.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Calamity by Esiltir. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/calamity-epic-orchestral-metal",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "orchestral-metal",
+        "action-metal"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/dc9a54487d84e040bec2426134818d3e3b4e1456d01be6bb98bcde10cdde72fb.html",
+        "sha256": "dc9a54487d84e040bec2426134818d3e3b4e1456d01be6bb98bcde10cdde72fb",
+        "url": "https://opengameart.org/content/calamity-epic-orchestral-metal"
+      },
+      "original": {
+        "path": "originals/4bc44a8effe48c1ef0ade06fcc818fabd043f1c4b6d37e0218eee91686a86dd4.mp3",
+        "sha256": "4bc44a8effe48c1ef0ade06fcc818fabd043f1c4b6d37e0218eee91686a86dd4",
+        "bytes": 4761908,
+        "url": "https://opengameart.org/sites/default/files/Esiltir%20-%20Calamity_0.mp3"
+      },
+      "delivery": {
+        "path": "objects/67875307ef6dae98521150d1e10a5056bbaf63f94f474b333511391292aa3fd7.mp3",
+        "sha256": "67875307ef6dae98521150d1e10a5056bbaf63f94f474b333511391292aa3fd7",
+        "bytes": 6702437
+      },
+      "asset": {
+        "sha256": "67875307ef6dae98521150d1e10a5056bbaf63f94f474b333511391292aa3fd7",
+        "bytes": 6702437,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 8018,
+        "durationSeconds": 209.44979591836736
+      },
+      "durationSeconds": 209.423673,
+      "sourceLoudness": {
+        "input_i": "-7.74",
+        "input_tp": "1.03",
+        "input_lra": "3.90",
+        "input_thresh": "-18.03",
+        "output_i": "-14.89",
+        "output_tp": "-1.50",
+        "output_lra": "3.40",
+        "output_thresh": "-24.94",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.11"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-7.20",
+        "input_lra": "3.90",
+        "input_thresh": "-26.29",
+        "output_i": "-14.89",
+        "output_tp": "-1.50",
+        "output_lra": "3.40",
+        "output_thresh": "-24.94",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.11"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "beetlemuse.nox-venator",
+      "title": "Nox Venator",
+      "artist": "Beetlemuse",
+      "source": "https://opengameart.org/content/nox-venator",
+      "download": "https://opengameart.org/sites/default/files/19_nox_venator.wav",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Nox Venator by Beetlemuse. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/nox-venator",
+      "family": "metal",
+      "status": "rights-reviewed-listening-pending",
+      "artistURL": "https://beetlemuse.bandcamp.com/album/arx",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "industrial-metal",
+        "retro-fps-metal",
+        "roland-sc-55"
+      ],
+      "changes": "Native WAV retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/ddd1f74b741ea4b2c7894a67b6406dbda989955085f32bee47df77853b0f82be.html",
+        "sha256": "ddd1f74b741ea4b2c7894a67b6406dbda989955085f32bee47df77853b0f82be",
+        "url": "https://opengameart.org/content/nox-venator"
+      },
+      "original": {
+        "path": "originals/8aa2a6cd0db2b6e0c96ab1b3d69f72922a449fbb4b400471071e7040ba882efa.wav",
+        "sha256": "8aa2a6cd0db2b6e0c96ab1b3d69f72922a449fbb4b400471071e7040ba882efa",
+        "bytes": 25629516,
+        "url": "https://opengameart.org/sites/default/files/19_nox_venator.wav"
+      },
+      "delivery": {
+        "path": "objects/2d4cbd64b3c286fc25818790649252a8b3e0aeb06ba202a650d95c5ef9775877.mp3",
+        "sha256": "2d4cbd64b3c286fc25818790649252a8b3e0aeb06ba202a650d95c5ef9775877",
+        "bytes": 4651093
+      },
+      "asset": {
+        "sha256": "2d4cbd64b3c286fc25818790649252a8b3e0aeb06ba202a650d95c5ef9775877",
+        "bytes": 4651093,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 5564,
+        "durationSeconds": 145.345306122449
+      },
+      "durationSeconds": 145.291791,
+      "sourceLoudness": {
+        "input_i": "-14.50",
+        "input_tp": "0.62",
+        "input_lra": "9.20",
+        "input_thresh": "-24.71",
+        "output_i": "-15.21",
+        "output_tp": "-1.50",
+        "output_lra": "7.70",
+        "output_thresh": "-25.31",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.79"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-1.36",
+        "input_lra": "8.30",
+        "input_thresh": "-26.15",
+        "output_i": "-16.61",
+        "output_tp": "-1.50",
+        "output_lra": "6.00",
+        "output_thresh": "-26.68",
+        "normalization_type": "dynamic",
+        "target_offset": "0.61"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "beetlemuse.rabidus",
+      "title": "Rabidus",
+      "artist": "Beetlemuse",
+      "source": "https://opengameart.org/content/rabidus",
+      "download": "https://opengameart.org/sites/default/files/06_rabidus.wav",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Rabidus by Beetlemuse. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/rabidus",
+      "family": "metal",
+      "status": "rights-reviewed-listening-pending",
+      "artistURL": "https://beetlemuse.bandcamp.com/album/arx",
+      "contentId": true,
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "industrial-metal",
+        "retro-fps-metal",
+        "roland-sc-55"
+      ],
+      "changes": "Native WAV retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/123a159a4b8c514914d07e67e054473054e794163f9aebca780084f6c93cc31e.html",
+        "sha256": "123a159a4b8c514914d07e67e054473054e794163f9aebca780084f6c93cc31e",
+        "url": "https://opengameart.org/content/rabidus"
+      },
+      "original": {
+        "path": "originals/da75e6b9ca6309ef5cfe449320abbbaa07944b1998d362f7f8de2fc7f5160766.wav",
+        "sha256": "da75e6b9ca6309ef5cfe449320abbbaa07944b1998d362f7f8de2fc7f5160766",
+        "bytes": 23748308,
+        "url": "https://opengameart.org/sites/default/files/06_rabidus.wav"
+      },
+      "delivery": {
+        "path": "objects/6154df8c83b690031a13654e7c37ef77186c24cc2cbeb2720ff23d514c26d154.mp3",
+        "sha256": "6154df8c83b690031a13654e7c37ef77186c24cc2cbeb2720ff23d514c26d154",
+        "bytes": 4310039
+      },
+      "asset": {
+        "sha256": "6154df8c83b690031a13654e7c37ef77186c24cc2cbeb2720ff23d514c26d154",
+        "bytes": 4310039,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 5156,
+        "durationSeconds": 134.6873469387755
+      },
+      "durationSeconds": 134.627347,
+      "sourceLoudness": {
+        "input_i": "-16.54",
+        "input_tp": "0.29",
+        "input_lra": "6.20",
+        "input_thresh": "-27.03",
+        "output_i": "-15.41",
+        "output_tp": "-1.50",
+        "output_lra": "6.20",
+        "output_thresh": "-25.73",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.59"
+      },
+      "encodedLoudness": {
+        "input_i": "-15.95",
+        "input_tp": "-1.14",
+        "input_lra": "6.40",
+        "input_thresh": "-26.36",
+        "output_i": "-16.33",
+        "output_tp": "-1.50",
+        "output_lra": "5.80",
+        "output_thresh": "-26.59",
+        "normalization_type": "dynamic",
+        "target_offset": "0.33"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "nene.fight-for-better-future",
+      "title": "Fight for Better Future",
+      "artist": "nene",
+      "source": "https://opengameart.org/content/fight-for-better-future-rockmetal",
+      "download": "https://opengameart.org/sites/default/files/fight_for_better_future.wav",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Fight for Better Future by nene. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/fight-for-better-future-rockmetal",
+      "family": "metal",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "boss-cue",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "battle-metal",
+        "hard-rock",
+        "synth-metal"
+      ],
+      "changes": "Native WAV retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/01acf9fa2e7cd6ad6f7c0f2543f02f62b12579cf602fec51ad2cadc5c31c8674.html",
+        "sha256": "01acf9fa2e7cd6ad6f7c0f2543f02f62b12579cf602fec51ad2cadc5c31c8674",
+        "url": "https://opengameart.org/content/fight-for-better-future-rockmetal"
+      },
+      "original": {
+        "path": "originals/d1ac9def24045a9a1f53054350ee6ec60abc71e707cf935d3a379f1dc6fd153a.wav",
+        "sha256": "d1ac9def24045a9a1f53054350ee6ec60abc71e707cf935d3a379f1dc6fd153a",
+        "bytes": 12018106,
+        "url": "https://opengameart.org/sites/default/files/fight_for_better_future.wav"
+      },
+      "delivery": {
+        "path": "objects/648ea3900a2f209cad6478e40487139f7c2494c4aed4a27ee48dc467023d2d97.mp3",
+        "sha256": "648ea3900a2f209cad6478e40487139f7c2494c4aed4a27ee48dc467023d2d97",
+        "bytes": 2182627
+      },
+      "asset": {
+        "sha256": "648ea3900a2f209cad6478e40487139f7c2494c4aed4a27ee48dc467023d2d97",
+        "bytes": 2182627,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 2611,
+        "durationSeconds": 68.20571428571428
+      },
+      "durationSeconds": 68.129025,
+      "sourceLoudness": {
+        "input_i": "-13.49",
+        "input_tp": "-2.31",
+        "input_lra": "5.20",
+        "input_thresh": "-23.67",
+        "output_i": "-15.89",
+        "output_tp": "-4.58",
+        "output_lra": "4.90",
+        "output_thresh": "-26.06",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.11"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-4.80",
+        "input_lra": "5.20",
+        "input_thresh": "-26.18",
+        "output_i": "-15.88",
+        "output_tp": "-4.63",
+        "output_lra": "4.90",
+        "output_thresh": "-26.05",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.12"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "gundatsch.the-destoroya",
+      "title": "The Destoroya",
+      "artist": "Gundatsch",
+      "source": "https://opengameart.org/content/the-destoroya",
+      "download": "https://opengameart.org/sites/default/files/destoroya.ogg",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Music: The Destoroya by Gundatsch. Licensed under CC BY 3.0 Unported: https://creativecommons.org/licenses/by/3.0/ Source: https://opengameart.org/content/the-destoroya",
+      "family": "metal",
+      "status": "rights-reviewed-listening-pending",
+      "artistURL": "https://soundcloud.com/gundatsch",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "action-metal",
+        "heavy-metal"
+      ],
+      "changes": "Native Ogg Vorbis source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/72723590c627a95bd6642e5f657d1633ecb9c73b1f8cf6d923ec5efece4c6b4e.html",
+        "sha256": "72723590c627a95bd6642e5f657d1633ecb9c73b1f8cf6d923ec5efece4c6b4e",
+        "url": "https://opengameart.org/content/the-destoroya"
+      },
+      "original": {
+        "path": "originals/e19eca8609b84da254ba2014734c80fd832117f0f5e1c804777e4bf5bff2148a.ogg",
+        "sha256": "e19eca8609b84da254ba2014734c80fd832117f0f5e1c804777e4bf5bff2148a",
+        "bytes": 9609495,
+        "url": "https://opengameart.org/sites/default/files/destoroya.ogg"
+      },
+      "delivery": {
+        "path": "objects/d9bd5c525d167791d02c32cbc611841b20e7665c1d8e8b644dd1da1b4d9bb833.mp3",
+        "sha256": "d9bd5c525d167791d02c32cbc611841b20e7665c1d8e8b644dd1da1b4d9bb833",
+        "bytes": 5441872
+      },
+      "asset": {
+        "sha256": "d9bd5c525d167791d02c32cbc611841b20e7665c1d8e8b644dd1da1b4d9bb833",
+        "bytes": 5441872,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 6510,
+        "durationSeconds": 170.05714285714285
+      },
+      "durationSeconds": 170.0,
+      "sourceLoudness": {
+        "input_i": "-10.02",
+        "input_tp": "-0.19",
+        "input_lra": "3.80",
+        "input_thresh": "-20.22",
+        "output_i": "-15.69",
+        "output_tp": "-3.51",
+        "output_lra": "3.80",
+        "output_thresh": "-25.78",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.31"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-6.04",
+        "input_lra": "3.90",
+        "input_thresh": "-26.15",
+        "output_i": "-15.68",
+        "output_tp": "-3.52",
+        "output_lra": "3.90",
+        "output_thresh": "-25.78",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.32"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "petterthesturgeon.action-synth-track",
+      "title": "Action Synth Track",
+      "artist": "PetterTheSturgeon",
+      "source": "https://opengameart.org/content/action-synth-track",
+      "download": "https://opengameart.org/sites/default/files/Notathing2.mp3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music: Action Synth Track by PetterTheSturgeon. Licensed under CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/ Source: https://opengameart.org/content/action-synth-track",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "action-synth",
+        "electro",
+        "synthwave"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/a88f98845e9fde769c189f75624e8fa79a1e4d8ab0ac9b60578c0fd73b24d2fa.html",
+        "sha256": "a88f98845e9fde769c189f75624e8fa79a1e4d8ab0ac9b60578c0fd73b24d2fa",
+        "url": "https://opengameart.org/content/action-synth-track"
+      },
+      "original": {
+        "path": "originals/cd563fdd5e964b0e01a68729d192e43bebb7d7d9cc9842cc33acdf868dbe9beb.mp3",
+        "sha256": "cd563fdd5e964b0e01a68729d192e43bebb7d7d9cc9842cc33acdf868dbe9beb",
+        "bytes": 6586070,
+        "url": "https://opengameart.org/sites/default/files/Notathing2.mp3"
+      },
+      "delivery": {
+        "path": "objects/6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d.mp3",
+        "sha256": "6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d",
+        "bytes": 5268837
+      },
+      "asset": {
+        "sha256": "6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d",
+        "bytes": 5268837,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 6303,
+        "durationSeconds": 164.64979591836735
+      },
+      "durationSeconds": 164.623673,
+      "sourceLoudness": {
+        "input_i": "-9.74",
+        "input_tp": "0.55",
+        "input_lra": "3.20",
+        "input_thresh": "-20.30",
+        "output_i": "-15.36",
+        "output_tp": "-1.50",
+        "output_lra": "5.30",
+        "output_thresh": "-25.60",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.64"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-5.33",
+        "input_lra": "3.20",
+        "input_thresh": "-26.56",
+        "output_i": "-15.36",
+        "output_tp": "-1.50",
+        "output_lra": "5.30",
+        "output_thresh": "-25.60",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.64"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "mintodog.darkness-road-climax-remake",
+      "title": "Darkness Road Climax (Remake)",
+      "artist": "MintoDog",
+      "source": "https://opengameart.org/content/darkness-roadremeke",
+      "download": "https://opengameart.org/sites/default/files/darkness_road_climax_remake_bpm180.mp3",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Darkness Road Climax (Remake) by MintoDog. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/darkness-roadremeke",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "racing-techno",
+        "electro",
+        "synthwave"
+      ],
+      "changes": "Native source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/998bbcfa5536f25b9929d8eed771da9aef20775d0401b2dc1d1c79f8b98725a1.html",
+        "sha256": "998bbcfa5536f25b9929d8eed771da9aef20775d0401b2dc1d1c79f8b98725a1",
+        "url": "https://opengameart.org/content/darkness-roadremeke"
+      },
+      "original": {
+        "path": "originals/ddf49bdeb59b94f6df26eaee4f125b9b713bf217871e8a3766eaa5235c9cc862.mp3",
+        "sha256": "ddf49bdeb59b94f6df26eaee4f125b9b713bf217871e8a3766eaa5235c9cc862",
+        "bytes": 4802489,
+        "url": "https://opengameart.org/sites/default/files/darkness_road_climax_remake_bpm180.mp3"
+      },
+      "delivery": {
+        "path": "objects/602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f.mp3",
+        "sha256": "602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f",
+        "bytes": 3841924
+      },
+      "asset": {
+        "sha256": "602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f",
+        "bytes": 3841924,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4596,
+        "durationSeconds": 120.05877551020409
+      },
+      "durationSeconds": 120.032653,
+      "sourceLoudness": {
+        "input_i": "-10.65",
+        "input_tp": "-0.95",
+        "input_lra": "1.40",
+        "input_thresh": "-20.65",
+        "output_i": "-15.51",
+        "output_tp": "-4.59",
+        "output_lra": "1.10",
+        "output_thresh": "-25.51",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.49"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.00",
+        "input_tp": "-6.20",
+        "input_lra": "1.30",
+        "input_thresh": "-26.00",
+        "output_i": "-15.51",
+        "output_tp": "-4.58",
+        "output_lra": "1.10",
+        "output_thresh": "-25.51",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.49"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    },
+    {
+      "id": "centurion-of-war.technological-messup",
+      "title": "Technological Messup",
+      "artist": "Centurion_of_war",
+      "source": "https://opengameart.org/content/technological-messup",
+      "download": "https://opengameart.org/sites/default/files/tecnological_messup_v2_0.ogg",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Technological Messup by Centurion_of_war. Licensed under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/ Source: https://opengameart.org/content/technological-messup",
+      "family": "synth90s",
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "defaultPlaylistEligible": false,
+      "auditionOnly": true,
+      "role": "gameplay",
+      "energy": "medium-high",
+      "status": "rights-reviewed-listening-pending",
+      "metadataReview": "source-described-listening-pending",
+      "instrumentalReview": "pending",
+      "fullTrackListening": false,
+      "gameplayReview": "pending",
+      "vocalContent": "unverified",
+      "explicitContentReview": "pending",
+      "exactNativeDurationReview": "pending-hosted-decode",
+      "minimumDurationSeconds": 60,
+      "substyles": [
+        "retro-synth",
+        "electro",
+        "combat-loop"
+      ],
+      "changes": "Native Ogg Vorbis source retained unchanged; separate audition derivative encoded as 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization.",
+      "sourceSnapshot": {
+        "path": "evidence/0c553fa4b5e489bd043b267aff5a84af70b60810d64efd0c5a32c707136102f8.html",
+        "sha256": "0c553fa4b5e489bd043b267aff5a84af70b60810d64efd0c5a32c707136102f8",
+        "url": "https://opengameart.org/content/technological-messup"
+      },
+      "original": {
+        "path": "originals/d782c36a82cfdb02772001fb5830a8d4e0e82392dd157fe4410d07d11f01e45e.ogg",
+        "sha256": "d782c36a82cfdb02772001fb5830a8d4e0e82392dd157fe4410d07d11f01e45e",
+        "bytes": 3456787,
+        "url": "https://opengameart.org/sites/default/files/tecnological_messup_v2_0.ogg"
+      },
+      "delivery": {
+        "path": "objects/9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2.mp3",
+        "sha256": "9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2",
+        "bytes": 3415606
+      },
+      "asset": {
+        "sha256": "9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2",
+        "bytes": 3415606,
+        "mime": "audio/mpeg",
+        "mpegVersion": "1",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 4086,
+        "durationSeconds": 106.73632653061225
+      },
+      "durationSeconds": 106.666667,
+      "sourceLoudness": {
+        "input_i": "-15.48",
+        "input_tp": "-0.72",
+        "input_lra": "5.60",
+        "input_thresh": "-25.50",
+        "output_i": "-15.11",
+        "output_tp": "-1.50",
+        "output_lra": "4.10",
+        "output_thresh": "-25.12",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.89"
+      },
+      "encodedLoudness": {
+        "input_i": "-16.03",
+        "input_tp": "-1.42",
+        "input_lra": "4.10",
+        "input_thresh": "-26.05",
+        "output_i": "-15.92",
+        "output_tp": "-1.50",
+        "output_lra": "4.20",
+        "output_thresh": "-25.93",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.08"
+      },
+      "completeDecode": true,
+      "listeningApproval": false
+    }
+  ],
+  "failures": [],
+  "deliveryVolumes": [
+    {
+      "family": "metal",
+      "number": 1,
+      "audioBytes": 23288068,
+      "metadataReservationBytes": 524288,
+      "maximumBytes": 67108864,
+      "tracks": [
+        "esiltir.calamity",
+        "beetlemuse.nox-venator",
+        "beetlemuse.rabidus",
+        "nene.fight-for-better-future",
+        "gundatsch.the-destoroya"
+      ],
+      "status": "size-checked-plan-listening-pending"
+    },
+    {
+      "family": "synth90s",
+      "number": 2,
+      "audioBytes": 12526367,
+      "metadataReservationBytes": 524288,
+      "maximumBytes": 67108864,
+      "tracks": [
+        "petterthesturgeon.action-synth-track",
+        "mintodog.darkness-road-climax-remake",
+        "centurion-of-war.technological-messup"
+      ],
+      "status": "size-checked-plan-listening-pending"
+    }
+  ]
+}

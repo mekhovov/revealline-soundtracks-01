@@ -1,0 +1,26 @@
+{
+  "format": "revealline-metal-energy-intake-binding.v1",
+  "sourceManifestSha256": "f326621bafffa17f24a5f331749539da0331d1937b709c5cb5109793d619021e",
+  "runnerRevision": "58ca17ed65a78247c72cd26cdf08388cf477d549",
+  "eventHeadRevision": "00266689d4ceca7758733bfd4bd79ce4918910f7",
+  "runnerRun": "36216590495",
+  "workflowRef": "mekhovov/revealline-soundtracks-01/.github/workflows/metal-energy-intake.yml@refs/pull/28/merge",
+  "sourceFiles": {
+    "intake/approved_directions_pins.py": "66d16626bd881975c17341568e35f8259a6f0b44ca07c43a5ffabc0c2d6b60a8",
+    "intake/second_directions_pins.py": "739c02e904c06e79225f8fe32745d3ddcfa59739dc06db89dc958094d1457522",
+    "intake/purgatory3_pins.py": "9a77d15dcd0bf719bf6ba8c3f96ebf5217fc393ebaa09c6a4ccc38f2c585fd80",
+    "intake/reckless2_pins.py": "cbb4358287c3aaba8a63eac7821a3289f046b7bdbb4c3d9e1f71f0d878051ef2",
+    "intake/itch_source.py": "23aba53139fcede75049e07dc9d3e1284b70c747e1f78856d8a5ba6f36ff8b30",
+    "intake/itch_audio.py": "dc8c282d68e92d991124f837f2948445186df7db8467f4072d8ec871d7b16e6e",
+    "intake/prepare.py": "a55df729528bd3d061771daf9311119ec99b56e59ff1e9c3c8ce936cfcd5dac5",
+    "intake/metal-energy-20260926.json": "f326621bafffa17f24a5f331749539da0331d1937b709c5cb5109793d619021e",
+    "intake/metal-energy-20260926.md": "fe2142e92d6c65d6d31517e8a102e9c1b72a345df47ea06f948122a96d70f1a2",
+    "intake/test_prepare.py": "743fd6c116be0e46e112def958ace2bc87eabd6561f78495f8319c903fb2007c",
+    "intake/test_metal_energy.py": "f338ddba4424f347711b1958509b17e09cb1efb32727ac8553fa0b58a60d9668",
+    "intake/prepare_metal_energy.py": "d50e505df41343bff4f4a17dbf4251f54c5a32c5391146405d2d9a1fe2c476eb",
+    ".github/workflows/metal-energy-intake.yml": "6bb816d97199639f06613515c5548a35fcd463803f7ab65553ac691e93a88666"
+  },
+  "publicationApproval": false,
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false
+}

@@ -1,0 +1,52 @@
+{
+  "format": "revealline-audition-assembly.v1",
+  "artifactId": 10898061610,
+  "artifactBytes": 126708651,
+  "artifactSha256": "6a30ea883646a016354cc7a5bb532ebab15260a1c34fc32fa72e64e224ef8d61",
+  "sourceRun": 36216590495,
+  "sourceHead": "00266689d4ceca7758733bfd4bd79ce4918910f7",
+  "runnerRevision": "58ca17ed65a78247c72cd26cdf08388cf477d549",
+  "sourceTree": "c4659963a1bb7a929e6ed172ee72b2c0797b8dd5",
+  "treeProofRevision": "58ca17ed65a78247c72cd26cdf08388cf477d549",
+  "mergedSource": "ab9b5f36e3e5f0c3ec140edae20ed0a0d7e32f8f",
+  "sourceManifestSha256": "f326621bafffa17f24a5f331749539da0331d1937b709c5cb5109793d619021e",
+  "assemblyRevision": "ccc755a5d7088575a9bc53fd1e4189b26b8407ce",
+  "assemblyRun": "36218206984",
+  "originalArtifactInspection": "Verified by this hosted assembler; independent publication review pending",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false,
+  "default": false,
+  "status": "hosted-byte-verification-complete-independent-review-pending",
+  "recordings": 8,
+  "publicRecordings": 148,
+  "preservedExistingEntries": 140,
+  "memberCount": 29,
+  "productionBytes": 162597271,
+  "volumes": [
+    {
+      "id": "metal-energy-audition-20260926",
+      "totalBytes": 23335269,
+      "manifest": {
+        "path": "batches/metal-energy-audition-20260926/deployment-manifest.json",
+        "bytes": 2768,
+        "sha256": "75c59b9bda4d25194b5622c8053a764c95711e55681ab5dd7f5436335a2408d4"
+      }
+    },
+    {
+      "id": "synth-action-audition-20260926",
+      "totalBytes": 12560873,
+      "manifest": {
+        "path": "batches/synth-action-audition-20260926/deployment-manifest.json",
+        "bytes": 2339,
+        "sha256": "7d11fdf0693ad80ab32b0163dd07e6078019512ef86ba45b1408352cfade7d95"
+      }
+    }
+  ],
+  "remaining": [
+    "Independent original-artifact and publication PR review",
+    "Public byte and playback verification",
+    "Full listening, musical fit, transitions and warning audibility",
+    "Game admission and defaults",
+    "Offline and physical-device qualification"
+  ]
+}
