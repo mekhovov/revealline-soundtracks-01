@@ -144,6 +144,10 @@ export async function createUploadManifest(input, options) {
     commonArtist = options.artist?.trim(),
     tags = [...new Set((options.tags ?? []).map((tag) => tag.trim()).filter(Boolean))];
   demand(tags.length >= 1, 'Choose at least one style/tag with --styles.');
+  demand(
+    !options.title || (files.length === 1 && options.title.trim()),
+    'Use --title only with one MP3 file and provide a non-empty title.',
+  );
   const inputName = titleFromFile(path.resolve(input)),
     date = options.date ?? new Date().toISOString().slice(0, 10).replaceAll('-', ''),
     batchId = options.batchId ?? `${slug(inputName, 48)}-${date}`,
@@ -151,7 +155,7 @@ export async function createUploadManifest(input, options) {
   const tracks = [];
   for (const file of files) {
     const id3 = await readID3(file),
-      title = id3.title || titleFromFile(file),
+      title = options.title?.trim() || id3.title || titleFromFile(file),
       artist = commonArtist || id3.artist;
     demand(artist, `Artist is missing from ID3 metadata for ${file}; pass --artist.`);
     const base = `${slug(artist, 70)}.${slug(title, 70)}`,
@@ -205,7 +209,7 @@ function parseArguments(argv) {
         '--source': 'source', '--license': 'license', '--artist': 'artist',
         '--styles': 'tags', '--batch-id': 'batchId', '--batch-title': 'batchTitle',
         '--description': 'description', '--rights-evidence': 'rightsEvidence',
-        '--attribution': 'attribution',
+        '--attribution': 'attribution', '--title': 'title',
         '--derivative-notice': 'derivativeNotice',
       }[value];
       demand(key, `Unknown option: ${value}`);
