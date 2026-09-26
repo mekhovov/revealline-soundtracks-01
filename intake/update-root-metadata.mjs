@@ -10,6 +10,7 @@ const PUBLIC_METADATA = [
   "README.md",
   "UPLOAD_GUIDE.md",
   "catalogue.json",
+  "archive-directory.json",
   "index.html",
   "inventory.json",
   "playback-policy.mjs",

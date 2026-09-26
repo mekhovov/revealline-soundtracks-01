@@ -2,7 +2,9 @@
 
 [Listen and download](https://mekhovov.github.io/revealline-soundtracks-01/)
 
-The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 104 unique recordings and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
+The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 148 unique recordings and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
+
+[archive-directory.json](archive-directory.json) is the bounded discovery contract for scale-out. It keeps this archive first and required while allowing reviewed, project-owned successor shards to be added without moving existing recording URLs or identities. The game must validate every listed catalogue independently; a directory entry cannot grant listening approval, default-playlist admission or recording rights.
 
 The original collection preserves 354,986,122 exact MP3 bytes. Every `objects/<sha256>.mp3` file is committed for reuse. Files are free to use under their individually listed CC0, CC BY 3.0 or CC BY 4.0 licenses; retain the required attribution and change notices in [CREDITS.md](CREDITS.md) and each batch. The creators do not endorse this game.
 
@@ -29,6 +31,6 @@ If an older preview copy is already installed, keep it and its backup: changed c
 
 ## Verify and deploy
 
-Run `node intake/build-unified-catalogue.mjs --check`, then `node verify.mjs` to read and hash every public file. Run `node verify.mjs --stage public` to prepare the exact Pages payload. The GitHub Actions workflow independently verifies and publishes it on main. `deployment-manifest.json` pins public files, `inventory.json` pins every immutable original-collection MP3 object, each batch carries its own equivalent pins, and `catalogue.json` joins their public playback metadata. Keep old object paths immutable when extending the archive.
+Run `node intake/build-unified-catalogue.mjs --check`, then `node verify.mjs` to read and hash every public file. Run `node verify.mjs --stage public` to prepare the exact Pages payload. The GitHub Actions workflow independently verifies and publishes it on main. `deployment-manifest.json` pins public files, `inventory.json` pins every immutable original-collection MP3 object, each batch carries its own equivalent pins, `catalogue.json` joins their public playback metadata, and `archive-directory.json` declares the bounded catalogue set. Keep old object paths immutable when extending the archive.
 
 Authoring sources: [RevealLine soundtrack PR](https://github.com/mekhovov/revealline/pull/209). Source register, authorization and inventory hashes are embedded in the catalogue and deployment manifest.

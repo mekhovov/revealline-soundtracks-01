@@ -19,6 +19,7 @@ import {
   validateDeclarations,
   validateBatchDeclarations,
   validateBatchIndex,
+  validateArchiveDirectory,
   verifyPreviewBatch,
   appendVerifiedPreviewBatch,
 } from "./verify.mjs";
@@ -200,6 +201,51 @@ test("unified catalogue reproducibly exposes every published batch on the root p
   assert.equal(shchedryk.recordingModeEligible, false);
   assert(shchedryk.tags.some((tag) => /metal/i.test(tag)));
   assert(shchedryk.tags.some((tag) => /ukrain/i.test(tag)));
+});
+test('archive directory is bounded, exact and keeps the primary catalogue first', async () => {
+  const directory = JSON.parse(
+    await readFile(path.join(source, 'archive-directory.json'), 'utf8'),
+  );
+  assert.equal(validateArchiveDirectory(directory).length, 1);
+  assert.equal(
+    validateArchiveDirectory({
+      ...directory,
+      catalogues: [
+        ...directory.catalogues,
+        {
+          id: 'revealline-soundtracks-02',
+          url: 'https://mekhovov.github.io/revealline-soundtracks-02/catalogue.json',
+          baseURL: 'https://mekhovov.github.io/revealline-soundtracks-02/',
+          required: false,
+        },
+      ],
+    }).length,
+    2,
+  );
+  assert.throws(
+    () =>
+      validateArchiveDirectory({
+        ...directory,
+        catalogues: [
+          ...directory.catalogues,
+          {
+            id: 'revealline-soundtracks-02',
+            url: 'https://attacker.example/catalogue.json',
+            baseURL: 'https://attacker.example/',
+            required: false,
+          },
+        ],
+      }),
+    /directory entry/,
+  );
+  assert.throws(
+    () =>
+      validateArchiveDirectory({
+        ...directory,
+        catalogues: [{ ...directory.catalogues[0], required: false }],
+      }),
+    /primary soundtrack archive/,
+  );
 });
 test('style selection supports mixed families and deterministic ordered or shuffled queues', () => {
   assert.deepEqual(stylesOf({ tags: ['Ukrainian', 'metal', 'synthwave'] }), [
@@ -430,6 +476,7 @@ async function uploadFixture(t, batchId = "upload-fixture") {
     "README.md",
     "UPLOAD_GUIDE.md",
     "catalogue.json",
+    "archive-directory.json",
     "deployment-manifest.json",
     "index.html",
     "inventory.json",

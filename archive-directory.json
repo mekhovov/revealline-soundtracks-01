@@ -1,0 +1,11 @@
+{
+  "format": "revealline-public-soundtrack-directory.v1",
+  "catalogues": [
+    {
+      "id": "revealline-soundtracks-01",
+      "url": "https://mekhovov.github.io/revealline-soundtracks-01/catalogue.json",
+      "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/",
+      "required": true
+    }
+  ]
+}
