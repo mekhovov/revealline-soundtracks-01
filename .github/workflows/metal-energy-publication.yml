@@ -1,19 +1,19 @@
-name: Publish exact Purgatory 3 audition artifact
+name: Publish exact high-energy audition artifact
 
 on:
   pull_request:
     paths:
       - 'intake/assemble_approved_directions.py'
-      - 'intake/assemble_purgatory3.py'
+      - 'intake/assemble_metal_energy.py'
       - 'intake/test_approved_assembly.py'
-      - 'intake/test_purgatory3_assembly.py'
-      - 'intake/purgatory3-publication.md'
+      - 'intake/test_metal_energy_assembly.py'
+      - 'intake/metal-energy-publication.md'
       - 'intake/build-unified-catalogue.mjs'
-      - '.github/workflows/purgatory3-publication.yml'
+      - '.github/workflows/metal-energy-publication.yml'
   workflow_dispatch:
     inputs:
       operation:
-        description: Assemble the fixed reviewed Purgatory 3 artifact
+        description: Assemble the fixed reviewed metal-energy artifact
         type: choice
         options: [assemble]
         default: assemble
@@ -35,15 +35,16 @@ jobs:
       - name: Verify source and historical archive boundaries
         env:
           PYTHONDONTWRITEBYTECODE: '1'
+          PYTHONPATH: intake
         run: |
           python3 -m unittest discover -s intake -p 'test_*.py'
-          python3 intake/prepare_purgatory3.py --check
+          python3 intake/prepare_metal_energy.py --check
           node --test test-verify.mjs
           node verify.mjs
 
   assemble:
     needs: source
-    if: github.event_name == 'workflow_dispatch' && inputs.operation == 'assemble' && github.ref == 'refs/heads/codex/purgatory3-publication-20260925'
+    if: github.event_name == 'workflow_dispatch' && inputs.operation == 'assemble' && github.ref == 'refs/heads/codex/metal-energy-publication-20260926'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     permissions:
@@ -52,13 +53,16 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: intake
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 20.19.5
       - name: Verify original artifact and assemble audition-only publication
-        run: python3 intake/assemble_purgatory3.py
+        run: python3 intake/assemble_metal_energy.py
       - name: Verify assembled payload and unchanged historical entries
         run: |
           python3 -m unittest discover -s intake -p 'test_*.py'
@@ -68,21 +72,21 @@ jobs:
       - name: Commit only the generated audition publication to this review branch
         run: |
           set -euo pipefail
-          test "$GITHUB_REF_NAME" = 'codex/purgatory3-publication-20260925'
+          test "$GITHUB_REF_NAME" = 'codex/metal-energy-publication-20260926'
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          git add batches/metal-purgatory3-audition-20260925 intake/archive/metal-purgatory3-audition-20260925 batches.json catalogue.json deployment-manifest.json
+          git add batches/metal-energy-audition-20260926 batches/synth-action-audition-20260926 intake/archive/metal-energy-audition-20260926 batches.json catalogue.json deployment-manifest.json
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Assemble exact Purgatory 3 audition artifact'
+          git commit -m 'Assemble exact high-energy audition artifact'
           git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"
       - name: Preserve small assembly verification evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: purgatory3-assembly-evidence
+          name: metal-energy-assembly-evidence
           path: |
-            intake/archive/metal-purgatory3-audition-20260925/artifact-binding.json
-            intake/archive/metal-purgatory3-audition-20260925/artifact-member-hashes.json
-            intake/archive/metal-purgatory3-audition-20260925/assembly-review.json
+            intake/archive/metal-energy-audition-20260926/artifact-binding.json
+            intake/archive/metal-energy-audition-20260926/artifact-member-hashes.json
+            intake/archive/metal-energy-audition-20260926/assembly-review.json
           if-no-files-found: warn
           retention-days: 30

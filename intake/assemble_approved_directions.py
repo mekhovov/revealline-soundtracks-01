@@ -277,10 +277,13 @@ def page(title, tracks, other):
     for t in tracks:
         duration = f'{int(t["durationSeconds"]) // 60}:{int(t["durationSeconds"]) % 60:02}'
         vocal = 'Creator-described vocals; lyrics and explicit-content suitability remain pending.' if t['vocalContent'] == 'creator-described-vocals' else 'Vocal and instrumental review remain pending.'
-        content_id = ('The source reports Content ID disabled; Recording mode remains off pending review.'
+        content_id = ('The source reports registered Content ID; Recording mode remains off.'
+                      if t['contentId'] is True else
+                      'The source reports Content ID disabled; Recording mode remains off pending review.'
                       if t['contentId'] is False else
                       'Content ID is unknown; Recording mode eligibility remains off.')
-        cards.append(f'<article class="track" data-genres="{t["family"]}" data-search="{esc((t["title"] + " " + t["artist"]).lower(), quote=True)}"><button class="play-track" type="button" aria-label="Play {esc(t["title"], quote=True)}">▶</button><div class="track-main"><h2>{esc(t["title"])}</h2><p class="artist"><a href="{esc(t["artistURL"])}" rel="noopener noreferrer">{esc(t["artist"])}</a></p><p class="tags">{duration} · Audition · Listening pending</p><details><summary>Credits and recording details</summary><p>{esc(t["credit"])}</p><p>{esc(t["changes"])}</p><p>{vocal}</p><p>{content_id} No game admission or default selection.</p><p>Source filename: <span class="filename">{esc(t["originalFilename"])}</span></p><p>SHA-256: <code>{t["sha256"]}</code></p></details></div><div class="links"><a href="{t["path"]}" download="{esc(t["title"], quote=True)}.mp3">MP3 ↓</a><a href="{esc(t["source"])}" rel="noopener noreferrer">Creator source ↗</a><a href="{t["licenseURL"]}" rel="license">{esc(t["license"])}</a></div></article>')
+        artist_url = t.get('artistURL', t['source'])
+        cards.append(f'<article class="track" data-genres="{t["family"]}" data-search="{esc((t["title"] + " " + t["artist"]).lower(), quote=True)}"><button class="play-track" type="button" aria-label="Play {esc(t["title"], quote=True)}">▶</button><div class="track-main"><h2>{esc(t["title"])}</h2><p class="artist"><a href="{esc(artist_url)}" rel="noopener noreferrer">{esc(t["artist"])}</a></p><p class="tags">{duration} · Audition · Listening pending</p><details><summary>Credits and recording details</summary><p>{esc(t["credit"])}</p><p>{esc(t["changes"])}</p><p>{vocal}</p><p>{content_id} No game admission or default selection.</p><p>Source filename: <span class="filename">{esc(t["originalFilename"])}</span></p><p>SHA-256: <code>{t["sha256"]}</code></p></details></div><div class="links"><a href="{t["path"]}" download="{esc(t["title"], quote=True)}.mp3">MP3 ↓</a><a href="{esc(t["source"])}" rel="noopener noreferrer">Creator source ↗</a><a href="{t["licenseURL"]}" rel="license">{esc(t["license"])}</a></div></article>')
     count = len(tracks)
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>RevealLine · {esc(title)}</title><link rel="stylesheet" href="style.css"><script type="module" src="player.mjs"></script></head>
@@ -297,6 +300,7 @@ def build_batch(family, rows, files, templates):
     for row in rows:
         t = {k: v for k, v in row.items() if k not in ('delivery', 'asset')}
         t.update(row['delivery'])
+        t.setdefault('artistURL', t['source'])
         t['rights'] = structured_rights(row)
         t.update({'genres': [family], 'tags': [family, 'audition', 'listening pending'],
                   'reviewStatus': 'pending', 'default': False, 'gameCatalogueAdmission': False,
@@ -324,7 +328,7 @@ def build_batch(family, rows, files, templates):
                            f'Exact native sources and technical evidence: `{ARCHIVE}/`.\n').encode()
     payload['CREDITS.md'] = ('# Credits\n\n' + '\n\n'.join(
         f'## {t["title"]}\n\n{t["credit"]}\n\n{t["changes"]}\n\nSource: {t["source"]}\n\nSHA-256: `{t["sha256"]}`. '
-        f'Content ID {"reported disabled by source" if t["contentId"] is False else "unknown"}; Recording mode disabled; listening and explicit-content review pending.' for t in tracks) + '\n').encode()
+        f'Content ID {"registered" if t["contentId"] is True else "reported disabled by source" if t["contentId"] is False else "unknown"}; Recording mode disabled; listening and explicit-content review pending.' for t in tracks) + '\n').encode()
     manifest = {'format': 'revealline-soundtrack-preview-deployment.v1', 'id': batch_id,
                 'expected': {'trackCount': len(tracks), 'audioBytes': sum(t['bytes'] for t in tracks)},
                 'files': [pin(name, body) for name, body in sorted(payload.items())],
