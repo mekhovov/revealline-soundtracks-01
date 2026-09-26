@@ -29,7 +29,9 @@ const BATCH_ID = /^[a-z0-9][a-z0-9-]{0,63}$/;
 const TRACK_ID = /^[a-z0-9][a-z0-9._-]{0,159}$/;
 const MAX_TRACK_BYTES = 100_000_000;
 const MAX_BATCH_BYTES = 64 * 1024 * 1024;
-const MAX_PUBLIC_BYTES = 800_000_000;
+// Leave 100 MB below GitHub Pages' documented 1 GB published-site limit.
+// Further growth belongs in another immutable archive shard.
+const MAX_PUBLIC_BYTES = 900_000_000;
 const MINIMUM_FREE_BYTES = 1024 ** 3;
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const pin = (file, bytes) => ({
@@ -483,7 +485,7 @@ export async function prepareUpload(manifestPath, options = {}) {
     );
     demand(
       existingPublicBytes + audioBytes + 8 * 1024 * 1024 < MAX_PUBLIC_BYTES,
-      "The public archive would exceed its 800 MB budget.",
+      "The public archive would exceed its 900 MB budget.",
     );
     const available =
       options.availableBytes ??
