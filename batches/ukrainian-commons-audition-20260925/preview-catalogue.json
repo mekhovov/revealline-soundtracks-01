@@ -1,0 +1,131 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "listeningApproval": "not-reviewed",
+  "gameCatalogueAdmission": false,
+  "archive": {
+    "id": "ukrainian-commons-audition-20260925",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/ukrainian-commons-audition-20260925/",
+    "inventorySha256": "7513700944f00123d685e721d7686aabea15374385ea8aa637f74d74931433c0"
+  },
+  "tracks": [
+    {
+      "id": "ukrainian-air-force-band.oi-u-luzi-chervona-kalyna",
+      "title": "Oi u luzi chervona kalyna",
+      "artist": "Ukrainian Air Force Band and three Vinnytsia choirs",
+      "source": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%9E%D0%B9_%D1%83_%D0%BB%D1%83%D0%B7%D1%96_%D1%87%D0%B5%D1%80%D0%B2%D0%BE%D0%BD%D0%B0_%D0%BA%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0%C2%BB_%D0%BE%D1%80%D0%BA%D0%B5%D1%81%D1%82%D1%80%D1%83_%D0%9F%D0%BE%D0%B2%D1%96%D1%82%D1%80%D1%8F%D0%BD%D0%B8%D1%85_%D0%A1%D0%B8%D0%BB_%D0%97%D0%A1%D0%A3.webm",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Оркестр Повітряних Сил ЗСУ. “«Ой у Лузі Червона Калина» Оркестру Повітряних Сил ЗСУ.” YouTube, Ukrinform TV, 7 May 2022, https://www.youtube.com/watch?v=ZkMKYPWWmSY/. Licensed under CC BY 3.0: https://creativecommons.org/licenses/by/3.0/.",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%9E%D0%B9_%D1%83_%D0%BB%D1%83%D0%B7%D1%96_%D1%87%D0%B5%D1%80%D0%B2%D0%BE%D0%BD%D0%B0_%D0%BA%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0%C2%BB_%D0%BE%D1%80%D0%BA%D0%B5%D1%81%D1%82%D1%80%D1%83_%D0%9F%D0%BE%D0%B2%D1%96%D1%82%D1%80%D1%8F%D0%BD%D0%B8%D1%85_%D0%A1%D0%B8%D0%BB_%D0%97%D0%A1%D0%A3.webm",
+        "attribution": "Оркестр Повітряних Сил ЗСУ. “«Ой у Лузі Червона Калина» Оркестру Повітряних Сил ЗСУ.” YouTube, Ukrinform TV, 7 May 2022, https://www.youtube.com/watch?v=ZkMKYPWWmSY/. Licensed under CC BY 3.0: https://creativecommons.org/licenses/by/3.0/.",
+        "derivativeChangeNotice": "Audio extracted from the native WebM recording; converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; video omitted; native source retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "ukrainian",
+        "gameplay",
+        "military-band",
+        "choral",
+        "patriotic-song",
+        "victory",
+        "energy 4",
+        "Ukrainian patriotic-song military-band and choral performance"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760.mp3",
+      "path": "objects/b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760.mp3",
+      "bytes": 6536925,
+      "sha256": "b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760"
+    },
+    {
+      "id": "zoretsvit-kalyna.a-v-kryvoho-tantsia",
+      "title": "A v kryvoho tantsia",
+      "artist": "Youth Ethno Group Zoretsvit and Folk Ensemble Kalyna",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%90_%D0%B2_%D0%BA%D1%80%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE_%D1%82%D0%B0%D0%BD%D1%86%D1%8F_-_%D0%B0%D0%BD%D1%81%D0%B0%D0%BC%D0%B1%D0%BB%D1%96_%D0%97%D0%BE%D1%80%D0%B5%D1%86%D0%B2%D1%96%D1%82_%D1%82%D0%B0_%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_(%D0%9E%D0%B4%D0%B5%D1%81%D0%B0).webm",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "“A v kryvoho tantsia,” performed by Youth Ethno Group Zoretsvit and Folk Ensemble Kalyna; source video by Cxidnyak, via Wikimedia Commons. Licensed under CC BY 3.0: https://creativecommons.org/licenses/by/3.0/.",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://commons.wikimedia.org/wiki/File:%D0%90_%D0%B2_%D0%BA%D1%80%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE_%D1%82%D0%B0%D0%BD%D1%86%D1%8F_-_%D0%B0%D0%BD%D1%81%D0%B0%D0%BC%D0%B1%D0%BB%D1%96_%D0%97%D0%BE%D1%80%D0%B5%D1%86%D0%B2%D1%96%D1%82_%D1%82%D0%B0_%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_(%D0%9E%D0%B4%D0%B5%D1%81%D0%B0).webm",
+        "attribution": "“A v kryvoho tantsia,” performed by Youth Ethno Group Zoretsvit and Folk Ensemble Kalyna; source video by Cxidnyak, via Wikimedia Commons. Licensed under CC BY 3.0: https://creativecommons.org/licenses/by/3.0/.",
+        "derivativeChangeNotice": "Audio extracted from the native WebM recording; converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; video omitted; native source retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "ukrainian",
+        "world",
+        "folk-vocal",
+        "vesnianka",
+        "round-dance",
+        "village",
+        "transition",
+        "energy 3",
+        "Ukrainian vesnianka round-dance ensemble performance"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608.mp3",
+      "path": "objects/2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608.mp3",
+      "bytes": 2562969,
+      "sha256": "2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608"
+    },
+    {
+      "id": "kate-orange.oi-khodyt-son",
+      "title": "Oi khodyt son kolo vikon",
+      "artist": "Kate Orange",
+      "source": "https://commons.wikimedia.org/wiki/File:Oi_hodut%27_son_-_%D0%9E%D0%B9_%D1%85%D0%BE%D0%B4%D0%B8%D1%82%D1%8C_%D1%81%D0%BE%D0%BD,_%D0%BA%D0%BE%D0%BB%D0%BE_%D0%B2%D1%96%D0%BA%D0%BE%D0%BD_-_Kate_Orange.webm",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "“Oi khodyt son kolo vikon,” a Ukrainian folk song performed by Kate Orange; source video by Singing Birds, via Wikimedia Commons. Licensed under CC BY 3.0: https://creativecommons.org/licenses/by/3.0/.",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://commons.wikimedia.org/wiki/File:Oi_hodut%27_son_-_%D0%9E%D0%B9_%D1%85%D0%BE%D0%B4%D0%B8%D1%82%D1%8C_%D1%81%D0%BE%D0%BD,_%D0%BA%D0%BE%D0%BB%D0%BE_%D0%B2%D1%96%D0%BA%D0%BE%D0%BD_-_Kate_Orange.webm",
+        "attribution": "“Oi khodyt son kolo vikon,” a Ukrainian folk song performed by Kate Orange; source video by Singing Birds, via Wikimedia Commons. Licensed under CC BY 3.0: https://creativecommons.org/licenses/by/3.0/.",
+        "derivativeChangeNotice": "Audio extracted from the native WebM recording; converted to 256 kbps stereo MP3 at 44.1 kHz with two-pass loudness normalization; video omitted; native source retained unchanged.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "ukrainian",
+        "menu",
+        "folk-vocal",
+        "lullaby",
+        "night",
+        "recovery",
+        "energy 1",
+        "Ukrainian folk lullaby vocal performance"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f.mp3",
+      "path": "objects/834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f.mp3",
+      "bytes": 4091028,
+      "sha256": "834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f"
+    }
+  ]
+}

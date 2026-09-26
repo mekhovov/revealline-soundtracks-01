@@ -1,0 +1,77 @@
+{
+  "format": "revealline-hosted-artifact-members.v1",
+  "artifactId": 10836663291,
+  "artifactName": "ukrainian-commons-audition-candidates",
+  "members": [
+    {
+      "path": "evidence/0c47ddb5f43f2dd919ec58f534d3ec7253776d49ea9654f76b2460eecf73d68b.html",
+      "bytes": 160721,
+      "sha256": "0c47ddb5f43f2dd919ec58f534d3ec7253776d49ea9654f76b2460eecf73d68b"
+    },
+    {
+      "path": "evidence/5584a0e30beb024e5d5254586e0950b1eeca0743efdcffe820b71c999d7f5db4.json",
+      "bytes": 4902,
+      "sha256": "5584a0e30beb024e5d5254586e0950b1eeca0743efdcffe820b71c999d7f5db4"
+    },
+    {
+      "path": "evidence/9a78d0a07fc11040b18cbd865a3105a153f46fda544c6881812687160d161187.json",
+      "bytes": 3589,
+      "sha256": "9a78d0a07fc11040b18cbd865a3105a153f46fda544c6881812687160d161187"
+    },
+    {
+      "path": "evidence/b69ddb693db2423916fa3247c16a5535a418255ec4aa7291efc35c77602dfea0.json",
+      "bytes": 4375,
+      "sha256": "b69ddb693db2423916fa3247c16a5535a418255ec4aa7291efc35c77602dfea0"
+    },
+    {
+      "path": "evidence/bfeef98159f6a7ef2d06f3df2922f1d80fe495884264a0831accfd4e5eeae635.html",
+      "bytes": 147079,
+      "sha256": "bfeef98159f6a7ef2d06f3df2922f1d80fe495884264a0831accfd4e5eeae635"
+    },
+    {
+      "path": "evidence/d0563b3a071ce3b4d21589681f2efb17a2877be7833df3cb04e1cadc7b7dcf39.html",
+      "bytes": 131810,
+      "sha256": "d0563b3a071ce3b4d21589681f2efb17a2877be7833df3cb04e1cadc7b7dcf39"
+    },
+    {
+      "path": "objects/2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608.mp3",
+      "bytes": 2562969,
+      "sha256": "2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608"
+    },
+    {
+      "path": "objects/834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f.mp3",
+      "bytes": 4091028,
+      "sha256": "834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f"
+    },
+    {
+      "path": "objects/b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760.mp3",
+      "bytes": 6536925,
+      "sha256": "b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760"
+    },
+    {
+      "path": "originals/0c6d3c9645a33ad71dac3e501c37c731b70acc75d85cc481757253aeeff6fdb1.webm",
+      "bytes": 14529571,
+      "sha256": "0c6d3c9645a33ad71dac3e501c37c731b70acc75d85cc481757253aeeff6fdb1"
+    },
+    {
+      "path": "originals/154259b4545c3289a26afae258558dd98f91cfd07dab288da0be37bbf4c56dde.webm",
+      "bytes": 9588148,
+      "sha256": "154259b4545c3289a26afae258558dd98f91cfd07dab288da0be37bbf4c56dde"
+    },
+    {
+      "path": "originals/99b06247c92edd5080ba330cceefb8bafd2f7fb3828212915bee5976c0068ac9.webm",
+      "bytes": 36085059,
+      "sha256": "99b06247c92edd5080ba330cceefb8bafd2f7fb3828212915bee5976c0068ac9"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 19095,
+      "sha256": "fc11a65a2fb6dedc2cf6ac9872a9d8cd6229cfd3a81821a8d4ce269a8ef75112"
+    },
+    {
+      "path": "review.json",
+      "bytes": 782,
+      "sha256": "5bdc6a342b95c52656af900dc889ccf52f17df1d1a23fbbbd39c7762e2905ad3"
+    }
+  ]
+}

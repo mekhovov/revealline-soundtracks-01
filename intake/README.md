@@ -106,6 +106,12 @@ The API response and file page are stored as rights-evidence snapshots. Every
 row keeps cultural, instrumental, gameplay, complete-listening and Content ID
 review pending; recording mode remains disabled.
 
+The successful hosted artifact from run `36067125672` was independently recovered
+for publication. Its exact derivative MP3s, complete receipt, pending review state,
+source snapshots and every artifact-member hash are bound under
+`intake/archive/ukrainian-commons-audition-20260925/`. The public batch remains an
+audition and grants neither cultural approval nor game catalogue admission.
+
 `.github/workflows/ukrainian-commons-intake.yml` creates the distinct
 `ukrainian-commons-audition-candidates` 30-day artifact. It has read-only
 repository permissions and cannot publish the candidates or add them to the

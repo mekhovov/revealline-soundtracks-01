@@ -1,0 +1,16 @@
+{
+  "format": "revealline-hosted-artifact-binding.v1",
+  "repository": "mekhovov/revealline-soundtracks-01",
+  "workflowRun": 36067125672,
+  "runURL": "https://github.com/mekhovov/revealline-soundtracks-01/actions/runs/36067125672",
+  "headSha": "9901657c0beb5ada22712bbc6e7b5b2b646b9bab",
+  "artifactId": 10836663291,
+  "artifactName": "ukrainian-commons-audition-candidates",
+  "artifactSizeBytes": 73869275,
+  "createdAt": "2026-09-24T22:25:02Z",
+  "expiresAt": "2026-10-24T22:25:01Z",
+  "sourceManifest": "intake/ukrainian-commons-audition-20260925.json",
+  "sourceManifestSha256": "99bc4dc890a1d2c28c222e3ae32eefa5b47f2bcd3750346ab7dba5bf9839e463",
+  "receiptSha256": "fc11a65a2fb6dedc2cf6ac9872a9d8cd6229cfd3a81821a8d4ce269a8ef75112",
+  "reviewSha256": "5bdc6a342b95c52656af900dc889ccf52f17df1d1a23fbbbd39c7762e2905ad3"
+}
