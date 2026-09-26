@@ -1,0 +1,87 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "listeningApproval": "not-reviewed",
+  "gameCatalogueAdmission": false,
+  "archive": {
+    "id": "final-archive01-audition-20260926",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/final-archive01-audition-20260926/",
+    "inventorySha256": "ec6497b185e432d3fc5ed1fcb6b77b1c26340d31349ce1cb38fdf60fe36f8039"
+  },
+  "tracks": [
+    {
+      "id": "tri-tachyon.heavy-metal-riffs-3hr-mt3",
+      "title": "Heavy Metal Riffs - 3HR.MT3",
+      "artist": "Tri-Tachyon",
+      "source": "https://opengameart.org/content/heavy-metal-riffs-3hrmt3",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Music by Tri-Tachyon - https://soundcloud.com/tri-tachyon/albums. Licensed under CC BY 4.0.",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/heavy-metal-riffs-3hrmt3",
+        "attribution": "Music by Tri-Tachyon - https://soundcloud.com/tri-tachyon/albums. Licensed under CC BY 4.0.",
+        "derivativeChangeNotice": "Creator MP3 SHA-256 6db71a03ec3149ab60de37fc33631b40b2d6bb60be243acff4558648aea9e847; loudness-normalized and encoded to 256 kbps MP3, yielding -15.9 LUFS integrated and -3.1 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "metal",
+        "groove",
+        "riff",
+        "gameplay",
+        "high energy"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "Heavy Metal Riffs - 3HR.MT3.mp3",
+      "path": "objects/7b98de758ad4b987b8b879e9203d82e45a7b1bda90b15bb5deb64df77725aa6b.mp3",
+      "bytes": 2051386,
+      "sha256": "7b98de758ad4b987b8b879e9203d82e45a7b1bda90b15bb5deb64df77725aa6b"
+    },
+    {
+      "id": "vitalezzz.specular-city",
+      "title": "Specular City",
+      "artist": "Vitalezzz",
+      "source": "https://opengameart.org/content/specular-city",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vitalezzz - Specular City. CC0 1.0 Universal. Source: https://opengameart.org/content/specular-city",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/specular-city",
+        "attribution": "Vitalezzz - Specular City. CC0 1.0 Universal. Source: https://opengameart.org/content/specular-city",
+        "derivativeChangeNotice": "Creator MP3 SHA-256 c3865e5435ac38a1a7c5611a674f629b212a912421a95999845e0a4801004ce1; loudness-normalized and encoded to 256 kbps MP3, yielding -16.0 LUFS integrated and -5.6 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "electronic",
+        "synth",
+        "sci-fi",
+        "arcade",
+        "action",
+        "gameplay",
+        "high energy"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "Specular City.mp3",
+      "path": "objects/e9088e2263c020d17e51a5a714826212726c1468994e2384e2ff67ac672ad8ba.mp3",
+      "bytes": 6619728,
+      "sha256": "e9088e2263c020d17e51a5a714826212726c1468994e2384e2ff67ac672ad8ba"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "final-archive01-audition-20260926",
+  "files": [
+    {
+      "path": "objects/7b98de758ad4b987b8b879e9203d82e45a7b1bda90b15bb5deb64df77725aa6b.mp3",
+      "bytes": 2051386,
+      "sha256": "7b98de758ad4b987b8b879e9203d82e45a7b1bda90b15bb5deb64df77725aa6b"
+    },
+    {
+      "path": "objects/e9088e2263c020d17e51a5a714826212726c1468994e2384e2ff67ac672ad8ba.mp3",
+      "bytes": 6619728,
+      "sha256": "e9088e2263c020d17e51a5a714826212726c1468994e2384e2ff67ac672ad8ba"
+    }
+  ]
+}
