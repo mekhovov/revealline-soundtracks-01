@@ -176,6 +176,14 @@
         "bytes": 1864,
         "sha256": "ee7d264279849d7b17720564d7b3eb95ca68097c7222524aab8693f7b3eb24f9"
       }
+    },
+    {
+      "id": "racing-synth-final-audition-20260926",
+      "manifest": {
+        "path": "batches/racing-synth-final-audition-20260926/deployment-manifest.json",
+        "bytes": 2081,
+        "sha256": "6bc71a6840ea33bec28c994cbbc9b4462a1fe58b959aa38c45e7fc8daaecf2f4"
+      }
     }
   ]
 }

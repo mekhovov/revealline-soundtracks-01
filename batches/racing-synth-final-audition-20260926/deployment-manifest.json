@@ -1,0 +1,69 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "racing-synth-final-audition-20260926",
+  "expected": {
+    "trackCount": 3,
+    "audioBytes": 9982072
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 273,
+      "sha256": "2bc2aa0b8dc8ed4f144f74c39669fc044b246ff82a5bfedc90da86b98d31eb76"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 1822,
+      "sha256": "fbec4767fa151fcb67cbe9ecb154a9bf96eb6df74c99d2a5c19913172e6d0ca5"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2205,
+      "sha256": "079850674a0ba4e3f310f82b5f220f66da5babbc4a5ae0683ebc2e0786ed2d57"
+    },
+    {
+      "path": "style.css",
+      "bytes": 264,
+      "sha256": "de0dd57417d30949a5afe855d52aef0fbb203042909799f37b2f096665f2209b"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 84,
+      "sha256": "4386d6094858886b8ef75b2046735aacf703661d7670dedd8f66981bb7ef29ea"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 758,
+      "sha256": "08aadbfd985da374f7aa51800365ec0f37001e51f362d5a692dbf08347582dac"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 5475,
+      "sha256": "452bd23a7ba0e69f6357c256f1e19358982d62d86a93cdf55334147fcb801f6b"
+    },
+    {
+      "path": "objects/00f33561394d7c21f4b4d7a264ada90129ca0996396ad4fb66c1bfb334dee344.mp3",
+      "bytes": 3073789,
+      "sha256": "00f33561394d7c21f4b4d7a264ada90129ca0996396ad4fb66c1bfb334dee344"
+    },
+    {
+      "path": "objects/a8600abafb871840cc414513fbcbca3e656967366d8cf4f5b105ab23beafad2d.mp3",
+      "bytes": 2810484,
+      "sha256": "a8600abafb871840cc414513fbcbca3e656967366d8cf4f5b105ab23beafad2d"
+    },
+    {
+      "path": "objects/c5fd1584afe017a62e830302586ae3a30d8d26cafc78306cc84a2260d9047bf6.mp3",
+      "bytes": 4097799,
+      "sha256": "c5fd1584afe017a62e830302586ae3a30d8d26cafc78306cc84a2260d9047bf6"
+    }
+  ],
+  "provenance": {
+    "localUpload": true,
+    "listeningApproval": false
+  }
+}
