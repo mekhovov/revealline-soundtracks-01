@@ -1,0 +1,21 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "racing-synth-final-audition-20260926",
+  "files": [
+    {
+      "path": "objects/00f33561394d7c21f4b4d7a264ada90129ca0996396ad4fb66c1bfb334dee344.mp3",
+      "bytes": 3073789,
+      "sha256": "00f33561394d7c21f4b4d7a264ada90129ca0996396ad4fb66c1bfb334dee344"
+    },
+    {
+      "path": "objects/a8600abafb871840cc414513fbcbca3e656967366d8cf4f5b105ab23beafad2d.mp3",
+      "bytes": 2810484,
+      "sha256": "a8600abafb871840cc414513fbcbca3e656967366d8cf4f5b105ab23beafad2d"
+    },
+    {
+      "path": "objects/c5fd1584afe017a62e830302586ae3a30d8d26cafc78306cc84a2260d9047bf6.mp3",
+      "bytes": 4097799,
+      "sha256": "c5fd1584afe017a62e830302586ae3a30d8d26cafc78306cc84a2260d9047bf6"
+    }
+  ]
+}

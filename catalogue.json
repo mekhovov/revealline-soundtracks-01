@@ -211,13 +211,22 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 2
+    },
+    {
+      "id": "racing-synth-final-audition-20260926",
+      "path": "batches/racing-synth-final-audition-20260926/preview-catalogue.json",
+      "sha256": "452bd23a7ba0e69f6357c256f1e19358982d62d86a93cdf55334147fcb801f6b",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 3
     }
   ],
   "counts": {
-    "declaredTracks": 160,
-    "uniqueRecordings": 160,
+    "declaredTracks": 163,
+    "uniqueRecordings": 163,
     "duplicateAliases": 0,
-    "audioBytes": 877521728
+    "audioBytes": 887503800
   },
   "tracks": [
     {
@@ -5473,6 +5482,147 @@
         "path": "batches/final-archive01-audition-20260926/objects/e9088e2263c020d17e51a5a714826212726c1468994e2384e2ff67ac672ad8ba.mp3",
         "bytes": 6619728,
         "sha256": "e9088e2263c020d17e51a5a714826212726c1468994e2384e2ff67ac672ad8ba"
+      },
+      "aliases": []
+    },
+    {
+      "id": "mintodog.pure-raceway",
+      "title": "Pure Raceway",
+      "artist": "MintoDog",
+      "durationSeconds": null,
+      "tags": [
+        "synthwave",
+        "electronic",
+        "racing",
+        "arcade",
+        "gameplay",
+        "160 bpm",
+        "high energy"
+      ],
+      "source": "https://opengameart.org/content/pure-raceway",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "MintoDog - Pure Raceway. CC0 1.0 Universal. Source: https://opengameart.org/content/pure-raceway",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/pure-raceway",
+        "attribution": "MintoDog - Pure Raceway. CC0 1.0 Universal. Source: https://opengameart.org/content/pure-raceway",
+        "derivativeChangeNotice": "Creator MP3 SHA-256 71cb719a40738b9c63ef120301f73cdd1b658e5c83133710d61c007952fff7f3; gain-adjusted and encoded to 256 kbps MP3, yielding -16.0 LUFS integrated and -5.0 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "pure_raceway_bpm160.mp3",
+      "archiveId": "racing-synth-final-audition-20260926",
+      "collection": "racing-synth-final-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/racing-synth-final-audition-20260926/objects/00f33561394d7c21f4b4d7a264ada90129ca0996396ad4fb66c1bfb334dee344.mp3",
+        "bytes": 3073789,
+        "sha256": "00f33561394d7c21f4b4d7a264ada90129ca0996396ad4fb66c1bfb334dee344"
+      },
+      "aliases": []
+    },
+    {
+      "id": "mintodog.pure-raceway-climax",
+      "title": "Pure Raceway (Climax)",
+      "artist": "MintoDog",
+      "durationSeconds": null,
+      "tags": [
+        "synthwave",
+        "electronic",
+        "racing",
+        "arcade",
+        "finale",
+        "175 bpm",
+        "high energy"
+      ],
+      "source": "https://opengameart.org/content/pure-raceway",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "MintoDog - Pure Raceway (Climax). CC0 1.0 Universal. Source: https://opengameart.org/content/pure-raceway",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/pure-raceway",
+        "attribution": "MintoDog - Pure Raceway (Climax). CC0 1.0 Universal. Source: https://opengameart.org/content/pure-raceway",
+        "derivativeChangeNotice": "Creator MP3 SHA-256 6394df5430ef3d430386fe562926b0cbf2dd4b3a9e38ecc1981e505cad0802e6; gain-adjusted and encoded to 256 kbps MP3, yielding -16.0 LUFS integrated and -4.7 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "pure_raceway_climax_bpm175.mp3",
+      "archiveId": "racing-synth-final-audition-20260926",
+      "collection": "racing-synth-final-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/racing-synth-final-audition-20260926/objects/a8600abafb871840cc414513fbcbca3e656967366d8cf4f5b105ab23beafad2d.mp3",
+        "bytes": 2810484,
+        "sha256": "a8600abafb871840cc414513fbcbca3e656967366d8cf4f5b105ab23beafad2d"
+      },
+      "aliases": []
+    },
+    {
+      "id": "mintodog.darkness-road-remake",
+      "title": "Darkness Road (Remake)",
+      "artist": "MintoDog",
+      "durationSeconds": null,
+      "tags": [
+        "electronic",
+        "techno",
+        "racing",
+        "action",
+        "gameplay",
+        "165 bpm",
+        "high energy"
+      ],
+      "source": "https://opengameart.org/content/darkness-roadremeke",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "MintoDog - Darkness Road (Remake). CC0 1.0 Universal. Source: https://opengameart.org/content/darkness-roadremeke",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/darkness-roadremeke",
+        "attribution": "MintoDog - Darkness Road (Remake). CC0 1.0 Universal. Source: https://opengameart.org/content/darkness-roadremeke",
+        "derivativeChangeNotice": "Creator MP3 SHA-256 f17006159f907657ab338ae403bf733e892f98979d72d2ae9587a1872876772d; gain-adjusted and encoded to 256 kbps MP3, yielding -16.0 LUFS integrated and -5.2 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "darkness_road_remake_bpm165.mp3",
+      "archiveId": "racing-synth-final-audition-20260926",
+      "collection": "racing-synth-final-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/racing-synth-final-audition-20260926/objects/c5fd1584afe017a62e830302586ae3a30d8d26cafc78306cc84a2260d9047bf6.mp3",
+        "bytes": 4097799,
+        "sha256": "c5fd1584afe017a62e830302586ae3a30d8d26cafc78306cc84a2260d9047bf6"
       },
       "aliases": []
     }
