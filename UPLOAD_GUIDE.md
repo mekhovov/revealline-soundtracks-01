@@ -126,7 +126,7 @@ node verify.mjs
 ## Limits and behavior
 
 - One batch contains 1–20 MP3 files and at most 64 MiB of audio.
-- One MP3 must be smaller than 100 MB; the whole Pages archive remains below its verified 800 MB budget.
+- One MP3 must be smaller than 100 MB; the whole Pages archive remains below its verified 900 MB budget. This leaves 100 MB of headroom below [GitHub Pages' documented 1 GB published-site limit](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits). Start a new archive shard before reaching the 900 MB guard.
 - Exact duplicate audio is rejected even when renamed.
 - Folder intake is deterministic, ignores non-MP3 files, rejects symbolic links and scans no more than eight directory levels.
 - The public catalogue may contain listening-pending auditions. Publication does not add a recording to the game’s default playlists or mark it musically approved.

@@ -744,7 +744,7 @@ test("combining verified batches preserves root pins and enforces aggregate uniq
   );
   for (const changed of [
     { trackCount: 256 },
-    { totalBytes: 800000000 - batch.totalBytes },
+    { totalBytes: 900000000 - batch.totalBytes },
   ]) {
     const refused = { ...structuredClone(rootDeclarations), ...changed };
     const before = structuredClone(refused);

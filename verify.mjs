@@ -22,7 +22,10 @@ import {
 const EXPECTED_TRACKS = 70;
 const EXPECTED_AUDIO_BYTES = 354986122;
 const MAX_FILE_BYTES = 100000000;
-const MAX_SITE_BYTES = 800000000;
+// Keep 100 MB of headroom below GitHub Pages' documented 1 GB published-site
+// limit. New recordings must move to another archive shard before this guard
+// is reached.
+const MAX_SITE_BYTES = 900000000;
 const MANIFEST = 'deployment-manifest.json';
 const BATCHES = 'batches.json';
 const BATCH_ID = /^[a-z0-9][a-z0-9-]{0,63}$/;
@@ -404,7 +407,7 @@ async function verifyPayloadSite(source, { staged = false, batchId, baseURL } = 
   const manifestStat = await lstat(path.join(root, MANIFEST));
   demand(
     result.totalBytes + manifestStat.size < MAX_SITE_BYTES,
-    'Site exceeds its 800 MB budget.',
+    'Site exceeds its 900 MB budget.',
   );
   for (const entry of result.files.values()) {
     demand(
@@ -460,7 +463,7 @@ export function appendVerifiedPreviewBatch(result, entry, batch) {
   demand(
     result.trackCount + batch.trackCount <= 256 &&
       result.totalBytes + batch.totalBytes < MAX_SITE_BYTES,
-    'Combined previews exceed 256 recordings or the 800 MB site budget.',
+    'Combined previews exceed 256 recordings or the 900 MB site budget.',
   );
   const hashes = new Set(
     [...result.files.values()]
@@ -543,7 +546,7 @@ export async function verifyPreviewSite(source, { staged = false } = {}) {
   }
   demand(
     result.trackCount <= 256 && result.totalBytes < MAX_SITE_BYTES,
-    'Combined previews exceed 256 recordings or the 800 MB site budget.',
+    'Combined previews exceed 256 recordings or the 900 MB site budget.',
   );
   return result;
 }
