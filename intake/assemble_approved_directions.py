@@ -167,6 +167,18 @@ def download_original():
     return data
 
 
+def allowed_artifact_member(name):
+    return (
+        name == TESTS_FILE
+        or re.fullmatch(
+            r'candidate-output/(?:receipt|review|intake-binding|source-manifest)\.json', name
+        )
+        or re.fullmatch(r'candidate-output/objects/[0-9a-f]{64}\.mp3', name)
+        or re.fullmatch(r'candidate-output/originals/[0-9a-f]{64}\.(?:flac|mp3|ogg|wav)', name)
+        or re.fullmatch(r'candidate-output/evidence/[0-9a-f]{64}\.(?:json|html)', name)
+    )
+
+
 def checked_members(data):
     demand(len(data) == ZIP_BYTES and digest(data) == ZIP_SHA, 'Original ZIP digest or length differs')
     with zipfile.ZipFile(io.BytesIO(data)) as archive:
@@ -176,10 +188,7 @@ def checked_members(data):
         total = 0
         for info in infos:
             name = info.filename
-            allowed = (name == TESTS_FILE
-                       or re.fullmatch(r'candidate-output/(?:receipt|review|intake-binding|source-manifest)\.json', name)
-                       or re.fullmatch(r'candidate-output/(?:objects|originals|evidence)/[0-9a-f]{64}\.(?:flac|mp3|ogg|json|html)', name))
-            demand(allowed and name not in names and not info.is_dir()
+            demand(allowed_artifact_member(name) and name not in names and not info.is_dir()
                    and not stat.S_ISLNK(info.external_attr >> 16)
                    and not (info.flag_bits & 1) and 0 < info.file_size <= 64 * 1024 ** 2,
                    'Unexpected, duplicate, unsafe or excessive artifact member')
