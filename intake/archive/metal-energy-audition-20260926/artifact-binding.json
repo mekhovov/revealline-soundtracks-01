@@ -1,0 +1,19 @@
+{
+  "format": "revealline-audition-assembly.v1",
+  "artifactId": 10898061610,
+  "artifactBytes": 126708651,
+  "artifactSha256": "6a30ea883646a016354cc7a5bb532ebab15260a1c34fc32fa72e64e224ef8d61",
+  "sourceRun": 36216590495,
+  "sourceHead": "00266689d4ceca7758733bfd4bd79ce4918910f7",
+  "runnerRevision": "58ca17ed65a78247c72cd26cdf08388cf477d549",
+  "sourceTree": "c4659963a1bb7a929e6ed172ee72b2c0797b8dd5",
+  "treeProofRevision": "58ca17ed65a78247c72cd26cdf08388cf477d549",
+  "mergedSource": "ab9b5f36e3e5f0c3ec140edae20ed0a0d7e32f8f",
+  "sourceManifestSha256": "f326621bafffa17f24a5f331749539da0331d1937b709c5cb5109793d619021e",
+  "assemblyRevision": "ccc755a5d7088575a9bc53fd1e4189b26b8407ce",
+  "assemblyRun": "36218206984",
+  "originalArtifactInspection": "Verified by this hosted assembler; independent publication review pending",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false,
+  "default": false
+}

@@ -1,0 +1,73 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "synth-action-audition-20260926",
+  "expected": {
+    "trackCount": 3,
+    "audioBytes": 12526367
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 1816,
+      "sha256": "f711ee4300aed49c2b0fce63ca94c17f640d0d45121e8e60623fcc2c03414411"
+    },
+    {
+      "path": "README.md",
+      "bytes": 434,
+      "sha256": "6e29ef720fc58ba98078616e1760581829cb335145b54ef561ed50712742a81c"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6868,
+      "sha256": "67377b4f0b7c1b02c8ef1e521e88dab3dbf0dfe0ad6efd3f82678c2c55df27dc"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 752,
+      "sha256": "7dd26b416385e7583886b14fc534bb55d04f17569f3d3a4bb8c65dccbbf5064a"
+    },
+    {
+      "path": "objects/602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f.mp3",
+      "bytes": 3841924,
+      "sha256": "602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f"
+    },
+    {
+      "path": "objects/6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d.mp3",
+      "bytes": 5268837,
+      "sha256": "6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d"
+    },
+    {
+      "path": "objects/9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2.mp3",
+      "bytes": 3415606,
+      "sha256": "9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 3385,
+      "sha256": "9f9fb4ba8fcc837c48dbcbd531067c8627c3cc6d76d4ebc7833309bbac3c3c14"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 13673,
+      "sha256": "e96818618454d2efb043a37868dd49ff0e0aa39186b781511276458b2053fb98"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5239,
+      "sha256": "78af84fc9b0acb7f1f41d04d95d3536e6b31314807bda74d827bc1e9e0599ddf"
+    }
+  ],
+  "provenance": {
+    "sourceRun": 36216590495,
+    "artifactId": 10898061610,
+    "artifactSha256": "6a30ea883646a016354cc7a5bb532ebab15260a1c34fc32fa72e64e224ef8d61",
+    "sourceManifestSha256": "f326621bafffa17f24a5f331749539da0331d1937b709c5cb5109793d619021e",
+    "gameCatalogueAdmission": false,
+    "listeningApproval": false
+  }
+}

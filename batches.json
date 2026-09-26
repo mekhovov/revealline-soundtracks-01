@@ -112,6 +112,22 @@
         "bytes": 2556,
         "sha256": "88e8628bdb90e0ab985ce10a92f6313ff86b443a6e64b1ca8fbc8cf4f2b3c290"
       }
+    },
+    {
+      "id": "metal-energy-audition-20260926",
+      "manifest": {
+        "path": "batches/metal-energy-audition-20260926/deployment-manifest.json",
+        "bytes": 2768,
+        "sha256": "75c59b9bda4d25194b5622c8053a764c95711e55681ab5dd7f5436335a2408d4"
+      }
+    },
+    {
+      "id": "synth-action-audition-20260926",
+      "manifest": {
+        "path": "batches/synth-action-audition-20260926/deployment-manifest.json",
+        "bytes": 2339,
+        "sha256": "7d11fdf0693ad80ab32b0163dd07e6078019512ef86ba45b1408352cfade7d95"
+      }
     }
   ]
 }

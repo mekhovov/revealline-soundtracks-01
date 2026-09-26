@@ -1,0 +1,31 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-energy-audition-20260926",
+  "files": [
+    {
+      "path": "objects/67875307ef6dae98521150d1e10a5056bbaf63f94f474b333511391292aa3fd7.mp3",
+      "bytes": 6702437,
+      "sha256": "67875307ef6dae98521150d1e10a5056bbaf63f94f474b333511391292aa3fd7"
+    },
+    {
+      "path": "objects/2d4cbd64b3c286fc25818790649252a8b3e0aeb06ba202a650d95c5ef9775877.mp3",
+      "bytes": 4651093,
+      "sha256": "2d4cbd64b3c286fc25818790649252a8b3e0aeb06ba202a650d95c5ef9775877"
+    },
+    {
+      "path": "objects/6154df8c83b690031a13654e7c37ef77186c24cc2cbeb2720ff23d514c26d154.mp3",
+      "bytes": 4310039,
+      "sha256": "6154df8c83b690031a13654e7c37ef77186c24cc2cbeb2720ff23d514c26d154"
+    },
+    {
+      "path": "objects/648ea3900a2f209cad6478e40487139f7c2494c4aed4a27ee48dc467023d2d97.mp3",
+      "bytes": 2182627,
+      "sha256": "648ea3900a2f209cad6478e40487139f7c2494c4aed4a27ee48dc467023d2d97"
+    },
+    {
+      "path": "objects/d9bd5c525d167791d02c32cbc611841b20e7665c1d8e8b644dd1da1b4d9bb833.mp3",
+      "bytes": 5441872,
+      "sha256": "d9bd5c525d167791d02c32cbc611841b20e7665c1d8e8b644dd1da1b4d9bb833"
+    }
+  ]
+}

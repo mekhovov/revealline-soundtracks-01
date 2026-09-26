@@ -1,0 +1,61 @@
+{
+  "status": "pending",
+  "tracks": [
+    {
+      "id": "esiltir.calamity",
+      "sha256": "67875307ef6dae98521150d1e10a5056bbaf63f94f474b333511391292aa3fd7",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "beetlemuse.nox-venator",
+      "sha256": "2d4cbd64b3c286fc25818790649252a8b3e0aeb06ba202a650d95c5ef9775877",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "beetlemuse.rabidus",
+      "sha256": "6154df8c83b690031a13654e7c37ef77186c24cc2cbeb2720ff23d514c26d154",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "nene.fight-for-better-future",
+      "sha256": "648ea3900a2f209cad6478e40487139f7c2494c4aed4a27ee48dc467023d2d97",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "gundatsch.the-destoroya",
+      "sha256": "d9bd5c525d167791d02c32cbc611841b20e7665c1d8e8b644dd1da1b4d9bb833",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "petterthesturgeon.action-synth-track",
+      "sha256": "6f69cf21e511aab5e5012a5b81760979b7a0d9af9d39f1caf2db14a387f74c3d",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "mintodog.darkness-road-climax-remake",
+      "sha256": "602bea91d3802ef1fa443ec9aafbb32b67641c65b7d7c2edbe66d0362ae0172f",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    },
+    {
+      "id": "centurion-of-war.technological-messup",
+      "sha256": "9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2",
+      "fullTrackListening": false,
+      "transitions": false,
+      "warningAudibility": false
+    }
+  ]
+}
