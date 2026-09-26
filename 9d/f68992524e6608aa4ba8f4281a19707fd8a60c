@@ -1,0 +1,41 @@
+README.md
+  s_f8296d264eaab0::t_7236dfdf941f0f 5
+batches.json
+  s_f8296d264eaab0::t_f88f4669ce930b 179-186
+batches/racing-synth-final-audition-20260926/CREDITS.md
+  s_f8296d264eaab0::t_756f9c39162950 1-5
+batches/racing-synth-final-audition-20260926/README.md
+  s_f8296d264eaab0::t_e94d4b039c41db 1-5
+batches/racing-synth-final-audition-20260926/deployment-manifest.json
+  s_f8296d264eaab0::t_3570e2c168e008 1-69
+batches/racing-synth-final-audition-20260926/index.html
+  s_f8296d264eaab0::t_d8089c8a47abc1 1-3
+batches/racing-synth-final-audition-20260926/inventory.json
+  s_f8296d264eaab0::t_d94f36f590632d 1-21
+batches/racing-synth-final-audition-20260926/player.mjs
+  s_f8296d264eaab0::t_b486d16676be36 1
+batches/racing-synth-final-audition-20260926/preview-catalogue.json
+  s_f8296d264eaab0::t_476e487d24b1d0 1-127
+batches/racing-synth-final-audition-20260926/style.css
+  s_f8296d264eaab0::t_8df057cec1fe11 1
+catalogue.json
+  s_f8296d264eaab0::t_04855a8efe39ec 214-222,226-227,229,5487-5627
+deployment-manifest.json
+  s_f8296d264eaab0::t_e248c4206293fb 22,31-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9df68992524e6608aa4ba8f4281a19707fd8a60c",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
