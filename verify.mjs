@@ -28,6 +28,7 @@ const MAX_FILE_BYTES = 100000000;
 const MAX_SITE_BYTES = 900000000;
 const MANIFEST = 'deployment-manifest.json';
 const BATCHES = 'batches.json';
+const DIRECTORY = 'archive-directory.json';
 const BATCH_ID = /^[a-z0-9][a-z0-9-]{0,63}$/;
 const STATIC = new Set([
   'index.html',
@@ -35,6 +36,7 @@ const STATIC = new Set([
   'player.mjs',
   'playback-policy.mjs',
   'catalogue.json',
+  DIRECTORY,
   'UPLOAD_GUIDE.md',
   'inventory.json',
   'preview-catalogue.json',
@@ -56,6 +58,7 @@ const ROOT_REQUIRED = [
   ...REQUIRED,
   'playback-policy.mjs',
   'catalogue.json',
+  DIRECTORY,
   'UPLOAD_GUIDE.md',
 ];
 const PRIVATE = new Set([
@@ -321,6 +324,43 @@ export function validateBatchIndex(value) {
   return value.batches;
 }
 
+export function validateArchiveDirectory(value) {
+  exactKeys(value, ['format', 'catalogues'], 'archive directory');
+  demand(
+    value.format === 'revealline-public-soundtrack-directory.v1' &&
+      Array.isArray(value.catalogues) &&
+      value.catalogues.length >= 1 &&
+      value.catalogues.length <= 8,
+    'Invalid archive directory.',
+  );
+  const ids = new Set(),
+    urls = new Set();
+  for (const entry of value.catalogues) {
+    exactKeys(entry, ['id', 'url', 'baseURL', 'required'], 'archive directory entry');
+    const match = /^revealline-soundtracks-([0-9]{2})$/.exec(entry.id),
+      expectedBaseURL = match
+        ? `https://mekhovov.github.io/revealline-soundtracks-${match[1]}/`
+        : '';
+    demand(
+      match &&
+        entry.baseURL === expectedBaseURL &&
+        entry.url === `${expectedBaseURL}catalogue.json` &&
+        typeof entry.required === 'boolean' &&
+        !ids.has(entry.id) &&
+        !urls.has(entry.url),
+      'Invalid or duplicate archive directory entry.',
+    );
+    ids.add(entry.id);
+    urls.add(entry.url);
+  }
+  demand(
+    value.catalogues[0].id === 'revealline-soundtracks-01' &&
+      value.catalogues[0].required === true,
+    'The primary soundtrack archive must remain required and first.',
+  );
+  return value.catalogues;
+}
+
 async function json(root, name, maxBytes) {
   const file = path.join(root, name);
   const stat = await lstat(file);
@@ -496,6 +536,7 @@ export function appendVerifiedPreviewBatch(result, entry, batch) {
 export async function verifyPreviewSite(source, { staged = false } = {}) {
   const result = await verifyPayloadSite(source, { staged });
   const root = result.root;
+  validateArchiveDirectory(await json(root, DIRECTORY, 64 * 1024));
   let declaration,
     declarationBytes = 0;
   try {
