@@ -1,0 +1,29 @@
+intake/prepare_metal_energy.py
+  s_f8296d264eaab0::t_ec2904bd2b5c00 1-83
+intake/metal-energy-20260926.md
+  s_f8296d264eaab0::t_2f3479e2f8fac9 18
+intake/metal-energy-20260926.json
+  s_f8296d264eaab0::t_3caf0dee047925 3-8,18,20-39,49,54-72,82,87-105,115,117-137,147,150-169,179,181-201,211,213-233
+  s_f8296d264eaab0::t_433e51b7933e50 243,245-265
+.github/workflows/metal-energy-intake.yml
+  s_f8296d264eaab0::t_ec2904bd2b5c00 10-11,16-17,25-41,43-44,46,50,68,70-72,74,80-82
+  s_f8296d264eaab0::t_ce8a0e5d16e71d 12-15
+intake/test_metal_energy.py
+  s_f8296d264eaab0::t_ec2904bd2b5c00 1-114
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "84c0e8f0f59cac93524e8f522505f91bf100bff5",
+  "prompts": {},
+  "sessions": {
+    "s_f8296d264eaab0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c0d5-9336-7041-b706-4daf00829a3a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Oleksandr Mekhovov <oleksandr.mekhovov@coupa.com>"
+    }
+  }
+}
