@@ -1,0 +1,84 @@
+name: Prepare high-energy metal candidates
+
+on:
+  pull_request:
+    paths:
+      - 'intake/metal-energy-20260926.json'
+      - 'intake/metal-energy-20260926.md'
+      - 'intake/prepare.py'
+      - 'intake/test_prepare.py'
+      - 'intake/prepare_metal_energy.py'
+      - 'intake/test_metal_energy.py'
+      - 'intake/approved_directions_pins.py'
+      - 'intake/second_directions_pins.py'
+      - 'intake/purgatory3_pins.py'
+      - 'intake/reckless2_pins.py'
+      - 'intake/itch_source.py'
+      - 'intake/itch_audio.py'
+      - '.github/workflows/metal-energy-intake.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: intake
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - name: Verify exact source and unchanged published inventory
+        run: |
+          python3 -m unittest intake/test_prepare.py intake/test_metal_energy.py
+          python3 intake/prepare_metal_energy.py --check
+          node --test test-verify.mjs
+          node verify.mjs
+
+  prepare:
+    needs: source
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: intake
+      EVENT_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.5
+      - uses: actions/checkout@v4
+        with:
+          repository: mekhovov/revealline
+          ref: 71a0ffeaeb5079ac6e87a7d80327c6b34948aaa3
+          path: .runtime
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /game/*.mjs
+            /game/ui/*.mjs
+            /game/content/*.mjs
+      - name: Install audio validation tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Test exact source identities and intake boundaries
+        run: |
+          set -o pipefail
+          python3 -m unittest intake/test_prepare.py intake/test_metal_energy.py 2>&1 | tee metal-energy-tests.txt
+          python3 intake/prepare_metal_energy.py --check
+      - name: Acquire and measure candidates without approving publication
+        run: python3 intake/prepare_metal_energy.py --output candidate-output --game-root .runtime
+      - name: Preserve source audio and all partial evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: metal-energy-candidates-20260926
+          path: |
+            candidate-output/
+            metal-energy-tests.txt
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
