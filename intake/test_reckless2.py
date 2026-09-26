@@ -107,17 +107,26 @@ class Reckless2Tests(unittest.TestCase):
 
     def test_current_public_catalogue_has_no_title_duplicates(self):
         baseline = json.loads(publication.merged_catalogue_bytes())
-        titles = {
+        baseline_titles = {
             re.sub(r'[^a-z0-9]', '', row['title'].lower())
             for row in baseline['tracks']
         }
         for title in pins.REFERENCE_LOOP_END_SECONDS:
             expected = pins.UPLOAD_PINS[title][3]
-            self.assertNotIn(re.sub(r'[^a-z0-9]', '', expected.lower()), titles)
-        state = publication.validate_catalogue_context(
-            Path('catalogue.json').read_bytes()
+            self.assertNotIn(
+                re.sub(r'[^a-z0-9]', '', expected.lower()), baseline_titles
+            )
+
+        current = json.loads(Path('catalogue.json').read_bytes())
+        self.assertGreaterEqual(len(current['tracks']), len(baseline['tracks']))
+        self.assertEqual(
+            current['tracks'][:len(baseline['tracks'])], baseline['tracks']
         )
-        self.assertIn(state, ('base', 'generated'))
+        current_titles = [
+            re.sub(r'[^a-z0-9]', '', row['title'].lower())
+            for row in current['tracks']
+        ]
+        self.assertEqual(len(current_titles), len(set(current_titles)))
 
     def test_reference_loop_end_is_not_claimed_as_exact_duration(self):
         for row in self.rows:
