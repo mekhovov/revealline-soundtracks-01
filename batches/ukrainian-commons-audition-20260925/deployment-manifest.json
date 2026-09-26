@@ -1,0 +1,69 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "ukrainian-commons-audition-20260925",
+  "expected": {
+    "trackCount": 3,
+    "audioBytes": 13190922
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 268,
+      "sha256": "ef7f8600dd97825a5161437108ba217bbc33ff1ea7e116fbadddb42798dd7f65"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 3755,
+      "sha256": "a509f6dd55fafd2a2a5092abccea7c448623addfd20760a8fb6a1f8a920507b7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3113,
+      "sha256": "40bf7591faf1231c009a9ef28ca646ce2f57a966090e6439db94da0d91b40574"
+    },
+    {
+      "path": "style.css",
+      "bytes": 264,
+      "sha256": "de0dd57417d30949a5afe855d52aef0fbb203042909799f37b2f096665f2209b"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 84,
+      "sha256": "4386d6094858886b8ef75b2046735aacf703661d7670dedd8f66981bb7ef29ea"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 757,
+      "sha256": "7513700944f00123d685e721d7686aabea15374385ea8aa637f74d74931433c0"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 8183,
+      "sha256": "51fab637e63653e4901ece005ffd8e3552b3205796adc9b05915a95f8e970a6d"
+    },
+    {
+      "path": "objects/b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760.mp3",
+      "bytes": 6536925,
+      "sha256": "b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760"
+    },
+    {
+      "path": "objects/2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608.mp3",
+      "bytes": 2562969,
+      "sha256": "2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608"
+    },
+    {
+      "path": "objects/834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f.mp3",
+      "bytes": 4091028,
+      "sha256": "834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f"
+    }
+  ],
+  "provenance": {
+    "localUpload": true,
+    "listeningApproval": false
+  }
+}

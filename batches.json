@@ -136,6 +136,14 @@
         "bytes": 2298,
         "sha256": "f610d03c76076b7a9dc77400916c43cc843f158b666614970d6eb27ac67c122f"
       }
+    },
+    {
+      "id": "ukrainian-commons-audition-20260925",
+      "manifest": {
+        "path": "batches/ukrainian-commons-audition-20260925/deployment-manifest.json",
+        "bytes": 2081,
+        "sha256": "4fd9d5ec2b38af6280aa7cd119df7b0eec6d1672f0fa63a9595ec61fee4b9762"
+      }
     }
   ]
 }

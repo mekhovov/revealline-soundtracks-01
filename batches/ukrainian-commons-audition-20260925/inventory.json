@@ -1,0 +1,21 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "ukrainian-commons-audition-20260925",
+  "files": [
+    {
+      "path": "objects/b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760.mp3",
+      "bytes": 6536925,
+      "sha256": "b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760"
+    },
+    {
+      "path": "objects/2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608.mp3",
+      "bytes": 2562969,
+      "sha256": "2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608"
+    },
+    {
+      "path": "objects/834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f.mp3",
+      "bytes": 4091028,
+      "sha256": "834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f"
+    }
+  ]
+}

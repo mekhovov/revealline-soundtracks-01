@@ -2,7 +2,7 @@
 
 [Listen and download](https://mekhovov.github.io/revealline-soundtracks-01/)
 
-The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 148 unique recordings and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
+The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 155 unique recordings across 19 collections and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
 
 [archive-directory.json](archive-directory.json) is the bounded discovery contract for scale-out. It keeps this archive first and required while allowing reviewed, project-owned successor shards to be added without moving existing recording URLs or identities. The game must validate every listed catalogue independently; a directory entry cannot grant listening approval, default-playlist admission or recording rights.
 
@@ -11,6 +11,11 @@ The original collection preserves 354,986,122 exact MP3 bytes. Every `objects/<s
 This is a preview music archive, separate from the frozen RevealLine game release. Publication makes a recording available to the archive player and online game browser; it does not approve musical quality, grant Content ID clearance or automatically admit tracks into the game's standard playlists. UA-FPV and rejected AI recordings are excluded. No master files or duplicate album packages are stored in the Pages payload.
 
 To publish another permitted MP3 or album, follow [UPLOAD_GUIDE.md](UPLOAD_GUIDE.md). The checked-in automation accepts one song or folder, creates an immutable batch, updates the batch index, rebuilds the public catalogue, runs verification and can open the pull request. CI refuses stale catalogue output, duplicate identities/hashes, missing credit, unsupported licences and incomplete ShareAlike delivery terms.
+
+The [Ukrainian Commons audition](batches/ukrainian-commons-audition-20260925/)
+contains three separately credited CC BY 3.0 performances whose exact hosted
+derivatives and source evidence are preserved in the repository. They remain
+listening-pending and outside the game's standard playlists.
 
 ## Ready-made playlist previews
 

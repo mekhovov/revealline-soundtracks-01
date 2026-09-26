@@ -1,0 +1,48 @@
+{
+  "format": "revealline-audition-publication-review.v1",
+  "batchId": "ukrainian-commons-audition-20260925",
+  "artifactBinding": "artifact-binding.json",
+  "tracks": [
+    {
+      "id": "ukrainian-air-force-band.oi-u-luzi-chervona-kalyna",
+      "deliverySha256": "b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760",
+      "deliveryBytes": 6536925,
+      "completeDecode": true,
+      "encodedLoudnessLUFS": -16.0,
+      "encodedTruePeakDbTP": -3.89,
+      "listeningApproval": false,
+      "culturalReview": "pending",
+      "gameplayReview": "pending"
+    },
+    {
+      "id": "zoretsvit-kalyna.a-v-kryvoho-tantsia",
+      "deliverySha256": "2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608",
+      "deliveryBytes": 2562969,
+      "completeDecode": true,
+      "encodedLoudnessLUFS": -16.0,
+      "encodedTruePeakDbTP": -6.05,
+      "listeningApproval": false,
+      "culturalReview": "pending",
+      "gameplayReview": "pending"
+    },
+    {
+      "id": "kate-orange.oi-khodyt-son",
+      "deliverySha256": "834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f",
+      "deliveryBytes": 4091028,
+      "completeDecode": true,
+      "encodedLoudnessLUFS": -16.0,
+      "encodedTruePeakDbTP": -3.77,
+      "listeningApproval": false,
+      "culturalReview": "pending",
+      "gameplayReview": "pending"
+    }
+  ],
+  "publicationState": "rights-cleared-audition-only",
+  "gameCatalogueAdmission": false,
+  "recordingModeEligible": false,
+  "notes": [
+    "Exact MP3 derivatives match the successful hosted artifact.",
+    "Original WebM hashes and source evidence remain bound in the artifact inventory.",
+    "Publication does not establish full-track listening, cultural approval or game admission."
+  ]
+}

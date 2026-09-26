@@ -202,6 +202,113 @@ test("unified catalogue reproducibly exposes every published batch on the root p
   assert(shchedryk.tags.some((tag) => /metal/i.test(tag)));
   assert(shchedryk.tags.some((tag) => /ukrain/i.test(tag)));
 });
+test("Ukrainian Commons publication is exactly bound to its hosted artifact and remains audition-only", async () => {
+  const batchId = "ukrainian-commons-audition-20260925";
+  const archiveRoot = path.join(source, "intake", "archive", batchId);
+  const publicRoot = path.join(source, "batches", batchId);
+  const binding = JSON.parse(
+    await readFile(path.join(archiveRoot, "artifact-binding.json"), "utf8"),
+  );
+  const members = JSON.parse(
+    await readFile(
+      path.join(archiveRoot, "artifact-member-hashes.json"),
+      "utf8",
+    ),
+  );
+  const assembly = JSON.parse(
+    await readFile(path.join(archiveRoot, "assembly-review.json"), "utf8"),
+  );
+  const receipt = await readFile(
+    path.join(archiveRoot, "hosted-artifact", "receipt.json"),
+  );
+  const review = await readFile(
+    path.join(archiveRoot, "hosted-artifact", "review.json"),
+  );
+  const catalogue = JSON.parse(
+    await readFile(path.join(publicRoot, "preview-catalogue.json"), "utf8"),
+  );
+  const declarations = JSON.parse(
+    await readFile(path.join(source, "batches.json"), "utf8"),
+  );
+  const declaration = declarations.batches.find((entry) => entry.id === batchId);
+
+  assert.deepEqual(
+    {
+      workflowRun: binding.workflowRun,
+      artifactId: binding.artifactId,
+      artifactName: binding.artifactName,
+      sourceManifestSha256: binding.sourceManifestSha256,
+    },
+    {
+      workflowRun: 36067125672,
+      artifactId: 10836663291,
+      artifactName: "ukrainian-commons-audition-candidates",
+      sourceManifestSha256:
+        "99bc4dc890a1d2c28c222e3ae32eefa5b47f2bcd3750346ab7dba5bf9839e463",
+    },
+  );
+  assert.equal(hash(receipt), binding.receiptSha256);
+  assert.equal(hash(review), binding.reviewSha256);
+
+  const memberByPath = new Map(
+    members.members.map((member) => [member.path, member]),
+  );
+  for (const member of members.members.filter(
+    ({ path: memberPath }) =>
+      memberPath === "receipt.json" ||
+      memberPath === "review.json" ||
+      memberPath.startsWith("evidence/"),
+  )) {
+    const body = await readFile(
+      path.join(archiveRoot, "hosted-artifact", member.path),
+    );
+    assert.equal(body.length, member.bytes);
+    assert.equal(hash(body), member.sha256);
+  }
+
+  const expected = new Map(
+    assembly.tracks.map((track) => [track.id, track]),
+  );
+  assert.equal(expected.size, 3);
+  assert.equal(catalogue.listeningApproval, "not-reviewed");
+  assert.equal(catalogue.gameCatalogueAdmission, false);
+  for (const track of catalogue.tracks) {
+    const reviewed = expected.get(track.id);
+    assert(reviewed, `Unexpected Ukrainian Commons track ${track.id}`);
+    assert.equal(track.sha256, reviewed.deliverySha256);
+    assert.equal(track.bytes, reviewed.deliveryBytes);
+    assert.equal(reviewed.completeDecode, true);
+    assert.equal(reviewed.listeningApproval, false);
+    assert.equal(reviewed.culturalReview, "pending");
+    assert.equal(reviewed.gameplayReview, "pending");
+    assert.equal(track.contentId, "unknown");
+    assert.equal(track.recordingModeEligible, false);
+    assert.equal(track.rights.licenseId, "CC-BY");
+    assert.equal(track.rights.licenseVersion, "3.0");
+    assert.equal(
+      track.rights.licenseURL,
+      "https://creativecommons.org/licenses/by/3.0/",
+    );
+    assert.match(
+      track.rights.rightsEvidenceURL,
+      /^https:\/\/commons\.wikimedia\.org\//,
+    );
+    const artifactObject = memberByPath.get(`objects/${track.sha256}.mp3`);
+    assert.equal(artifactObject?.bytes, track.bytes);
+    const publicObject = await readFile(path.join(publicRoot, track.path));
+    assert.equal(hash(publicObject), track.sha256);
+  }
+  assert.equal(assembly.publicationState, "rights-cleared-audition-only");
+  assert.equal(assembly.gameCatalogueAdmission, false);
+  assert.equal(assembly.recordingModeEligible, false);
+  assert(declaration, "Missing Ukrainian Commons batch declaration");
+  const verified = await verifyPreviewBatch(publicRoot, {
+    ...declaration,
+    baseURL,
+  });
+  assert.equal(verified.trackCount, 3);
+  assert.equal(verified.audioBytes, 13190922);
+});
 test('archive directory is bounded, exact and keeps the primary catalogue first', async () => {
   const directory = JSON.parse(
     await readFile(path.join(source, 'archive-directory.json'), 'utf8'),
