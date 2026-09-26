@@ -157,13 +157,22 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 3
+    },
+    {
+      "id": "action-metal-electro-audition-20260926",
+      "path": "batches/action-metal-electro-audition-20260926/preview-catalogue.json",
+      "sha256": "9cc9ae53c209bfbf07af0cfcc2609d3d004fa39342921a237b6b7900bf59da71",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 4
     }
   ],
   "counts": {
-    "declaredTracks": 148,
-    "uniqueRecordings": 148,
+    "declaredTracks": 152,
+    "uniqueRecordings": 152,
     "duplicateAliases": 0,
-    "audioBytes": 826222618
+    "audioBytes": 841132228
   },
   "tracks": [
     {
@@ -4862,6 +4871,194 @@
         "path": "batches/synth-action-audition-20260926/objects/9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2.mp3",
         "bytes": 3415606,
         "sha256": "9d7e001771430e648bdfa7ab12650c454a6dbc8cd7db8989d62f397c93d222a2"
+      },
+      "aliases": []
+    },
+    {
+      "id": "mintodog.heavy-battle-1",
+      "title": "Heavy Battle 1",
+      "artist": "MintoDog",
+      "durationSeconds": null,
+      "tags": [
+        "metal",
+        "heavy",
+        "battle",
+        "gameplay",
+        "energetic",
+        "loopable",
+        "190 bpm"
+      ],
+      "source": "https://opengameart.org/content/heavy-battle-1",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Heavy Battle 1 by MintoDog. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/heavy-battle-1",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/heavy-battle-1",
+        "attribution": "Music: Heavy Battle 1 by MintoDog. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/heavy-battle-1",
+        "derivativeChangeNotice": "Source MP3 SHA-256 790bf97caead77553df5b75aa658323750ba2816df3071616c207612c6d69d7e; audition derivative re-encoded as 256 kbps MP3 with two-pass loudness normalization to -15.9 LUFS integrated, -6.1 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "final-heavy-battle-1.mp3",
+      "archiveId": "action-metal-electro-audition-20260926",
+      "collection": "action-metal-electro-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/action-metal-electro-audition-20260926/objects/b056fe80e1e796b4f282438f01b4bf1b00667160a3e08b994ddb063b380964c7.mp3",
+        "bytes": 2588882,
+        "sha256": "b056fe80e1e796b4f282438f01b4bf1b00667160a3e08b994ddb063b380964c7"
+      },
+      "aliases": []
+    },
+    {
+      "id": "ruskerdax.cybershaman",
+      "title": "Cybershaman",
+      "artist": "Ruskerdax",
+      "durationSeconds": null,
+      "tags": [
+        "metal",
+        "synth",
+        "electro",
+        "cyberpunk",
+        "guitar",
+        "gameplay",
+        "fusion"
+      ],
+      "source": "https://opengameart.org/content/cybershaman",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Cybershaman by Ruskerdax. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/cybershaman",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/cybershaman",
+        "attribution": "Music: Cybershaman by Ruskerdax. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/cybershaman",
+        "derivativeChangeNotice": "Native FLAC SHA-256 f52d71e66bf900c14faf7bc106668d1aebed83a924c85c19727d967c51e909fc; audition derivative encoded as 256 kbps MP3 with two-pass loudness normalization to -16.0 LUFS integrated, -6.6 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "final-cybershaman.mp3",
+      "archiveId": "action-metal-electro-audition-20260926",
+      "collection": "action-metal-electro-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/action-metal-electro-audition-20260926/objects/956cf5dbdb16f33c3e4c89ec30a8c193dc385d98d1709e30cd42a3a8e691ac6f.mp3",
+        "bytes": 6354694,
+        "sha256": "956cf5dbdb16f33c3e4c89ec30a8c193dc385d98d1709e30cd42a3a8e691ac6f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "fupi.empacotatron",
+      "title": "Empacotatron",
+      "artist": "Fupi",
+      "durationSeconds": null,
+      "tags": [
+        "synth",
+        "electro",
+        "techno",
+        "arcade",
+        "gameplay",
+        "energetic",
+        "drums"
+      ],
+      "source": "https://opengameart.org/content/empacotatron",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Empacotatron by Fupi. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/empacotatron",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/empacotatron",
+        "attribution": "Music: Empacotatron by Fupi. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/empacotatron",
+        "derivativeChangeNotice": "Native FLAC SHA-256 24e0f95db1c54c4b70d089b3485bd245cd18baaac575207c28e4c529302cac4c; audition derivative encoded as 256 kbps MP3 with two-pass loudness normalization to -16.0 LUFS integrated, -2.5 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "final-empacotatron.mp3",
+      "archiveId": "action-metal-electro-audition-20260926",
+      "collection": "action-metal-electro-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/action-metal-electro-audition-20260926/objects/e0faeeea03ebb4edfac157f45044754c7aea02e65a0ca86105f0206370c3ead1.mp3",
+        "bytes": 2584702,
+        "sha256": "e0faeeea03ebb4edfac157f45044754c7aea02e65a0ca86105f0206370c3ead1"
+      },
+      "aliases": []
+    },
+    {
+      "id": "centurion-of-war.hail-the-arbiter",
+      "title": "Hail the Arbiter",
+      "artist": "Centurion_of_war",
+      "durationSeconds": null,
+      "tags": [
+        "metal",
+        "chiptune",
+        "retro synth",
+        "boss",
+        "gameplay",
+        "energetic",
+        "fusion"
+      ],
+      "source": "https://opengameart.org/content/hail-the-arbiter",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Music: Hail the Arbiter by Centurion_of_war. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/hail-the-arbiter",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/hail-the-arbiter",
+        "attribution": "Music: Hail the Arbiter by Centurion_of_war. Licensed under CC0 1.0 Universal. Source: https://opengameart.org/content/hail-the-arbiter",
+        "derivativeChangeNotice": "Native OGG SHA-256 4c7a9f30c2326994ac946ee70572d1e0eab39e0df67e48418baf091debb030b3; audition derivative encoded as 256 kbps MP3 with two-pass loudness normalization to -15.9 LUFS integrated, -1.6 dBTP.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "final-hail-the-arbiter.mp3",
+      "archiveId": "action-metal-electro-audition-20260926",
+      "collection": "action-metal-electro-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/action-metal-electro-audition-20260926/objects/656b3584108c0f69969b96b128d85213df8893e6a5ddf79a6aaa498895e70355.mp3",
+        "bytes": 3381332,
+        "sha256": "656b3584108c0f69969b96b128d85213df8893e6a5ddf79a6aaa498895e70355"
       },
       "aliases": []
     }

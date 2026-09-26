@@ -128,6 +128,14 @@
         "bytes": 2339,
         "sha256": "7d11fdf0693ad80ab32b0163dd07e6078019512ef86ba45b1408352cfade7d95"
       }
+    },
+    {
+      "id": "action-metal-electro-audition-20260926",
+      "manifest": {
+        "path": "batches/action-metal-electro-audition-20260926/deployment-manifest.json",
+        "bytes": 2298,
+        "sha256": "f610d03c76076b7a9dc77400916c43cc843f158b666614970d6eb27ac67c122f"
+      }
     }
   ]
 }

@@ -1,0 +1,74 @@
+{
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "action-metal-electro-audition-20260926",
+  "expected": {
+    "trackCount": 4,
+    "audioBytes": 14909610
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 361,
+      "sha256": "906774ea7f1487432294119068536a3178e5c8063bfe30cb7cbf1c83d7e46641"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 2591,
+      "sha256": "59b5191efb52eec5b03ae9d2e2ce90361e341adc56a06a33cd19d02a421bd563"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2765,
+      "sha256": "1b9cb60375b9ec46dbf37ef99b8b743edae604288c6c7d0fe44f991e4db5b7fd"
+    },
+    {
+      "path": "style.css",
+      "bytes": 264,
+      "sha256": "de0dd57417d30949a5afe855d52aef0fbb203042909799f37b2f096665f2209b"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 84,
+      "sha256": "4386d6094858886b8ef75b2046735aacf703661d7670dedd8f66981bb7ef29ea"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 974,
+      "sha256": "b3613487bb8928304b510449a3a30e6466875c320540f61971d5ab567c2e9b95"
+    },
+    {
+      "path": "preview-catalogue.json",
+      "bytes": 7329,
+      "sha256": "9cc9ae53c209bfbf07af0cfcc2609d3d004fa39342921a237b6b7900bf59da71"
+    },
+    {
+      "path": "objects/b056fe80e1e796b4f282438f01b4bf1b00667160a3e08b994ddb063b380964c7.mp3",
+      "bytes": 2588882,
+      "sha256": "b056fe80e1e796b4f282438f01b4bf1b00667160a3e08b994ddb063b380964c7"
+    },
+    {
+      "path": "objects/956cf5dbdb16f33c3e4c89ec30a8c193dc385d98d1709e30cd42a3a8e691ac6f.mp3",
+      "bytes": 6354694,
+      "sha256": "956cf5dbdb16f33c3e4c89ec30a8c193dc385d98d1709e30cd42a3a8e691ac6f"
+    },
+    {
+      "path": "objects/e0faeeea03ebb4edfac157f45044754c7aea02e65a0ca86105f0206370c3ead1.mp3",
+      "bytes": 2584702,
+      "sha256": "e0faeeea03ebb4edfac157f45044754c7aea02e65a0ca86105f0206370c3ead1"
+    },
+    {
+      "path": "objects/656b3584108c0f69969b96b128d85213df8893e6a5ddf79a6aaa498895e70355.mp3",
+      "bytes": 3381332,
+      "sha256": "656b3584108c0f69969b96b128d85213df8893e6a5ddf79a6aaa498895e70355"
+    }
+  ],
+  "provenance": {
+    "localUpload": true,
+    "listeningApproval": false
+  }
+}

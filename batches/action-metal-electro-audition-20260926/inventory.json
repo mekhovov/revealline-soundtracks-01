@@ -1,0 +1,26 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "action-metal-electro-audition-20260926",
+  "files": [
+    {
+      "path": "objects/b056fe80e1e796b4f282438f01b4bf1b00667160a3e08b994ddb063b380964c7.mp3",
+      "bytes": 2588882,
+      "sha256": "b056fe80e1e796b4f282438f01b4bf1b00667160a3e08b994ddb063b380964c7"
+    },
+    {
+      "path": "objects/956cf5dbdb16f33c3e4c89ec30a8c193dc385d98d1709e30cd42a3a8e691ac6f.mp3",
+      "bytes": 6354694,
+      "sha256": "956cf5dbdb16f33c3e4c89ec30a8c193dc385d98d1709e30cd42a3a8e691ac6f"
+    },
+    {
+      "path": "objects/e0faeeea03ebb4edfac157f45044754c7aea02e65a0ca86105f0206370c3ead1.mp3",
+      "bytes": 2584702,
+      "sha256": "e0faeeea03ebb4edfac157f45044754c7aea02e65a0ca86105f0206370c3ead1"
+    },
+    {
+      "path": "objects/656b3584108c0f69969b96b128d85213df8893e6a5ddf79a6aaa498895e70355.mp3",
+      "bytes": 3381332,
+      "sha256": "656b3584108c0f69969b96b128d85213df8893e6a5ddf79a6aaa498895e70355"
+    }
+  ]
+}
