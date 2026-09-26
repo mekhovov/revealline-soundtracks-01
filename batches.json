@@ -168,6 +168,14 @@
         "bytes": 1651,
         "sha256": "ef33c5ace94a344b4696ce941ec13e5a5280a7c168eb780fa3c3c4fc6fe7c8df"
       }
+    },
+    {
+      "id": "final-archive01-audition-20260926",
+      "manifest": {
+        "path": "batches/final-archive01-audition-20260926/deployment-manifest.json",
+        "bytes": 1864,
+        "sha256": "ee7d264279849d7b17720564d7b3eb95ca68097c7222524aab8693f7b3eb24f9"
+      }
     }
   ]
 }

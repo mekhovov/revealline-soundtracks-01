@@ -2,7 +2,7 @@
 
 [Listen and download](https://mekhovov.github.io/revealline-soundtracks-01/)
 
-The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 158 unique recordings across 22 collections and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
+The single-page player indexes the original 70-recording collection and every published batch. It currently exposes 160 unique recordings across 23 collections and streams only the selected SHA-256-addressed MP3. Search, style and collection filters all use the generated [catalogue.json](catalogue.json).
 
 [archive-directory.json](archive-directory.json) is the bounded discovery contract for scale-out. It keeps this archive first and required while allowing reviewed, project-owned successor shards to be added without moving existing recording URLs or identities. The game must validate every listed catalogue independently; a directory entry cannot grant listening approval, default-playlist admission or recording rights.
 
