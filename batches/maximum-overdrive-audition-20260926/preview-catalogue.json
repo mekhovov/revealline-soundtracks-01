@@ -1,0 +1,49 @@
+{
+  "format": "revealline-licensed-preview-catalogue.v1",
+  "status": "licensed-preview",
+  "listeningApproval": "not-reviewed",
+  "gameCatalogueAdmission": false,
+  "archive": {
+    "id": "maximum-overdrive-audition-20260926",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-01/batches/maximum-overdrive-audition-20260926/",
+    "inventorySha256": "bc5e33a5c6c4eb8a0db40b67f5308b95c2ac4ddf036445f33b0180c7423dd14f"
+  },
+  "tracks": [
+    {
+      "id": "bogart-vgm.maximum-overdrive",
+      "title": "maximum overdrive",
+      "artist": "Bogart VGM",
+      "source": "https://opengameart.org/content/maximum-overdrive",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Maximum Overdrive by Bogart VGM. CC BY 3.0. Credit: Bogart VGM; https://www.facebook.com/BogartVGM/. Source: https://opengameart.org/content/maximum-overdrive",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/maximum-overdrive",
+        "attribution": "Maximum Overdrive by Bogart VGM. CC BY 3.0. Credit: Bogart VGM; https://www.facebook.com/BogartVGM/. Source: https://opengameart.org/content/maximum-overdrive",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "tags": [
+        "synthwave",
+        "electronic",
+        "racing",
+        "gameplay",
+        "energy 3"
+      ],
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "fileName": "maximum_overdrive.mp3",
+      "path": "objects/e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d.mp3",
+      "bytes": 8421948,
+      "sha256": "e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d"
+    }
+  ]
+}

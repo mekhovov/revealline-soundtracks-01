@@ -193,13 +193,22 @@
       "listeningApproval": "not-reviewed",
       "gameCatalogueAdmission": false,
       "declaredTracks": 1
+    },
+    {
+      "id": "maximum-overdrive-audition-20260926",
+      "path": "batches/maximum-overdrive-audition-20260926/preview-catalogue.json",
+      "sha256": "dbba8c86ebc4424fa8b4d4f49889006951a2c0826d1f78fec816c2445180b81a",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
     }
   ],
   "counts": {
-    "declaredTracks": 157,
-    "uniqueRecordings": 157,
+    "declaredTracks": 158,
+    "uniqueRecordings": 158,
     "duplicateAliases": 0,
-    "audioBytes": 860428666
+    "audioBytes": 868850614
   },
   "tracks": [
     {
@@ -5318,6 +5327,51 @@
         "path": "batches/synthwave-type-audition-20260926/objects/df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389.mp3",
         "bytes": 2263307,
         "sha256": "df87e826f113f3fc425b24fc85361e1f5866045eb44f06096ea64b792a362389"
+      },
+      "aliases": []
+    },
+    {
+      "id": "bogart-vgm.maximum-overdrive",
+      "title": "maximum overdrive",
+      "artist": "Bogart VGM",
+      "durationSeconds": null,
+      "tags": [
+        "synthwave",
+        "electronic",
+        "racing",
+        "gameplay",
+        "energy 3"
+      ],
+      "source": "https://opengameart.org/content/maximum-overdrive",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Maximum Overdrive by Bogart VGM. CC BY 3.0. Credit: Bogart VGM; https://www.facebook.com/BogartVGM/. Source: https://opengameart.org/content/maximum-overdrive",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/maximum-overdrive",
+        "attribution": "Maximum Overdrive by Bogart VGM. CC BY 3.0. Credit: Bogart VGM; https://www.facebook.com/BogartVGM/. Source: https://opengameart.org/content/maximum-overdrive",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "maximum_overdrive.mp3",
+      "archiveId": "maximum-overdrive-audition-20260926",
+      "collection": "maximum-overdrive-audition-20260926",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "audio": {
+        "path": "batches/maximum-overdrive-audition-20260926/objects/e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d.mp3",
+        "bytes": 8421948,
+        "sha256": "e084b649daa4e61a46cccba12cd0f80bd24424145a7f45af46bd78eaeebdc76d"
       },
       "aliases": []
     }
